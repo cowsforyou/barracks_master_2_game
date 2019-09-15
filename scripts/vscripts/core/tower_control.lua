@@ -1,0 +1,176 @@
+if not TowerControl then
+    TowerControl = class({})
+end
+
+function TowerControl:Init()
+    TowerControl.Links = {}
+    TowerControl.validTeams = {DOTA_TEAM_GOODGUYS, DOTA_TEAM_BADGUYS} --could be a map setting
+    for _,teamNumber in pairs(self.validTeams) do
+        TowerControl.Links[teamNumber] = {}
+    end
+    TowerControl.Debug = false -- Turn this off to stop spewing messages from this module
+end
+
+-- Naming convention is tower_lane[1-X]_tier[1-Y]_team[2-Z]
+-- The towers and ancient should have invulnerability link counts but no backdoor protection.
+function TowerControl:SpawnMapEntities()
+    local maxLanes = MapSettings:GetData("maxLanes")
+    local maxTier = MapSettings:GetData("maxTier")
+
+    self:print("Spawn Map Towers")
+    for laneNumber=1,maxLanes do
+
+        -- Store towers of each lane for each valid team
+        for _,teamNumber in pairs(self.validTeams) do
+            TowerControl.Links[teamNumber][laneNumber] = {}
+        end
+
+        for tierNumber=1,maxTier do
+            local tower_entities = Entities:FindAllByName("tower_lane"..laneNumber.."_tier"..tierNumber.."*")
+            if #tower_entities > 0 then
+                self:print("Found "..#tower_entities.." tower entities for lane "..laneNumber.." tier "..tierNumber)
+
+                -- Create for each team
+                for _,ent in pairs(tower_entities) do
+                    local position = ent:GetAbsOrigin()
+                    local name = ent:GetName()
+                    local angles = ent:GetAngles()
+                    local teamNumber = DOTA_TEAM_GOODGUYS
+                    if string.match(name, "team3") then
+                        teamNumber = DOTA_TEAM_BADGUYS
+                    end
+
+                    -- Create the unit
+                    BuildingHelper:SnapToGrid(4, position)
+                    local blockers = BuildingHelper:BlockGridSquares(4, 4, position)
+                    local tower = CreateUnitByName(name, position, false, nil, nil, teamNumber)
+                    tower:SetNeverMoveToClearSpace(true)
+                    tower:SetAngles(angles.x, angles.y, angles.z)
+                    tower:AddNewModifier(nil, nil, "modifier_disable_turning", {})
+                    tower.tier = tierNumber
+                    tower.lane = laneNumber
+                    tower.blockers = blockers
+                    tower.invulnCount = tierNumber-1
+
+                    -- radiant towers also have a pedestal that spawns below them
+                    local pedestalName = GetUnitKV(name, "PedestalModel")
+                    if pedestalName then
+                        BuildingHelper:CreatePedestalForBuilding(tower, name, position, pedestalName)
+                    end
+
+                    -- Store a direct reference to this tower tier
+                    TowerControl.Links[teamNumber][laneNumber][tierNumber] = tower
+
+                    -- Set invulnerability charges
+                    if tower.invulnCount > 0 then
+                        local invulnModifier = tower:AddNewModifier(tower, nil, "modifier_invulnerable", {})
+                        if invulnModifier then
+                            invulnModifier:SetStackCount(tower.invulnCount)
+                        end
+                    end
+
+                    self:print("\tSpawned "..name.." - Team ".. teamNumber.." - Invuln Count "..tower.invulnCount.." - Position: "..VectorString(position))
+
+                    -- Remove the Hammer entity
+                    UTIL_Remove(ent)
+                end
+            end
+        end
+    end
+
+    self:print("Spawning Map Ancients")
+    for _,teamNumber in pairs(self.validTeams) do
+        local ent = Entities:FindByName(nil, "ancient_team"..teamNumber)
+        if not ent then
+            self:print("ERROR: No ancient for team "..teamNumber)
+        else
+            local position = ent:GetAbsOrigin()
+            local name = ent:GetName()
+            local angles = ent:GetAngles()
+
+            local construction_size = BuildingHelper:GetConstructionSize(name)
+            local pathing_size = BuildingHelper:GetBlockPathingSize(name)
+            BuildingHelper:SnapToGrid(construction_size, position)
+            local blockers = BuildingHelper:BlockGridSquares(construction_size, pathing_size, position)
+            local ancient = CreateUnitByName("ancient_team"..teamNumber, position, false, nil, nil, teamNumber)
+            ancient:SetNeverMoveToClearSpace(true)
+            ancient:SetAngles(angles.x, angles.y, angles.z)
+            ancient.blockers = blockers
+            ancient.tier = maxTier -- Used to know when we should disable the invulnerability
+            ancient.winOnKill = true -- Used to set game winner when killed
+            ancient:SetHullRadius(320)
+
+            local invulnModifier = ancient:AddNewModifier(ancient, nil, "modifier_invulnerable", {})
+
+            -- Keep a reference
+            TowerControl.Links[teamNumber]['ancient'] = ancient
+
+            -- Remove the Hammer entity
+            UTIL_Remove(ent)
+        end
+    end
+end
+
+-- Perform actions when a tower is killed
+function TowerControl:OnTowerKilled(unit)
+    local teamNumber = unit:GetTeamNumber()
+    local towerTable = TowerControl.Links[teamNumber][unit.lane]
+
+    self:print("OnTowerKilled")
+
+    -- Remove this tower from the table
+    towerTable[unit.tier] = nil
+
+    -- Play effects
+    unit:AddNoDraw()
+    BuildingHelper:RemoveBuilding(unit)
+
+    -- Award Last Stand charge
+    local dur = 5.0
+    Notifications:BottomToTeam(teamNumber, {item="item_last_stand", duration=dur}) 
+    Notifications:BottomToTeam(teamNumber, {text="&nbsp;", continue=true})
+    Notifications:BottomToTeam(teamNumber, {text="#give_item_last_stand", continue=true})
+
+    local heroList = HeroList:GetAllHeroes()
+    for _,hero in pairs(heroList) do
+        if hero:GetTeamNumber() == teamNumber then
+            local itemName = "item_last_stand"
+            local lastStandItem = GetItemByName(hero, itemName)
+            if lastStandItem then
+                lastStandItem:SetCurrentCharges(lastStandItem:GetCurrentCharges() + 1)
+            else
+                hero:AddItemByName(itemName)
+            end
+        end
+    end
+
+    -- Go through the remaining towers in this lane and reduce their invulnerability count
+    for tier,tower in pairs(towerTable) do
+        tower.invulnCount = tower.invulnCount - 1
+        local invulnModifier = tower:FindModifierByName("modifier_invulnerable")
+        if invulnModifier and invulnModifier:GetStackCount() > 0 then
+            invulnModifier:SetStackCount(tower.invulnCount)
+            self:print("Set "..tower:GetUnitName().." invulnerability count to "..tower.invulnCount)
+        end
+
+        if tower.invulnCount == 0 then
+            tower:RemoveModifierByName("modifier_invulnerable")
+        end
+    end
+
+    -- Should we make the ancient vulnerable?
+    local ancient = TowerControl.Links[teamNumber]['ancient']
+    if IsValidEntity(ancient) and ancient:HasModifier("modifier_invulnerable") and unit.tier == ancient.tier then
+        self:print("Removed "..ancient:GetUnitName().." invulnerability ")
+        ancient:RemoveModifierByName("modifier_invulnerable")
+    end
+end
+
+-- self print while Debug flag is turned on
+function TowerControl:print(...)
+    if self.Debug then
+        print('[TowerControl] '.. ...)
+    end
+end
+
+if not TowerControl.Links then TowerControl:Init() end

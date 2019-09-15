@@ -1,0 +1,35 @@
+"xoya_citol_armor"
+{
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"             "ability_datadriven"
+    "AbilityTextureName"    "xoya"
+
+    "MaxLevel"    "3"
+
+    // AbilitySpecial  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"        "FIELD_INTEGER"
+            "armor_bonus"     "1 2 6"
+        }     
+    }
+
+    // Modifiers
+    //-------------------------------------------------------------------------------------------------------------
+    "Modifiers"
+    {
+        "modifier_xoya_citol_armor"
+        {
+            "Passive"    "1"
+            "IsHidden"   "0"
+        
+            "Properties"
+            {
+                "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%armor_bonus" // grab from AbilitySpecial
+            } 
+        }
+    }
+}

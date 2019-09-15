@@ -1,0 +1,60 @@
+"build_xoya_building_belek"
+{
+	// Ability Settings
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+    "AbilityCastPoint"              "0"
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"xoya"
+	"MaxLevel" 						"1"
+
+
+	// Building Helper Info
+	//-------------------------------------------------------------------------------------------------------------
+	"UnitName"						"xoya_building_belek"
+	"Building"						"1" //bool 
+	"AbilityCastRange"				"200"
+	"UpdateHealth"					"1" //bool
+	"Scale"							"0" //bool
+	"PlayerCanControl"				"1" //bool
+	"BuilderInside"					"1"
+	"ModelRotation"					"315.0"
+	"AbilityCooldown"				"0"
+
+	"BuildTime"						"5"
+	"AbilityGoldCost"				"150"
+	"MaxBuildingCount"				"1"
+
+
+	// Ability Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"build_time"			"5"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"gold_cost"				"150"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"lumber_cost"			"80"
+		}
+	}
+
+	// Scripts
+	//-------------------------------------------------------------------------------------------------------------
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"builder.lua"
+			"Function"		"Build"
+		}
+	}
+}

@@ -1,0 +1,60 @@
+"build_ling_building_lumber"
+{
+	// Ability Settings
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+    "AbilityCastPoint"              "0"
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"ling"
+	"MaxLevel" 						"1"
+
+
+	// Building Helper Info
+	//-------------------------------------------------------------------------------------------------------------
+	"UnitName"						"ling_building_lumber"
+	"Building"						"1" //bool 
+	"AbilityCastRange"				"200"
+	"UpdateHealth"					"1" //bool
+	"Scale"							"0" //bool
+	"PlayerCanControl"				"1" //bool
+	"BuilderInside"					"1"
+	"ModelRotation"					"45.0"
+	"AbilityCooldown"				"0"
+
+	"BuildTime"						"35.0"
+	"AbilityGoldCost"				"400"
+	"MaxBuildingCount"				"3"
+
+
+	// Ability Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"build_time"			"35"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"gold_cost"				"400"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"max_count"				"3"
+		}
+	}
+
+	// Scripts
+	//-------------------------------------------------------------------------------------------------------------
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"builder.lua"
+			"Function"		"Build"
+		}
+	}
+}

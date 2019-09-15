@@ -1,0 +1,9 @@
+// Add heroes on this list will be selectable
+// Integer value indicates the number of instances that hero can be chosen. If "-1" then instances is infinite.
+
+"CustomHeroList"
+{
+	"npc_dota_hero_keeper_of_the_light"			"-1"
+	"npc_dota_hero_nevermore"					"-1"
+	//"npc_dota_hero_arc_warden"					"-1"
+}

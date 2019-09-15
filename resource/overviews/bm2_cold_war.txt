@@ -1,0 +1,8 @@
+bm2_cold_war
+{
+	material materials/overviews/bm2_cold_war.vmat
+	pos_x -6656
+	pos_y 6656
+	scale 13.000
+}
+

@@ -1,0 +1,21 @@
+"AddonInfo"
+{
+  "TeamCount" "2"
+  "maps"      "bm2_legacy bm2_mexican_standoff"
+  "IsPlayable"  "1"
+
+  "bm2_legacy"
+  {
+          "MaxPlayers"                    "4"
+  }
+
+  "bm2_mexican_standoff"
+  {
+          "MaxPlayers"                    "2"
+  }
+
+   "bm2_cold_war"
+  {
+          "MaxPlayers"                    "8"
+  } 
+}

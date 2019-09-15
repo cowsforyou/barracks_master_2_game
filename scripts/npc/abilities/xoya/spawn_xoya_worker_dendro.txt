@@ -1,0 +1,49 @@
+"spawn_xoya_worker_dendro"
+{
+    "BaseClass"                     "ability_datadriven"
+    "AbilityTextureName"            "xoya"
+    "MaxLevel"                      "1"
+
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    "AbilityCastPoint"              "0"
+
+    "AbilityGoldCost"               "80"
+    "AbilityCooldown"               "25.0"
+
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "creep_count"           "1"
+        }
+
+        "02"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "gold_cost"             "80"
+        }
+
+        "03"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "max_count"             "10"
+        }
+    }
+
+    "OnSpellStart"
+    {
+        "FireSound"
+        {
+            "EffectName"            "Tree.CutDown"
+            "Target"                "CASTER"
+        }
+
+        "RunScript"
+        {
+            "ScriptFile"            "core/gathering.lua"
+            "Function"              "SpawnWorker"
+            "workerName"            "xoya_worker_dendro"
+        }
+    }
+}

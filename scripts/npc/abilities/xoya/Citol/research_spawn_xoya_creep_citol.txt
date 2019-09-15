@@ -1,0 +1,61 @@
+"research_spawn_xoya_creep_citol"
+{
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+    "BaseClass"                     "ability_datadriven"
+    "AbilityTextureName"            "xoya"
+    "MaxLevel"                      "6"
+
+    "AbilityChannelTime"            "0 10 10 20 30 40"
+    "AbilityGoldCost"               "0 100 150 250 350 500"
+    
+    "AbilitySpecial"
+    {
+        "01"
+      {
+        "var_type"              "FIELD_INTEGER"
+        "creep_count"           "2 4 6 8 10 12"
+      }
+      
+        "02"
+      {
+        "var_type"              "FIELD_INTEGER"
+        "research_time"         "0 10 10 20 30 40"
+      }
+
+        "03"
+      {
+        "var_type"              "FIELD_INTEGER"
+        "gold_cost"             "0 100 150 250 350 500"
+      }
+ 
+        "04"
+      {
+        "var_type"              "FIELD_INTEGER"
+        "lumber_cost"           "0 0 0 100 150 250"
+      }
+    }
+
+    "OnSpellStart"
+    {
+        "RunScript"
+        {
+            "ScriptFile"    "core/queue.lua"
+            "Function"      "EnqueueUnit"
+        }
+    }
+
+    "OnChannelSucceeded"
+    {
+        "RunScript"
+        {
+            "ScriptFile"    "core/queue.lua"
+            "Function"      "NextQueue"
+        }
+
+        "RunScript"
+        {
+            "ScriptFile"    "core/research.lua"
+            "Function"      "ResearchComplete"
+        }
+    }
+}

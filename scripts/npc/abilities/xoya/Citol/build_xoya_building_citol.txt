@@ -1,0 +1,55 @@
+"build_xoya_building_citol"
+{
+	// Ability Settings
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+    "AbilityCastPoint"              "0"
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"xoya"
+	"MaxLevel" 						"1"
+
+
+	// Building Helper Info
+	//-------------------------------------------------------------------------------------------------------------
+	"UnitName"						"xoya_building_citol"
+	"Building"						"1" //bool 
+	"AbilityCastRange"				"200"
+	"UpdateHealth"					"1" //bool
+	"Scale"							"0" //bool
+	"PlayerCanControl"				"1" //bool
+	"BuilderInside"					"1"
+	"ModelRotation"					"315.0"
+	"AbilityCooldown"				"0"
+
+	"BuildTime"						"25.0"
+	"AbilityGoldCost"				"250"
+	"MaxBuildingCount"				"1"
+
+
+	// Ability Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"build_time"			"25"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"gold_cost"				"250"
+		}
+	}
+
+	// Scripts
+	//-------------------------------------------------------------------------------------------------------------
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"builder.lua"
+			"Function"		"Build"
+		}
+	}
+}

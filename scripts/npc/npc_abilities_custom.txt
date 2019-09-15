@@ -1,0 +1,3915 @@
+"DOTAAbilities"
+{
+	"ability_building"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	
+		"Modifiers"
+		{
+			"modifier_building"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes"		"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"	
+				"States"
+				{
+					"MODIFIER_STATE_MAGIC_IMMUNE" "MODIFIER_STATE_VALUE_ENABLED" // Makes most abilities don't affect this. Use custom damage
+					"MODIFIER_STATE_ROOTED"		"MODIFIER_STATE_VALUE_ENABLED" // Prevents moving
+					//"MODIFIER_STATE_SPECIALLY_DENIABLE" "MODIFIER_STATE_VALUE_ENABLED" // Allows attacking own buildings
+					"MODIFIER_STATE_LOW_ATTACK_PRIORITY" "MODIFIER_STATE_VALUE_ENABLED" // Makes it a secondary target when A-clicking ground
+					"MODIFIER_STATE_NO_UNIT_COLLISION"	"MODIFIER_STATE_VALUE_ENABLED" // GridNav is blocked
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE"	"0.1"
+				}
+			}
+		}		
+	}
+	
+	"ability_tower"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	
+		"Modifiers"
+		{
+			"modifier_tower"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes"		"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"	
+				"States"
+				{
+					"MODIFIER_STATE_MAGIC_IMMUNE" "MODIFIER_STATE_VALUE_ENABLED" // Makes most abilities don't affect this. Use custom damage
+					"MODIFIER_STATE_ROOTED"		"MODIFIER_STATE_VALUE_ENABLED" // Prevents moving
+					"MODIFIER_STATE_SPECIALLY_DENIABLE" "MODIFIER_STATE_VALUE_ENABLED" // Allows attacking own buildings
+					"MODIFIER_STATE_LOW_ATTACK_PRIORITY" "MODIFIER_STATE_VALUE_ENABLED" // Makes it a secondary target when A-clicking ground
+					"MODIFIER_STATE_NO_UNIT_COLLISION"	"MODIFIER_STATE_VALUE_ENABLED" // GridNav is blocked
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE"	"0.1"
+				}
+			}
+		}		
+	}
+	"giant_tree_passive"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "furion_sprout"
+	    "MaxLevel"                      "1"
+	
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	
+	    "Modifiers"
+	    {
+	        "modifier_giant_tree_passive"
+	        {
+	            "Passive"           "1"
+	            "IsHidden"          "1"
+	
+	            "States"
+	            {
+	                "MODIFIER_STATE_INVULNERABLE"       "MODIFIER_STATE_VALUE_ENABLED"
+	                "MODIFIER_STATE_NO_HEALTH_BAR"      "MODIFIER_STATE_VALUE_ENABLED"
+	                "MODIFIER_STATE_NO_TEAM_MOVE_TO"    "MODIFIER_STATE_VALUE_ENABLED"
+	                "MODIFIER_STATE_NO_TEAM_SELECT"     "MODIFIER_STATE_VALUE_ENABLED"
+	            }
+	        }
+	    }
+	}
+	"dummy_tree"
+	{
+	    "BaseClass"         "ability_datadriven"
+	    "AbilityBehavior"   "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "Modifiers"
+	    {
+	        "dummy_modifier"
+	        {
+	            "Passive"   "1"
+	            "States"
+	            {
+	                "MODIFIER_STATE_NO_UNIT_COLLISION"  "MODIFIER_STATE_VALUE_ENABLED"
+	                "MODIFIER_STATE_NO_TEAM_MOVE_TO"    "MODIFIER_STATE_VALUE_ENABLED"
+	                "MODIFIER_STATE_NO_TEAM_SELECT" "MODIFIER_STATE_VALUE_ENABLED"
+	                "MODIFIER_STATE_COMMAND_RESTRICTED" "MODIFIER_STATE_VALUE_ENABLED"
+	                "MODIFIER_STATE_ATTACK_IMMUNE"  "MODIFIER_STATE_VALUE_ENABLED"
+	                "MODIFIER_STATE_INVULNERABLE"   "MODIFIER_STATE_VALUE_ENABLED"
+	                //"MODIFIER_STATE_FLYING"   "MODIFIER_STATE_VALUE_ENABLED"
+	                "MODIFIER_STATE_NOT_ON_MINIMAP" "MODIFIER_STATE_VALUE_ENABLED"
+	                "MODIFIER_STATE_UNSELECTABLE"   "MODIFIER_STATE_VALUE_ENABLED"
+	                //"MODIFIER_STATE_OUT_OF_GAME"  "MODIFIER_STATE_VALUE_ENABLED"
+	                "MODIFIER_STATE_NO_HEALTH_BAR"         "MODIFIER_STATE_VALUE_ENABLED"
+	            }
+	        }
+	    }
+	}
+	"gather_lumber"
+	{
+	    "BaseClass"                 "ability_datadriven"
+	    "AbilityTextureName"        "furion_sprout"
+	    "MaxLevel"                  "1"
+	
+	    "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/gathering.lua"
+	            "Function"      "GatherLumber"
+	        }
+	    }
+	}
+	"ability_swapper_empty"
+	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"	
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"rubick_empty1"
+		"MaxLevel" 						"0"
+	
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+	
+		}
+	
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+	
+	}
+	"ability_swapper_ling_back"
+	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"	
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"ability_swapper_ling_back"
+		"MaxLevel" 						"1"
+	
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+	
+		}
+	
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"widgets/ability_swapper/ability_list_ling.lua"
+				"Function"		"OnSpellStart"
+			}
+		}
+	}
+	"ability_swapper_ling_next"
+	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"	
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"ability_swapper_ling_next"
+		"MaxLevel" 						"1"
+	
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+	
+		}
+	
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"widgets/ability_swapper/ability_list_ling.lua"
+				"Function"		"OnSpellStart"
+			}
+		}
+	}
+	"ability_swapper_xoya_back"
+	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"	
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"ability_swapper_xoya_back"
+		"MaxLevel" 						"1"
+	
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+	
+		}
+	
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"widgets/ability_swapper/ability_list_xoya.lua"
+				"Function"		"OnSpellStart"
+			}
+		}
+	}
+	"ability_swapper_xoya_next"
+	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"	
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"ability_swapper_xoya_next"
+		"MaxLevel" 						"1"
+	
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+	
+		}
+	
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"widgets/ability_swapper/ability_list_xoya.lua"
+				"Function"		"OnSpellStart"
+			}
+		}
+	}
+	"spawn_ling_worker_nelum"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "ling"
+	    "MaxLevel"                      "1"
+	
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"
+	
+	    "AbilityGoldCost"               "80"
+	    "AbilityCooldown"               "25.0"
+	
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "creep_count"           "1"
+	        }
+	
+	        "02"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "gold_cost"             "80"
+	        }
+	
+	        "03"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "max_count"             "10"
+	        }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "FireSound"
+	        {
+	            "EffectName"            "Tree.CutDown"
+	            "Target"                "CASTER"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"            "core/gathering.lua"
+	            "Function"              "SpawnWorker"
+	            "workerName"            "ling_worker_nelum"
+	        }
+	    }
+	}
+	"build_ling_building_catlan"
+	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityCastPoint"              "0"
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"ling"
+		"MaxLevel" 						"1"
+	
+	
+		// Building Helper Info
+		//-------------------------------------------------------------------------------------------------------------
+		"UnitName"						"ling_building_catlan"
+		"Building"						"1" //bool 
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+		"BuilderInside"					"1"
+		"ModelRotation"					"45.0"
+		"AbilityCooldown"				"0"
+	
+		"BuildTime"						"7.0"
+		"AbilityGoldCost"				"200"
+		"MaxBuildingCount"				"1"
+	
+	
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"7"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"200"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"100"
+			}
+		}
+	
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	"build_ling_building_catlan_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"ling"
+		"MaxLevel" 						"0"
+	}
+	"research_spawn_ling_creep_catlan"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "ling"
+	    "MaxLevel"                      "3"
+	
+	    "AbilityChannelTime"            "0 30 40"
+	    "AbilityGoldCost"               "0 500 700"
+	    
+	    "AbilitySpecial"
+	    {
+	        "01"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "creep_count"           "1 2 3"
+	      }
+	      
+	        "02"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "research_time"         "0 30 40"
+	      }
+	
+	        "03"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "gold_cost"             "0 500 700"
+	      }
+	 
+	        "04"
+	      {
+	        "var_type"              "FIELD_INTEGzER"
+	        "lumber_cost"           "0 250 350"
+	      }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "EnqueueUnit"
+	        }
+	    }
+	
+	    "OnChannelSucceeded"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "NextQueue"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/research.lua"
+	            "Function"      "ResearchComplete"
+	        }
+	    }
+	}
+	// Autocast creep spawner spell; starts casting as soon as the building is fully constructed
+	"spawn_ling_creep_catlan"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "ling"
+	    "MaxLevel"                      "3"
+	
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"
+	
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"				"FIELD_INTEGER"
+	            "creep_count"			"1 2 3"
+	        }
+	    }
+	
+	    // Run this script every time the spell is used
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/spawner_ability.lua"
+	            "Function"      "SpawnerAbility"
+	            "creepName"		"ling_creep_catlan"
+	        }
+	    }
+	
+	    // Modifiers are buffs/debuffs, usually associated with abilities
+	    "Modifiers"
+	    {
+	    	"modifier_thinker"
+	    	{
+	    		"Passive"			"1" // start activated
+	    		"IsHidden"			"1" // hide the visual buff icon
+	
+	    		// run this Think() script every 0.25 seconds
+				"ThinkInterval" 	"0.25"
+			    "OnIntervalThink"
+				{
+					"RunScript"
+			        {
+			            "ScriptFile"    "core/spawner_ability.lua"
+			            "Function"      "Think"
+			        }
+				}
+	   	    }
+	    }
+	}
+	"build_ling_building_clorn"
+	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityCastPoint"              "0"
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"ling"
+		"MaxLevel" 						"1"
+	
+	
+		// Building Helper Info
+		//-------------------------------------------------------------------------------------------------------------
+		"UnitName"						"ling_building_clorn"
+		"Building"						"1" //bool 
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+		"BuilderInside"					"1"
+		"ModelRotation"					"45.0"
+		"AbilityCooldown"				"0"
+	
+		"BuildTime"						"25.0"
+		"AbilityGoldCost"				"250"
+		"MaxBuildingCount"				"1"
+	
+	
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"25"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"250"
+			}
+		}
+	
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	"ling_clorn_armor"
+	{
+	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "BaseClass"             "ability_datadriven"
+	    "AbilityTextureName"    "ling"
+	
+	    "MaxLevel"    "3"
+	
+	    // AbilitySpecial  
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"        "FIELD_INTEGER"
+	            "armor_bonus"     "1 2 6"
+	        }     
+	    }
+	
+	    // Modifiers
+	    //-------------------------------------------------------------------------------------------------------------
+	    "Modifiers"
+	    {
+	        "modifier_ling_clorn_armor"
+	        {
+	            "Passive"    "1"
+	            "IsHidden"   "0"
+	        
+	            "Properties"
+	            {
+	                "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%armor_bonus" // grab from AbilitySpecial
+	            } 
+	        }
+	    }
+	}
+	"ling_clorn_armor_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "ling"
+	    "MaxLevel"                      "0"
+	}
+	"ling_clorn_damage"
+	{
+	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "BaseClass"             "ability_datadriven"
+	    "AbilityTextureName"    "ling"
+	
+	    "MaxLevel"    "3"
+	
+	    // AbilitySpecial  
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"          "FIELD_INTEGER"
+	            "damage_bonus"      "3 10 30"
+	        }     
+	    }
+	
+	    // Modifiers
+	    //-------------------------------------------------------------------------------------------------------------
+	    "Modifiers"
+	    {
+	        "modifier_ling_clorn_damage"
+	        {
+	            "Passive"    "1"
+	            "IsHidden"   "0"
+	        
+	            "Properties"
+	            {
+	                "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"      "%damage_bonus"
+	            } 
+	        }
+	    }
+	}
+	"ling_clorn_damage_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "ling"
+	    "MaxLevel"                      "0"
+	}
+	"research_ling_clorn_armor"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "ling"
+	    "MaxLevel"                      "3"
+	
+	    "AbilityChannelTime"            "30 45 80"
+	    "AbilityGoldCost"               "100 200 450"
+	    
+	    "AbilitySpecial"
+	    {
+	        "01"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "armor_bonus"           "1 2 6"
+	      }
+	      
+	        "02"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "research_time"         "30 45 80"
+	      }
+	
+	        "03"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "gold_cost"             "100 200 450"
+	      }
+	 
+	        "04"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "lumber_cost"           "0 0 125"
+	      }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "EnqueueUnit"
+	        }
+	    }
+	
+	    "OnChannelSucceeded"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "NextQueue"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/research.lua"
+	            "Function"      "ResearchComplete"
+	        }
+	    }
+	}
+	"research_ling_clorn_damage"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "ling"
+	    "MaxLevel"                      "3"
+	
+	    "AbilityChannelTime"            "35 55 80"
+	    "AbilityGoldCost"               "130 320 550"
+	
+	    "AbilitySpecial"
+	    {
+	        "01"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "damage_bonus"          "3 10 30"
+	      }
+	      
+	        "02"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "research_time"         "35 55 80"
+	      }
+	
+	        "03"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "gold_cost"             "130 320 550"
+	      }
+	 
+	        "04"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "lumber_cost"           "0 0 350"
+	      }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "EnqueueUnit"
+	        }
+	    }
+	
+	    "OnChannelSucceeded"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "NextQueue"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/research.lua"
+	            "Function"      "ResearchComplete"
+	        }
+	    }
+	}
+	"research_spawn_ling_creep_clorn"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "ling"
+	    "MaxLevel"                      "6"
+	
+	    "AbilityChannelTime"            "0 10 10 20 30 40"
+	    "AbilityGoldCost"               "0 100 150 250 350 500"
+	    
+	    "AbilitySpecial"
+	    {
+	        "01"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "creep_count"           "1 2 3 4 5 6"
+	      }
+	      
+	        "02"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "research_time"         "0 10 10 20 30 40"
+	      }
+	
+	        "03"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "gold_cost"             "0 100 150 250 350 500"
+	      }
+	 
+	        "04"
+	      {
+	        "var_type"              "FIELD_INTEGzER"
+	        "lumber_cost"           "0 0 0 100 150 250"
+	      }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "EnqueueUnit"
+	        }
+	    }
+	
+	    "OnChannelSucceeded"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "NextQueue"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/research.lua"
+	            "Function"      "ResearchComplete"
+	        }
+	    }
+	}
+	// Autocast creep spawner spell; starts casting as soon as the building is fully constructed
+	"spawn_ling_creep_clorn"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "ling"
+	    "MaxLevel"                      "6"
+	
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"
+	
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"				"FIELD_INTEGER"
+	            "creep_count"			"1 2 3 4 5 6"
+	        }
+	    }
+	
+	    // Run this script every time the spell is used
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/spawner_ability.lua"
+	            "Function"      "SpawnerAbility"
+	            "creepName"		"ling_creep_clorn"
+	        }
+	    }
+	
+	    // Modifiers are buffs/debuffs, usually associated with abilities
+	    "Modifiers"
+	    {
+	    	"modifier_thinker"
+	    	{
+	    		"Passive"			"1" // start activated
+	    		"IsHidden"			"1" // hide the visual buff icon
+	
+	    		// run this Think() script every 0.25 seconds
+				"ThinkInterval" 	"0.25"
+			    "OnIntervalThink"
+				{
+					"RunScript"
+			        {
+			            "ScriptFile"    "core/spawner_ability.lua"
+			            "Function"      "Think"
+			        }
+				}
+	   	    }
+	    }
+	}
+	"build_ling_building_elixir"
+	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityCastPoint"              "0"
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"ling"
+		"MaxLevel" 						"1"
+	
+	
+		// Building Helper Info
+		//-------------------------------------------------------------------------------------------------------------
+		"UnitName"						"ling_building_elixir"
+		"Building"						"1" //bool 
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+		"BuilderInside"					"1"
+		"ModelRotation"					"45.0"
+		"AbilityCooldown"				"0"
+	
+		"BuildTime"						"7.0"
+		"AbilityGoldCost"				"200"
+		"MaxBuildingCount"				"1"
+	
+	
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"7"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"200"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"100"
+			}
+		}
+	
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	"build_ling_building_gnorgil"
+	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityCastPoint"              "0"
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"ling"
+		"MaxLevel" 						"1"
+	
+	
+		// Building Helper Info
+		//-------------------------------------------------------------------------------------------------------------
+		"UnitName"						"ling_building_gnorgil"
+		"Building"						"1" //bool 
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+		"BuilderInside"					"1"
+		"ModelRotation"					"45.0"
+		"AbilityCooldown"				"0"
+	
+		"BuildTime"						"7.0"
+		"AbilityGoldCost"				"200"
+		"MaxBuildingCount"				"1"
+	
+	
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"7"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"200"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"100"
+			}
+		}
+	
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	"build_ling_building_gnorgil_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"ling"
+		"MaxLevel" 						"0"
+	}
+	"research_spawn_ling_creep_gnorgil"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "ling"
+	    "MaxLevel"                      "3"
+	
+	    "AbilityChannelTime"            "0 30 40"
+	    "AbilityGoldCost"               "0 500 700"
+	    
+	    "AbilitySpecial"
+	    {
+	        "01"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "creep_count"           "1 2 3"
+	      }
+	      
+	        "02"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "research_time"         "0 30 40"
+	      }
+	
+	        "03"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "gold_cost"             "0 500 700"
+	      }
+	 
+	        "04"
+	      {
+	        "var_type"              "FIELD_INTEGzER"
+	        "lumber_cost"           "0 250 350"
+	      }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "EnqueueUnit"
+	        }
+	    }
+	
+	    "OnChannelSucceeded"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "NextQueue"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/research.lua"
+	            "Function"      "ResearchComplete"
+	        }
+	    }
+	}
+	// Autocast creep spawner spell; starts casting as soon as the building is fully constructed
+	"spawn_ling_creep_gnorgil"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "ling"
+	    "MaxLevel"                      "3"
+	
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"
+	
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"				"FIELD_INTEGER"
+	            "creep_count"			"1 2 3"
+	        }
+	    }
+	
+	    // Run this script every time the spell is used
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/spawner_ability.lua"
+	            "Function"      "SpawnerAbility"
+	            "creepName"		"ling_creep_gnorgil"
+	        }
+	    }
+	
+	    // Modifiers are buffs/debuffs, usually associated with abilities
+	    "Modifiers"
+	    {
+	    	"modifier_thinker"
+	    	{
+	    		"Passive"			"1" // start activated
+	    		"IsHidden"			"1" // hide the visual buff icon
+	
+	    		// run this Think() script every 0.25 seconds
+				"ThinkInterval" 	"0.25"
+			    "OnIntervalThink"
+				{
+					"RunScript"
+			        {
+			            "ScriptFile"    "core/spawner_ability.lua"
+			            "Function"      "Think"
+			        }
+				}
+	   	    }
+	    }
+	}
+	"build_ling_building_lumber"
+	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityCastPoint"              "0"
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"ling"
+		"MaxLevel" 						"1"
+	
+	
+		// Building Helper Info
+		//-------------------------------------------------------------------------------------------------------------
+		"UnitName"						"ling_building_lumber"
+		"Building"						"1" //bool 
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+		"BuilderInside"					"1"
+		"ModelRotation"					"45.0"
+		"AbilityCooldown"				"0"
+	
+		"BuildTime"						"35.0"
+		"AbilityGoldCost"				"400"
+		"MaxBuildingCount"				"3"
+	
+	
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"35"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"400"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"max_count"				"3"
+			}
+		}
+	
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	"ling_lumber_mango"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"   
+	    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+	    "AbilityTextureName"            "ling"
+	
+	    "MaxLevel"                      "1"
+	
+	    // Casting
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityCastRange"              "400"
+	    "AbilityCastPoint"              "0.0"
+	    "AbilityCooldown"               "70.0"
+	    "AbilityManaCost"               "0"   
+	
+	    // Special  
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "mana_amount"           "150"
+	        }
+	        "02"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "range_tooltip"         "400"
+	        }        
+	
+	    }
+	    
+	    // OnSpellStart
+	    //-------------------------------------------------------------------------------------------------------------
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "Target"        "TARGET"
+	            "ScriptFile"    "spells/addmana.lua"
+	            "Function"      "AddMana"
+	            "mana_amount"   "%mana_amount"
+	        }
+	
+	        "FireSound"
+	        {
+	            "Target"        "CASTER"
+	            "EffectName"    "DOTA_Item.Mango.Activate"
+	        }
+	
+	        "FireEffect"
+	        {
+	            "Target"            "TARGET"
+	            "EffectName"        "particles/items3_fx/mango_active.vpcf"
+	            "EffectAttachType"  "follow_origin"
+	        }
+	    }
+	}
+	"ling_lumber_mango_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"ling"
+		"MaxLevel" 						"0"
+	}
+	"build_ling_building_orthi"
+	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityCastPoint"              "0"
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"ling"
+		"MaxLevel" 						"1"
+	
+	
+		// Building Helper Info
+		//-------------------------------------------------------------------------------------------------------------
+		"UnitName"						"ling_building_orthi"
+		"Building"						"1" //bool 
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+		"BuilderInside"					"1"
+		"ModelRotation"					"45.0"
+		"AbilityCooldown"				"0"
+	
+		"BuildTime"						"25.0"
+		"AbilityGoldCost"				"250"
+		"MaxBuildingCount"				"1"
+	
+	
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"25"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"250"
+			}
+		}
+	
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	"ling_orthi_armor"
+	{
+	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "BaseClass"             "ability_datadriven"
+	    "AbilityTextureName"    "ling"
+	
+	    "MaxLevel"    "3"
+	
+	    // AbilitySpecial  
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"        "FIELD_INTEGER"
+	            "armor_bonus"     "1 2 6"
+	        }     
+	    }
+	
+	    // Modifiers
+	    //-------------------------------------------------------------------------------------------------------------
+	    "Modifiers"
+	    {
+	        "modifier_ling_orthi_armor"
+	        {
+	            "Passive"    "1"
+	            "IsHidden"   "0"
+	        
+	            "Properties"
+	            {
+	                "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%armor_bonus" // grab from AbilitySpecial
+	            } 
+	        }
+	    }
+	}
+	"ling_orthi_armor_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "ling"
+	    "MaxLevel"                      "0"
+	}
+	"ling_orthi_damage"
+	{
+	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "BaseClass"             "ability_datadriven"
+	    "AbilityTextureName"    "ling"
+	
+	    "MaxLevel"    "3"
+	
+	    // AbilitySpecial  
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"          "FIELD_INTEGER"
+	            "damage_bonus"      "3 10 30"
+	        }     
+	    }
+	
+	    // Modifiers
+	    //-------------------------------------------------------------------------------------------------------------
+	    "Modifiers"
+	    {
+	        "modifier_ling_orthi_damage"
+	        {
+	            "Passive"    "1"
+	            "IsHidden"   "0"
+	        
+	            "Properties"
+	            {
+	                "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"      "%damage_bonus"
+	            } 
+	        }
+	    }
+	}
+	"ling_orthi_damage_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "ling"
+	    "MaxLevel"                      "0"
+	}
+	"research_ling_orthi_armor"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "ling"
+	    "MaxLevel"                      "3"
+	
+	    "AbilityChannelTime"            "30 45 80"
+	    "AbilityGoldCost"               "100 200 450"
+	    
+	    "AbilitySpecial"
+	    {
+	        "01"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "armor_bonus"           "1 2 6"
+	      }
+	      
+	        "02"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "research_time"         "30 45 80"
+	      }
+	
+	        "03"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "gold_cost"             "100 200 450"
+	      }
+	 
+	        "04"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "lumber_cost"           "0 0 125"
+	      }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "EnqueueUnit"
+	        }
+	    }
+	
+	    "OnChannelSucceeded"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "NextQueue"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/research.lua"
+	            "Function"      "ResearchComplete"
+	        }
+	    }
+	}
+	"research_ling_orthi_damage"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "ling"
+	    "MaxLevel"                      "3"
+	
+	    "AbilityChannelTime"            "35 55 80"
+	    "AbilityGoldCost"               "130 320 550"
+	
+	    "AbilitySpecial"
+	    {
+	        "01"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "damage_bonus"          "3 10 30"
+	      }
+	      
+	        "02"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "research_time"         "35 55 80"
+	      }
+	
+	        "03"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "gold_cost"             "130 320 550"
+	      }
+	 
+	        "04"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "lumber_cost"           "0 0 350"
+	      }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "EnqueueUnit"
+	        }
+	    }
+	
+	    "OnChannelSucceeded"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "NextQueue"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/research.lua"
+	            "Function"      "ResearchComplete"
+	        }
+	    }
+	}
+	"research_spawn_ling_creep_orthi"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "ling"
+	    "MaxLevel"                      "4"
+	
+	    "AbilityChannelTime"            "0 10 25 45"
+	    "AbilityGoldCost"               "0 150 300 500"
+	    
+	    "AbilitySpecial"
+	    {
+	        "01"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "creep_count"           "1 2 3 4"
+	      }
+	      
+	        "02"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "research_time"         "0 15 25 45"
+	      }
+	
+	        "03"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "gold_cost"             "0 150 300 500"
+	      }
+	 
+	        "04"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "lumber_cost"           "0 0 100 200"
+	      }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "EnqueueUnit"
+	        }
+	    }
+	
+	    "OnChannelSucceeded"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "NextQueue"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/research.lua"
+	            "Function"      "ResearchComplete"
+	        }
+	    }
+	}
+	// Autocast creep spawner spell; starts casting as soon as the building is fully constructed
+	"spawn_ling_creep_orthi"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "ling"
+	    "MaxLevel"                      "4"
+	
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"
+	
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"				"FIELD_INTEGER"
+	            "creep_count"			"1 2 3 4"
+	        }
+	    }
+	
+	    // Run this script every time the spell is used
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/spawner_ability.lua"
+	            "Function"      "SpawnerAbility"
+	            "creepName"		"ling_creep_orthi"
+	        }
+	    }
+	
+	    // Modifiers are buffs/debuffs, usually associated with abilities
+	    "Modifiers"
+	    {
+	    	"modifier_thinker"
+	    	{
+	    		"Passive"			"1" // start activated
+	    		"IsHidden"			"1" // hide the visual buff icon
+	
+	    		// run this Think() script every 0.25 seconds
+				"ThinkInterval" 	"0.25"
+			    "OnIntervalThink"
+				{
+					"RunScript"
+			        {
+			            "ScriptFile"    "core/spawner_ability.lua"
+			            "Function"      "Think"
+			        }
+				}
+	   	    }
+	    }
+	}
+	"build_ling_building_purifier"
+	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityCastPoint"              "0"
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"ling"
+		"MaxLevel" 						"1"
+	
+	
+		// Building Helper Info
+		//-------------------------------------------------------------------------------------------------------------
+		"UnitName"						"ling_building_purifier"
+		"Building"						"1" //bool 
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+		"BuilderInside"					"1"
+		"ModelRotation"					"45.0"
+		"AbilityCooldown"				"0"
+	
+		"BuildTime"						"7.0"
+		"AbilityGoldCost"				"200"
+		"MaxBuildingCount"				"1"
+	
+	
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"7"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"200"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"100"
+			}
+		}
+	
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	"build_ling_building_purifier_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"ling"
+		"MaxLevel" 						"0"
+	}
+	"build_ling_building_runic"
+	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityCastPoint"              "0"
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"ling"
+		"MaxLevel" 						"1"
+	
+	
+		// Building Helper Info
+		//-------------------------------------------------------------------------------------------------------------
+		"UnitName"						"ling_building_runic"
+		"Building"						"1" //bool 
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+		"BuilderInside"					"1"
+		"ModelRotation"					"45.0"
+		"AbilityCooldown"				"0"
+	
+		"BuildTime"						"7.0"
+		"AbilityGoldCost"				"200"
+		"MaxBuildingCount"				"1"
+	
+	
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"7"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"200"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"100"
+			}
+		}
+	
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	"build_ling_building_runic_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"ling"
+		"MaxLevel" 						"0"
+	}
+	"build_ling_building_temple"
+	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityCastPoint"              "0"
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"ling"
+		"MaxLevel" 						"1"
+	
+	
+		// Building Helper Info
+		//-------------------------------------------------------------------------------------------------------------
+		"UnitName"						"ling_building_temple"
+		"Building"						"1" //bool 
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+		"BuilderInside"					"1"
+		"ModelRotation"					"135.0"
+		"AbilityCooldown"				"0"
+	
+		"BuildTime"						"7.0"
+		"AbilityGoldCost"				"200"
+		"MaxBuildingCount"				"1"
+	
+	
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"7"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"200"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"100"
+			}
+		}
+	
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	"build_ling_building_temple_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"ling"
+		"MaxLevel" 						"0"
+	}
+	"build_ling_building_thiki"
+	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityCastPoint"              "0"
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"ling"
+		"MaxLevel" 						"1"
+	
+	
+		// Building Helper Info
+		//-------------------------------------------------------------------------------------------------------------
+		"UnitName"						"ling_building_thiki"
+		"Building"						"1" //bool 
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+		"BuilderInside"					"1"
+		"ModelRotation"					"45.0"
+		"AbilityCooldown"				"0"
+	
+		"BuildTime"						"7.0"
+		"AbilityGoldCost"				"200"
+		"MaxBuildingCount"				"1"
+	
+	
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"7"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"200"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"100"
+			}
+		}
+	
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	"build_ling_building_thiki_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"ling"
+		"MaxLevel" 						"0"
+	}
+	"research_spawn_ling_creep_thiki"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "ling"
+	    "MaxLevel"                      "2"
+	
+	    "AbilityChannelTime"            "0 40"
+	    "AbilityGoldCost"               "0 700"
+	    
+	    "AbilitySpecial"
+	    {
+	        "01"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "creep_count"           "1 2"
+	      }
+	      
+	        "02"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "research_time"         "0 40"
+	      }
+	
+	        "03"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "gold_cost"             "0 700"
+	      }
+	 
+	        "04"
+	      {
+	        "var_type"              "FIELD_INTEGzER"
+	        "lumber_cost"           "0 350"
+	      }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "EnqueueUnit"
+	        }
+	    }
+	
+	    "OnChannelSucceeded"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "NextQueue"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/research.lua"
+	            "Function"      "ResearchComplete"
+	        }
+	    }
+	}
+	// Autocast creep spawner spell; starts casting as soon as the building is fully constructed
+	"spawn_ling_creep_thiki"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "ling"
+	    "MaxLevel"                      "2"
+	
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"
+	
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"				"FIELD_INTEGER"
+	            "creep_count"			"1 2"
+	        }
+	    }
+	
+	    // Run this script every time the spell is used
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/spawner_ability.lua"
+	            "Function"      "SpawnerAbility"
+	            "creepName"		"ling_creep_thiki"
+	        }
+	    }
+	
+	    // Modifiers are buffs/debuffs, usually associated with abilities
+	    "Modifiers"
+	    {
+	    	"modifier_thinker"
+	    	{
+	    		"Passive"			"1" // start activated
+	    		"IsHidden"			"1" // hide the visual buff icon
+	
+	    		// run this Think() script every 0.25 seconds
+				"ThinkInterval" 	"0.25"
+			    "OnIntervalThink"
+				{
+					"RunScript"
+			        {
+			            "ScriptFile"    "core/spawner_ability.lua"
+			            "Function"      "Think"
+			        }
+				}
+	   	    }
+	    }
+	}
+	"build_xoya_building_arrow"
+	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityCastPoint"              "0"
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"xoya"
+		"MaxLevel" 						"1"
+	
+	
+		// Building Helper Info
+		//-------------------------------------------------------------------------------------------------------------
+		"UnitName"						"xoya_building_arrow"
+		"Building"						"1" //bool 
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+		"BuilderInside"					"1"
+		"ModelRotation"					"135.0"
+		"AbilityCooldown"				"0"
+	
+		"BuildTime"						"5"
+		"AbilityGoldCost"				"20"
+		"MaxBuildingCount"				"1"
+	
+	
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"20"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"100"
+			}
+		}
+	
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	"build_xoya_building_arrow_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"xoya"
+		"MaxLevel" 						"0"
+	}
+	"build_xoya_building_belek"
+	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityCastPoint"              "0"
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"xoya"
+		"MaxLevel" 						"1"
+	
+	
+		// Building Helper Info
+		//-------------------------------------------------------------------------------------------------------------
+		"UnitName"						"xoya_building_belek"
+		"Building"						"1" //bool 
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+		"BuilderInside"					"1"
+		"ModelRotation"					"315.0"
+		"AbilityCooldown"				"0"
+	
+		"BuildTime"						"5"
+		"AbilityGoldCost"				"150"
+		"MaxBuildingCount"				"1"
+	
+	
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"150"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"80"
+			}
+		}
+	
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	"build_xoya_building_skeleton"
+	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityCastPoint"              "0"
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"xoya"
+		"MaxLevel" 						"1"
+	
+	
+		// Building Helper Info
+		//-------------------------------------------------------------------------------------------------------------
+		"UnitName"						"xoya_building_skeleton"
+		"Building"						"1" //bool 
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+		"BuilderInside"					"1"
+		"ModelRotation"					"135.0"
+		"AbilityCooldown"				"0"
+	
+		"BuildTime"						"5"
+		"AbilityGoldCost"				"20"
+		"MaxBuildingCount"				"1"
+	
+	
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"20"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"100"
+			}
+		}
+	
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	"build_xoya_building_skeleton_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"xoya"
+		"MaxLevel" 						"0"
+	}
+	// Autocast creep spawner spell; starts casting as soon as the building is fully constructed
+	"spawn_xoya_creep_skeleton"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "xoya"
+	    "MaxLevel"                      "1"
+	
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"
+	
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"				"FIELD_INTEGER"
+	            "creep_count"			"1"
+	        }
+	    }
+	
+	    // Run this script every time the spell is used
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/spawner_ability.lua"
+	            "Function"      "SpawnerAbility"
+	            "creepName"		"xoya_creep_skeleton"
+	        }
+	    }
+	
+	    // Modifiers are buffs/debuffs, usually associated with abilities
+	    "Modifiers"
+	    {
+	    	"modifier_thinker"
+	    	{
+	    		"Passive"			"1" // start activated
+	    		"IsHidden"			"1" // hide the visual buff icon
+	
+	    		// run this Think() script every 0.25 seconds
+				"ThinkInterval" 	"0.25"
+			    "OnIntervalThink"
+				{
+					"RunScript"
+			        {
+			            "ScriptFile"    "core/spawner_ability.lua"
+			            "Function"      "Think"
+			        }
+				}
+	   	    }
+	    }
+	}
+	"spawn_xoya_worker_dendro"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "xoya"
+	    "MaxLevel"                      "1"
+	
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"
+	
+	    "AbilityGoldCost"               "80"
+	    "AbilityCooldown"               "25.0"
+	
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "creep_count"           "1"
+	        }
+	
+	        "02"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "gold_cost"             "80"
+	        }
+	
+	        "03"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "max_count"             "10"
+	        }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "FireSound"
+	        {
+	            "EffectName"            "Tree.CutDown"
+	            "Target"                "CASTER"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"            "core/gathering.lua"
+	            "Function"              "SpawnWorker"
+	            "workerName"            "xoya_worker_dendro"
+	        }
+	    }
+	}
+	// Autocast creep spawner spell; starts casting as soon as the building is fully constructed
+	"spawn_xoya_creep_belek"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "xoya"
+	    "MaxLevel"                      "5"
+	
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"
+	
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"				"FIELD_INTEGER"
+	            "creep_count"			"1 4 6 8 10"
+	        }
+	    }
+	
+	    // Run this script every time the spell is used
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/spawner_ability.lua"
+	            "Function"      "SpawnerAbility"
+	            "creepName"		"xoya_creep_belek"
+	        }
+	    }
+	
+	    // Modifiers are buffs/debuffs, usually associated with abilities
+	    "Modifiers"
+	    {
+	    	"modifier_thinker"
+	    	{
+	    		"Passive"			"1" // start activated
+	    		"IsHidden"			"1" // hide the visual buff icon
+	
+	    		// run this Think() script every 0.25 seconds
+				"ThinkInterval" 	"0.25"
+			    "OnIntervalThink"
+				{
+					"RunScript"
+			        {
+			            "ScriptFile"    "core/spawner_ability.lua"
+			            "Function"      "Think"
+			        }
+				}
+	   	    }
+	    }
+	}
+	"build_xoya_building_catlix"
+	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityCastPoint"              "0"
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"xoya"
+		"MaxLevel" 						"1"
+	
+	
+		// Building Helper Info
+		//-------------------------------------------------------------------------------------------------------------
+		"UnitName"						"xoya_building_catlix"
+		"Building"						"1" //bool 
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+		"BuilderInside"					"1"
+		"ModelRotation"					"45.0"
+		"AbilityCooldown"				"0"
+	
+		"BuildTime"						"5.0"
+		"AbilityGoldCost"				"200"
+		"MaxBuildingCount"				"1"
+	
+	
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"%BuildTime"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"%AbilityGoldCost"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"100"
+			}
+		}
+	
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	"build_xoya_building_catlix_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"xoya"
+		"MaxLevel" 						"0"
+	}
+	"research_spawn_xoya_creep_catlix"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "ling"
+	    "MaxLevel"                      "3"
+	
+	    "AbilityChannelTime"            "0 30 40"
+	    "AbilityGoldCost"               "0 500 700"
+	    
+	    "AbilitySpecial"
+	    {
+	        "01"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "creep_count"           "1 2 3"
+	      }
+	      
+	        "02"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "research_time"         "0 30 40"
+	      }
+	
+	        "03"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "gold_cost"             "0 500 700"
+	      }
+	 
+	        "04"
+	      {
+	        "var_type"              "FIELD_INTEGzER"
+	        "lumber_cost"           "0 250 350"
+	      }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "EnqueueUnit"
+	        }
+	    }
+	
+	    "OnChannelSucceeded"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "NextQueue"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/research.lua"
+	            "Function"      "ResearchComplete"
+	        }
+	    }
+	}
+	// Autocast creep spawner spell; starts casting as soon as the building is fully constructed
+	"spawn_xoya_creep_catlix"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "xoya"
+	    "MaxLevel"                      "3"
+	
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"
+	
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"				"FIELD_INTEGER"
+	            "creep_count"			"1 2 3"
+	        }
+	    }
+	
+	    // Run this script every time the spell is used
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/spawner_ability.lua"
+	            "Function"      "SpawnerAbility"
+	            "creepName"		"xoya_creep_catlix"
+	        }
+	    }
+	
+	    // Modifiers are buffs/debuffs, usually associated with abilities
+	    "Modifiers"
+	    {
+	    	"modifier_thinker"
+	    	{
+	    		"Passive"			"1" // start activated
+	    		"IsHidden"			"1" // hide the visual buff icon
+	
+	    		// run this Think() script every 0.25 seconds
+				"ThinkInterval" 	"0.25"
+			    "OnIntervalThink"
+				{
+					"RunScript"
+			        {
+			            "ScriptFile"    "core/spawner_ability.lua"
+			            "Function"      "Think"
+			        }
+				}
+	   	    }
+	    }
+	}
+	"build_xoya_building_citol"
+	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityCastPoint"              "0"
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"xoya"
+		"MaxLevel" 						"1"
+	
+	
+		// Building Helper Info
+		//-------------------------------------------------------------------------------------------------------------
+		"UnitName"						"xoya_building_citol"
+		"Building"						"1" //bool 
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+		"BuilderInside"					"1"
+		"ModelRotation"					"315.0"
+		"AbilityCooldown"				"0"
+	
+		"BuildTime"						"25.0"
+		"AbilityGoldCost"				"250"
+		"MaxBuildingCount"				"1"
+	
+	
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"25"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"250"
+			}
+		}
+	
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	"research_spawn_xoya_creep_citol"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "xoya"
+	    "MaxLevel"                      "6"
+	
+	    "AbilityChannelTime"            "0 10 10 20 30 40"
+	    "AbilityGoldCost"               "0 100 150 250 350 500"
+	    
+	    "AbilitySpecial"
+	    {
+	        "01"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "creep_count"           "2 4 6 8 10 12"
+	      }
+	      
+	        "02"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "research_time"         "0 10 10 20 30 40"
+	      }
+	
+	        "03"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "gold_cost"             "0 100 150 250 350 500"
+	      }
+	 
+	        "04"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "lumber_cost"           "0 0 0 100 150 250"
+	      }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "EnqueueUnit"
+	        }
+	    }
+	
+	    "OnChannelSucceeded"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "NextQueue"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/research.lua"
+	            "Function"      "ResearchComplete"
+	        }
+	    }
+	}
+	"research_xoya_citol_armor"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "xoya"
+	    "MaxLevel"                      "3"
+	
+	    "AbilityChannelTime"            "30 45 80"
+	    "AbilityGoldCost"               "100 200 450"
+	    
+	    "AbilitySpecial"
+	    {
+	        "01"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "armor_bonus"           "1 2 6"
+	      }
+	      
+	        "02"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "research_time"         "30 45 80"
+	      }
+	
+	        "03"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "gold_cost"             "100 200 450"
+	      }
+	 
+	        "04"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "lumber_cost"           "0 0 125"
+	      }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "EnqueueUnit"
+	        }
+	    }
+	
+	    "OnChannelSucceeded"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "NextQueue"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/research.lua"
+	            "Function"      "ResearchComplete"
+	        }
+	    }
+	}
+	"research_xoya_citol_damage"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "xoya"
+	    "MaxLevel"                      "3"
+	
+	    "AbilityChannelTime"            "35 55 80"
+	    "AbilityGoldCost"               "130 320 550"
+	
+	    "AbilitySpecial"
+	    {
+	        "01"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "damage_bonus"          "3 10 30"
+	      }
+	      
+	        "02"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "research_time"         "35 55 80"
+	      }
+	
+	        "03"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "gold_cost"             "130 320 550"
+	      }
+	 
+	        "04"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "lumber_cost"           "0 0 350"
+	      }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "EnqueueUnit"
+	        }
+	    }
+	
+	    "OnChannelSucceeded"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "NextQueue"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/research.lua"
+	            "Function"      "ResearchComplete"
+	        }
+	    }
+	}
+	// Autocast creep spawner spell; starts casting as soon as the building is fully constructed
+	"spawn_xoya_creep_citol"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "xoya"
+	    "MaxLevel"                      "6"
+	
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"
+	
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"				"FIELD_INTEGER"
+	            "creep_count"			"2 4 6 8 10 12"
+	        }
+	    }
+	
+	    // Run this script every time the spell is used
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/spawner_ability.lua"
+	            "Function"      "SpawnerAbility"
+	            "creepName"		"xoya_creep_citol"
+	        }
+	    }
+	
+	    // Modifiers are buffs/debuffs, usually associated with abilities
+	    "Modifiers"
+	    {
+	    	"modifier_thinker"
+	    	{
+	    		"Passive"			"1" // start activated
+	    		"IsHidden"			"1" // hide the visual buff icon
+	
+	    		// run this Think() script every 0.25 seconds
+				"ThinkInterval" 	"0.25"
+			    "OnIntervalThink"
+				{
+					"RunScript"
+			        {
+			            "ScriptFile"    "core/spawner_ability.lua"
+			            "Function"      "Think"
+			        }
+				}
+	   	    }
+	    }
+	}
+	"xoya_citol_armor"
+	{
+	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "BaseClass"             "ability_datadriven"
+	    "AbilityTextureName"    "xoya"
+	
+	    "MaxLevel"    "3"
+	
+	    // AbilitySpecial  
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"        "FIELD_INTEGER"
+	            "armor_bonus"     "1 2 6"
+	        }     
+	    }
+	
+	    // Modifiers
+	    //-------------------------------------------------------------------------------------------------------------
+	    "Modifiers"
+	    {
+	        "modifier_xoya_citol_armor"
+	        {
+	            "Passive"    "1"
+	            "IsHidden"   "0"
+	        
+	            "Properties"
+	            {
+	                "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%armor_bonus" // grab from AbilitySpecial
+	            } 
+	        }
+	    }
+	}
+	"xoya_citol_armor_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "xoya"
+	    "MaxLevel"                      "0"
+	}
+	"xoya_citol_damage"
+	{
+	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "BaseClass"             "ability_datadriven"
+	    "AbilityTextureName"    "xoya"
+	
+	    "MaxLevel"    "3"
+	
+	    // AbilitySpecial  
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"          "FIELD_INTEGER"
+	            "damage_bonus"      "3 10 30"
+	        }     
+	    }
+	
+	    // Modifiers
+	    //-------------------------------------------------------------------------------------------------------------
+	    "Modifiers"
+	    {
+	        "modifier_xoya_citol_damage"
+	        {
+	            "Passive"    "1"
+	            "IsHidden"   "0"
+	        
+	            "Properties"
+	            {
+	                "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"      "%damage_bonus"
+	            } 
+	        }
+	    }
+	}
+	"xoya_citol_damage_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "xoya"
+	    "MaxLevel"                      "0"
+	}
+	"build_xoya_building_library"
+	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityCastPoint"              "0"
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"xoya"
+		"MaxLevel" 						"1"
+	
+	
+		// Building Helper Info
+		//-------------------------------------------------------------------------------------------------------------
+		"UnitName"						"xoya_building_library"
+		"Building"						"1" //bool 
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+		"BuilderInside"					"1"
+		"ModelRotation"					"135.0"
+		"AbilityCooldown"				"0"
+	
+		"BuildTime"						"5"
+		"AbilityGoldCost"				"20"
+		"MaxBuildingCount"				"1"
+	
+	
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"20"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"100"
+			}
+		}
+	
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	"build_xoya_building_library_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"xoya"
+		"MaxLevel" 						"0"
+	}
+	"build_xoya_building_lumber"
+	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityCastPoint"              "0"
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"xoya"
+		"MaxLevel" 						"1"
+	
+	
+		// Building Helper Info
+		//-------------------------------------------------------------------------------------------------------------
+		"UnitName"						"xoya_building_lumber"
+		"Building"						"1" //bool 
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+		"BuilderInside"					"1"
+		"ModelRotation"					"135.0"
+		"AbilityCooldown"				"0"
+	
+		"BuildTime"						"35"
+		"AbilityGoldCost"				"400"
+		"MaxBuildingCount"				"3"
+	
+	
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"35"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"400"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"max_count"				"3"
+			}
+		}
+	
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	"xoya_lumber_mango"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"   
+	    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+	    "AbilityTextureName"            "xoya"
+	
+	    "MaxLevel"                      "1"
+	
+	    // Casting
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityCastRange"              "400"
+	    "AbilityCastPoint"              "0.0"
+	    "AbilityCooldown"               "70.0"
+	    "AbilityManaCost"               "0"   
+	
+	    // Special  
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "mana_amount"           "150"
+	        }
+	        "02"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "range_tooltip"         "400"
+	        }        
+	
+	    }
+	    
+	    // OnSpellStart
+	    //-------------------------------------------------------------------------------------------------------------
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "Target"        "TARGET"
+	            "ScriptFile"    "spells/addmana.lua"
+	            "Function"      "AddMana"
+	            "mana_amount"   "%mana_amount"
+	        }
+	
+	        "FireSound"
+	        {
+	            "Target"        "CASTER"
+	            "EffectName"    "DOTA_Item.Mango.Activate"
+	        }
+	
+	        "FireEffect"
+	        {
+	            "Target"            "TARGET"
+	            "EffectName"        "particles/items3_fx/mango_active.vpcf"
+	            "EffectAttachType"  "follow_origin"
+	        }
+	    }
+	}
+	"xoya_lumber_mango_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"xoya"
+		"MaxLevel" 						"0"
+	}
+	"build_xoya_building_monolith"
+	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityCastPoint"              "0"
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"xoya"
+		"MaxLevel" 						"1"
+	
+	
+		// Building Helper Info
+		//-------------------------------------------------------------------------------------------------------------
+		"UnitName"						"xoya_building_monolith"
+		"Building"						"1" //bool 
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+		"BuilderInside"					"1"
+		"ModelRotation"					"135.0"
+		"AbilityCooldown"				"0"
+	
+		"BuildTime"						"5"
+		"AbilityGoldCost"				"20"
+		"MaxBuildingCount"				"1"
+	
+	
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"20"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"100"
+			}
+		}
+	
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	"build_xoya_building_monolith_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"xoya"
+		"MaxLevel" 						"0"
+	}
+	"build_xoya_building_phe"
+	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityCastPoint"              "0"
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"xoya"
+		"MaxLevel" 						"1"
+	
+	
+		// Building Helper Info
+		//-------------------------------------------------------------------------------------------------------------
+		"UnitName"						"xoya_building_phe"
+		"Building"						"1" //bool 
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+		"BuilderInside"					"1"
+		"ModelRotation"					"315.0"
+		"AbilityCooldown"				"0"
+	
+		"BuildTime"						"25.0"
+		"AbilityGoldCost"				"250"
+		"MaxBuildingCount"				"1"
+	
+	
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"25"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"250"
+			}
+		}
+	
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	"research_spawn_xoya_creep_phe"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "xoya"
+	    "MaxLevel"                      "4"
+	
+	    "AbilityChannelTime"            "0 10 25 45"
+	    "AbilityGoldCost"               "0 150 300 500"
+	    
+	    "AbilitySpecial"
+	    {
+	        "01"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "creep_count"           "1 2 3 4"
+	      }
+	      
+	        "02"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "research_time"         "0 15 25 45"
+	      }
+	
+	        "03"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "gold_cost"             "0 150 300 500"
+	      }
+	 
+	        "04"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "lumber_cost"           "0 0 100 200"
+	      }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "EnqueueUnit"
+	        }
+	    }
+	
+	    "OnChannelSucceeded"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "NextQueue"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/research.lua"
+	            "Function"      "ResearchComplete"
+	        }
+	    }
+	}
+	"research_xoya_phe_armor"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "xoya"
+	    "MaxLevel"                      "3"
+	
+	    "AbilityChannelTime"            "30 45 80"
+	    "AbilityGoldCost"               "100 200 500"
+	    
+	    "AbilitySpecial"
+	    {
+	        "01"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "armor_bonus"           "2 4 8"
+	      }
+	      
+	        "02"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "research_time"         "30 45 80"
+	      }
+	
+	        "03"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "gold_cost"             "100 200 500"
+	      }
+	 
+	        "04"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "lumber_cost"           "0 0 200"
+	      }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "EnqueueUnit"
+	        }
+	    }
+	
+	    "OnChannelSucceeded"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "NextQueue"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/research.lua"
+	            "Function"      "ResearchComplete"
+	        }
+	    }
+	}
+	"research_xoya_phe_damage"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "xoya"
+	    "MaxLevel"                      "3"
+	
+	    "AbilityChannelTime"            "40 55 80"
+	    "AbilityGoldCost"               "150 380 550"
+	
+	    "AbilitySpecial"
+	    {
+	        "01"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "damage_bonus"          "8 20 55"
+	      }
+	      
+	        "02"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "research_time"         "40 55 80"
+	      }
+	
+	        "03"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "gold_cost"             "150 380 550"
+	      }
+	 
+	        "04"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "lumber_cost"           "0 0 400"
+	      }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "EnqueueUnit"
+	        }
+	    }
+	
+	    "OnChannelSucceeded"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "NextQueue"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/research.lua"
+	            "Function"      "ResearchComplete"
+	        }
+	    }
+	}
+	// Autocast creep spawner spell; starts casting as soon as the building is fully constructed
+	"spawn_xoya_creep_phe"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "xoya"
+	    "MaxLevel"                      "4"
+	
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"
+	
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"				"FIELD_INTEGER"
+	            "creep_count"			"1 2 3 4"
+	        }
+	    }
+	
+	    // Run this script every time the spell is used
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/spawner_ability.lua"
+	            "Function"      "SpawnerAbility"
+	            "creepName"		"xoya_creep_phe"
+	        }
+	    }
+	
+	    // Modifiers are buffs/debuffs, usually associated with abilities
+	    "Modifiers"
+	    {
+	    	"modifier_thinker"
+	    	{
+	    		"Passive"			"1" // start activated
+	    		"IsHidden"			"1" // hide the visual buff icon
+	
+	    		// run this Think() script every 0.25 seconds
+				"ThinkInterval" 	"0.25"
+			    "OnIntervalThink"
+				{
+					"RunScript"
+			        {
+			            "ScriptFile"    "core/spawner_ability.lua"
+			            "Function"      "Think"
+			        }
+				}
+	   	    }
+	    }
+	}
+	"xoya_phe_armor"
+	{
+	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "BaseClass"             "ability_datadriven"
+	    "AbilityTextureName"    "xoya"
+	
+	    "MaxLevel"    "3"
+	
+	    // AbilitySpecial  
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"        "FIELD_INTEGER"
+	            "armor_bonus"     "2 4 8"
+	        }     
+	    }
+	
+	    // Modifiers
+	    //-------------------------------------------------------------------------------------------------------------
+	    "Modifiers"
+	    {
+	        "modifier_xoya_phe_armor"
+	        {
+	            "Passive"    "1"
+	            "IsHidden"   "0"
+	        
+	            "Properties"
+	            {
+	                "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%armor_bonus" // grab from AbilitySpecial
+	            } 
+	        }
+	    }
+	}
+	"xoya_phe_armor_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "xoya"
+	    "MaxLevel"                      "0"
+	}
+	"xoya_phe_damage"
+	{
+	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "BaseClass"             "ability_datadriven"
+	    "AbilityTextureName"    "xoya"
+	
+	    "MaxLevel"    "3"
+	
+	    // AbilitySpecial  
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"          "FIELD_INTEGER"
+	            "damage_bonus"      "8 20 55"
+	        }     
+	    }
+	
+	    // Modifiers
+	    //-------------------------------------------------------------------------------------------------------------
+	    "Modifiers"
+	    {
+	        "modifier_xoya_phe_damage"
+	        {
+	            "Passive"    "1"
+	            "IsHidden"   "0"
+	        
+	            "Properties"
+	            {
+	                "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"      "%damage_bonus"
+	            } 
+	        }
+	    }
+	}
+	"xoya_phe_damage_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "xoya"
+	    "MaxLevel"                      "0"
+	}
+	"build_xoya_building_purifier"
+	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityCastPoint"              "0"
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"xoya"
+		"MaxLevel" 						"1"
+	
+	
+		// Building Helper Info
+		//-------------------------------------------------------------------------------------------------------------
+		"UnitName"						"xoya_building_purifier"
+		"Building"						"1" //bool 
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+		"BuilderInside"					"1"
+		"ModelRotation"					"135.0"
+		"AbilityCooldown"				"0"
+	
+		"BuildTime"						"5"
+		"AbilityGoldCost"				"20"
+		"MaxBuildingCount"				"1"
+	
+	
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"20"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"100"
+			}
+		}
+	
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	"build_xoya_building_purifier_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"xoya"
+		"MaxLevel" 						"0"
+	}
+	"build_xoya_building_warthan"
+	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityCastPoint"              "0"
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"xoya"
+		"MaxLevel" 						"1"
+	
+	
+		// Building Helper Info
+		//-------------------------------------------------------------------------------------------------------------
+		"UnitName"						"xoya_building_warthan"
+		"Building"						"1" //bool 
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+		"BuilderInside"					"1"
+		"ModelRotation"					"135.0"
+		"AbilityCooldown"				"0"
+	
+		"BuildTime"						"5.0"
+		"AbilityGoldCost"				"200"
+		"MaxBuildingCount"				"1"
+	
+	
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"200"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"100"
+			}
+		}
+	
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	"build_xoya_building_warthan_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"xoya"
+		"MaxLevel" 						"0"
+	}
+	"research_spawn_xoya_creep_warthan"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "xoya"
+	    "MaxLevel"                      "3"
+	
+	    "AbilityChannelTime"            "0 30 40"
+	    "AbilityGoldCost"               "0 500 700"
+	    
+	    "AbilitySpecial"
+	    {
+	        "01"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "creep_count"           "1 2 3"
+	      }
+	      
+	        "02"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "research_time"         "0 30 40"
+	      }
+	
+	        "03"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "gold_cost"             "0 500 700"
+	      }
+	 
+	        "04"
+	      {
+	        "var_type"              "FIELD_INTEGzER"
+	        "lumber_cost"           "0 250 350"
+	      }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "EnqueueUnit"
+	        }
+	    }
+	
+	    "OnChannelSucceeded"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "NextQueue"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/research.lua"
+	            "Function"      "ResearchComplete"
+	        }
+	    }
+	}
+	// Autocast creep spawner spell; starts casting as soon as the building is fully constructed
+	"spawn_xoya_creep_warthan"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "xoya"
+	    "MaxLevel"                      "3"
+	
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"
+	
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"				"FIELD_INTEGER"
+	            "creep_count"			"1 2 3"
+	        }
+	    }
+	
+	    // Run this script every time the spell is used
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/spawner_ability.lua"
+	            "Function"      "SpawnerAbility"
+	            "creepName"		"xoya_creep_warthan"
+	        }
+	    }
+	
+	    // Modifiers are buffs/debuffs, usually associated with abilities
+	    "Modifiers"
+	    {
+	    	"modifier_thinker"
+	    	{
+	    		"Passive"			"1" // start activated
+	    		"IsHidden"			"1" // hide the visual buff icon
+	
+	    		// run this Think() script every 0.25 seconds
+				"ThinkInterval" 	"0.25"
+			    "OnIntervalThink"
+				{
+					"RunScript"
+			        {
+			            "ScriptFile"    "core/spawner_ability.lua"
+			            "Function"      "Think"
+			        }
+				}
+	   	    }
+	    }
+	}
+	"build_xoya_building_zavartu"
+	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityCastPoint"              "0"
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"xoya"
+		"MaxLevel" 						"1"
+	
+	
+		// Building Helper Info
+		//-------------------------------------------------------------------------------------------------------------
+		"UnitName"						"xoya_building_zavartu"
+		"Building"						"1" //bool 
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+		"BuilderInside"					"1"
+		"ModelRotation"					"135.0"
+		"AbilityCooldown"				"0"
+	
+		"BuildTime"						"5"
+		"AbilityGoldCost"				"20"
+		"MaxBuildingCount"				"1"
+	
+	
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"20"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"100"
+			}
+		}
+	
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
+		}
+	}
+	"build_xoya_building_zavartu_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"xoya"
+		"MaxLevel" 						"0"
+	}
+	"research_spawn_xoya_creep_zavartu"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "ling"
+	    "MaxLevel"                      "2"
+	
+	    "AbilityChannelTime"            "0 40"
+	    "AbilityGoldCost"               "0 700"
+	    
+	    "AbilitySpecial"
+	    {
+	        "01"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "creep_count"           "1 2"
+	      }
+	      
+	        "02"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "research_time"         "0 40"
+	      }
+	
+	        "03"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "gold_cost"             "0 700"
+	      }
+	 
+	        "04"
+	      {
+	        "var_type"              "FIELD_INTEGzER"
+	        "lumber_cost"           "0 350"
+	      }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "EnqueueUnit"
+	        }
+	    }
+	
+	    "OnChannelSucceeded"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "NextQueue"
+	        }
+	
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/research.lua"
+	            "Function"      "ResearchComplete"
+	        }
+	    }
+	}
+	// Autocast creep spawner spell; starts casting as soon as the building is fully constructed
+	"spawn_xoya_creep_zavartu"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "xoya"
+	    "MaxLevel"                      "2"
+	
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"
+	
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"				"FIELD_INTEGER"
+	            "creep_count"			"1 2"
+	        }
+	    }
+	
+	    // Run this script every time the spell is used
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/spawner_ability.lua"
+	            "Function"      "SpawnerAbility"
+	            "creepName"		"xoya_creep_zavartu"
+	        }
+	    }
+	
+	    // Modifiers are buffs/debuffs, usually associated with abilities
+	    "Modifiers"
+	    {
+	    	"modifier_thinker"
+	    	{
+	    		"Passive"			"1" // start activated
+	    		"IsHidden"			"1" // hide the visual buff icon
+	
+	    		// run this Think() script every 0.25 seconds
+				"ThinkInterval" 	"0.25"
+			    "OnIntervalThink"
+				{
+					"RunScript"
+			        {
+			            "ScriptFile"    "core/spawner_ability.lua"
+			            "Function"      "Think"
+			        }
+				}
+	   	    }
+	    }
+	}
+}

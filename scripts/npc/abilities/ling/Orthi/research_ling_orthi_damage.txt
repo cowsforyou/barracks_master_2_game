@@ -1,0 +1,61 @@
+"research_ling_orthi_damage"
+{
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+    "BaseClass"                     "ability_datadriven"
+    "AbilityTextureName"            "ling"
+    "MaxLevel"                      "3"
+
+    "AbilityChannelTime"            "35 55 80"
+    "AbilityGoldCost"               "130 320 550"
+
+    "AbilitySpecial"
+    {
+        "01"
+      {
+        "var_type"              "FIELD_INTEGER"
+        "damage_bonus"          "3 10 30"
+      }
+      
+        "02"
+      {
+        "var_type"              "FIELD_INTEGER"
+        "research_time"         "35 55 80"
+      }
+
+        "03"
+      {
+        "var_type"              "FIELD_INTEGER"
+        "gold_cost"             "130 320 550"
+      }
+ 
+        "04"
+      {
+        "var_type"              "FIELD_INTEGER"
+        "lumber_cost"           "0 0 350"
+      }
+    }
+
+    "OnSpellStart"
+    {
+        "RunScript"
+        {
+            "ScriptFile"    "core/queue.lua"
+            "Function"      "EnqueueUnit"
+        }
+    }
+
+    "OnChannelSucceeded"
+    {
+        "RunScript"
+        {
+            "ScriptFile"    "core/queue.lua"
+            "Function"      "NextQueue"
+        }
+
+        "RunScript"
+        {
+            "ScriptFile"    "core/research.lua"
+            "Function"      "ResearchComplete"
+        }
+    }
+}

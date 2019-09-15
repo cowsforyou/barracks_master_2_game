@@ -1,0 +1,35 @@
+"ling_orthi_damage"
+{
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"             "ability_datadriven"
+    "AbilityTextureName"    "ling"
+
+    "MaxLevel"    "3"
+
+    // AbilitySpecial  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"          "FIELD_INTEGER"
+            "damage_bonus"      "3 10 30"
+        }     
+    }
+
+    // Modifiers
+    //-------------------------------------------------------------------------------------------------------------
+    "Modifiers"
+    {
+        "modifier_ling_orthi_damage"
+        {
+            "Passive"    "1"
+            "IsHidden"   "0"
+        
+            "Properties"
+            {
+                "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"      "%damage_bonus"
+            } 
+        }
+    }
+}

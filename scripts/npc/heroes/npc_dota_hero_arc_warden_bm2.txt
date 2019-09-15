@@ -1,0 +1,60 @@
+"npc_dota_hero_arc_warden_bm2"
+{
+	"override_hero"				"npc_dota_hero_arc_warden"
+
+	// Health & Mana
+	//-------------------------------------------------------------------------------------------------------------
+	"StatusHealth"					"100"			// Base health.
+	"StatusHealthRegen"				"0.5"
+	"StatusMana"					"300"
+	"StatusManaRegen"				"1.0"	
+
+	// Damage
+	//-------------------------------------------------------------------------------------------------------------
+	"AttackDamageMin"				"25"
+	"AttackDamageMax"				"35"	
+	"AttackDamageType"				"DAMAGE_TYPE_ArmorPhysical"
+	"AttackRange"					"600"
+	"AttackRate"                	"1.2"
+
+	// Armor
+	//-------------------------------------------------------------------------------------------------------------
+	"ArmorPhysical"					"2"
+	"MagicalResistance"				"25"
+
+	// Attributes
+	//-------------------------------------------------------------------------------------------------------------
+	"AttributePrimary"				"DOTA_ATTRIBUTE_STRENGTH"
+	"AttributeBaseStrength"			"0"
+	"AttributeStrengthGain"			"0"
+	"AttributeBaseIntelligence"		"0"
+	"AttributeIntelligenceGain"		"0"
+	"AttributeBaseAgility"			"0"
+	"AttributeAgilityGain"			"0"
+
+    // Bounty
+    //----------------------------------------------------------------
+    "BountyXP"                  "0"        // Experience earn.
+    "BountyGoldMin"             "60"        // Gold earned min.
+    "BountyGoldMax"             "60"        // Gold earned max.
+   
+	// Movement
+	//-------------------------------------------------------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"400"
+	"MovementTurnRate"			"0.500000"
+
+	// Abilities
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityLayout"				"6"
+	"Ability1" 					"build_myro_building_1"
+	"Ability2" 					"build_myro_building_2"
+	"Ability3" 					"build_myro_building_3"
+	"Ability4"					"build_myro_building_4"
+	"Ability5"					"build_myro_building_5"
+	"Ability6" 					"ability_swapper_myro_next"
+	"Ability7"					""
+	"Ability8"					""
+	"Ability9"					""
+	"Ability10"					""
+}

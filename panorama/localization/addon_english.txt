@@ -1,0 +1,33 @@
+"addon"
+{
+	//Notifications
+	"alch_gold"										"Alchemist was feeling rich and donated gold to you. Amount received: "
+	"give_item_last_stand"							"You have been awarded an extra charge of Last Stand"
+
+	//Error Messages
+	"error_invalid_build_position"					"Cannot Build In Lane or Water"
+	"error_invalid_build_position_2"				"Invalid Build Position"	
+	"error_max_build_count"							"Max Building Count Reached"
+	"error_max_worker_count"						"Max Worker Count Reached"
+	"error_not_enough_gold"							"Insufficent Gold"
+	"error_not_enough_lumber"						"Insufficent Lumber"
+	"error_queue_full"								"The Queue is Full"
+
+	"Unassigned"      								"Unassigned Team"
+	"Spectator"       								"Spectator Team"
+	"Neutrals"        								"Neutral Team"
+	"NoTeam"          								"No Team"
+
+	"DOTA_GoodGuys"   								"Radiant"
+	"DOTA_BadGuys"    								"Dire"
+	"DOTA_Custom1"    								"Pink Dragon"
+	"DOTA_Custom2"    								"Orange Dog"
+	"DOTA_Custom3"    								"Blue Rooster"
+	"DOTA_Custom4"    								"Green Ram"
+	"DOTA_Custom5"    								"Brown Rat"
+	"DOTA_Custom6"    								"Cyan Boar"
+	"DOTA_Custom7"    								"Olive Snake"
+	"DOTA_Custom8"    								"Purple Horse"
+	
+	"addonname"										"Barracks Master 2"
+}

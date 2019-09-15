@@ -1,0 +1,8 @@
+bm2_legacy
+{
+	material materials/overviews/bm2_legacy.vmat
+	pos_x -8192
+	pos_y 256
+	scale 8.250
+}
+
