@@ -18,6 +18,7 @@
 	"error_not_enough_gold"							"Insufficent Gold"
 	"error_not_enough_lumber"						"Insufficent Lumber"
 	"error_queue_full"								"The Queue is Full"
+	"error_must_use_worker"							"Use Worker to Harvest"
 
 	"Unassigned"      								"Unassigned Team"
 	"Spectator"       								"Spectator Team"
