@@ -1,5 +1,10 @@
 "addon"
 {
+	"custom_end_screen_legend_cs"					"CS"
+	"custom_end_screen_legend_networth"				"NET WORTH"
+	"custom_end_screen_legend_gold"					"GOLD"
+	"custom_end_screen_legend_lumber"				"LUMBER"
+
 	//Notifications
 	"alch_gold"										"Alchemist was feeling rich and donated gold to you. Amount received: "
 	"give_item_last_stand"							"You have been awarded an extra charge of Last Stand"
