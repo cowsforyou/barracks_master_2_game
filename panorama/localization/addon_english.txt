@@ -1,5 +1,6 @@
 "addon"
 {
+	//Scoreboard Labels
 	"custom_end_screen_legend_cs"					"CS"
 	"custom_end_screen_legend_networth"				"NET WORTH"
 	"custom_end_screen_legend_gold"					"GOLD"
