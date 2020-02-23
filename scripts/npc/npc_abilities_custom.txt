@@ -3510,7 +3510,7 @@
 		"Scale"							"0" //bool
 		"PlayerCanControl"				"1" //bool
 		"BuilderInside"					"1"
-		"ModelRotation"					"135.0"
+		"ModelRotation"					"315.0"
 		"AbilityCooldown"				"0"
 	
 		"BuildTime"						"5"

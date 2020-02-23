@@ -3,8 +3,8 @@
     // General
     //----------------------------------------------------------------
     "BaseClass"                 "npc_dota_creature"  
-    "Model"                     "models/props_structures/bad_column_torch.vmdl" 
-    "ModelScale"                "2.0"
+    "Model"                     "models/props_structures/bad_tower_destruction.vmdl" 
+    "ModelScale"                "0.7"
     //"PedestalModel"             "models/props_structures/radiant_tower_base001.vmdl"
     //"PedestalModelScale"        "0.7"
     "ConsideredHero"            "1"
@@ -98,7 +98,7 @@
 
     // Status
     //----------------------------------------------------------------
-    "HealthBarOffset"           "180"
+    "HealthBarOffset"           "260"
     "StatusHealth"              "200"     // Base health.
     "StatusHealthRegen"         "0"     // Health regeneration rate.
     "StatusMana"                "0"     // Base mana.

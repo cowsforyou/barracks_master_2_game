@@ -5345,7 +5345,7 @@
 	
 	    // Status
 	    //----------------------------------------------------------------
-	    "HealthBarOffset"           "180"
+	    "HealthBarOffset"           "200"
 	    "StatusHealth"              "200"     // Base health.
 	    "StatusHealthRegen"         "0"     // Health regeneration rate.
 	    "StatusMana"                "0"     // Base mana.
@@ -5375,8 +5375,8 @@
 	    // General
 	    //----------------------------------------------------------------
 	    "BaseClass"                 "npc_dota_creature"  
-	    "Model"                     "models/props_structures/cave_well_04.vmdl" 
-	    "ModelScale"                "0.88"
+	    "Model"                     "models/props_structures/tower_upgrade/tower_upgrade.vmdl" 
+	    "ModelScale"                "0.68"
 	    //"PedestalModel"             "models/props_structures/radiant_tower_base001.vmdl"
 	    //"PedestalModelScale"        "0.7"
 	    "ConsideredHero"            "1"
@@ -5400,8 +5400,8 @@
 	
 	    // Building Helper Info
 	    //----------------------------------------------------------------   
-	    "ConstructionSize"          "4"
-	    "BlockPathingSize"          "4"
+	    "ConstructionSize"          "5"
+	    "BlockPathingSize"          "5"
 	
 	
 	    // Abilities
@@ -5470,7 +5470,7 @@
 	
 	    // Status
 	    //----------------------------------------------------------------
-	    "HealthBarOffset"           "180"
+	    "HealthBarOffset"           "200"
 	    "StatusHealth"              "200"     // Base health.
 	    "StatusHealthRegen"         "0"     // Health regeneration rate.
 	    "StatusMana"                "0"     // Base mana.
@@ -5624,8 +5624,8 @@
 	    // General
 	    //----------------------------------------------------------------
 	    "BaseClass"                 "npc_dota_creature"  
-	    "Model"                     "models/props_structures/bad_column_torch.vmdl" 
-	    "ModelScale"                "2.0"
+	    "Model"                     "models/props_structures/bad_tower_destruction.vmdl" 
+	    "ModelScale"                "0.7"
 	    //"PedestalModel"             "models/props_structures/radiant_tower_base001.vmdl"
 	    //"PedestalModelScale"        "0.7"
 	    "ConsideredHero"            "1"
@@ -5719,7 +5719,7 @@
 	
 	    // Status
 	    //----------------------------------------------------------------
-	    "HealthBarOffset"           "180"
+	    "HealthBarOffset"           "260"
 	    "StatusHealth"              "200"     // Base health.
 	    "StatusHealthRegen"         "0"     // Health regeneration rate.
 	    "StatusMana"                "0"     // Base mana.
