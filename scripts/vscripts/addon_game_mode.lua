@@ -57,8 +57,7 @@ require('widgets/emit_sound_on_client')
 -- For lumber cost display on pano
 --require('widgets/ability_values_overlay') DEPRECATED
 
--- For in-game scoreboard
-require('scoreboard_updater')
+
 
 ------------------------------------------------------
 --                PRECACHE BLOCK

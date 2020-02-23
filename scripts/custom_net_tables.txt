@@ -7,6 +7,5 @@
         "construction_size",
         "building_settings",
         "containers_lua",
-        "scores",
     ]
 } 
