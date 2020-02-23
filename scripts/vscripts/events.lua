@@ -19,6 +19,7 @@ function GameMode:OnGameRulesStateChange(keys)
   local newState = GameRules:State_Get()
   if newState == DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP then
     print("Game State: Custom Game Setup")
+    ScoreboardUpdater:Setup()
   elseif newState == DOTA_GAMERULES_STATE_HERO_SELECTION then
     
     print("Game State: Hero Selection")
