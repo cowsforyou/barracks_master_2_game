@@ -14,7 +14,7 @@
 	"error_invalid_build_position"					"Cannot Build In Lane or Water"
 	"error_invalid_build_position_2"				"Invalid Build Position"	
 	"error_max_build_count"							"Max Building Count Reached"
-	"error_max_worker_count"						"Max Worker Count Reached"
+	"error_max_worker_count_reached"				"Max Worker Count Reached"
 	"error_not_enough_gold"							"Insufficent Gold"
 	"error_not_enough_lumber"						"Insufficent Lumber"
 	"error_queue_full"								"The Queue is Full"
