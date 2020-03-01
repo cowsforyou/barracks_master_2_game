@@ -3,7 +3,7 @@
     // General
     //----------------------------------------------------------------
     "BaseClass"                 "npc_dota_creature"  
-    "Model"                     "models/props_structures/statue_mystical001.vmdl" 
+    "Model"                     "models/zavartu.vmdl" 
     "ModelScale"                "0.9"
     //"PedestalModel"             "models/props_structures/radiant_tower_base001.vmdl"
     //"PedestalModelScale"        "0.7"
@@ -85,7 +85,7 @@
     // Bounds
     //----------------------------------------------------------------
     "BoundsHullName"            "DOTA_HULL_SIZE_HUGE"      // Hull size is used to determine incoming attack hit range
-    "RingRadius"                "165"
+    "RingRadius"                "135"
 
 
     // Movement
