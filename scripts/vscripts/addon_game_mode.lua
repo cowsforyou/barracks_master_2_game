@@ -60,6 +60,9 @@ require('widgets/emit_sound_on_client')
 -- For in-game scoreboard
 require('scoreboard_updater')
 
+-- Gives access to Resource Functions
+require('widgets/get_resources_info')
+
 ------------------------------------------------------
 --                PRECACHE BLOCK
 ------------------------------------------------------
