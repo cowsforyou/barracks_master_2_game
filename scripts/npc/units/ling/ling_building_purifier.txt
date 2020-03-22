@@ -3,7 +3,7 @@
     // General
     //----------------------------------------------------------------
     "BaseClass"                 "npc_dota_creature"  
-    "Model"                     "models/caldron.vmdl" 
+    "Model"                     "models/caldron3.vmdl" 
     "ModelScale"                "0.85"
     //"PedestalModel"             "models/props_structures/radiant_tower_base001.vmdl"
     //"PedestalModelScale"        "0.7"
