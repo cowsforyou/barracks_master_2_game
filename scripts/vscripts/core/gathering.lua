@@ -244,6 +244,7 @@ function SpawnWorker(event)
                         return 0.1
                     else
                         ModifyLumber(hero, worker.lumber_gathered)
+                        Purifier:EarnedLumber(player, worker.lumber_gathered)
                         if worker.lumber_gathered > 0 then
                             PopupLumber(worker, worker.lumber_gathered)
                         end

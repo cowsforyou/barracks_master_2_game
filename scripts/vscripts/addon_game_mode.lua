@@ -20,6 +20,7 @@ require('core/spawner')
 require('core/tower_control')
 require('core/spawn_synchronizer')
 require('core/gathering')
+require('core/creep_control')
 
 -- Convert all reliable gold to unreliable
 require('widgets/gold_to_unreliable')
@@ -62,6 +63,9 @@ require('scoreboard_updater')
 
 -- Gives access to Resource Functions
 require('widgets/get_resources_info')
+
+-- Purifier
+require('widgets/purifier')
 
 ------------------------------------------------------
 --                PRECACHE BLOCK

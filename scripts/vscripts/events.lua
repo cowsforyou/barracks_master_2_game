@@ -271,6 +271,9 @@ function GameMode:OnEntityKilled( keys )
 
   -- Put code here to handle when an entity gets killed
 
+  -- Handle last hits for creeps (purifier)
+  CreepControl:OnCreepKilled( killedUnit, killerEntity )
+
   -- Remove tower
   if killedUnit.invulnCount then
     TowerControl:OnTowerKilled(killedUnit)
