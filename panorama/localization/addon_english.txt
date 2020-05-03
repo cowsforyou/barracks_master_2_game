@@ -1,7 +1,7 @@
 "addon"
 {
 	//Loading Screen
-	"bm_updates_title"								"Updates"
+	"bm_updates_title"								"Update s"
 	"bm_updates_text"								"We're no strangers to love, You know the rules and so do I, A full commitment's what I'm thinking of, You wouldn't get this from any other guy"	
 	"bm_ladder_title"								"Ladder"
 	"bm_ladder_text"								"Coming Soon"
