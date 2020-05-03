@@ -397,7 +397,7 @@
 	    // General
 	    //----------------------------------------------------------------
 	    "BaseClass"                 "npc_dota_creature"  
-	    "Model"                     "models/props_structures/gravestone005.vmdl" 
+	    "Model"                     "models/catlan.vmdl" 
 	    "ModelScale"                "1.95"
 	    //"PedestalModel"             "models/props_structures/radiant_tower_base001.vmdl"
 	    //"PedestalModelScale"        "0.7"
@@ -4875,7 +4875,7 @@
 	    // General
 	    //----------------------------------------------------------------
 	    "BaseClass"                 "npc_dota_creature"  
-	    "Model"                     "models/props_structures/wooden_sentry_tower001.vmdl" 
+	    "Model"                     "models/catlix.vmdl" 
 	    "ModelScale"                "0.65"
 	    //"PedestalModel"             "models/props_structures/radiant_tower_base001.vmdl"
 	    //"PedestalModelScale"        "0.7"
@@ -5125,7 +5125,7 @@
 	    // General
 	    //----------------------------------------------------------------
 	    "BaseClass"                 "npc_dota_creature"  
-	    "Model"                     "models/props_structures/cathedral001.vmdl" 
+	    "Model"                     "models/library.vmdl" 
 	    "ModelScale"                "0.65"
 	    //"PedestalModel"             "models/props_structures/radiant_tower_base001.vmdl"
 	    //"PedestalModelScale"        "0.7"
