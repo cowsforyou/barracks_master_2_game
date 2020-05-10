@@ -5150,8 +5150,8 @@
 	
 	    // Building Helper Info
 	    //----------------------------------------------------------------   
-	    "ConstructionSize"          "5"
-	    "BlockPathingSize"          "5"
+	    "ConstructionSize"          "4"
+	    "BlockPathingSize"          "4"
 	
 	
 	    // Abilities
@@ -5207,7 +5207,7 @@
 	    // Bounds
 	    //----------------------------------------------------------------
 	    "BoundsHullName"            "DOTA_HULL_SIZE_BARRACKS"      // Hull size is used to determine incoming attack hit range
-	    "RingRadius"                "185"
+	    "RingRadius"                "145"
 	
 	
 	    // Movement

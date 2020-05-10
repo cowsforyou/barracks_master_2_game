@@ -231,9 +231,9 @@
         {
             "Default"
             {
-                "PortraitPosition"  "180 -140 180"
-                "PortraitAngles"    "0 200 0"
-                "PortraitFOV"       "120"
+                "PortraitPosition"  "200 -200 260"
+                "PortraitAngles"    "352 136 0"
+                "PortraitFOV"       "60"
                 "PortraitFar"       "1000"
             }
         }
