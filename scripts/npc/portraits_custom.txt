@@ -40,15 +40,52 @@
         "PortraitHideHero"      "0"
     }
 
+    "models/caldron.vmdl"
+    {
+        "cameras"
+        {
+            "Default"
+            {
+                "PortraitPosition"  "260 -260 160"
+                "PortraitAngles"    "350 136 0"
+                "PortraitFOV"       "35"
+                "PortraitFar"       "1000"
+            }
+        }
+        "PortraitLightPosition"     "165.934387 506.319611 807.458984"
+        "PortraitLightAngles"       "56.795567 -111.496040 170.940033"
+        "PortraitLightFOV"          "26.466000"
+        "PortraitLightDistance"     "1072.660034"
+        "PortraitLightColor"        "255 255 255"
+        "PortraitLightScale"        "4.348000"
+        "PortraitShadowColor"       "77 134 195"
+        "PortraitShadowScale"       "1.000000"
+        "PortraitGroundShadowScale" "1.000000"
+        "PortraitAmbientDirection"  "-0.957 0.044 0.287"
+        "PortraitAmbientColor"      "127 190 244"
+        "PortraitAmbientScale"      "5.000000"
+        "PortraitSpecularColor"     "48 182 222"
+        "PortraitSpecularDirection" "0.000000 0.000000 -1.000000"
+        "PortraitSpecularPower"     "16.000000"
+        "PortraitBackgroundColor1"  "0.313726 0.909804 1.000000"
+        "PortraitBackgroundColor2"  "1.000000 1.000000 1.000000"
+        "PortraitBackgroundColor3"  "1.000000 1.000000 1.000000"
+        "PortraitBackgroundColor4"  "0.313726 0.909804 1.000000"
+        "PortraitBackgroundTexture" "materials/vgui/hud/heroportraits/portraitbackground_bluebloom.vmat"
+        "PortraitAnimationCycle"    "0.000000"
+        "PortraitAnimationRate"     "1.000000"
+        "PortraitHideHero"          "0"
+    }
+
     "models/catlan.vmdl"
     {
         "cameras"
         {
             "Default"
             {
-                "PortraitPosition"  "237 -280 120"
+                "PortraitPosition"  "250 -260 50"
                 "PortraitAngles"    "350 136 0"
-                "PortraitFOV"       "60"
+                "PortraitFOV"       "20"
                 "PortraitFar"       "1000"
             }
         }
@@ -83,9 +120,9 @@
         {
             "Default"
             {
-                "PortraitPosition"      "-257.488983 -122.332367 60.829964"
-                "PortraitAngles"        "339 31 0"
-                "PortraitFOV"       "50"
+                "PortraitPosition"  "-260 -120 100"
+                "PortraitAngles"    "339 31 0"
+                "PortraitFOV"       "70"
                 "PortraitFar"       "1000"
             }
         }
@@ -120,10 +157,10 @@
         {
             "Default"
             {
-                "PortraitPosition"      "237.442932 -208.587357 120.175018"
-                "PortraitAngles"        "352.464386 136.600189 0.000000"
-                "PortraitFOV"       "60.000000"
-                "PortraitFar"       "1000.000000"
+                "PortraitPosition"      "200 -200 170"
+                "PortraitAngles"        "352 136 0"
+                "PortraitFOV"       "90"
+                "PortraitFar"       "1000"
             }
         }
         "PortraitLightPosition"     "165.934387 506.319611 807.458984"
@@ -151,15 +188,52 @@
         "PortraitHideHero"      "0"
     }
 
+    "models/gryphon.vmdl"
+    {
+        "cameras"
+        {
+            "Default"
+            {
+                "PortraitPosition"      "200 -200 160"
+                "PortraitAngles"        "352 136 0"
+                "PortraitFOV"           "50"
+                "PortraitFar"           "1000"
+            }
+        }
+        "PortraitLightPosition"     "165.934387 506.319611 807.458984"
+        "PortraitLightAngles"       "56.795567 -111.496040 170.940033"
+        "PortraitLightFOV"          "26.466000"
+        "PortraitLightDistance"     "1072.660034"
+        "PortraitLightColor"        "255 255 255"
+        "PortraitLightScale"        "4.348000"
+        "PortraitShadowColor"       "77 134 195"
+        "PortraitShadowScale"       "1.000000"
+        "PortraitGroundShadowScale" "1.000000"
+        "PortraitAmbientDirection"  "-0.957 0.044 0.287"
+        "PortraitAmbientColor"      "127 190 244"
+        "PortraitAmbientScale"      "5.000000"
+        "PortraitSpecularColor"     "48 182 222"
+        "PortraitSpecularDirection" "0.000000 0.000000 -1.000000"
+        "PortraitSpecularPower"     "16.000000"
+        "PortraitBackgroundColor1"  "0.313726 0.909804 1.000000"
+        "PortraitBackgroundColor2"  "1.000000 1.000000 1.000000"
+        "PortraitBackgroundColor3"  "1.000000 1.000000 1.000000"
+        "PortraitBackgroundColor4"  "0.313726 0.909804 1.000000"
+        "PortraitBackgroundTexture" "materials/vgui/hud/heroportraits/portraitbackground_bluebloom.vmat"
+        "PortraitAnimationCycle"    "0.000000"
+        "PortraitAnimationRate"     "1.000000"
+        "PortraitHideHero"          "0"
+    }
+
     "models/library.vmdl"
     {
         "cameras"
         {
             "Default"
             {
-                "PortraitPosition"      "-257.488983 -122.332367 60.829964"
-                "PortraitAngles"        "339 31 0"
-                "PortraitFOV"       "50"
+                "PortraitPosition"  "180 -140 180"
+                "PortraitAngles"    "0 200 0"
+                "PortraitFOV"       "120"
                 "PortraitFar"       "1000"
             }
         }
@@ -186,6 +260,117 @@
         "PortraitAnimationCycle"        "0.000000"
         "PortraitAnimationRate"     "1.000000"
         "PortraitHideHero"      "0"
+    }
+
+    "models/obelisk.vmdl"
+    {
+        "cameras"
+        {
+            "Default"
+            {
+                "PortraitPosition"      "210 -200 290"
+                "PortraitAngles"        "352 136 0"
+                "PortraitFOV"           "40"
+                "PortraitFar"           "1000"
+            }
+        }
+        "PortraitLightPosition"     "165.934387 506.319611 807.458984"
+        "PortraitLightAngles"       "56.795567 -111.496040 170.940033"
+        "PortraitLightFOV"          "26.466000"
+        "PortraitLightDistance"     "1072.660034"
+        "PortraitLightColor"        "255 255 255"
+        "PortraitLightScale"        "4.348000"
+        "PortraitShadowColor"       "77 134 195"
+        "PortraitShadowScale"       "1.000000"
+        "PortraitGroundShadowScale" "1.000000"
+        "PortraitAmbientDirection"  "-0.957 0.044 0.287"
+        "PortraitAmbientColor"      "127 190 244"
+        "PortraitAmbientScale"      "5.000000"
+        "PortraitSpecularColor"     "48 182 222"
+        "PortraitSpecularDirection" "0.000000 0.000000 -1.000000"
+        "PortraitSpecularPower"     "16.000000"
+        "PortraitBackgroundColor1"  "0.313726 0.909804 1.000000"
+        "PortraitBackgroundColor2"  "1.000000 1.000000 1.000000"
+        "PortraitBackgroundColor3"  "1.000000 1.000000 1.000000"
+        "PortraitBackgroundColor4"  "0.313726 0.909804 1.000000"
+        "PortraitBackgroundTexture" "materials/vgui/hud/heroportraits/portraitbackground_bluebloom.vmat"
+        "PortraitAnimationCycle"    "0.000000"
+        "PortraitAnimationRate"     "1.000000"
+        "PortraitHideHero"          "0"
+    }
+
+    "models/props_structures/radiant_statue002.vmdl"
+    {
+        "cameras"
+        {
+            "Default"
+            {
+                "PortraitPosition"      "220 -170 220"
+                "PortraitAngles"        "0 140 0"
+                "PortraitFOV"           "30"
+                "PortraitFar"           "1000"
+            }
+        }
+        "PortraitLightPosition"     "165.934387 506.319611 807.458984"
+        "PortraitLightAngles"       "56.795567 -111.496040 170.940033"
+        "PortraitLightFOV"          "26.466000"
+        "PortraitLightDistance"     "1072.660034"
+        "PortraitLightColor"        "255 255 255"
+        "PortraitLightScale"        "4.348000"
+        "PortraitShadowColor"       "77 134 195"
+        "PortraitShadowScale"       "1.000000"
+        "PortraitGroundShadowScale" "1.000000"
+        "PortraitAmbientDirection"  "-0.957 0.044 0.287"
+        "PortraitAmbientColor"      "127 190 244"
+        "PortraitAmbientScale"      "5.000000"
+        "PortraitSpecularColor"     "48 182 222"
+        "PortraitSpecularDirection" "0.000000 0.000000 -1.000000"
+        "PortraitSpecularPower"     "16.000000"
+        "PortraitBackgroundColor1"  "0.313726 0.909804 1.000000"
+        "PortraitBackgroundColor2"  "1.000000 1.000000 1.000000"
+        "PortraitBackgroundColor3"  "1.000000 1.000000 1.000000"
+        "PortraitBackgroundColor4"  "0.313726 0.909804 1.000000"
+        "PortraitBackgroundTexture" "materials/vgui/hud/heroportraits/portraitbackground_bluebloom.vmat"
+        "PortraitAnimationCycle"    "0.000000"
+        "PortraitAnimationRate"     "1.000000"
+        "PortraitHideHero"          "0"
+    }
+
+    "models/thiki_tree.vmdl"
+    {
+        "cameras"
+        {
+            "Default"
+            {
+                "PortraitPosition"      "200 -200 160"
+                "PortraitAngles"        "352 136 0"
+                "PortraitFOV"           "50"
+                "PortraitFar"           "1000"
+            }
+        }
+        "PortraitLightPosition"     "165.934387 506.319611 807.458984"
+        "PortraitLightAngles"       "56.795567 -111.496040 170.940033"
+        "PortraitLightFOV"          "26.466000"
+        "PortraitLightDistance"     "1072.660034"
+        "PortraitLightColor"        "255 255 255"
+        "PortraitLightScale"        "4.348000"
+        "PortraitShadowColor"       "77 134 195"
+        "PortraitShadowScale"       "1.000000"
+        "PortraitGroundShadowScale" "1.000000"
+        "PortraitAmbientDirection"  "-0.957 0.044 0.287"
+        "PortraitAmbientColor"      "127 190 244"
+        "PortraitAmbientScale"      "5.000000"
+        "PortraitSpecularColor"     "48 182 222"
+        "PortraitSpecularDirection" "0.000000 0.000000 -1.000000"
+        "PortraitSpecularPower"     "16.000000"
+        "PortraitBackgroundColor1"  "0.313726 0.909804 1.000000"
+        "PortraitBackgroundColor2"  "1.000000 1.000000 1.000000"
+        "PortraitBackgroundColor3"  "1.000000 1.000000 1.000000"
+        "PortraitBackgroundColor4"  "0.313726 0.909804 1.000000"
+        "PortraitBackgroundTexture" "materials/vgui/hud/heroportraits/portraitbackground_bluebloom.vmat"
+        "PortraitAnimationCycle"    "0.000000"
+        "PortraitAnimationRate"     "1.000000"
+        "PortraitHideHero"          "0"
     }
 
     "models/zavartu.vmdl"
