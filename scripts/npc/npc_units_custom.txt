@@ -5656,9 +5656,9 @@
 	    // Abilities
 	    //----------------------------------------------------------------    
 	    "AbilityLayout"             "6"
-	    "Ability1"                  ""     
-	    "Ability2"                  ""    
-	    "Ability3"                  ""     
+    	"Ability1"                  "xoya_purifier_bonus_gold"     
+    	"Ability2"                  "research_xoya_purifier_bonus_lumber_disabled"    
+    	"Ability3"                  "research_xoya_purifier_bonus_lumber"
 	    "Ability4"                  ""      
 	    "Ability5"                  ""     
 	    "Ability6"                  ""     

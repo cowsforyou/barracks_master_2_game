@@ -64,7 +64,7 @@ require('scoreboard_updater')
 -- Gives access to Resource Functions
 require('widgets/get_resources_info')
 
--- Purifier
+-- Allows Purifier code to work when built
 require('widgets/purifier')
 
 ------------------------------------------------------

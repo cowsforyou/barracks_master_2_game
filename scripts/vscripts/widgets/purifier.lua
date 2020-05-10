@@ -1,3 +1,10 @@
+--[[
+Installation Instructions:
+
+1) On addon_game_mode.lua, add this line of code:
+require('spells/purifier')
+]]--
+
 if not Purifier then
     Purifier = class({})
 end

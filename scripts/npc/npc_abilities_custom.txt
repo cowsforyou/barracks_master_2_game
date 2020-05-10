@@ -3556,6 +3556,145 @@
 		"AbilityTextureName"			"xoya"
 		"MaxLevel" 						"0"
 	}
+	"xoya_purifier_bonus_gold"
+	{
+	  	"BaseClass"                     "ability_datadriven"
+	  	"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  		"AbilityTextureName"            "dragon_knight_breathe_fire"
+
+	  	"MaxLevel"                      "1"
+
+	  	// Special
+	  	//-------------------------------------------------------------------------------------------------------------
+	  	"AbilitySpecial"
+  		{
+    		"01"
+    		{
+      			"var_type"       "FIELD_INTEGER"
+      			"gold_bonus"     "25"
+    		}    
+  		}
+
+  		"Modifiers"
+  		{
+    		"modifier_autocast"
+    		{
+      			"Passive"     "1" // start activated
+      			"IsHidden"    "1" // hide the visual buff icon
+
+	      		// run this Think() script every 0.25 seconds
+    	  		"ThinkInterval"   "0.25"
+      			"OnIntervalThink"
+      			{
+        			"RunScript"
+        			{
+          				"ScriptFile"    "spells/autocast.lua"
+          				"Function"      "Autocast"
+        			}
+      			}
+   	 		}
+  		}
+	}
+	"research_xoya_purifier_bonus_lumber"
+	{
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "xoya"
+	    "MaxLevel"                      "3"
+
+	    "AbilityChannelTime"            "60 120 240"
+	    "AbilityGoldCost"               "350 550 800"
+	    
+	    "AbilitySpecial"
+	    {
+	        "01"
+		     {
+		     	"var_type"              "FIELD_INTEGER"
+		        "lumber_bonus"          "20 40 60"
+		     }
+		      
+		     "02"
+		     {
+		        "var_type"              "FIELD_INTEGER"
+		        "research_time"         "60 120 240"
+		     }
+
+		     "03"
+		     {
+		        "var_type"              "FIELD_INTEGER"
+		        "gold_cost"             "350 500 800"
+		     }
+	    }
+
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "EnqueueUnit"
+	        }
+	    }
+
+	    "OnChannelSucceeded"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/queue.lua"
+	            "Function"      "NextQueue"
+	        }
+
+	        "RunScript"
+	        {
+	            "ScriptFile"    "core/research.lua"
+	            "Function"      "ResearchComplete"
+	        }
+	    }
+	}
+	"xoya_purifier_bonus_lumber"
+	{
+	  "BaseClass"                     "ability_datadriven"
+	  "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	  "AbilityTextureName"            "xoya"
+
+	  "MaxLevel"                      "3"
+
+	  // Special
+	  //-------------------------------------------------------------------------------------------------------------
+	  "AbilitySpecial"
+	  {
+	    "01"
+	    {
+	      "var_type"       "FIELD_INTEGER"
+	      "lumber_bonus"   "20 40 60"
+	    }    
+	  }
+
+	  "Modifiers"
+	  {
+	    "modifier_autocast"
+	    {
+	      "Passive"     "1" // start activated
+	      "IsHidden"    "1" // hide the visual buff icon
+
+	      // run this Think() script every 0.25 seconds
+	      "ThinkInterval"   "0.25"
+	      "OnIntervalThink"
+	      {
+	        "RunScript"
+	        {
+	          "ScriptFile"    "spells/autocast.lua"
+	          "Function"      "Autocast"
+	        }
+	      }
+	    }
+	  }
+	}
+	"xoya_purifier_bonus_lumber_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "xoya"
+	    "MaxLevel"                      "0"
+	}
 	"build_xoya_building_warthan"
 	{
 		// Ability Settings
