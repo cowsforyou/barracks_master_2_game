@@ -18,10 +18,11 @@ You are done! If you want to make your ability researchable then continue on.
 3.2) E.g. "research_fire"
 3.3) This new ability with the research parameters should be added into the npc_abilities_custom.txt file.
 
-4) Create a disabled version of your research ability.
-4.1) This can be done with creating a new ability and adding a _disabled suffix to your research ability name.
-4.2) E.g. "research_fire_disabled"
-4.3) This new ability should also be added into npc_abilities_custom.txt.
+4) Create a disabled version of your ability.
+4.1) This will be the placeholder before the ability becomes active.
+4.2) This can be done with creating a new ability and adding a _disabled suffix to your ability name.
+4.3) E.g. "fire_disabled"
+4.4) This new ability should also be added into npc_abilities_custom.txt.
 
 5) Add research instructions to the tech tree.
 5.1) Add this line in: "fire" {"research" "1" "research_fire" "1"}

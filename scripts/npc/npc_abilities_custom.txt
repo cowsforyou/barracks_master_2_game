@@ -3650,6 +3650,12 @@
 	        }
 	    }
 	}
+	"research_xoya_purifier_bonus_lumber_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"xoya"
+		"MaxLevel" 						"0"
+	}
 	"xoya_purifier_bonus_lumber"
 	{
 	  "BaseClass"                     "ability_datadriven"
