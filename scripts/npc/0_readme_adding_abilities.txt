@@ -9,7 +9,7 @@
 2.1) All units should be listed in npc_units_custom.txt. 
 2.2) Each unit has a list of abilities that can be specified to them. ("Ability1", "Ability2", etc)
 2.3) Type in the name of the ability you created earlier into the unit abilities.
-2.4) E.g. "Ability1"	"fire"
+2.4) E.g. "Ability1" "fire"
 
 You are done! If you want to make your ability researchable then continue on.
 
@@ -19,17 +19,22 @@ You are done! If you want to make your ability researchable then continue on.
 3.3) This new ability with the research parameters should be added into the npc_abilities_custom.txt file.
 
 4) Create a disabled version of your ability.
-4.1) This will be the placeholder before the ability becomes active.
+4.1) This will be the placeholder before the ability becomes active/researched.
 4.2) This can be done with creating a new ability and adding a _disabled suffix to your ability name.
 4.3) E.g. "fire_disabled"
 4.4) This new ability should also be added into npc_abilities_custom.txt.
 
-5) Add research instructions to the tech tree.
-5.1) Add this line in: "fire" {"research" "1" "research_fire" "1"}
+5) Attach the ability to a unit.
+5.1) The research ability and the actual ability can be in different places.
+5.2) For simplicity in these instructions, we will assume it is on the same unit.
+5.3) E.g. "Ability1" "fire" "Ability2" "fire_disabled" "Ability3" "research_fire"
 
-6) Add a way to cancel the research
-6.1) Create a new cancel item with the item_ prefix to your research ability.
-6.2) This should be added into npc_items_custom.txt.
-6.3) E.g. "item_research_fire".
+6) Add research instructions to the tech tree.
+6.1) Add this line in: "fire" {"research" "1" "research_fire" "1"}
+
+7) Add a way to cancel the research
+7.1) Create a new cancel item with the item_ prefix to your research ability.
+7.2) This should be added into npc_items_custom.txt.
+7.3) E.g. "item_research_fire".
 
 You are done adding an ability that can be researched/upgraded!
