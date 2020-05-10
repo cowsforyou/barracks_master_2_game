@@ -15,9 +15,9 @@ function Purifier:FindPurifier(player)
     local playerBuildings = BuildingHelper:GetBuildings(playerID)
     for _,building in pairs(playerBuildings) do
         if IsValidEntity(building) and building:IsAlive() then
-            print("valid building found")
+            -- print("valid building found")
             if building:GetUnitName():match("purifier") then
-                print("valid purifier found")
+                -- print("valid purifier found")
                 return building
             end
         end
@@ -32,8 +32,9 @@ function Purifier:EarnedGold(player, gold)
         -- print("No purifier found.")
         return
     end
-
-    local goldAbility = purifier:FindAbilityByName("purifier_bonus_gold")
+    
+    local builderName = GetBuilderName(player)
+    local goldAbility = purifier:FindAbilityByName(builderName .. "_purifier_bonus_gold")
     if not goldAbility then
         -- print("Shouldn't ever happen because this ability is not researched")
         return
@@ -57,8 +58,9 @@ function Purifier:EarnedLumber(player, lumber)
         -- print("No purifier found.")
         return
     end
+    local builderName = GetBuilderName(player)
+    local lumberAbility = purifier:FindAbilityByName(builderName .. "_purifier_bonus_lumber")
 
-    local lumberAbility = purifier:FindAbilityByName("purifier_bonus_lumber")
     if not lumberAbility then
         -- print("Purify lumber ability not researched yet")
         return

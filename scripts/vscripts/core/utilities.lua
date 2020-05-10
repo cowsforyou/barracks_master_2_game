@@ -194,3 +194,15 @@ function GetGridAroundPoint( numUnits, point )
 
     return navPoints
 end
+
+function GetBuilderName(player)
+    local hero = player:GetAssignedHero()
+    local heroName = hero:GetUnitName()
+    if heroName == "npc_dota_hero_keeper_of_the_light" then
+        return 'ling'
+    elseif heroName == "npc_dota_hero_nevermore" then
+        return 'xoya'
+    elseif heroName == 'npc_dota_hero_arc_warden' then
+        return 'myro'
+    end
+end
