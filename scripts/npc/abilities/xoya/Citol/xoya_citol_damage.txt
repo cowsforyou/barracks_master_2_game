@@ -1,35 +1,38 @@
-"xoya_citol_damage"
+"DOTAAbilities" 
 {
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"             "ability_datadriven"
-    "AbilityTextureName"    "xoya"
-
-    "MaxLevel"    "3"
-
-    // AbilitySpecial  
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
+    "xoya_citol_damage"
     {
-        "01"
-        {
-            "var_type"          "FIELD_INTEGER"
-            "damage_bonus"      "3 10 30"
-        }     
-    }
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "BaseClass"             "ability_datadriven"
+        "AbilityTextureName"    "xoya"
 
-    // Modifiers
-    //-------------------------------------------------------------------------------------------------------------
-    "Modifiers"
-    {
-        "modifier_xoya_citol_damage"
+        "MaxLevel"    "3"
+
+        // AbilitySpecial  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
         {
-            "Passive"    "1"
-            "IsHidden"   "0"
-        
-            "Properties"
+            "01"
             {
-                "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"      "%damage_bonus"
-            } 
+                "var_type"          "FIELD_INTEGER"
+                "damage_bonus"      "1 6 15"
+            }     
+        }
+
+        // Modifiers
+        //-------------------------------------------------------------------------------------------------------------
+        "Modifiers"
+        {
+            "modifier_xoya_citol_damage"
+            {
+                "Passive"    "1"
+                "IsHidden"   "0"
+            
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"      "%damage_bonus"
+                } 
+            }
         }
     }
 }

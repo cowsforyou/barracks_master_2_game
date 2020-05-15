@@ -6,42 +6,59 @@
   
   "item_travel_boots"
   {
-  	"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
-    "AbilityManaCost"               "0"
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "bonus_movement_speed"  "110"
+      }
+      "02"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "maximum_distance"    "575"
+      }
+      "03"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "vision_radius"     "200"
+      }
+      "04"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "tp_cooldown"     "30"
+      }
+    }
   }  
 
   "item_quelling_blade"
   {
-    "AbilityCooldown"       "2.0"
+    "AbilityCooldown"     "2.0"
   }    
 
   "treant_living_armor"
   {
-    "MaxLevel"                      "1"
-    "AbilityCooldown"               "50.0"
-    "AbilityManaCost"               "0"
+    "MaxLevel"            "1"
+    "AbilityCooldown"     "50.0"
+    "AbilityManaCost"     "0"
 
     "AbilitySpecial"
     {
       "01"
       {
-        "var_type"          "FIELD_INTEGER"
-        "damage_count"      "4"
+        "var_type"      "FIELD_INTEGER"
+        "total_heal"    "100"
+        "LinkedSpecialBonus"      "special_bonus_unique_treant_8"
       }
       "02"
       {
-        "var_type"          "FIELD_INTEGER"
-        "health_regen"      "10"
+        "var_type"      "FIELD_INTEGER"
+        "bonus_armor"   "8"
       }
       "03"
       {
-        "var_type"          "FIELD_INTEGER"
-        "damage_block"      "20"
-      }
-      "04"
-      {
-        "var_type"          "FIELD_FLOAT"
-        "duration"          "25.0"
+        "var_type"      "FIELD_FLOAT"
+        "duration"      "12.0"
       }
     }
   }
