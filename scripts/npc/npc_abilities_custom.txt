@@ -3,6 +3,9 @@
 //#base "abilities\ling\Catlan\research_spawn_ling_creep_catlan.txt"
 //#base "abilities\ling\Catlan\spawn_ling_creep_catlan.txt"
 
+#base "abilities\ling\Purifier\build_ling_building_purifier.txt"
+#base "abilities\ling\Purifier\build_ling_building_purifier_disabled.txt"
+
 #base "abilities\xoya\Citol\research_xoya_citol_damage.txt"
 #base "abilities\xoya\Citol\xoya_citol_damage.txt"
 #base "abilities\xoya\Citol\xoya_citol_damage_disabled.txt"
