@@ -1,0 +1,9 @@
+"DOTAAbilities" 
+{
+	"ling_purifier_bonus_lumber_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "ling"
+	    "MaxLevel"                      "0"
+	}
+}

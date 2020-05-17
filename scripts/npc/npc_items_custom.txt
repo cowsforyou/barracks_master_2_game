@@ -530,6 +530,40 @@
 			}
 		}
 	}
+	"item_research_ling_purifier_bonus_lumber"
+	{
+	    "ID"    "1010"
+		"BaseClass"             		"item_datadriven"
+		"AbilityTextureName"			"item_cancel"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"AbilityCastPoint"				"0"
+	
+		"ItemDroppable" 				"0"
+		"ItemPurchasable" 				"0"
+		"ItemSellable"					"0"
+		
+		"OnSpellStart"
+		{
+		    "FireSound"
+	        {
+	            "EffectName"    "BarracksMaster.Cancelled"
+	            "Target"        "CASTER"
+	        }
+	
+			"RunScript"
+			{
+				"ScriptFile"	"core/queue.lua"
+				"Function"		"DequeueUnit"
+			}
+	
+			// Re-enable research ability
+			"RunScript"
+			{
+				"ScriptFile"	"core/research.lua"
+				"Function"		"ReEnableResearch"
+			}
+		}
+	}
 	"item_research_spawn_ling_creep_catlan"
 	{
 	    "ID"    "1010"
