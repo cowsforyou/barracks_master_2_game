@@ -1,5 +1,7 @@
-"xoya_building_purifier"
+"DOTAUnits" 
 {
+  "xoya_building_purifier"
+  {
     // General
     //----------------------------------------------------------------
     "BaseClass"                 "npc_dota_creature"  
@@ -36,7 +38,7 @@
     //----------------------------------------------------------------    
     "AbilityLayout"             "6"
     "Ability1"                  "xoya_purifier_bonus_gold"     
-    "Ability2"                  "xoya_purifier_bonus_lumber_disabled"
+    "Ability2"                  "xoya_purifier_bonus_lumber_disabled"    
     "Ability3"                  "research_xoya_purifier_bonus_lumber"
     "Ability4"                  ""
     "Ability5"                  ""     
@@ -122,4 +124,5 @@
     // Bots
     //----------------------------------------------------------------
     "AttackDesire"              "1.5"   // How much bots want to attack them vs other non-hero things
-} 
+  }
+}
