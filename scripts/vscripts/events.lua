@@ -24,6 +24,9 @@ function GameMode:OnGameRulesStateChange(keys)
     
     print("Game State: Hero Selection")
 
+   -- Custom Hero Selection Screen
+    HeroSelection:Start()
+    
     -- Spawn the initial towers for the map and setup their invulnerabily links
     TowerControl:SpawnMapEntities()
 

@@ -21,6 +21,7 @@ require('core/tower_control')
 require('core/spawn_synchronizer')
 require('core/gathering')
 require('core/creep_control')
+require('core/hero_selection')
 
 -- Convert all reliable gold to unreliable
 require('widgets/gold_to_unreliable')
@@ -205,4 +206,5 @@ end
 function Activate()
   GameRules.GameMode = GameMode()
   GameRules.GameMode:_InitGameMode()
+  GameRules:GetGameModeEntity():SetCustomGameForceHero("npc_dota_hero_keeper_of_the_light")
 end
