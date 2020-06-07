@@ -5,7 +5,7 @@
         // General
         //----------------------------------------------------------------
         "BaseClass"                 "npc_dota_creature"  
-        "Model"                     "models/props_structures/radiant_tower002.vmdl" 
+        "Model"                     "models/props_structures/rock_golem/tower_radiant_rock_golem.vmdl"
         "ModelScale"                "1.0"
         "PedestalModel"             "models/props_structures/radiant_tower_base002.vmdl"
         "PedestalModelScale"        "1.0"
