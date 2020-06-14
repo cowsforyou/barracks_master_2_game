@@ -1,3 +1,13 @@
+//==================================================================================================
+//                                     **  G L O B A L  **
+//==================================================================================================
+#base "abilities\cosmetics\ability_small_fire.txt"
+
+
+//==================================================================================================
+//                                     **  L I N G  **
+//==================================================================================================
+
 #base "abilities\ling\Catlan\build_ling_building_catlan.txt"
 //#base "abilities\ling\Catlan\build_ling_building_catlan_disabled.txt"
 //#base "abilities\ling\Catlan\research_spawn_ling_creep_catlan.txt"
@@ -10,9 +20,15 @@
 #base "abilities\ling\Purifier\ling_purifier_bonus_lumber_disabled.txt"
 #base "abilities\ling\Purifier\research_ling_purifier_bonus_lumber.txt"
 
+
+//==================================================================================================
+//                                     **  X O O  **
+//==================================================================================================
+
 #base "abilities\xoya\Citol\research_xoya_citol_damage.txt"
 #base "abilities\xoya\Citol\xoya_citol_damage.txt"
 #base "abilities\xoya\Citol\xoya_citol_damage_disabled.txt"
+
 
 "DOTAAbilities"
 {
