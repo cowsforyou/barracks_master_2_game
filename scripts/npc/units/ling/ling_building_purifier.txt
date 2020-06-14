@@ -40,7 +40,7 @@
     "Ability1"                  "ling_purifier_bonus_gold"     
     "Ability2"                  "ling_purifier_bonus_lumber_disabled"
     "Ability3"                  "research_ling_purifier_bonus_lumber"   
-    "Ability4"                  ""
+    "Ability4"                  "ability_particle_ambient_red"
     "Ability5"                  ""
     "Ability6"                  ""
     "Ability7"                  ""
