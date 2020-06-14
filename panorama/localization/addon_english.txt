@@ -1,18 +1,30 @@
 "addon"
 {
+	//-------------------
 	//Loading Screen
+	//-------------------
 	"bm_updates_title"								"Updates"
 	"bm_updates_text"								"We're no strangers to love, you know the rules and so do I, a full commitment's what I'm thinking of, you wouldn't get this from any other guy."	
 	"bm_ladder_title"								"Ladder"
 	"bm_ladder_text"								"Coming Soon"
 
+	//-------------------
+	//Pregame Selection Screen
+	//-------------------
+	""												"The Lings are valiant people, valuing honour and camaraderie. Their forces are hardy with ample healing and regenerative abilities."
+	""												"The Xoos thrive on chaos. Their modus operandi is overwhelming their opponent with sheer numbers."
+
+	//-------------------
 	//Scoreboard Labels
+	//-------------------
 	"custom_end_screen_legend_cs"					"CS"
 	"custom_end_screen_legend_networth"				"NET WORTH"
 	"custom_end_screen_legend_gold"					"GOLD"
 	"custom_end_screen_legend_lumber"				"LUMBER"
 
+	//-------------------
 	//Notifications
+	//-------------------
 	"alch_gold"										"Alchemist was feeling rich and donated gold to you. Amount received: "
 	"give_item_last_stand"							"You have been awarded an extra charge of Last Stand"
 
