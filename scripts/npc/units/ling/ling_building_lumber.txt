@@ -1,125 +1,128 @@
-"ling_building_lumber"
+"DOTAUnits" 
 {
-    // General
-    //----------------------------------------------------------------
-    "BaseClass"                 "npc_dota_creature"  
-    "Model"                     "models/props_structures/dire_fountain002.vmdl" 
-    "ModelScale"                "0.6"
-    //"PedestalModel"             "models/props_structures/radiant_tower_base001.vmdl"
-    //"PedestalModelScale"        "0.7"
-    "ConsideredHero"            "1"
-    "HasInventory"              "0"
-    "Level"                     "1"
+    "ling_building_lumber"
+    {
+        // General
+        //----------------------------------------------------------------
+        "BaseClass"                 "npc_dota_creature"  
+        "Model"                     "models/props_structures/dire_fountain002.vmdl" 
+        "ModelScale"                "0.6"
+        //"PedestalModel"             "models/props_structures/radiant_tower_base001.vmdl"
+        //"PedestalModelScale"        "0.7"
+        "ConsideredHero"            "1"
+        "HasInventory"              "0"
+        "Level"                     "1"
 
 
-    // Custom KVs
-    //----------------------------------------------------------------
-    "UnitLabel"                 "building"
-    "HasQueue"                  "1"
+        // Custom KVs
+        //----------------------------------------------------------------
+        "UnitLabel"                 "building"
+        "HasQueue"                  "1"
 
 
-    // Sounds, Projectiles and Destruction
-    //----------------------------------------------------------------
-    "SoundSet"                  ""
-    "ProjectileModel"           ""
-    //"ProjectileSpeed"           "900"   
-    "DestructionEffect"         "particles/world_destruction_fx/base_statue_destruction_generic.vpcf"
-    
+        // Sounds, Projectiles and Destruction
+        //----------------------------------------------------------------
+        "SoundSet"                  ""
+        "ProjectileModel"           ""
+        //"ProjectileSpeed"           "900"   
+        "DestructionEffect"         "particles/world_destruction_fx/base_statue_destruction_generic.vpcf"
+        
 
-    // Building Helper Info
-    //----------------------------------------------------------------   
-    "ConstructionSize"          "5"
-    "BlockPathingSize"          "5"
-
-
-    // Abilities
-    //----------------------------------------------------------------    
-    "AbilityLayout"             "6"
-    "Ability1"                  "spawn_ling_worker_nelum"     
-    "Ability2"                  "treant_living_armor"    
-    "Ability3"                  "ling_lumber_mango_disabled"     
-    "Ability4"                  ""      
-    "Ability5"                  ""     
-    "Ability6"                  ""     
-    "Ability7"                  ""      
-    "Ability8"                  ""      
-    "Ability9"                  ""        
-    "Ability10"                 "ability_building"
-
-    // Armor and Resistance
-    //----------------------------------------------------------------
-    "ArmorPhysical"             "5"     // Physical protection.
-    "MagicalResistance"         "100"     // Magical protection.
+        // Building Helper Info
+        //----------------------------------------------------------------   
+        "ConstructionSize"          "5"
+        "BlockPathingSize"          "5"
 
 
-    // Attack
-    //----------------------------------------------------------------
-    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"     // Type of attack - melee, ranged, etc.
-    "AttackDamageMin"           "0"     // Damage range min.
-    "AttackDamageMax"           "0"     // Damage range max.
-    "AttackDamageType"          "DAMAGE_TYPE_ArmorPhysical"
-    "AttackRate"                "0"     // Speed of attack.
-    "AttackAnimationPoint"      "0"   // Normalized time in animation cycle to attack.
-    "AttackAcquisitionRange"    "0"   // Range within a target can be acquired.
-    "AttackRange"               "0"   // Range within a target can be attacked.
+        // Abilities
+        //----------------------------------------------------------------    
+        "AbilityLayout"             "6"
+        "Ability1"                  "spawn_ling_worker_nelum"     
+        "Ability2"                  "treant_living_armor"    
+        "Ability3"                  "ling_lumber_mango_disabled"     
+        "Ability4"                  ""      
+        "Ability5"                  ""     
+        "Ability6"                  ""     
+        "Ability7"                  ""      
+        "Ability8"                  ""      
+        "Ability9"                  ""        
+        "Ability10"                 "ability_building"
+
+        // Armor and Resistance
+        //----------------------------------------------------------------
+        "ArmorPhysical"             "5"     // Physical protection.
+        "MagicalResistance"         "100"     // Magical protection.
 
 
-    // Attributes
-    //----------------------------------------------------------------
-    "AttributePrimary"          "DOTA_ATTRIBUTE_STRENGTH"
-    "AttributeBaseStrength"     "0"     // Base strength
-    "AttributeStrengthGain"     "0"     // Strength bonus per level.
-    "AttributeBaseIntelligence" "0"     // Base intelligence
-    "AttributeIntelligenceGain" "0"     // Intelligence bonus per level.
-    "AttributeBaseAgility"      "0"     // Base agility
-    "AttributeAgilityGain"      "0"     // Agility bonus per level.
+        // Attack
+        //----------------------------------------------------------------
+        "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"     // Type of attack - melee, ranged, etc.
+        "AttackDamageMin"           "0"     // Damage range min.
+        "AttackDamageMax"           "0"     // Damage range max.
+        "AttackDamageType"          "DAMAGE_TYPE_ArmorPhysical"
+        "AttackRate"                "0"     // Speed of attack.
+        "AttackAnimationPoint"      "0"   // Normalized time in animation cycle to attack.
+        "AttackAcquisitionRange"    "0"   // Range within a target can be acquired.
+        "AttackRange"               "0"   // Range within a target can be attacked.
 
 
-    // Bounty
-    //----------------------------------------------------------------
-    "BountyXP"                  "0"     // Experience earn.
-    "BountyGoldMin"             "40"     // Gold earned min.
-    "BountyGoldMax"             "60"     // Gold earned max.
+        // Attributes
+        //----------------------------------------------------------------
+        "AttributePrimary"          "DOTA_ATTRIBUTE_STRENGTH"
+        "AttributeBaseStrength"     "0"     // Base strength
+        "AttributeStrengthGain"     "0"     // Strength bonus per level.
+        "AttributeBaseIntelligence" "0"     // Base intelligence
+        "AttributeIntelligenceGain" "0"     // Intelligence bonus per level.
+        "AttributeBaseAgility"      "0"     // Base agility
+        "AttributeAgilityGain"      "0"     // Agility bonus per level.
 
 
-    // Bounds
-    //----------------------------------------------------------------
-    "BoundsHullName"            "DOTA_HULL_SIZE_HUGE"      // Hull size is used to determine incoming attack hit range
-    "RingRadius"                "170"
+        // Bounty
+        //----------------------------------------------------------------
+        "BountyXP"                  "0"     // Experience earn.
+        "BountyGoldMin"             "40"     // Gold earned min.
+        "BountyGoldMax"             "60"     // Gold earned max.
 
 
-    // Movement
-    //----------------------------------------------------------------
-    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_GROUND"     // Type of locomotion - ground, air
-    "MovementSpeed"             "0"   // Speed
-    "MovementTurnRate"          "1.0"   // Turning rate.
-    "FollowRange"               "0"   // Distance to keep when following
+        // Bounds
+        //----------------------------------------------------------------
+        "BoundsHullName"            "DOTA_HULL_SIZE_HUGE"      // Hull size is used to determine incoming attack hit range
+        "RingRadius"                "170"
 
 
-    // Status
-    //----------------------------------------------------------------
-    "HealthBarOffset"           "180"
-    "StatusHealth"              "200"     // Base health.
-    "StatusHealthRegen"         "0"     // Health regeneration rate.
-    "StatusMana"                "0"     // Base mana.
-    "StatusManaRegen"           "0"     // Mana regeneration rate.
+        // Movement
+        //----------------------------------------------------------------
+        "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_GROUND"     // Type of locomotion - ground, air
+        "MovementSpeed"             "0"   // Speed
+        "MovementTurnRate"          "1.0"   // Turning rate.
+        "FollowRange"               "0"   // Distance to keep when following
 
 
-    // Team
-    //----------------------------------------------------------------
-    "TeamName"                  "DOTA_TEAM_NEUTRALS"      // Team name.
-    "CombatClassAttack"         "DOTA_COMBAT_CLASS_ATTACK_BASIC"
-    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
-    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-    
-
-    // Vision
-    //----------------------------------------------------------------
-    "VisionDaytimeRange"        "800"   // Range of vision during day light.
-    "VisionNighttimeRange"      "500"   // Range of vision at night time.
+        // Status
+        //----------------------------------------------------------------
+        "HealthBarOffset"           "180"
+        "StatusHealth"              "200"     // Base health.
+        "StatusHealthRegen"         "0"     // Health regeneration rate.
+        "StatusMana"                "0"     // Base mana.
+        "StatusManaRegen"           "0"     // Mana regeneration rate.
 
 
-    // Bots
-    //----------------------------------------------------------------
-    "AttackDesire"              "1.5"   // How much bots want to attack them vs other non-hero things
-} 
+        // Team
+        //----------------------------------------------------------------
+        "TeamName"                  "DOTA_TEAM_NEUTRALS"      // Team name.
+        "CombatClassAttack"         "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+        "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+        "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+        
+
+        // Vision
+        //----------------------------------------------------------------
+        "VisionDaytimeRange"        "800"   // Range of vision during day light.
+        "VisionNighttimeRange"      "500"   // Range of vision at night time.
+
+
+        // Bots
+        //----------------------------------------------------------------
+        "AttackDesire"              "1.5"   // How much bots want to attack them vs other non-hero things
+    } 
+}
