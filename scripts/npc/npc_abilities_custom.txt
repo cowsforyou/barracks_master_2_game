@@ -3566,6 +3566,30 @@
 	    "AbilityTextureName"            "xoya"
 	    "MaxLevel"                      "0"
 	}
+	"ability_small_fire"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+        "MaxLevel"                      "1"
+
+        "Modifiers"
+        {
+          "modifier_small_fire"
+          {
+            "Passive"     "1"
+            "IsHidden"    "0"
+            "OnCreated"
+            {
+                "RunScript"
+                {
+                    "ScriptFile"  "spells/small_fire.lua"
+                    "Function"    "CreateSmallFire"
+                }
+            }
+          }
+        }
+    }
 	"build_xoya_building_warthan"
 	{
 		// Ability Settings
