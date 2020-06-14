@@ -107,6 +107,9 @@ function HeroSelection:EndPicking()
 
 	--Signal the picking screen to disappear
 	CustomGameEventManager:Send_ServerToAllClients( "picking_done", {} )
+
+	-- Speeds the game back up
+	-- Convars:SetInt("host_timescale", tonumber(1))
 end
 
 --[[
@@ -120,5 +123,11 @@ end
 function HeroSelection:AssignHero( player, hero )
 	PrecacheUnitByNameAsync( hero, function()
 		PlayerResource:ReplaceHeroWith( player, hero, 0, 0 )
+
+		-- Initialize Hero
+		local playerEnt = PlayerResource:GetPlayer(player)
+		local heroEnt = playerEnt:GetAssignedHero()
+		BMCore:InitializeHero(heroEnt)
+		Upgrades:CheckAbilityRequirements(heroEnt)
 	end, player)
 end
