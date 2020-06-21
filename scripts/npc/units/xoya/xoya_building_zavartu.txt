@@ -1,5 +1,5 @@
 "DOTAUnits" 
-    {
+{
     "xoya_building_zavartu"
     {
         // General
