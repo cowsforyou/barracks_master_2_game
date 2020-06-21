@@ -1,17 +1,20 @@
-"gather_lumber"
+"DOTAAbilities"
 {
-    "BaseClass"                 "ability_datadriven"
-    "AbilityTextureName"        "furion_sprout"
-    "MaxLevel"                  "1"
-
-    "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-    
-    "OnSpellStart"
+    "gather_lumber"
     {
-        "RunScript"
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "furion_sprout"
+        "MaxLevel"                  "1"
+
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        
+        "OnSpellStart"
         {
-            "ScriptFile"    "core/gathering.lua"
-            "Function"      "GatherLumber"
+            "RunScript"
+            {
+                "ScriptFile"    "core/gathering.lua"
+                "Function"      "GatherLumber"
+            }
         }
     }
 }

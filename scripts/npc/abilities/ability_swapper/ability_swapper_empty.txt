@@ -1,21 +1,24 @@
-"ability_swapper_empty"
+"DOTAAbilities"
 {
-	// Ability Settings
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-    "AbilityCastPoint"              "0"	
-	"BaseClass"             		"ability_datadriven"
-	"AbilityTextureName"			"rubick_empty1"
-	"MaxLevel" 						"0"
-
-	// Ability Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	"ability_swapper_empty"
 	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"	
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"rubick_empty1"
+		"MaxLevel" 						"0"
+
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+
+		}
+
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
 
 	}
-
-	// Scripts
-	//-------------------------------------------------------------------------------------------------------------
-
 }

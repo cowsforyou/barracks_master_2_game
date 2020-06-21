@@ -1,28 +1,31 @@
-"ability_swapper_ling_next"
+"DOTAAbilities"
 {
-	// Ability Settings
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-    "AbilityCastPoint"              "0"	
-	"BaseClass"             		"ability_datadriven"
-	"AbilityTextureName"			"ability_swapper_ling_next"
-	"MaxLevel" 						"1"
-
-	// Ability Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	"ability_swapper_ling_next"
 	{
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	    "AbilityCastPoint"              "0"	
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"ability_swapper_ling_next"
+		"MaxLevel" 						"1"
 
-	}
-
-	// Scripts
-	//-------------------------------------------------------------------------------------------------------------
-	"OnSpellStart"
-	{
-		"RunScript"
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"ScriptFile"	"widgets/ability_swapper/ability_list_ling.lua"
-			"Function"		"OnSpellStart"
+
+		}
+
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"widgets/ability_swapper/ability_list_ling.lua"
+				"Function"		"OnSpellStart"
+			}
 		}
 	}
 }
