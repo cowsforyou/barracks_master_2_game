@@ -31,6 +31,10 @@
 #base "abilities\xoya\Citol\xoya_citol_damage.txt"
 #base "abilities\xoya\Citol\xoya_citol_damage_disabled.txt"
 
+#base "abilities\xoya\Lumber\build_xoya_building_lumber.txt"
+#base "abilities\xoya\Lumber\xoya_lumber_mango.txt"
+#base "abilities\xoya\Lumber\xoya_lumber_mango_disabled.txt"
+
 
 "DOTAAbilities"
 {
@@ -2793,132 +2797,6 @@
 		}
 	}
 	"build_xoya_building_library_disabled"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"xoya"
-		"MaxLevel" 						"0"
-	}
-	"build_xoya_building_lumber"
-	{
-		// Ability Settings
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-	    "AbilityCastPoint"              "0"
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"xoya"
-		"MaxLevel" 						"1"
-	
-	
-		// Building Helper Info
-		//-------------------------------------------------------------------------------------------------------------
-		"UnitName"						"xoya_building_lumber"
-		"Building"						"1" //bool 
-		"AbilityCastRange"				"200"
-		"UpdateHealth"					"1" //bool
-		"Scale"							"0" //bool
-		"PlayerCanControl"				"1" //bool
-		"BuilderInside"					"1"
-		"ModelRotation"					"135.0"
-		"AbilityCooldown"				"0"
-	
-		"BuildTime"						"35"
-		"AbilityGoldCost"				"400"
-		"MaxBuildingCount"				"3"
-	
-	
-		// Ability Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"build_time"			"35"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"400"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"max_count"				"3"
-			}
-		}
-	
-		// Scripts
-		//-------------------------------------------------------------------------------------------------------------
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"builder.lua"
-				"Function"		"Build"
-			}
-		}
-	}
-	"xoya_lumber_mango"
-	{
-	    "BaseClass"                     "ability_datadriven"
-	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-	    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"   
-	    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
-	    "AbilityTextureName"            "xoya"
-	
-	    "MaxLevel"                      "1"
-	
-	    // Casting
-	    //-------------------------------------------------------------------------------------------------------------
-	    "AbilityCastRange"              "400"
-	    "AbilityCastPoint"              "0.0"
-	    "AbilityCooldown"               "70.0"
-	    "AbilityManaCost"               "0"   
-	
-	    // Special  
-	    //-------------------------------------------------------------------------------------------------------------
-	    "AbilitySpecial"
-	    {
-	        "01"
-	        {
-	            "var_type"              "FIELD_INTEGER"
-	            "mana_amount"           "150"
-	        }
-	        "02"
-	        {
-	            "var_type"              "FIELD_INTEGER"
-	            "range_tooltip"         "400"
-	        }        
-	
-	    }
-	    
-	    // OnSpellStart
-	    //-------------------------------------------------------------------------------------------------------------
-	    "OnSpellStart"
-	    {
-	        "RunScript"
-	        {
-	            "Target"        "TARGET"
-	            "ScriptFile"    "spells/addmana.lua"
-	            "Function"      "AddMana"
-	            "mana_amount"   "%mana_amount"
-	        }
-	
-	        "FireSound"
-	        {
-	            "Target"        "CASTER"
-	            "EffectName"    "DOTA_Item.Mango.Activate"
-	        }
-	
-	        "FireEffect"
-	        {
-	            "Target"            "TARGET"
-	            "EffectName"        "particles/items3_fx/mango_active.vpcf"
-	            "EffectAttachType"  "follow_origin"
-	        }
-	    }
-	}
-	"xoya_lumber_mango_disabled"
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"xoya"

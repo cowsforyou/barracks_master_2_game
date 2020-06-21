@@ -1,6 +1,9 @@
-"xoya_lumber_mango_disabled"
+"DOTAAbilities" 
 {
-	"BaseClass"             		"ability_datadriven"
-	"AbilityTextureName"			"xoya"
-	"MaxLevel" 						"0"
+	"xoya_lumber_mango_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"xoya"
+		"MaxLevel" 						"0"
+	}
 }
