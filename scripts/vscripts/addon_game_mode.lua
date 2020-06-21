@@ -206,5 +206,5 @@ end
 function Activate()
   GameRules.GameMode = GameMode()
   GameRules.GameMode:_InitGameMode()
-  GameRules:GetGameModeEntity():SetCustomGameForceHero("npc_dota_hero_keeper_of_the_light")
+  GameRules:GetGameModeEntity():SetCustomGameForceHero("npc_dota_hero_wisp")
 end
