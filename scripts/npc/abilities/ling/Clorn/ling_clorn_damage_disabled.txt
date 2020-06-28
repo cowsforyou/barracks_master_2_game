@@ -1,6 +1,9 @@
-"ling_clorn_damage_disabled"
+"DOTAAbilities"
 {
-    "BaseClass"                     "ability_datadriven"
-    "AbilityTextureName"            "ling"
-    "MaxLevel"                      "0"
+	"ling_clorn_damage_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "ling"
+	    "MaxLevel"                      "0"
+	}
 }

@@ -1,6 +1,9 @@
-"ling_lumber_mango_disabled"
+"DOTAAbilities"
 {
-	"BaseClass"             		"ability_datadriven"
-	"AbilityTextureName"			"ling"
-	"MaxLevel" 						"0"
+	"ling_lumber_mango_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"ling"
+		"MaxLevel" 						"0"
+	}
 }
