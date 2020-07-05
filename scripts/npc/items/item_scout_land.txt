@@ -6,7 +6,7 @@
         //-------------------------------------------------------------------------------------------------------------
         "ID"    "1002"
         "BaseClass"                     "item_datadriven"
-        "AbilityTextureName"			"example_item"
+        "AbilityTextureName"			"item_img_scout_land"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 
         "ItemKillable"      "0" 
