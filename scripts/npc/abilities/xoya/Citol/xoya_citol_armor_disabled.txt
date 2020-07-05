@@ -1,6 +1,9 @@
-"xoya_citol_armor_disabled"
+"DOTAAbilities" 
 {
-    "BaseClass"                     "ability_datadriven"
-    "AbilityTextureName"            "xoya"
-    "MaxLevel"                      "0"
+	"xoya_citol_armor_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "xoya"
+	    "MaxLevel"                      "0"
+	}
 }
