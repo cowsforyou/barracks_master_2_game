@@ -1,35 +1,38 @@
-"xoya_phe_armor"
+"DOTAAbilities"
 {
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"             "ability_datadriven"
-    "AbilityTextureName"    "xoya"
-
-    "MaxLevel"    "3"
-
-    // AbilitySpecial  
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
+    "xoya_phe_armor"
     {
-        "01"
-        {
-            "var_type"        "FIELD_INTEGER"
-            "armor_bonus"     "2 4 8"
-        }     
-    }
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "BaseClass"             "ability_datadriven"
+        "AbilityTextureName"    "xoya"
 
-    // Modifiers
-    //-------------------------------------------------------------------------------------------------------------
-    "Modifiers"
-    {
-        "modifier_xoya_phe_armor"
+        "MaxLevel"    "3"
+
+        // AbilitySpecial  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
         {
-            "Passive"    "1"
-            "IsHidden"   "0"
-        
-            "Properties"
+            "01"
             {
-                "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%armor_bonus" // grab from AbilitySpecial
-            } 
+                "var_type"        "FIELD_INTEGER"
+                "armor_bonus"     "2 4 8"
+            }     
+        }
+
+        // Modifiers
+        //-------------------------------------------------------------------------------------------------------------
+        "Modifiers"
+        {
+            "modifier_xoya_phe_armor"
+            {
+                "Passive"    "1"
+                "IsHidden"   "0"
+            
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%armor_bonus" // grab from AbilitySpecial
+                } 
+            }
         }
     }
 }
