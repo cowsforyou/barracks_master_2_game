@@ -1,143 +1,145 @@
-"item_last_stand"
+"DOTAAbilities"
 {
-    // General
-    //-------------------------------------------------------------------------------------------------------------
-    "ID"    "1008"
-    "BaseClass"                     "item_datadriven"
-    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
-    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
-    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-    "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
-    "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
-    "AbilityTextureName"            "item_last_stand"
-    "AOERadius"                     "%radius"
-
-    // Item Details
-    //-------------------------------------------------------------------------------------------------------------  
-    "ItemDroppable"         "1"
-    "ItemKillable"          "1"
-    "ItemShareability"      "ITEM_FULLY_SHAREABLE"
-
-    "ItemInitialCharges"    "1"
-    "ItemRequiresCharges"   "1"
-    "ItemPermanent"         "0"
-
-    // Precache
-    //-------------------------------------------------------------------------------------------------------------
-    "precache"
+    "item_last_stand"
     {
-        "soundfile"         "soundevents/game_sounds_heroes/game_sounds_lion.vsndevts"
-        "particle"          "particles/units/heroes/hero_lion/lion_spell_finger_of_death.vpcf"
-    }
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "ID"    "1008"
+        "BaseClass"                     "item_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "AbilityTextureName"            "img_item_last_stand"
+        "AOERadius"                     "%radius"
 
+        // Item Details
+        //-------------------------------------------------------------------------------------------------------------  
+        "ItemDroppable"         "1"
+        "ItemKillable"          "1"
+        "ItemShareability"      "ITEM_FULLY_SHAREABLE"
 
-    // Casting
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityCastRange"              "900"
-    "AbilityCastPoint"              "0.3"
+        "ItemInitialCharges"    "1"
+        "ItemRequiresCharges"   "1"
+        "ItemPermanent"         "0"
 
-    // Time     
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityCooldown"               "10.0"
-
-    // Cost
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityManaCost"               "0"
-
-    // Stats
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityModifierSupportValue"   "0.0"   // Modifier just delays damage
-
-    // Special
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
-    {
-        "01"
+        // Precache
+        //-------------------------------------------------------------------------------------------------------------
+        "precache"
         {
-            "var_type"                  "FIELD_FLOAT"
-            "radius"                    "450"
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_lion.vsndevts"
+            "particle"          "particles/units/heroes/hero_lion/lion_spell_finger_of_death.vpcf"
         }
 
-        "02"
-        {
-            "var_type"                  "FIELD_INTEGER"
-            "damage"                    "1800"
-        }
 
-        "03"
-        {
-            "var_type"                  "FIELD_FLOAT"
-            "damage_delay"              "0.25"
-        }
-    }
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "900"
+        "AbilityCastPoint"              "0.3"
 
-    "OnSpellStart"
-    {
-        "FireSound"
-        {
-            "EffectName"    "Hero_Lion.FingerOfDeath"
-            "Target"        "CASTER"
-        }
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "10.0"
 
-        "FireSound"
-        {
-            "EffectName"    "Hero_Lion.FingerOfDeathImpact"
-            "Target"        "TARGET"
-        }
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
 
-        "SpendCharge" {}
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityModifierSupportValue"   "0.0"   // Modifier just delays damage
 
-        "ActOnTargets"
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
         {
-            "Target"
+            "01"
             {
-                "Center"    "TARGET"
-                "Radius"    "%radius"
-                "Teams"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
-                "Types"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                "var_type"                  "FIELD_FLOAT"
+                "radius"                    "450"
             }
 
-            "Action"
+            "02"
             {
-                "ApplyModifier"
+                "var_type"                  "FIELD_INTEGER"
+                "damage"                    "1800"
+            }
+
+            "03"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "damage_delay"              "0.25"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "FireSound"
+            {
+                "EffectName"    "Hero_Lion.FingerOfDeath"
+                "Target"        "CASTER"
+            }
+
+            "FireSound"
+            {
+                "EffectName"    "Hero_Lion.FingerOfDeathImpact"
+                "Target"        "TARGET"
+            }
+
+            "SpendCharge" {}
+
+            "ActOnTargets"
+            {
+                "Target"
                 {
-                    "ModifierName"      "modifier_last_stand_damage"
-                    "Target"            "TARGET"
+                    "Center"    "TARGET"
+                    "Radius"    "%radius"
+                    "Teams"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                    "Types"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
                 }
 
-                "FireEffect"
+                "Action"
                 {
-                    "EffectName"        "particles/units/heroes/hero_lion/lion_spell_finger_of_death.vpcf"
-                    "EffectAttachType"  "start_at_customorigin"
-
-                    "ControlPointEntities"
+                    "ApplyModifier"
                     {
-                        "CASTER"    "attach_attack1"
-                        "TARGET"    "attach_hitloc"
+                        "ModifierName"      "modifier_last_stand_damage"
+                        "Target"            "TARGET"
+                    }
+
+                    "FireEffect"
+                    {
+                        "EffectName"        "particles/units/heroes/hero_lion/lion_spell_finger_of_death.vpcf"
+                        "EffectAttachType"  "start_at_customorigin"
+
+                        "ControlPointEntities"
+                        {
+                            "CASTER"    "attach_attack1"
+                            "TARGET"    "attach_hitloc"
+                        }
+                    }
+                }
+            }
+        }
+
+
+        "Modifiers"
+        {
+            "modifier_last_stand_damage"
+            {
+                "IsHidden"  "1"
+                "Duration"  "%damage_delay"
+
+                "OnDestroy"
+                {
+                    "Damage"
+                    {
+                        "Target"    "TARGET"
+                        "Type"      "DAMAGE_TYPE_MAGICAL"
+                        "Damage"    "%damage"
                     }
                 }
             }
         }
     }
-
-
-    "Modifiers"
-    {
-        "modifier_last_stand_damage"
-        {
-            "IsHidden"  "1"
-            "Duration"  "%damage_delay"
-
-            "OnDestroy"
-            {
-                "Damage"
-                {
-                    "Target"    "TARGET"
-                    "Type"      "DAMAGE_TYPE_MAGICAL"
-                    "Damage"    "%damage"
-                }
-            }
-        }
-    }
 }
-
