@@ -1,112 +1,115 @@
-"xoya_creep_citol"
+"DOTAUnits"
 {
-    // General
-    //----------------------------------------------------------------
-    "BaseClass"                 "npc_dota_creature"  
-    "Model"                     "models/creeps/neutral_creeps/n_creep_kobold/kobold_c/n_creep_kobold_frost.vmdl" 
-    "ModelScale"                "0.7"
-    "Level"                     "1"
-    "HealthBarOffset"           "185"
-    "HasInventory"              "0"
-    "ConsideredHero"            "0"
-       
-    "UnitLabel"                 "creep"
+    "xoya_creep_citol"
+    {
+        // General
+        //----------------------------------------------------------------
+        "BaseClass"                 "npc_dota_creature"  
+        "Model"                     "models/creeps/neutral_creeps/n_creep_kobold/kobold_c/n_creep_kobold_frost.vmdl" 
+        "ModelScale"                "0.7"
+        "Level"                     "1"
+        "HealthBarOffset"           "185"
+        "HasInventory"              "0"
+        "ConsideredHero"            "0"
+           
+        "UnitLabel"                 "creep"
 
 
-    // Sounds, Projectiles and Destruction
-    //----------------------------------------------------------------
-    "SoundSet"                  "n_creep_Melee"
-    //"ProjectileModel"           "particles/base_attacks/ranged_goodguy.vpcf"
-    //"ProjectileSpeed"           "900"
+        // Sounds, Projectiles and Destruction
+        //----------------------------------------------------------------
+        "SoundSet"                  "n_creep_Melee"
+        //"ProjectileModel"           "particles/base_attacks/ranged_goodguy.vpcf"
+        //"ProjectileSpeed"           "900"
 
 
-    // Abilities
-    //----------------------------------------------------------------    
-    "AbilityLayout"             "6"
-    "Ability1"                  "xoya_citol_armor_disabled"     
-    "Ability2"                  "xoya_citol_damage_disabled"    
-    "Ability3"                  ""     
-    "Ability4"                  ""      
-    "Ability5"                  ""     
-    "Ability6"                  ""     
-    "Ability7"                  ""      
-    "Ability8"                  ""      
-    "Ability9"                  ""        
-    "Ability10"                 ""
+        // Abilities
+        //----------------------------------------------------------------    
+        "AbilityLayout"             "6"
+        "Ability1"                  "xoya_citol_armor_disabled"     
+        "Ability2"                  "xoya_citol_damage_disabled"    
+        "Ability3"                  ""     
+        "Ability4"                  ""      
+        "Ability5"                  ""     
+        "Ability6"                  ""     
+        "Ability7"                  ""      
+        "Ability8"                  ""      
+        "Ability9"                  ""        
+        "Ability10"                 ""
 
-    // Armor and Resistance
-    //----------------------------------------------------------------
-    "ArmorPhysical"             "0"     // Physical protection.
-    "MagicalResistance"         "0"     // Magical protection.
-
-
-    // Attack
-    //----------------------------------------------------------------
-    "AttackCapabilities"        "DOTA_UNIT_CAP_MELEE_ATTACK"
-    "AttackDamageMin"           "10"
-    "AttackDamageMax"           "16"
-    "AttackDamageType"          "DAMAGE_TYPE_ArmorPhysical"
-    "AttackRate"                "1.3"   
-    "AttackAnimationPoint"      "0.5"   
-    "AttackAcquisitionRange"    "400"   
-    "AttackRange"               "128"   
+        // Armor and Resistance
+        //----------------------------------------------------------------
+        "ArmorPhysical"             "0"     // Physical protection.
+        "MagicalResistance"         "0"     // Magical protection.
 
 
-    // Attributes
-    //----------------------------------------------------------------
-    "AttributePrimary"          "DOTA_ATTRIBUTE_STRENGTH"
-    "AttributeBaseStrength"     "0"     // Base strength
-    "AttributeStrengthGain"     "0"     // Strength bonus per level.
-    "AttributeBaseIntelligence" "0"     // Base intelligence
-    "AttributeIntelligenceGain" "0"     // Intelligence bonus per level.
-    "AttributeBaseAgility"      "0"     // Base agility
-    "AttributeAgilityGain"      "0"     // Agility bonus per level.
+        // Attack
+        //----------------------------------------------------------------
+        "AttackCapabilities"        "DOTA_UNIT_CAP_MELEE_ATTACK"
+        "AttackDamageMin"           "10"
+        "AttackDamageMax"           "16"
+        "AttackDamageType"          "DAMAGE_TYPE_ArmorPhysical"
+        "AttackRate"                "1.3"   
+        "AttackAnimationPoint"      "0.5"   
+        "AttackAcquisitionRange"    "400"   
+        "AttackRange"               "128"   
 
 
-    // Bounty
-    //----------------------------------------------------------------
-    "BountyXP"                  "0"     // Experience earn.
-    "BountyGoldMin"             "13"     // Gold earned min.
-    "BountyGoldMax"             "17"     // Gold earned max.
+        // Attributes
+        //----------------------------------------------------------------
+        "AttributePrimary"          "DOTA_ATTRIBUTE_STRENGTH"
+        "AttributeBaseStrength"     "0"     // Base strength
+        "AttributeStrengthGain"     "0"     // Strength bonus per level.
+        "AttributeBaseIntelligence" "0"     // Base intelligence
+        "AttributeIntelligenceGain" "0"     // Intelligence bonus per level.
+        "AttributeBaseAgility"      "0"     // Base agility
+        "AttributeAgilityGain"      "0"     // Agility bonus per level.
 
 
-    // Bounds
-    //----------------------------------------------------------------
-    "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"      // Hull size is used to determine incoming attack hit range
-    "RingRadius"                "45"
+        // Bounty
+        //----------------------------------------------------------------
+        "BountyXP"                  "0"     // Experience earn.
+        "BountyGoldMin"             "13"     // Gold earned min.
+        "BountyGoldMax"             "17"     // Gold earned max.
 
 
-    // Movement
-    //----------------------------------------------------------------
-    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_GROUND"     // Type of locomotion - ground, air
-    "MovementSpeed"             "325"   // Speed
-    "MovementTurnRate"          "0.5"   // Turning rate.
-    "FollowRange"               "0"   // Distance to keep when following
+        // Bounds
+        //----------------------------------------------------------------
+        "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"      // Hull size is used to determine incoming attack hit range
+        "RingRadius"                "45"
 
 
-    // Status
-    //----------------------------------------------------------------
-    "StatusHealth"              "120"     // Base health.
-    "StatusHealthRegen"         "0"     // Health regeneration rate.
-    "StatusMana"                "0"     // Base mana.
-    "StatusManaRegen"           "0"     // Mana regeneration rate.
+        // Movement
+        //----------------------------------------------------------------
+        "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_GROUND"     // Type of locomotion - ground, air
+        "MovementSpeed"             "325"   // Speed
+        "MovementTurnRate"          "0.5"   // Turning rate.
+        "FollowRange"               "0"   // Distance to keep when following
 
 
-    // Team
-    //----------------------------------------------------------------
-    "TeamName"                  "DOTA_TEAM_NEUTRALS"      // Team name.
-    "CombatClassAttack"         "DOTA_COMBAT_CLASS_ATTACK_BASIC"
-    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_BASIC"
-    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-    
-
-    // Vision
-    //----------------------------------------------------------------
-    "VisionDaytimeRange"        "800"   // Range of vision during day light.
-    "VisionNighttimeRange"      "500"   // Range of vision at night time.
+        // Status
+        //----------------------------------------------------------------
+        "StatusHealth"              "120"     // Base health.
+        "StatusHealthRegen"         "0"     // Health regeneration rate.
+        "StatusMana"                "0"     // Base mana.
+        "StatusManaRegen"           "0"     // Mana regeneration rate.
 
 
-    // Bots
-    //----------------------------------------------------------------
-    "AttackDesire"              "1.5"   // How much bots want to attack them vs other non-hero things
-} 
+        // Team
+        //----------------------------------------------------------------
+        "TeamName"                  "DOTA_TEAM_NEUTRALS"      // Team name.
+        "CombatClassAttack"         "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+        "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_BASIC"
+        "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+        
+
+        // Vision
+        //----------------------------------------------------------------
+        "VisionDaytimeRange"        "800"   // Range of vision during day light.
+        "VisionNighttimeRange"      "500"   // Range of vision at night time.
+
+
+        // Bots
+        //----------------------------------------------------------------
+        "AttackDesire"              "1.5"   // How much bots want to attack them vs other non-hero things
+    } 
+}

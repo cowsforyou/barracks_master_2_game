@@ -1,132 +1,135 @@
-"xoya_creep_zavartu"
+"DOTAUnits"
 {
-    // General
-    //----------------------------------------------------------------
-    "BaseClass"                 "npc_dota_creature"  
-    "Model"                     "models/heroes/shadow_demon/shadow_demon.vmdl" 
-    "ModelScale"                "0.84"
-    "Level"                     "1"
-    "HealthBarOffset"           "175"
-    "HasInventory"              "0"
-    "ConsideredHero"            "0"
-       
-    "UnitLabel"                 "creep"
-
-
-    // Sounds, Projectiles and Destruction
-    //----------------------------------------------------------------
-    "SoundSet"                  "Hero_ShadowDemon"
-    "ProjectileModel"           "particles/units/heroes/hero_shadow_demon/shadow_demon_base_attack.vpcf"
-    "ProjectileSpeed"           "900"
-
-
-    // Abilities
-    //----------------------------------------------------------------    
-    "Ability1"                  ""     
-    "Ability2"                  ""    
-    "Ability3"                  ""     
-    "Ability4"                  ""      
-    "Ability5"                  ""     
-    "Ability6"                  ""     
-    "Ability7"                  ""      
-    "Ability8"                  ""      
-    "Ability9"                  ""        
-    "Ability10"                 ""
-
-    // Armor and Resistance
-    //----------------------------------------------------------------
-    "ArmorPhysical"             "0"     // Physical protection.
-    "MagicalResistance"         "0"     // Magical protection.
-
-
-    // Attack
-    //----------------------------------------------------------------
-    "AttackCapabilities"        "DOTA_UNIT_CAP_RANGED_ATTACK"
-    "AttackDamageMin"           "50"
-    "AttackDamageMax"           "60"
-    "AttackDamageType"          "DAMAGE_TYPE_ArmorPhysical"
-    "AttackRate"                "1.0"   
-    "AttackAnimationPoint"      "0.5"   
-    "AttackAcquisitionRange"    "600"   
-    "AttackRange"               "500"   
-
-
-    // Attributes
-    //----------------------------------------------------------------
-    "AttributePrimary"          "DOTA_ATTRIBUTE_STRENGTH"
-    "AttributeBaseStrength"     "0"     // Base strength
-    "AttributeStrengthGain"     "0"     // Strength bonus per level.
-    "AttributeBaseIntelligence" "0"     // Base intelligence
-    "AttributeIntelligenceGain" "0"     // Intelligence bonus per level.
-    "AttributeBaseAgility"      "0"     // Base agility
-    "AttributeAgilityGain"      "0"     // Agility bonus per level.
-
-
-    // Bounty
-    //----------------------------------------------------------------
-    "BountyXP"                  "0"     // Experience earn.
-    "BountyGoldMin"             "13"     // Gold earned min.
-    "BountyGoldMax"             "17"     // Gold earned max.
-
-
-    // Bounds
-    //----------------------------------------------------------------
-    "BoundsHullName"            "DOTA_HULL_SIZE_HERO"      // Hull size is used to determine incoming attack hit range
-    "RingRadius"                "55"
-
-
-    // Movement
-    //----------------------------------------------------------------
-    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_GROUND"     // Type of locomotion - ground, air
-    "MovementSpeed"             "300"   // Speed
-    "MovementTurnRate"          "0.5"   // Turning rate.
-    "FollowRange"               "0"   // Distance to keep when following
-
-
-    // Status
-    //----------------------------------------------------------------
-    "StatusHealth"              "400"     // Base health.
-    "StatusHealthRegen"         "0"     // Health regeneration rate.
-    "StatusMana"                "1000"     // Base mana.
-    "StatusManaRegen"           "0"     // Mana regeneration rate.
-
-
-    // Team
-    //----------------------------------------------------------------
-    "TeamName"                  "DOTA_TEAM_NEUTRALS"      // Team name.
-    "CombatClassAttack"         "DOTA_COMBAT_CLASS_ATTACK_BASIC"
-    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_BASIC"
-    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-    
-
-    // Vision
-    //----------------------------------------------------------------
-    "VisionDaytimeRange"        "800"   // Range of vision during day light.
-    "VisionNighttimeRange"      "500"   // Range of vision at night time.
-
-
-    // Bots
-    //----------------------------------------------------------------
-    "AttackDesire"              "1.5"   // How much bots want to attack them vs other non-hero things
-
-
-    // Wearables
-    //----------------------------------------------------------------
-    "Creature"
+    "xoya_creep_zavartu"
     {
-        "AttachWearables" // Default npc_dota_hero_furion
+        // General
+        //----------------------------------------------------------------
+        "BaseClass"                 "npc_dota_creature"  
+        "Model"                     "models/heroes/shadow_demon/shadow_demon.vmdl" 
+        "ModelScale"                "0.84"
+        "Level"                     "1"
+        "HealthBarOffset"           "175"
+        "HasInventory"              "0"
+        "ConsideredHero"            "0"
+           
+        "UnitLabel"                 "creep"
+
+
+        // Sounds, Projectiles and Destruction
+        //----------------------------------------------------------------
+        "SoundSet"                  "Hero_ShadowDemon"
+        "ProjectileModel"           "particles/units/heroes/hero_shadow_demon/shadow_demon_base_attack.vpcf"
+        "ProjectileSpeed"           "900"
+
+
+        // Abilities
+        //----------------------------------------------------------------    
+        "Ability1"                  ""     
+        "Ability2"                  ""    
+        "Ability3"                  ""     
+        "Ability4"                  ""      
+        "Ability5"                  ""     
+        "Ability6"                  ""     
+        "Ability7"                  ""      
+        "Ability8"                  ""      
+        "Ability9"                  ""        
+        "Ability10"                 ""
+
+        // Armor and Resistance
+        //----------------------------------------------------------------
+        "ArmorPhysical"             "0"     // Physical protection.
+        "MagicalResistance"         "0"     // Magical protection.
+
+
+        // Attack
+        //----------------------------------------------------------------
+        "AttackCapabilities"        "DOTA_UNIT_CAP_RANGED_ATTACK"
+        "AttackDamageMin"           "50"
+        "AttackDamageMax"           "60"
+        "AttackDamageType"          "DAMAGE_TYPE_ArmorPhysical"
+        "AttackRate"                "1.0"   
+        "AttackAnimationPoint"      "0.5"   
+        "AttackAcquisitionRange"    "600"   
+        "AttackRange"               "500"   
+
+
+        // Attributes
+        //----------------------------------------------------------------
+        "AttributePrimary"          "DOTA_ATTRIBUTE_STRENGTH"
+        "AttributeBaseStrength"     "0"     // Base strength
+        "AttributeStrengthGain"     "0"     // Strength bonus per level.
+        "AttributeBaseIntelligence" "0"     // Base intelligence
+        "AttributeIntelligenceGain" "0"     // Intelligence bonus per level.
+        "AttributeBaseAgility"      "0"     // Base agility
+        "AttributeAgilityGain"      "0"     // Agility bonus per level.
+
+
+        // Bounty
+        //----------------------------------------------------------------
+        "BountyXP"                  "0"     // Experience earn.
+        "BountyGoldMin"             "13"     // Gold earned min.
+        "BountyGoldMax"             "17"     // Gold earned max.
+
+
+        // Bounds
+        //----------------------------------------------------------------
+        "BoundsHullName"            "DOTA_HULL_SIZE_HERO"      // Hull size is used to determine incoming attack hit range
+        "RingRadius"                "55"
+
+
+        // Movement
+        //----------------------------------------------------------------
+        "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_GROUND"     // Type of locomotion - ground, air
+        "MovementSpeed"             "300"   // Speed
+        "MovementTurnRate"          "0.5"   // Turning rate.
+        "FollowRange"               "0"   // Distance to keep when following
+
+
+        // Status
+        //----------------------------------------------------------------
+        "StatusHealth"              "400"     // Base health.
+        "StatusHealthRegen"         "0"     // Health regeneration rate.
+        "StatusMana"                "1000"     // Base mana.
+        "StatusManaRegen"           "0"     // Mana regeneration rate.
+
+
+        // Team
+        //----------------------------------------------------------------
+        "TeamName"                  "DOTA_TEAM_NEUTRALS"      // Team name.
+        "CombatClassAttack"         "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+        "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_BASIC"
+        "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+        
+
+        // Vision
+        //----------------------------------------------------------------
+        "VisionDaytimeRange"        "800"   // Range of vision during day light.
+        "VisionNighttimeRange"      "500"   // Range of vision at night time.
+
+
+        // Bots
+        //----------------------------------------------------------------
+        "AttackDesire"              "1.5"   // How much bots want to attack them vs other non-hero things
+
+
+        // Wearables
+        //----------------------------------------------------------------
+        "Creature"
         {
-            "1" { "ItemDef" "396" } // Shadow Demon's Cape
-            "2" { "ItemDef" "399" } // Shadow Demon's Tail
-            "3" { "ItemDef" "545" } // Shadow Demon's Ambient Effects
-            "4" { "ItemDef" "397" } // Shadow Demon's Armor
-            "5" { "ItemDef" "398" } // Shadow Demon's Belt
+            "AttachWearables" // Default npc_dota_hero_furion
+            {
+                "1" { "ItemDef" "396" } // Shadow Demon's Cape
+                "2" { "ItemDef" "399" } // Shadow Demon's Tail
+                "3" { "ItemDef" "545" } // Shadow Demon's Ambient Effects
+                "4" { "ItemDef" "397" } // Shadow Demon's Armor
+                "5" { "ItemDef" "398" } // Shadow Demon's Belt
+            }
         }
-    }
 
 
-    // Precache
-    //-------------------------------------------------------------------------------------------------------------
-    "particle_folder"           "particles/units/heroes/hero_shadow_demon"
-    "GameSoundsFile"            "soundevents/game_sounds_heroes/game_sounds_shadow_demon.vsndevts"
-} 
+        // Precache
+        //-------------------------------------------------------------------------------------------------------------
+        "particle_folder"           "particles/units/heroes/hero_shadow_demon"
+        "GameSoundsFile"            "soundevents/game_sounds_heroes/game_sounds_shadow_demon.vsndevts"
+    } 
+}
