@@ -1,35 +1,38 @@
-"ling_orthi_armor"
+"DOTAAbilities"
 {
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"             "ability_datadriven"
-    "AbilityTextureName"    "ling"
-
-    "MaxLevel"    "3"
-
-    // AbilitySpecial  
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
+    "ling_orthi_armor"
     {
-        "01"
-        {
-            "var_type"        "FIELD_INTEGER"
-            "armor_bonus"     "1 2 6"
-        }     
-    }
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "BaseClass"             "ability_datadriven"
+        "AbilityTextureName"    "ling"
 
-    // Modifiers
-    //-------------------------------------------------------------------------------------------------------------
-    "Modifiers"
-    {
-        "modifier_ling_orthi_armor"
+        "MaxLevel"    "3"
+
+        // AbilitySpecial  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
         {
-            "Passive"    "1"
-            "IsHidden"   "0"
-        
-            "Properties"
+            "01"
             {
-                "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%armor_bonus" // grab from AbilitySpecial
-            } 
+                "var_type"        "FIELD_INTEGER"
+                "armor_bonus"     "1 2 6"
+            }     
+        }
+
+        // Modifiers
+        //-------------------------------------------------------------------------------------------------------------
+        "Modifiers"
+        {
+            "modifier_ling_orthi_armor"
+            {
+                "Passive"    "1"
+                "IsHidden"   "0"
+            
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%armor_bonus" // grab from AbilitySpecial
+                } 
+            }
         }
     }
 }

@@ -1,61 +1,64 @@
-"research_spawn_ling_creep_orthi"
+"DOTAAbilities"
 {
-    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
-    "BaseClass"                     "ability_datadriven"
-    "AbilityTextureName"            "ling"
-    "MaxLevel"                      "4"
-
-    "AbilityChannelTime"            "0 10 25 45"
-    "AbilityGoldCost"               "0 150 300 500"
-    
-    "AbilitySpecial"
+    "research_spawn_ling_creep_orthi"
     {
-        "01"
-      {
-        "var_type"              "FIELD_INTEGER"
-        "creep_count"           "1 2 3 4"
-      }
-      
-        "02"
-      {
-        "var_type"              "FIELD_INTEGER"
-        "research_time"         "0 15 25 45"
-      }
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+        "BaseClass"                     "ability_datadriven"
+        "AbilityTextureName"            "ling"
+        "MaxLevel"                      "4"
 
-        "03"
-      {
-        "var_type"              "FIELD_INTEGER"
-        "gold_cost"             "0 150 300 500"
-      }
- 
-        "04"
-      {
-        "var_type"              "FIELD_INTEGER"
-        "lumber_cost"           "0 0 100 200"
-      }
-    }
-
-    "OnSpellStart"
-    {
-        "RunScript"
+        "AbilityChannelTime"            "0 10 25 45"
+        "AbilityGoldCost"               "0 150 300 500"
+        
+        "AbilitySpecial"
         {
-            "ScriptFile"    "core/queue.lua"
-            "Function"      "EnqueueUnit"
-        }
-    }
+            "01"
+          {
+            "var_type"              "FIELD_INTEGER"
+            "creep_count"           "1 2 3 4"
+          }
+          
+            "02"
+          {
+            "var_type"              "FIELD_INTEGER"
+            "research_time"         "0 15 25 45"
+          }
 
-    "OnChannelSucceeded"
-    {
-        "RunScript"
-        {
-            "ScriptFile"    "core/queue.lua"
-            "Function"      "NextQueue"
+            "03"
+          {
+            "var_type"              "FIELD_INTEGER"
+            "gold_cost"             "0 150 300 500"
+          }
+     
+            "04"
+          {
+            "var_type"              "FIELD_INTEGER"
+            "lumber_cost"           "0 0 100 200"
+          }
         }
 
-        "RunScript"
+        "OnSpellStart"
         {
-            "ScriptFile"    "core/research.lua"
-            "Function"      "ResearchComplete"
+            "RunScript"
+            {
+                "ScriptFile"    "core/queue.lua"
+                "Function"      "EnqueueUnit"
+            }
+        }
+
+        "OnChannelSucceeded"
+        {
+            "RunScript"
+            {
+                "ScriptFile"    "core/queue.lua"
+                "Function"      "NextQueue"
+            }
+
+            "RunScript"
+            {
+                "ScriptFile"    "core/research.lua"
+                "Function"      "ResearchComplete"
+            }
         }
     }
 }

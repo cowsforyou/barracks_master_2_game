@@ -1,6 +1,9 @@
-"build_ling_building_runic_disabled"
+"DOTAAbilities"
 {
-	"BaseClass"             		"ability_datadriven"
-	"AbilityTextureName"			"ling"
-	"MaxLevel" 						"0"
+	"build_ling_building_runic_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"ling"
+		"MaxLevel" 						"0"
+	}
 }

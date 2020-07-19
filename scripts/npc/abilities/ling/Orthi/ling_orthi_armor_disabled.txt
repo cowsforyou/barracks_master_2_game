@@ -1,6 +1,9 @@
-"ling_orthi_armor_disabled"
+"DOTAAbilities"
 {
-    "BaseClass"                     "ability_datadriven"
-    "AbilityTextureName"            "ling"
-    "MaxLevel"                      "0"
+	"ling_orthi_armor_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "ling"
+	    "MaxLevel"                      "0"
+	}
 }

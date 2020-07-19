@@ -1,55 +1,58 @@
-"build_ling_building_orthi"
+"DOTAAbilities"
 {
-	// Ability Settings
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-    "AbilityCastPoint"              "0"
-	"BaseClass"             		"ability_datadriven"
-	"AbilityTextureName"			"ling"
-	"MaxLevel" 						"1"
-
-
-	// Building Helper Info
-	//-------------------------------------------------------------------------------------------------------------
-	"UnitName"						"ling_building_orthi"
-	"Building"						"1" //bool 
-	"AbilityCastRange"				"200"
-	"UpdateHealth"					"1" //bool
-	"Scale"							"0" //bool
-	"PlayerCanControl"				"1" //bool
-	"BuilderInside"					"1"
-	"ModelRotation"					"45.0"
-	"AbilityCooldown"				"0"
-
-	"BuildTime"						"25.0"
-	"AbilityGoldCost"				"250"
-	"MaxBuildingCount"				"1"
-
-
-	// Ability Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	"build_ling_building_orthi"
 	{
-		"01"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"build_time"			"25"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"gold_cost"				"250"
-		}
-	}
+		// Ability Settings
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityCastPoint"              "0"
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"ling"
+		"MaxLevel" 						"1"
 
-	// Scripts
-	//-------------------------------------------------------------------------------------------------------------
-	"OnSpellStart"
-	{
-		"RunScript"
+
+		// Building Helper Info
+		//-------------------------------------------------------------------------------------------------------------
+		"UnitName"						"ling_building_orthi"
+		"Building"						"1" //bool 
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+		"BuilderInside"					"1"
+		"ModelRotation"					"45.0"
+		"AbilityCooldown"				"0"
+
+		"BuildTime"						"25.0"
+		"AbilityGoldCost"				"250"
+		"MaxBuildingCount"				"1"
+
+
+		// Ability Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"ScriptFile"	"builder.lua"
-			"Function"		"Build"
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"25"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"250"
+			}
+		}
+
+		// Scripts
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+			}
 		}
 	}
 }
