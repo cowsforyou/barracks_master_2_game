@@ -1,51 +1,54 @@
-// Autocast creep spawner spell; starts casting as soon as the building is fully constructed
-"spawn_xoya_creep_belek"
+"DOTAAbilities"
 {
-    "BaseClass"                     "ability_datadriven"
-    "AbilityTextureName"            "xoya"
-    "MaxLevel"                      "5"
-
-    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-    "AbilityCastPoint"              "0"
-
-    "AbilitySpecial"
+    // Autocast creep spawner spell; starts casting as soon as the building is fully constructed
+    "spawn_xoya_creep_belek"
     {
-        "01"
+        "BaseClass"                     "ability_datadriven"
+        "AbilityTextureName"            "xoya"
+        "MaxLevel"                      "5"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCastPoint"              "0"
+
+        "AbilitySpecial"
         {
-            "var_type"				"FIELD_INTEGER"
-            "creep_count"			"1 4 6 8 10"
+            "01"
+            {
+                "var_type"				"FIELD_INTEGER"
+                "creep_count"			"1 4 6 8 10"
+            }
         }
-    }
 
-    // Run this script every time the spell is used
-    "OnSpellStart"
-    {
-        "RunScript"
+        // Run this script every time the spell is used
+        "OnSpellStart"
         {
-            "ScriptFile"    "core/spawner_ability.lua"
-            "Function"      "SpawnerAbility"
-            "creepName"		"xoya_creep_belek"
+            "RunScript"
+            {
+                "ScriptFile"    "core/spawner_ability.lua"
+                "Function"      "SpawnerAbility"
+                "creepName"		"xoya_creep_belek"
+            }
         }
-    }
 
-    // Modifiers are buffs/debuffs, usually associated with abilities
-    "Modifiers"
-    {
-    	"modifier_thinker"
-    	{
-    		"Passive"			"1" // start activated
-    		"IsHidden"			"1" // hide the visual buff icon
+        // Modifiers are buffs/debuffs, usually associated with abilities
+        "Modifiers"
+        {
+        	"modifier_thinker"
+        	{
+        		"Passive"			"1" // start activated
+        		"IsHidden"			"1" // hide the visual buff icon
 
-    		// run this Think() script every 0.25 seconds
-			"ThinkInterval" 	"0.25"
-		    "OnIntervalThink"
-			{
-				"RunScript"
-		        {
-		            "ScriptFile"    "core/spawner_ability.lua"
-		            "Function"      "Think"
-		        }
-			}
-   	    }
+        		// run this Think() script every 0.25 seconds
+    			"ThinkInterval" 	"0.25"
+    		    "OnIntervalThink"
+    			{
+    				"RunScript"
+    		        {
+    		            "ScriptFile"    "core/spawner_ability.lua"
+    		            "Function"      "Think"
+    		        }
+    			}
+       	    }
+        }
     }
 }

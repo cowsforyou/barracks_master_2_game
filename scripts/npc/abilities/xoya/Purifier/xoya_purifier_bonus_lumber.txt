@@ -1,37 +1,40 @@
-"xoya_purifier_bonus_lumber"
+"DOTAAbilities"
 {
-  "BaseClass"                     "ability_datadriven"
-  "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-  "AbilityTextureName"            "xoya"
-
-  "MaxLevel"                      "3"
-
-  // Special
-  //-------------------------------------------------------------------------------------------------------------
-  "AbilitySpecial"
+  "xoya_purifier_bonus_lumber"
   {
-    "01"
-    {
-      "var_type"       "FIELD_INTEGER"
-      "lumber_bonus"     "20 40 60"
-    }    
-  }
+    "BaseClass"                     "ability_datadriven"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityTextureName"            "xoya"
 
-  "Modifiers"
-  {
-    "modifier_autocast"
-    {
-      "Passive"     "1" // start activated
-      "IsHidden"    "1" // hide the visual buff icon
+    "MaxLevel"                      "3"
 
-      // run this Think() script every 0.25 seconds
-      "ThinkInterval"   "0.25"
-      "OnIntervalThink"
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
       {
-        "RunScript"
+        "var_type"       "FIELD_INTEGER"
+        "lumber_bonus"     "20 40 60"
+      }    
+    }
+
+    "Modifiers"
+    {
+      "modifier_autocast"
+      {
+        "Passive"     "1" // start activated
+        "IsHidden"    "1" // hide the visual buff icon
+
+        // run this Think() script every 0.25 seconds
+        "ThinkInterval"   "0.25"
+        "OnIntervalThink"
         {
-          "ScriptFile"    "spells/autocast.lua"
-          "Function"      "Autocast"
+          "RunScript"
+          {
+            "ScriptFile"    "spells/autocast.lua"
+            "Function"      "Autocast"
+          }
         }
       }
     }

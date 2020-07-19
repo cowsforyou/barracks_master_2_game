@@ -1,37 +1,40 @@
-"xoya_purifier_bonus_gold"
+"DOTAAbilities"
 {
-  "BaseClass"                     "ability_datadriven"
-  "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-  "AbilityTextureName"            "dragon_knight_breathe_fire"
-
-  "MaxLevel"                      "1"
-
-  // Special
-  //-------------------------------------------------------------------------------------------------------------
-  "AbilitySpecial"
+  "xoya_purifier_bonus_gold"
   {
-    "01"
-    {
-      "var_type"       "FIELD_INTEGER"
-      "gold_bonus"     "25"
-    }    
-  }
+    "BaseClass"                     "ability_datadriven"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityTextureName"            "dragon_knight_breathe_fire"
 
-  "Modifiers"
-  {
-    "modifier_autocast"
-    {
-      "Passive"     "1" // start activated
-      "IsHidden"    "1" // hide the visual buff icon
+    "MaxLevel"                      "1"
 
-      // run this Think() script every 0.25 seconds
-      "ThinkInterval"   "0.25"
-      "OnIntervalThink"
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
       {
-        "RunScript"
+        "var_type"       "FIELD_INTEGER"
+        "gold_bonus"     "25"
+      }    
+    }
+
+    "Modifiers"
+    {
+      "modifier_autocast"
+      {
+        "Passive"     "1" // start activated
+        "IsHidden"    "1" // hide the visual buff icon
+
+        // run this Think() script every 0.25 seconds
+        "ThinkInterval"   "0.25"
+        "OnIntervalThink"
         {
-          "ScriptFile"    "spells/autocast.lua"
-          "Function"      "Autocast"
+          "RunScript"
+          {
+            "ScriptFile"    "spells/autocast.lua"
+            "Function"      "Autocast"
+          }
         }
       }
     }
