@@ -3,7 +3,7 @@
 	"build_ling_building_thiki_disabled"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"ling"
+		"AbilityTextureName"			"ling_thiki_building"
 		"MaxLevel" 						"0"
 	}
 }

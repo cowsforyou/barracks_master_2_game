@@ -3,7 +3,7 @@
 	"build_ling_building_temple_disabled"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"ling"
+		"AbilityTextureName"			"ling_temple_building"
 		"MaxLevel" 						"0"
 	}
 }
