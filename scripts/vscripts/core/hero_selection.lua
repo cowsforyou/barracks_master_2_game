@@ -24,7 +24,12 @@ function HeroSelection:Start()
 
 	--Start the pick timer
 	HeroSelection.TimeLeft = SELECTION_DURATION_LIMIT
-	Timers:CreateTimer( 0.04, HeroSelection.Tick )
+	
+	Timers:CreateTimer({
+        useGameTime = false,
+        endTime = 0.04,
+        callback = HeroSelection.Tick
+      })
 
 	--Keep track of the number of players that have picked
 	HeroSelection.playersPicked = 0
@@ -51,6 +56,10 @@ function HeroSelection:Tick()
 		--End picking phase
 		HeroSelection:EndPicking()
 		return nil
+	elseif HeroSelection.TimeLeft == 58 then
+		PauseGame(true)
+		GameRules:GetGameModeEntity():SetPauseEnabled(false)
+		return 1
 	elseif HeroSelection.TimeLeft >= 0 then
 		return 1
 	else
@@ -108,6 +117,10 @@ function HeroSelection:EndPicking()
 	--Signal the picking screen to disappear
 	CustomGameEventManager:Send_ServerToAllClients( "picking_done", {} )
 
+	-- Unpause the game
+	PauseGame(false)
+	GameRules:GetGameModeEntity():SetPauseEnabled(true)
+	
 	-- Speeds the game back up
 	-- Convars:SetInt("host_timescale", tonumber(1))
 end
