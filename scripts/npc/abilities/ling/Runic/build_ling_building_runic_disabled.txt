@@ -3,7 +3,7 @@
 	"build_ling_building_runic_disabled"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"ling"
+		"AbilityTextureName"			"ling_runic_building"
 		"MaxLevel" 						"0"
 	}
 }
