@@ -40,12 +40,12 @@
     "Ability1"                  "ling_purifier_bonus_gold"     
     "Ability2"                  "ling_purifier_bonus_lumber_disabled"
     "Ability3"                  "research_ling_purifier_bonus_lumber"   
-    "Ability4"                  "ability_particle_ambient_red"
+    "Ability4"                  ""
     "Ability5"                  ""
     "Ability6"                  ""
     "Ability7"                  ""
     "Ability8"                  ""
-    "Ability9"                  "ability_small_fire"
+    "Ability9"                  ""
     "Ability10"                 "ability_building"
 
     // Armor and Resistance
