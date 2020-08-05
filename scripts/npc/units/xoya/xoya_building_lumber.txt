@@ -5,8 +5,8 @@
         // General
         //----------------------------------------------------------------
         "BaseClass"                 "npc_dota_creature"  
-        "Model"                     "models/props_structures/cage001.vmdl" 
-        "ModelScale"                "0.75"
+        "Model"                     "models/xoo_lumber.vmdl"
+        "ModelScale"                "1.00"
         //"PedestalModel"             "models/props_structures/radiant_tower_base001.vmdl"
         //"PedestalModelScale"        "0.7"
         "ConsideredHero"            "1"

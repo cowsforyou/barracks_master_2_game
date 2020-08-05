@@ -7,7 +7,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	    "AbilityCastPoint"              "0"
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"xoya"
+		"AbilityTextureName"			"xoo_lumber_building"
 		"MaxLevel" 						"1"
 
 
