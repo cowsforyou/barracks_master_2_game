@@ -5,8 +5,8 @@
     // General
     //----------------------------------------------------------------
     "BaseClass"                 "npc_dota_creature"  
-    "Model"                     "models/props_structures/bad_tower_destruction.vmdl" 
-    "ModelScale"                "0.7"
+    "Model"                     "models/xoo_purifier.vmdl" 
+    "ModelScale"                "1.8"
     //"PedestalModel"             "models/props_structures/radiant_tower_base001.vmdl"
     //"PedestalModelScale"        "0.7"
     "ConsideredHero"            "1"
