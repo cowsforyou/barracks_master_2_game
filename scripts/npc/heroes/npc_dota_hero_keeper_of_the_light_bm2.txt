@@ -1,60 +1,63 @@
-"npc_dota_hero_keeper_of_the_light_bm2"
+"DOTAHeroes"
 {
-	"override_hero"				"npc_dota_hero_keeper_of_the_light"
+	"npc_dota_hero_keeper_of_the_light_bm2"
+	{
+		"override_hero"				"npc_dota_hero_keeper_of_the_light"
 
-	// Health & Mana
-	//-------------------------------------------------------------------------------------------------------------
-	"StatusHealth"					"100"			// Base health.
-	"StatusHealthRegen"				"0.5"
-	"StatusMana"					"300"
-	"StatusManaRegen"				"1.0"	
+		// Health & Mana
+		//-------------------------------------------------------------------------------------------------------------
+		"StatusHealth"					"100"			// Base health.
+		"StatusHealthRegen"				"0.5"
+		"StatusMana"					"300"
+		"StatusManaRegen"				"1.0"	
 
-	// Damage
-	//-------------------------------------------------------------------------------------------------------------
-	"AttackDamageMin"				"25"
-	"AttackDamageMax"				"35"	
-	"AttackDamageType"				"DAMAGE_TYPE_ArmorPhysical"
-	"AttackRange"					"600"
-    "AttackRate"                	"1.2"
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackDamageMin"				"25"
+		"AttackDamageMax"				"35"	
+		"AttackDamageType"				"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRange"					"600"
+	    "AttackRate"                	"1.2"
 
-	// Armor
-	//-------------------------------------------------------------------------------------------------------------
-	"ArmorPhysical"					"2"
-	"MagicalResistance"				"25"
+		// Armor
+		//-------------------------------------------------------------------------------------------------------------
+		"ArmorPhysical"					"2"
+		"MagicalResistance"				"25"
 
-	// Attributes
-	//-------------------------------------------------------------------------------------------------------------
-	"AttributePrimary"				"DOTA_ATTRIBUTE_STRENGTH"
-	"AttributeBaseStrength"			"0"
-	"AttributeStrengthGain"			"0"
-	"AttributeBaseIntelligence"		"0"
-	"AttributeIntelligenceGain"		"0"
-	"AttributeBaseAgility"			"0"
-	"AttributeAgilityGain"			"0"
+		// Attributes
+		//-------------------------------------------------------------------------------------------------------------
+		"AttributePrimary"				"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"			"0"
+		"AttributeStrengthGain"			"0"
+		"AttributeBaseIntelligence"		"0"
+		"AttributeIntelligenceGain"		"0"
+		"AttributeBaseAgility"			"0"
+		"AttributeAgilityGain"			"0"
 
-    // Bounty
-    //----------------------------------------------------------------
-    "BountyXP"                  "0"        // Experience earn.
-    "BountyGoldMin"             "60"        // Gold earned min.
-    "BountyGoldMax"             "60"        // Gold earned max.
-   
-	// Movement
-	//-------------------------------------------------------------------------------------------------------------
-	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-	"MovementSpeed"				"400"
-	"MovementTurnRate"			"0.500000"
+	    // Bounty
+	    //----------------------------------------------------------------
+	    "BountyXP"                  "0"        // Experience earn.
+	    "BountyGoldMin"             "60"        // Gold earned min.
+	    "BountyGoldMax"             "60"        // Gold earned max.
+	   
+		// Movement
+		//-------------------------------------------------------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"400"
+		"MovementTurnRate"			"0.500000"
 
-	// Abilities
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityLayout"				"6"
-	"Ability1" 					"build_ling_building_elixir"
-	"Ability2" 					"build_ling_building_clorn"
-	"Ability3" 					"build_ling_building_orthi"
-	"Ability4"					"build_ling_building_lumber"
-	"Ability5"					"build_ling_building_catlan"
-	"Ability6" 					"ability_swapper_ling_next"
-	"Ability7"					""
-	"Ability8"					""
-	"Ability9"					""
-	"Ability10"					""
+		// Abilities
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityLayout"				"6"
+		"Ability1" 					"build_ling_building_elixir"
+		"Ability2" 					"build_ling_building_clorn"
+		"Ability3" 					"build_ling_building_orthi"
+		"Ability4"					"build_ling_building_lumber"
+		"Ability5"					"build_ling_building_catlan"
+		"Ability6" 					"ability_swapper_ling_next"
+		"Ability7"					""
+		"Ability8"					""
+		"Ability9"					""
+		"Ability10"					""
+	}
 }
