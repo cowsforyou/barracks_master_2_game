@@ -40,7 +40,7 @@
     "Ability1"                  "xoya_purifier_bonus_gold"     
     "Ability2"                  "xoya_purifier_bonus_lumber_disabled"    
     "Ability3"                  "research_xoya_purifier_bonus_lumber"
-    "Ability4"                  "ability_small_fire"
+    "Ability4"                  ""
     "Ability5"                  ""     
     "Ability6"                  ""     
     "Ability7"                  ""      
