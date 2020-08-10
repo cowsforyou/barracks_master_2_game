@@ -1,114 +1,117 @@
-"item_apply_modifiers"
+"DOTAAbilities"
 {
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-	"BaseClass"						"item_datadriven"
-
-	"Modifiers"
+	"item_apply_modifiers"
 	{
-		"modifier_on_fire"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"						"item_datadriven"
+
+		"Modifiers"
 		{
-			"IsHidden"				"1"
-			"OnCreated"
+			"modifier_on_fire"
 			{
-				"AttachEffect"
+				"IsHidden"				"1"
+				"OnCreated"
 				{
-					"EffectName"        "particles/dire_fx/fire_barracks.vpcf"
-					"EffectAttachType"  "follow_origin"
-					"Target"            "TARGET"
-					"ControlPointEntities"
+					"AttachEffect"
 					{
-						"TARGET"	"attach_fx"
+						"EffectName"        "particles/dire_fx/fire_barracks.vpcf"
+						"EffectAttachType"  "follow_origin"
+						"Target"            "TARGET"
+						"ControlPointEntities"
+						{
+							"TARGET"	"attach_fx"
+						}
 					}
 				}
 			}
-		}
 
-		"modifier_construction_red"
-		{
-			"IsHidden"				"1"
-			"OnCreated"
+			"modifier_construction_red"
 			{
-				"AttachEffect"
+				"IsHidden"				"1"
+				"OnCreated"
 				{
-					"EffectName"        "particles/bm2_custom/construction_ribbon_red.vpcf"
-					"EffectAttachType"  "follow_origin"
-					"Target"            "TARGET"
+					"AttachEffect"
+					{
+						"EffectName"        "particles/bm2_custom/construction_ribbon_red.vpcf"
+						"EffectAttachType"  "follow_origin"
+						"Target"            "TARGET"
+					}
+				}
+				"States"
+				{
+					"MODIFIER_STATE_SILENCED"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_DISARMED"		"MODIFIER_STATE_VALUE_ENABLED"
 				}
 			}
-			"States"
-			{
-				"MODIFIER_STATE_SILENCED"		"MODIFIER_STATE_VALUE_ENABLED"
-				"MODIFIER_STATE_DISARMED"		"MODIFIER_STATE_VALUE_ENABLED"
-			}
-		}
 
-		"modifier_construction_blue"
-		{
-			"IsHidden"				"1"
-			"OnCreated"
+			"modifier_construction_blue"
 			{
-				"AttachEffect"
+				"IsHidden"				"1"
+				"OnCreated"
 				{
-					"EffectName"        "particles/bm2_custom/construction_ribbon_blue.vpcf"
-					"EffectAttachType"  "follow_origin"
-					"Target"            "TARGET"
+					"AttachEffect"
+					{
+						"EffectName"        "particles/bm2_custom/construction_ribbon_blue.vpcf"
+						"EffectAttachType"  "follow_origin"
+						"Target"            "TARGET"
+					}
+				}
+				"States"
+				{
+					"MODIFIER_STATE_SILENCED"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_DISARMED"		"MODIFIER_STATE_VALUE_ENABLED"
 				}
 			}
-			"States"
-			{
-				"MODIFIER_STATE_SILENCED"		"MODIFIER_STATE_VALUE_ENABLED"
-				"MODIFIER_STATE_DISARMED"		"MODIFIER_STATE_VALUE_ENABLED"
-			}
-		}
 
-		"modifier_construction_gold"
-		{
-			"IsHidden"				"1"
-			"OnCreated"
+			"modifier_construction_gold"
 			{
-				"AttachEffect"
+				"IsHidden"				"1"
+				"OnCreated"
 				{
-					"EffectName"        "particles/bm2_custom/construction_ribbon_gold.vpcf"
-					"EffectAttachType"  "follow_origin"
-					"Target"            "TARGET"
+					"AttachEffect"
+					{
+						"EffectName"        "particles/bm2_custom/construction_ribbon_gold.vpcf"
+						"EffectAttachType"  "follow_origin"
+						"Target"            "TARGET"
+					}
+				}
+				"States"
+				{
+					"MODIFIER_STATE_SILENCED"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_DISARMED"		"MODIFIER_STATE_VALUE_ENABLED"
 				}
 			}
-			"States"
-			{
-				"MODIFIER_STATE_SILENCED"		"MODIFIER_STATE_VALUE_ENABLED"
-				"MODIFIER_STATE_DISARMED"		"MODIFIER_STATE_VALUE_ENABLED"
-			}
-		}
 
-		"modifier_construction_purple"
-		{
-			"IsHidden"				"1"
-			"OnCreated"
+			"modifier_construction_purple"
 			{
-				"AttachEffect"
+				"IsHidden"				"1"
+				"OnCreated"
 				{
-					"EffectName"        "particles/bm2_custom/construction_ribbon_purple.vpcf"
-					"EffectAttachType"  "follow_origin"
-					"Target"            "TARGET"
+					"AttachEffect"
+					{
+						"EffectName"        "particles/bm2_custom/construction_ribbon_purple.vpcf"
+						"EffectAttachType"  "follow_origin"
+						"Target"            "TARGET"
+					}
+				}
+				"States"
+				{
+					"MODIFIER_STATE_SILENCED"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_DISARMED"		"MODIFIER_STATE_VALUE_ENABLED"
 				}
 			}
-			"States"
-			{
-				"MODIFIER_STATE_SILENCED"		"MODIFIER_STATE_VALUE_ENABLED"
-				"MODIFIER_STATE_DISARMED"		"MODIFIER_STATE_VALUE_ENABLED"
-			}
-		}
 
-		"modifier_research_purple"
-		{
-			"IsHidden"				"1"
-			"OnCreated"
+			"modifier_research_purple"
 			{
-				"AttachEffect"
+				"IsHidden"				"1"
+				"OnCreated"
 				{
-					"EffectName"        "particles/bm2_custom/research_ribbon_purple.vpcf"
-					"EffectAttachType"  "follow_origin"
-					"Target"            "TARGET"
+					"AttachEffect"
+					{
+						"EffectName"        "particles/bm2_custom/research_ribbon_purple.vpcf"
+						"EffectAttachType"  "follow_origin"
+						"Target"            "TARGET"
+					}
 				}
 			}
 		}

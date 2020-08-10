@@ -1,149 +1,31 @@
+//==================================================================================================
+//                                     **  L I N G  **
+//==================================================================================================
+
 #base "items\ling\item_research_ling_purifier_bonus_lumber.txt"
+
+
+
+//==================================================================================================
+//                                     **  X O O  **
+//==================================================================================================
 
 #base "items\xoya\item_research_xoya_purifier_bonus_lumber.txt"
 
+
+
+//==================================================================================================
+//                                     **  G L O B A L  **
+//==================================================================================================
+
+#base "items\item_apply_modifiers.txt"
+#base "items\item_building_cancel.txt"
 #base "items\item_last_stand.txt"
 #base "items\item_scout_land.txt"
 
 
 "DOTAAbilities"
 {
-	"item_apply_modifiers"
-	{
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"BaseClass"						"item_datadriven"
-	
-		"Modifiers"
-		{
-			"modifier_on_fire"
-			{
-				"IsHidden"				"1"
-				"OnCreated"
-				{
-					"AttachEffect"
-					{
-						"EffectName"        "particles/dire_fx/fire_barracks.vpcf"
-						"EffectAttachType"  "follow_origin"
-						"Target"            "TARGET"
-						"ControlPointEntities"
-						{
-							"TARGET"	"attach_fx"
-						}
-					}
-				}
-			}
-	
-			"modifier_construction_red"
-			{
-				"IsHidden"				"1"
-				"OnCreated"
-				{
-					"AttachEffect"
-					{
-						"EffectName"        "particles/bm2_custom/construction_ribbon_red.vpcf"
-						"EffectAttachType"  "follow_origin"
-						"Target"            "TARGET"
-					}
-				}
-				"States"
-				{
-					"MODIFIER_STATE_SILENCED"		"MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_DISARMED"		"MODIFIER_STATE_VALUE_ENABLED"
-				}
-			}
-	
-			"modifier_construction_blue"
-			{
-				"IsHidden"				"1"
-				"OnCreated"
-				{
-					"AttachEffect"
-					{
-						"EffectName"        "particles/bm2_custom/construction_ribbon_blue.vpcf"
-						"EffectAttachType"  "follow_origin"
-						"Target"            "TARGET"
-					}
-				}
-				"States"
-				{
-					"MODIFIER_STATE_SILENCED"		"MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_DISARMED"		"MODIFIER_STATE_VALUE_ENABLED"
-				}
-			}
-	
-			"modifier_construction_gold"
-			{
-				"IsHidden"				"1"
-				"OnCreated"
-				{
-					"AttachEffect"
-					{
-						"EffectName"        "particles/bm2_custom/construction_ribbon_gold.vpcf"
-						"EffectAttachType"  "follow_origin"
-						"Target"            "TARGET"
-					}
-				}
-				"States"
-				{
-					"MODIFIER_STATE_SILENCED"		"MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_DISARMED"		"MODIFIER_STATE_VALUE_ENABLED"
-				}
-			}
-	
-			"modifier_construction_purple"
-			{
-				"IsHidden"				"1"
-				"OnCreated"
-				{
-					"AttachEffect"
-					{
-						"EffectName"        "particles/bm2_custom/construction_ribbon_purple.vpcf"
-						"EffectAttachType"  "follow_origin"
-						"Target"            "TARGET"
-					}
-				}
-				"States"
-				{
-					"MODIFIER_STATE_SILENCED"		"MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_DISARMED"		"MODIFIER_STATE_VALUE_ENABLED"
-				}
-			}
-	
-			"modifier_research_purple"
-			{
-				"IsHidden"				"1"
-				"OnCreated"
-				{
-					"AttachEffect"
-					{
-						"EffectName"        "particles/bm2_custom/research_ribbon_purple.vpcf"
-						"EffectAttachType"  "follow_origin"
-						"Target"            "TARGET"
-					}
-				}
-			}
-		}
-	}
-	"item_building_cancel"
-	{
-		"BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_cancel"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
-		"AbilityCastPoint"				"0"
-	
-		"ItemDroppable" 				"0"
-		"ItemPurchasable" 				"0"
-		"ItemSellable"					"0"
-		
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"builder.lua"
-				"Function"		"CancelBuilding"
-			}
-		}
-	}
 	"item_research_ling_clorn_armor"
 	{
 	    "ID"    "1010"
