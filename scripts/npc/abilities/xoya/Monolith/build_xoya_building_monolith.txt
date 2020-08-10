@@ -7,7 +7,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	    "AbilityCastPoint"              "0"
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"xoya"
+		"AbilityTextureName"			"xoo_monolith_building"
 		"MaxLevel" 						"1"
 
 
@@ -15,12 +15,12 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"UnitName"						"xoya_building_monolith"
 		"Building"						"1" //bool 
-		"AbilityCastRange"				"200"
+		"AbilityCastRange"				"250"
 		"UpdateHealth"					"1" //bool
 		"Scale"							"0" //bool
 		"PlayerCanControl"				"1" //bool
 		"BuilderInside"					"1"
-		"ModelRotation"					"135.0"
+		"ModelRotation"					"215.0"
 		"AbilityCooldown"				"0"
 
 		"BuildTime"						"5"
