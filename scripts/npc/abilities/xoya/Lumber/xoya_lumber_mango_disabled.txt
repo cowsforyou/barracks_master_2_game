@@ -3,7 +3,7 @@
 	"xoya_lumber_mango_disabled"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"xoya"
+		"AbilityTextureName"			"enchanted_mango"
 		"MaxLevel" 						"0"
 	}
 }
