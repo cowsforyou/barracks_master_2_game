@@ -28,6 +28,8 @@ $RECYCLE.BIN/
 *.vmdl_c
 *.vpcf_c
 *.vsndevts_c
+*.vmesh_c
+*.vphys_c
 
 # =========================
 # Operating System Files
