@@ -153,7 +153,8 @@ function Build( event )
         end
 
         -- Colorize building according to player color
-        unit:SetRenderColor(191,0,255)
+        local color = PlayerColors:GetPlayerColor(playerID)
+        unit:SetRenderColor(color[1],color[2],color[3])
 
         -- Units can't attack while building
         unit.original_attack = unit:GetAttackCapability()

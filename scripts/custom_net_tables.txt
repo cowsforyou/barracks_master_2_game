@@ -8,5 +8,7 @@
         "building_settings",
         "containers_lua",
         "scores",
+        "player_colors",
+        "selected_player_colors",
     ]
 } 
