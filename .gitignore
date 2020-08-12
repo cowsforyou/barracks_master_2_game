@@ -19,8 +19,15 @@ $RECYCLE.BIN/
 *.lnk
 
 # Dota Compiled Files
+*.bin
 *.vjs_c
 *.vcss_c
+*.vxml_c
+*.vmat_c
+*.vtex_c
+*.vmdl_c
+*.vpcf_c
+*.vsndevts_c
 
 # =========================
 # Operating System Files
