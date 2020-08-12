@@ -22,6 +22,7 @@ require('core/spawn_synchronizer')
 require('core/gathering')
 require('core/creep_control')
 require('core/hero_selection')
+require('core/player_colors')
 
 -- Convert all reliable gold to unreliable
 require('widgets/gold_to_unreliable')
