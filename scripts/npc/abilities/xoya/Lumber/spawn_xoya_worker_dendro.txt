@@ -3,7 +3,7 @@
     "spawn_xoya_worker_dendro"
     {
         "BaseClass"                     "ability_datadriven"
-        "AbilityTextureName"            "xoya"
+        "AbilityTextureName"            "xoo_dendro_worker"
         "MaxLevel"                      "1"
 
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
