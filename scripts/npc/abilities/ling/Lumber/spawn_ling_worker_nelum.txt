@@ -3,7 +3,7 @@
     "spawn_ling_worker_nelum"
     {
         "BaseClass"                     "ability_datadriven"
-        "AbilityTextureName"            "ling"
+        "AbilityTextureName"            "ling_nelum_worker"
         "MaxLevel"                      "1"
 
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
