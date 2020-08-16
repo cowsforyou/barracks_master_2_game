@@ -30,7 +30,6 @@
       }
     }
   }  
-
   "item_quelling_blade"
   {
     "AbilityCooldown"     "2.0"
@@ -62,15 +61,36 @@
       }
     }
   }
-
-  "nyx_assassin_burrow"
+  "ghost_frost_attack"
   {
-  	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-    "IsGrantedByScepter"			"0"
-  }
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"              "5301"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+    "MaxLevel"            "1"
+    "AbilityType"         "DOTA_ABILITY_TYPE_BASIC"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "SpellDispellableType"      "SPELL_DISPELLABLE_YES"
 
-  "nyx_assassin_unburrow"
-  {
-  	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "movespeed_slow"    "-50"
+      }
+      "02"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "attackspeed_slow"    "-50"
+      }     
+      "03"
+      {
+        "var_type"        "FIELD_FLOAT"
+        "duration"        "1.5"
+      }
+    }
+    "AbilityCastAnimation"    "ACT_DOTA_CAST_ABILITY_1"
   }
 }

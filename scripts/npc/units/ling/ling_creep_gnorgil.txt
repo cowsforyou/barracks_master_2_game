@@ -18,15 +18,15 @@
         // Sounds, Projectiles and Destruction
         //----------------------------------------------------------------
         "SoundSet"                  "Visage_Familiar"
-        "ProjectileModel"           "particles/units/heroes/hero_visage/visage_familiar_base_attack.vpcf"
-        "ProjectileSpeed"           "900"
+        "ProjectileModel"           "particles/units/heroes/hero_ancient_apparition/ancient_apparition_base_attack.vpcf"
+        "ProjectileSpeed"           "1000"
 
 
         // Abilities
         //----------------------------------------------------------------    
-        "Ability1"                  ""     
-        "Ability2"                  ""    
-        "Ability3"                  ""     
+        "Ability1"                  "ghost_frost_attack"
+        "Ability2"                  ""
+        "Ability3"                  ""
         "Ability4"                  ""      
         "Ability5"                  ""     
         "Ability6"                  ""     
