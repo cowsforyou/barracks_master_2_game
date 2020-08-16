@@ -41,7 +41,7 @@ function AutoSpawnCreeps(playerID, buildingAbility, creepName, spawn_count, over
         Upgrades:CheckAbilityRequirements(unit, playerID)
         
         -- Colorize creeps according to player color
-        local color = PlayerColors:GetPlayerColor(playerID)
+        local color = PlayerColors:GetPlayerColor(playerID) or {191,0,255}
         unit:SetRenderColor(color[1],color[2],color[3])
         
         Timers(0.1, function()
