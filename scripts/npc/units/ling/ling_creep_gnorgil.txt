@@ -5,7 +5,7 @@
         // General
         //----------------------------------------------------------------
         "BaseClass"                 "npc_dota_creature"  
-        "Model"                     "models/heroes/visage/visage_familiar.vmdl" 
+        "Model"                     "models/items/visage/frostivus2018_visage_frostbitten_wing_familiars/frostivus2018_visage_frostbitten_wing_familiars.vmdl" 
         "ModelScale"                "0.66"
         "Level"                     "1"
         "HealthBarOffset"           "130"
