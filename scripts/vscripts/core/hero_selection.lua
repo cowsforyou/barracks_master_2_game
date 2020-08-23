@@ -112,6 +112,10 @@ function HeroSelection:EndPicking()
 	--Assign the picked heroes to all players that have picked
 	for player, hero in pairs( HeroSelection.playerPicks ) do
 		HeroSelection:AssignHero( player, hero )
+		print('i am here')
+		local originalColorData = CustomNetTables:GetTableValue("selected_player_colors", tostring(player))
+		print(originalColorData)
+		PrintTable(originalColorData)
 	end
 
 	--Signal the picking screen to disappear
@@ -121,6 +125,12 @@ function HeroSelection:EndPicking()
 	PauseGame(false)
 	GameRules:GetGameModeEntity():SetPauseEnabled(true)
 	
+	-- Assigns color for users who did not select color
+	local playerCount = PlayerResource:GetPlayerCount()
+	local test  = PlayerResource:IsValidPlayer( 0 )
+
+    print("this ic cont", test, playerCount)
+
 	-- Speeds the game back up
 	-- Convars:SetInt("host_timescale", tonumber(1))
 end

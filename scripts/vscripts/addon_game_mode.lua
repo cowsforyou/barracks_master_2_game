@@ -207,5 +207,6 @@ end
 function Activate()
   GameRules.GameMode = GameMode()
   GameRules.GameMode:_InitGameMode()
+  PlayerColors:Init()
   GameRules:GetGameModeEntity():SetCustomGameForceHero("npc_dota_hero_wisp")
 end
