@@ -4,7 +4,7 @@
     "spawn_ling_creep_catlan"
     {
         "BaseClass"                     "ability_datadriven"
-        "AbilityTextureName"            "ling"
+        "AbilityTextureName"            "ling_catlan_creep"
         "MaxLevel"                      "3"
 
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"

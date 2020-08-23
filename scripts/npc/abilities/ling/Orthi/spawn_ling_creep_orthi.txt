@@ -4,7 +4,7 @@
     "spawn_ling_creep_orthi"
     {
         "BaseClass"                     "ability_datadriven"
-        "AbilityTextureName"            "ling"
+        "AbilityTextureName"            "ling_orthi_creep"
         "MaxLevel"                      "4"
 
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
