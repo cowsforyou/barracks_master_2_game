@@ -94,7 +94,9 @@ function HeroSelection:HeroSelect( event )
 	--Check if all heroes have been picked
 	if HeroSelection.playersPicked >= HeroSelection.numPickers then
 		--End picking
-		HeroSelection.TimeLeft = 0
+		if HeroSelection.TimeLeft > 5 then
+			HeroSelection.TimeLeft = 5
+		end
 		HeroSelection:Tick()
 	end
 end
