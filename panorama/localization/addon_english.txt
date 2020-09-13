@@ -11,13 +11,18 @@
 	//-------------------
 	//Pregame Selection Screen
 	//-------------------
-	"bm_builder_ling"								"Ling Builder"
-	"bm_lore_ling"									"The Lings are valiant people, valuing honour and camaraderie. Their forces are hardy with ample healing and regenerative abilities."
+	"bm_ling_select"								"Ling"
+	"bm_ling_lore"									"The Lings are valiant people, valuing honour and camaraderie. Their forces are hardy with ample healing and regenerative abilities."
+	"bm_xoo_select"									"Xoo"
+	"bm_xoo_lore"									"The Xoos thrive on chaos. Their modus operandi is overwhelming their opponent with sheer numbers."
+	"bm_myro_select"								"Myro"
+	"bm_myro_lore"									"To be added."
+	"bm_random_select"								"Random"
 
-	"bm_builder_xoo"								"Xoo Builder"
-	"bm_lore_xoo"									"The Xoos thrive on chaos. Their modus operandi is overwhelming their opponent with sheer numbers."
-
-	"bm_builder_random"								"Random"
+	"bm_map_legacy_name"							"Legacy"
+	"bm_map_legacy_count"							"2 vs 2"
+	"bm_map_mexican_name"							"Mexican Standoff"
+	"bm_map_mexican_count"							"1 vs 1"
 
 	//-------------------
 	//Scoreboard Labels
