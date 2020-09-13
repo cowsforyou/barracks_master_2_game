@@ -18,6 +18,7 @@
 	"bm_myro_select"								"Myro"
 	"bm_myro_lore"									"To be added."
 	"bm_random_select"								"Random"
+	"bm_random_lore"								"Randomize your faction selection. Life's exciting that way."
 
 	"bm_map_legacy_name"							"Legacy"
 	"bm_map_legacy_count"							"2 vs 2"

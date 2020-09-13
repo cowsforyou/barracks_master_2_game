@@ -23,8 +23,9 @@ function BMCore:InitializeHero(hero)
     hero:AddItemByName("item_scout_land")
     hero:AddItemByName("item_last_stand")
     hero:AddItemByName("item_quelling_blade")    
+    hero:AddItemByName("item_mines")
 
-    hero:SetGold(5000, false)
+    hero:SetGold(8000, false)
     ModifyLumber(hero, 5000)
 
     -- Remove AbilityPoints and upgrade initial abilities

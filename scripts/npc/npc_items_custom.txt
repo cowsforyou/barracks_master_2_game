@@ -41,6 +41,7 @@
 #base "items\item_building_cancel.txt"
 #base "items\item_last_stand.txt"
 #base "items\item_scout_land.txt"
+#base "items\item_mines.txt"
 
 
 "DOTAAbilities"

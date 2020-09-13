@@ -1,0 +1,57 @@
+"DOTAAbilities"
+{
+    "add_mines"
+    {
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "BaseClass"                     "ability_datadriven"
+        "AbilityTextureName"            "techies_land_mines"
+        "MaxLevel"                      "1"
+
+        "AbilityGoldCost"               "300"
+        "AbilityCooldown"               "180.0"
+        
+        "AbilitySpecial"
+        {    
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "gold_cost"             "300"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "damage_tooltip"        "150"
+            }    
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"    "core/research.lua"
+                "Function"      "ScoutResearchComplete"
+                "item_name"     "item_mines"
+            }
+
+            "FireSound"
+            {
+                "EffectName"    "ui.comp_coins_tick"
+                "Target"        "CASTER"
+            }
+
+            "FireEffect"
+            {
+                "Target"            "CASTER"
+                "EffectName"        "particles/econ/courier/courier_flopjaw/flopjaw_death_coins.vpcf"
+                "EffectAttachType"  "follow_overhead"
+            }
+
+            "FireSound"
+            {
+                "EffectName"    "techies_tech_remotemines_28"
+                "Target"        "CASTER"
+            }
+
+        }
+    }
+}

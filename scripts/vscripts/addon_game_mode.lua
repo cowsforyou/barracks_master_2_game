@@ -97,10 +97,13 @@ PrecacheUnitByNameSync("giant_tree_2", context)
 -- Items
 PrecacheItemByNameSync("item_scout_land", context)
 PrecacheItemByNameSync("item_last_stand", context)
+PrecacheItemByNameSync("item_mines", context)
+PrecacheResource("particle", "particles/econ/courier/courier_flopjaw/flopjaw_death_coins.vpcf", context) -- for Mines
+PrecacheResource("soundfile", "soundevents/voscripts/game_sounds_vo_techies.vsndevts", context) -- for Mines
 
 -- Scouts
 PrecacheUnitByNameSync("scout_land", context)
-PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts", context)
+PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts", context) -- for Land Scout
 
 -- Abilities
 PrecacheResource("particle_folder", "particles/units/heroes/hero_treant", context) -- Living Armor

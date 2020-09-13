@@ -145,7 +145,7 @@
 #base "abilities\dummy_tree.txt"
 #base "abilities\gather_lumber.txt"
 #base "abilities\giant_tree_passive.txt"
-
+#base "abilities\add_mines.txt"
 
 
 "DOTAAbilities"
