@@ -11,8 +11,13 @@
 	//-------------------
 	//Pregame Selection Screen
 	//-------------------
+	"bm_builder_ling"								"Ling Builder"
 	"bm_lore_ling"									"The Lings are valiant people, valuing honour and camaraderie. Their forces are hardy with ample healing and regenerative abilities."
+
+	"bm_builder_xoo"								"Xoo Builder"
 	"bm_lore_xoo"									"The Xoos thrive on chaos. Their modus operandi is overwhelming their opponent with sheer numbers."
+
+	"bm_builder_random"								"Random"
 
 	//-------------------
 	//Scoreboard Labels
