@@ -21,6 +21,12 @@ function PlayerColors:Init()
 
     CustomGameEventManager:RegisterListener ('set_player_color', Dynamic_Wrap(PlayerColors, "SetPlayerColor") )
     CustomGameEventManager:RegisterListener ('set_player_color_unselected', Dynamic_Wrap(PlayerColors, "SetPlayerColorUnselected") )
+    CustomGameEventManager:RegisterListener ('set_player_color_preview', Dynamic_Wrap(PlayerColors, "SetPlayerColorPreview") )
+end
+
+function PlayerColors:SetPlayerColorPreview( event )
+	CustomGameEventManager:Send_ServerToAllClients( "player_color_preview_pick", 
+	{ PlayerID = event.PlayerID, Color = event.Color} )
 end
 
 function PlayerColors:GetRGBValues (color)

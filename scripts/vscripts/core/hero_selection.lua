@@ -36,6 +36,9 @@ function HeroSelection:Start()
 
 	--Listen for the pick event
 	HeroSelection.listener = CustomGameEventManager:RegisterListener( "hero_selected", HeroSelection.HeroSelect )
+
+	--Listen for the hero preview event
+	HeroSelection.previewSelectionListener = CustomGameEventManager:RegisterListener( "hero_preview", HeroSelection.HeroPreview )
 end
 
 --[[
@@ -65,6 +68,18 @@ function HeroSelection:Tick()
 	else
 		return nil
 	end
+end
+
+--[[
+	HeroPreview
+	A player has previewed a hero. This function is called by the CustomGameEventManager
+	once a 'hero_preview' event was seen.
+	Params:
+			- event {table} - A table containing PlayerID and HeroID.
+]]
+function HeroSelection:HeroPreview( event )
+	CustomGameEventManager:Send_ServerToAllClients( "hero_preview_pick", 
+	{ PlayerID = event.PlayerID, HeroName = event.HeroName} )
 end
 
 --[[
@@ -109,7 +124,7 @@ end
 ]]
 function HeroSelection:EndPicking()
 	--Stop listening to pick events
-	--CustomGameEventManager:UnregisterListener( self.listener )
+	CustomGameEventManager:UnregisterListener( self.listener )
 
 	--Assign the picked heroes to all players that have picked
 	for player, hero in pairs( HeroSelection.playerPicks ) do
@@ -130,8 +145,6 @@ function HeroSelection:EndPicking()
 	-- Assigns color for users who did not select color
 	local playerCount = PlayerResource:GetPlayerCount()
 	local test  = PlayerResource:IsValidPlayer( 0 )
-
-    print("this ic cont", test, playerCount)
 
 	-- Speeds the game back up
 	-- Convars:SetInt("host_timescale", tonumber(1))
