@@ -29,7 +29,7 @@
             "RunScript"
             {
                 "ScriptFile"    "core/research.lua"
-                "Function"      "ScoutResearchComplete"
+                "Function"      "ItemResearchComplete"
                 "item_name"     "item_mines"
             }
 
@@ -52,6 +52,11 @@
                 "Target"        "CASTER"
             }
 
+            "RunScript"
+            {
+                "ScriptFile"    "core/research.lua"
+                "Function"      "ReEnableResearch"
+            }
         }
     }
 }

@@ -37,7 +37,7 @@ function ResearchComplete( event )
 end
 
 -- For add_mines
-function ScoutResearchComplete ( event )
+function ItemResearchComplete ( event )
 	local caster = event.caster
 	local ability = event.ability
 	local itemName = event.item_name
