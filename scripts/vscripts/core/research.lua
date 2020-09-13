@@ -36,6 +36,22 @@ function ResearchComplete( event )
     EmitSoundOnClient("BarracksMaster.ResearchComplete", PlayerResource:GetPlayer(playerID))
 end
 
+-- For add_mines
+function ScoutResearchComplete ( event )
+	local caster = event.caster
+	local ability = event.ability
+	local itemName = event.item_name
+	local player = caster:GetPlayerOwner()
+	local hero = player:GetAssignedHero()
+
+	if GetItemByName(hero, itemName) then
+		GetItemByName(hero, itemName):SetCurrentCharges(GetItemByName(hero, itemName):GetCurrentCharges() + 1)
+	else
+		hero:AddItemByName(itemName)
+	end
+	ResearchComplete(event)
+end
+
 -- When queing a research, disable it to prevent from being queued again
 function DisableResearch( event )
 	local ability = event.ability
