@@ -4,7 +4,7 @@
     "spawn_ling_creep_clorn"
     {
         "BaseClass"                     "ability_datadriven"
-        "AbilityTextureName"            "ling"
+        "AbilityTextureName"            "ling_clorn_creep"
         "MaxLevel"                      "6"
 
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"

@@ -4,7 +4,7 @@
     "spawn_ling_creep_thiki"
     {
         "BaseClass"                     "ability_datadriven"
-        "AbilityTextureName"            "ling"
+        "AbilityTextureName"            "ling_thiki_creep"
         "MaxLevel"                      "2"
 
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"

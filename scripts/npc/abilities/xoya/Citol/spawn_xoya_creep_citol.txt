@@ -4,7 +4,7 @@
     "spawn_xoya_creep_citol"
     {
         "BaseClass"                     "ability_datadriven"
-        "AbilityTextureName"            "xoya"
+        "AbilityTextureName"            "xoo_citol_creep"
         "MaxLevel"                      "6"
 
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"

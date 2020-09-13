@@ -3,7 +3,7 @@
 	"ling_clorn_armor_disabled"
 	{
 	    "BaseClass"                     "ability_datadriven"
-	    "AbilityTextureName"            "ling"
+	    "AbilityTextureName"            "armor"
 	    "MaxLevel"                      "0"
 	}
 }

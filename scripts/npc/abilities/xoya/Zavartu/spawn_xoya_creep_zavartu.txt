@@ -4,7 +4,7 @@
     "spawn_xoya_creep_zavartu"
     {
         "BaseClass"                     "ability_datadriven"
-        "AbilityTextureName"            "xoya"
+        "AbilityTextureName"            "xoo_zavartu_creep"
         "MaxLevel"                      "2"
 
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"

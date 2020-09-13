@@ -5,8 +5,8 @@
         // General
         //----------------------------------------------------------------
         "BaseClass"                 "npc_dota_creature"  
-        "Model"                     "models/heroes/shadow_demon/shadow_demon.vmdl" 
-        "ModelScale"                "0.84"
+        "Model"                     "models/creeps/neutral_creeps/n_creep_troll_dark_b/n_creep_troll_dark_b.vmdl" 
+        "ModelScale"                "0.80"
         "Level"                     "1"
         "HealthBarOffset"           "175"
         "HasInventory"              "0"
@@ -17,9 +17,9 @@
 
         // Sounds, Projectiles and Destruction
         //----------------------------------------------------------------
-        "SoundSet"                  "Hero_ShadowDemon"
-        "ProjectileModel"           "particles/units/heroes/hero_shadow_demon/shadow_demon_base_attack.vpcf"
-        "ProjectileSpeed"           "900"
+        "SoundSet"                  "n_creep_Ranged"
+        "ProjectileModel"           "particles/base_attacks/ranged_badguy.vpcf"
+        "ProjectileSpeed"           "1200"
 
 
         // Abilities

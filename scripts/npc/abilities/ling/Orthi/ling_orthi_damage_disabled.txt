@@ -3,7 +3,7 @@
 	"ling_orthi_damage_disabled"
 	{
 	    "BaseClass"                     "ability_datadriven"
-	    "AbilityTextureName"            "ling"
+	    "AbilityTextureName"            "damage"
 	    "MaxLevel"                      "0"
 	}
 }

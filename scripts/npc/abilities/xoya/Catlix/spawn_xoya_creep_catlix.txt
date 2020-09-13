@@ -4,7 +4,7 @@
     "spawn_xoya_creep_catlix"
     {
         "BaseClass"                     "ability_datadriven"
-        "AbilityTextureName"            "xoya"
+        "AbilityTextureName"            "xoo_catlix_creep"
         "MaxLevel"                      "3"
 
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
