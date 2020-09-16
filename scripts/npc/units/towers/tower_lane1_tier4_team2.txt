@@ -5,10 +5,10 @@
         // General
         //----------------------------------------------------------------
         "BaseClass"                 "npc_dota_creature"  
-        "Model"                     "models/props_structures/radiant_tower002.vmdl" 
+        "Model"                     "models/props_structures/tower_good.vmdl"
         "ModelScale"                "1.0"
-        "PedestalModel"             "models/props_structures/radiant_tower_base002.vmdl"
-        "PedestalModelScale"        "1.0"
+        //"PedestalModel"             "models/props_structures/radiant_tower_base002.vmdl"
+        //"PedestalModelScale"        "1.0"
         "Level"                     "1"
         "HasInventory"              "0"
         "ConsideredHero"            "0"
