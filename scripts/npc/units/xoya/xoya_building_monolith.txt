@@ -37,7 +37,7 @@
         // Abilities
         //----------------------------------------------------------------    
         "AbilityLayout"             "6"
-        "Ability1"                  ""     
+        "Ability1"                  "add_mines"
         "Ability2"                  ""    
         "Ability3"                  ""     
         "Ability4"                  ""      
