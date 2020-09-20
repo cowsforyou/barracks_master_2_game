@@ -1,12 +1,12 @@
 "DOTAAbilities"
 {
-    "item_scout_land"
+    "item_scout_techies"
     {
         // General
         //-------------------------------------------------------------------------------------------------------------
-        "ID"    "1002"
+        "ID"    "1023"
         "BaseClass"                     "item_datadriven"
-        "AbilityTextureName"			"img_scout_land"
+        "AbilityTextureName"            "img_scout_techies"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 
         "ItemKillable"      "0" 
@@ -21,12 +21,12 @@
 
         // Time     
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCooldown"               "12.0"
+        "AbilityCooldown"               "180.0"
 
         // Cost
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityGoldCost"               "10"
-        "AbilityManaCost"               "40"
+        "AbilityGoldCost"               "350"
+        "AbilityManaCost"               "120"
 
         // Special
         //-------------------------------------------------------------------------------------------------------------
@@ -35,32 +35,27 @@
             "01"
             {
                 "var_type"                  "FIELD_INTEGER"
-                "duration"                  "40"
+                "duration"                  "30"
             }
+
             "02"
             {
                 "var_type"                  "FIELD_INTEGER"
-                "gold_cost"                 "10"
-            }   
+                "gold_cost"                 "350"
+            }
+        
             "03"
             {
-                "var_type"                  "FIELD_INTEGER"
-                "boar_count"                "1" // Test if this works?
-            }
-            "04"
-            {
-                "var_type"                  "FIELD_INTEGER"
-                "distance"                  "150" // The distance in front of the target at which units will be created
+                "var_type"              "FIELD_INTEGER"
+                "distance"              "150" // The distance in front of the target at which units will be created
             }
         }
 
-        // Others
-        //-------------------------------------------------------------------------------------------------------------
         "OnSpellStart"
         {
             "RunScript"
             {
-                "ScriptFile"    "spells/scout_land.lua"
+                "ScriptFile"    "spells/scout_techies.lua"
                 "Function"      "SpawnScout"
                 "Distance"      "%distance"
                 "Duration"      "%duration"
@@ -77,15 +72,8 @@
                 {
                     "FireSound"
                     {
-                        "EffectName"    "Hero_Beastmaster.Call.Boar"
+                        "EffectName"    "techies_tech_spawn_01"
                         "Target"        "CASTER"
-                    }
-
-                    "FireEffect"
-                    {
-                        "Target"            "TARGET"
-                        "EffectName"        "particles/units/heroes/hero_beastmaster/beastmaster_call_boar.vpcf"
-                        "EffectAttachType"  "follow_origin"
                     }
                 }
 
@@ -109,7 +97,7 @@
                             "Center"    "UNIT"
                             "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
                         }
-                        "EffectName"    "Hero_Beastmaster_Boar.Death"
+                        "EffectName"    "techies_tech_death_12"
                     }
                 }
             }

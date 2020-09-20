@@ -1,0 +1,51 @@
+"DOTAAbilities"
+{
+    "unlock_scout_techies"
+    {
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "BaseClass"                     "ability_datadriven"
+        "AbilityTextureName"            "scout_techies"
+        "MaxLevel"                      "1"
+
+        "AbilityChannelTime"            "0"
+        "AbilityGoldCost"               "200"
+
+        
+        "AbilitySpecial"
+        {       
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "research_time"         "180"
+            }
+
+            "02"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "gold_cost"             "200"
+            }
+     
+            "03"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "lumber_cost"           "200"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"    "core/research.lua"
+                "Function"      "ItemResearchComplete"
+                "item_name"     "item_scout_techies"
+            }
+
+            "FireSound"
+            {
+                "EffectName"    "techies_tech_kill_17"
+                "Target"        "CASTER"
+            }
+        }
+    }
+}

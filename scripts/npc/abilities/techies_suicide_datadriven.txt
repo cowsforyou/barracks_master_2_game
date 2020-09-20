@@ -1,0 +1,125 @@
+"DOTAAbilities"
+{
+    "techies_suicide_datadriven"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP | DOTA_UNIT_TARGET_BUILDING"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+        "FightRecapLevel"               "1"
+        "AbilityTextureName"            "techies_suicide"
+
+        // Precache
+        //-------------------------------------------------------------------------------------------------------------
+        "precache"
+        {
+            "soundfile"     "soundevents/game_sounds_heroes/game_sounds_techies.vsndevts"       
+            "particle"      "particles/units/heroes/hero_techies/techies_suicide_base.vpcf"
+        }
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "100"
+        "AbilityCastPoint"              "0"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "35"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "radius"                    "300"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "damage"                    "300"
+            }
+            // Extra
+            "03"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "vision_radius"             "400"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "vision_duration"           "2.0"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "FireSound"
+            {
+                "EffectName"    "Hero_Techies.Suicide"
+                "Target"        "CASTER"
+            }
+
+            "FireEffect"
+            {
+                "EffectName"        "particles/units/heroes/hero_techies/techies_suicide_base.vpcf"
+                "EffectAttachType"  "follow_origin"
+                "Target"            "CASTER"
+            }
+
+            "DestroyTrees"
+            {
+                "Target"        "CASTER"
+                "Radius"        "%radius"
+            }
+
+            "ActOnTargets"
+            {
+                "Target"
+                {
+                    "Center"    "CASTER"
+                    "Radius"    "%radius"
+                    "Teams"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                    "Types"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP | DOTA_UNIT_TARGET_BUILDING"
+                    "Flags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+                }
+            
+                "Action"    
+                {
+                    "Damage"
+                    {
+                        "Target"
+                        {
+                            "Center"    "TARGET"
+                            "Flags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+                        }
+                        "Type"          "DAMAGE_TYPE_PHYSICAL"
+                        "Damage"        "%damage"
+                    }
+                }
+            }
+
+            "DelayedAction"
+            {
+                "Delay"     "0.03"
+                "Action"    
+                {
+                    "RunScript"
+                    {
+                        "ScriptFile"    "heroes/hero_techies/suicide.lua"
+                        "Function"      "Suicide"
+                    }
+                }
+            }   
+        }
+    }
+}

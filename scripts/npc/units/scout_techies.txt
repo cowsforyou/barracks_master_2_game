@@ -1,0 +1,82 @@
+"DOTAUnits" 
+{
+	"scout_techies"
+	{										
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/techies/techies.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_Techies"			// Name of sound set.
+		"Level"						"5"
+		"IgnoreAddSummonedToSelection"  "1"
+		"ModelScale"				"0.55"
+		"IsSummoned"				"1"
+		
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"techies_suicide_datadriven"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"0"			// Physical protection.
+		"MagicalResistance"			"0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"	   
+
+		// Bounds
+		//----------------------------------------------------------------
+		"HealthBarOffset"			"125"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"70"		// Gold earned min.
+		"BountyGoldMax"				"90"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"300"		// Speed.
+		"MovementTurnRate"			"0.6"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"50"		// Base health.
+		"StatusHealthRegen"			"0.25"		// Health regeneration rate.
+		"StatusMana"				"0"
+		"StatusManaRegen"			"0"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"900"		// Range of vision during day light.
+		"VisionNighttimeRange"		"600"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"	{ "ItemDef" "394" } // remote mine
+				"Wearable2"	{ "ItemDef" "487" } // spoon
+				"Wearable3"	{ "ItemDef" "489" } // slingshot
+				"Wearable4"	{ "ItemDef" "490" } // cart
+				"Wearable5"	{ "ItemDef" "491" } // squee
+				"Wearable6"	{ "ItemDef" "492" } // spleen
+				"Wearable7"	{ "ItemDef" "499" } // sign
+			}
+		}
+	}
+}

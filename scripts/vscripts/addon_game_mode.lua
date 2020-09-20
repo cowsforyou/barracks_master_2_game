@@ -103,7 +103,9 @@ PrecacheResource("soundfile", "soundevents/voscripts/game_sounds_vo_techies.vsnd
 
 -- Scouts
 PrecacheUnitByNameSync("scout_land", context)
-PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts", context) -- for Land Scout
+PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts", context) -- for scout_land
+PrecacheUnitByNameSync("scout_techies", context)
+PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_techies.vsndevts", context) -- for scout_techies
 
 -- Abilities
 PrecacheResource("particle_folder", "particles/units/heroes/hero_treant", context) -- Living Armor
