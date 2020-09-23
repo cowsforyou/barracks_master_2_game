@@ -160,7 +160,7 @@
                                     "Flags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
                                 }
                                 "Type"          "DAMAGE_TYPE_PHYSICAL"
-                                "Damage"        "%damage / 2"
+                                "Damage"        "%damage"
                             }
                         }
                     }
@@ -186,7 +186,7 @@
                                     "Flags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
                                 }
                                 "Type"          "DAMAGE_TYPE_PHYSICAL"
-                                "Damage"        "%damage / 2"
+                                "Damage"        "%damage"
                             }
                         }                   
                     }
