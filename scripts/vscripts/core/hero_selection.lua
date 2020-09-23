@@ -129,7 +129,7 @@ function HeroSelection:EndPicking()
 	--Assign the picked heroes to all players that have picked
 	for player, hero in pairs( HeroSelection.playerPicks ) do
 		HeroSelection:AssignHero( player, hero )
-		print('i am here')
+		
 		local originalColorData = CustomNetTables:GetTableValue("selected_player_colors", tostring(player))
 		print(originalColorData)
 		PrintTable(originalColorData)
