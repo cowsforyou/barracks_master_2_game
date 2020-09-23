@@ -57,12 +57,12 @@
             "02"
             {
                 "var_type"                  "FIELD_INTEGER"
-                "small_radius"              "150"
+                "radius"                    "150"
             }
             "03"
             {
                 "var_type"                  "FIELD_FLOAT"
-                "activation_time"           "1.00"
+                "activation_time"           "0.50"
             }
             "04"
             {
@@ -77,7 +77,7 @@
             "06"
             {
                 "var_type"                  "FIELD_FLOAT"
-                "fade_time"                 "2.0"
+                "fade_time"                 "3.0"
             }
             // Extra
             "07"
@@ -131,7 +131,7 @@
                     "FireEffect"
                     {
                         "EffectName"        "particles/units/heroes/hero_techies/techies_land_mine_explode.vpcf"
-                        "EffectAttachType"  "follow_hitloc"
+                        "EffectAttachType"  "follow_origin"
                         "Target"
                         {
                             "Center"    "UNIT"
@@ -144,7 +144,7 @@
                         "Target"
                         {
                             "Center"    "UNIT"
-                            "Radius"    "%small_radius"
+                            "Radius"    "%radius"
                             "Teams"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
                             "Types"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
                             "Flags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
@@ -163,39 +163,6 @@
                                 "Damage"        "%damage"
                             }
                         }
-                    }
-
-                    "ActOnTargets"
-                    {
-                        "Target"
-                        {
-                            "Center"    "UNIT"
-                            "Radius"    "%big_radius"
-                            "Teams"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
-                            "Types"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
-                            "Flags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
-                        }
-                    
-                        "Action"    
-                        {
-                            "Damage"
-                            {
-                                "Target"
-                                {
-                                    "Center"    "TARGET"
-                                    "Flags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
-                                }
-                                "Type"          "DAMAGE_TYPE_PHYSICAL"
-                                "Damage"        "%damage"
-                            }
-                        }                   
-                    }
-
-                    "RunScript"
-                    {
-                        "ScriptFile"    "spells/mines.lua"
-                        "Function"      "LandMinesDeath"
-                        "modifier_caster"   "modifier_land_mine_caster_datadriven"
                     }
                 }
 
