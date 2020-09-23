@@ -70,6 +70,9 @@ function PlayerColors:SetPlayerColor( event )
     local newColorAvailability = CustomNetTables:GetTableValue("player_colors", event.color)
     print('check new color', event.color)
     PrintTable(newColorAvailability)
+
+    CustomGameEventManager:Send_ServerToAllClients( "player_color_confirmed_pick", 
+	{ PlayerID = event.PlayerID, Color = event.color} )
 end
 
 function PlayerColors:SetPlayerColorUnselected( event )
