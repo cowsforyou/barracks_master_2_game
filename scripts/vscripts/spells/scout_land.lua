@@ -9,12 +9,18 @@ function SpawnScout( event )
     local steamID = PlayerResource:GetSteamAccountID(playerID)
     local unitName = "scout_land"
     
-    if steamID == 46639111 then
-        unitName = "scout_land_white"
+    if steamID == 87566860 then
+        unitName = "scout_land_blue" 
 
     elseif steamID == 72355671 then
         unitName = "scout_land_red"
-    
+
+    elseif steamID == 46639111 then
+        unitName = "scout_land_white"
+
+    elseif steamID == 209669279 then
+        unitName = "scout_land_yellow"    
+
     end
 
     -- if steamID == 49458799 or steamID == 12498553 or steamID == 191904610 then

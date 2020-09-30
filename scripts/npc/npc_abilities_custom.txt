@@ -134,8 +134,11 @@
 
 //Cosmetics
 //--------------------------------------------------------------------------------------------------
+#base "abilities\cosmetics\ability_particle_ambient_blue.txt"
+#base "abilities\cosmetics\ability_particle_ambient_purple.txt"
 #base "abilities\cosmetics\ability_particle_ambient_red.txt"
 #base "abilities\cosmetics\ability_particle_ambient_white.txt"
+#base "abilities\cosmetics\ability_particle_ambient_yellow.txt"
 #base "abilities\cosmetics\ability_small_fire.txt"
 
 //Miscellaneous
