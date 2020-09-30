@@ -8,14 +8,21 @@ function SpawnScout( event )
     local playerID = caster:GetPlayerID()
     local steamID = PlayerResource:GetSteamAccountID(playerID)
     local unitName = "scout_land"
+    
+    if steamID == 46639111 then
+        unitName = "scout_land_white"
+
+    elseif steamID == 72355671 then
+        unitName = "scout_land_red"
+    
+    end
 
     -- if steamID == 49458799 or steamID == 12498553 or steamID == 191904610 then
-    --     unitName = "scout_boar_blue"
+    --     unitName = "scout_land_white"
 
     -- elseif steamID == 46639111 then
-    --     unitName = "scout_wolf_purple"
+    --     unitName = "scout_land_red"
     -- end
-
 
     -- Create the unit in front of the caster
     local origin = caster:GetAbsOrigin()
