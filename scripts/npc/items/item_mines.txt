@@ -9,7 +9,7 @@
         "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
         "AbilityTextureName"            "img_mines"
-        "AOERadius"                     "%small_radius"
+        "AOERadius"                     "%radius"
 
         // Precache
         //-------------------------------------------------------------------------------------------------------------
@@ -23,14 +23,10 @@
 
         // Item Details
         //-------------------------------------------------------------------------------------------------------------  
-        "ItemDroppable"         "0"
-        "ItemKillable"          "0"
-        "ItemShareability"      "ITEM_NOT_SHAREABLE"
-
-        "ItemInitialCharges"    "1"
-        "ItemRequiresCharges"   "1"
-        "ItemPermanent"         "0"
-
+        "ItemKillable"      "0" 
+        "ItemSellable"      "0"
+        "ItemPurchasable"   "0"
+        "ItemDroppable"     "0"
 
         // Casting
         //-------------------------------------------------------------------------------------------------------------
@@ -39,10 +35,11 @@
         
         // Time     
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCooldown"               "5"
+        "AbilityCooldown"               "145.0"
 
         // Cost
         //-------------------------------------------------------------------------------------------------------------
+        "AbilityGoldCost"               "150"
         "AbilityManaCost"               "80"
 
         // Special
