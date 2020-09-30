@@ -4,13 +4,14 @@ end
 
 function PlayerColors:Init()
     for i, color in ipairs({
-        "purple",
-        "white",
-        "black",
-        "cyan",
-        "lime",
+        "mandarinorange",
         "red",
-        "silver",
+        "tiffany",
+        "limegreen",
+        "armygreen",
+        "yellow",
+        "pink",
+        "cyan",
     }) do
         CustomNetTables:SetTableValue( "player_colors", color, { isAvailable = true } )
         if color == "purple" then
@@ -30,20 +31,22 @@ function PlayerColors:SetPlayerColorPreview( event )
 end
 
 function PlayerColors:GetRGBValues (color)
-    if color == "purple" then
-        return {191,0,255}
-    elseif color == "white" then
-        return {255,255,255}
-    elseif color == "black" then
-        return {0,0,0}
+    if color == "mandarinorange" then
+        return {215,138,5}
+    elseif color == "red" then
+        return {128,0,3}
+    elseif color == "tiffany" then
+        return {0,156,201}
+    elseif color == "limegreen" then
+        return {170,255,170}
+    elseif color == "armygreen" then
+        return {0,200,50}
+    elseif color == "yellow" then
+        return {255,255,0}
+    elseif color == "pink" then
+        return {255,125,200}
     elseif color == "cyan" then
         return {0,255,255}
-    elseif color == "lime" then
-        return {0,255,0}
-    elseif color == "red" then
-        return {255,0,0}
-    elseif color == "silver" then
-        return {192,192,192}
     else end
 end
 
@@ -79,13 +82,14 @@ function PlayerColors:SetPlayerColorUnselected( event )
     local colorData = CustomNetTables:GetTableValue("selected_player_colors", tostring(event.PlayerID))
     if colorData == nil then
         for i, color in ipairs({
-            "purple",
-            "white",
-            "black",
-            "cyan",
-            "lime",
+            "mandarinorange",
             "red",
-            "silver",
+            "tiffany",
+            "limegreen",
+            "armygreen",
+            "yellow",
+            "pink",
+            "cyan",
         }) do
             local colorAvailabilityData = CustomNetTables:GetTableValue("player_colors", color)
             if colorAvailabilityData['isAvailable'] == 1 then
