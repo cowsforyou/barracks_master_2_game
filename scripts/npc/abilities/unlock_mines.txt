@@ -1,14 +1,14 @@
 "DOTAAbilities"
 {
-    "add_mines"
+    "unlock_mines"
     {
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
         "BaseClass"                     "ability_datadriven"
         "AbilityTextureName"            "techies_land_mines"
         "MaxLevel"                      "1"
 
+        "AbilityChannelTime"            "0"
         "AbilityGoldCost"               "300"
-        "AbilityCooldown"               "180.0"
         
         "AbilitySpecial"
         {    
@@ -20,8 +20,8 @@
             "02"
             {
                 "var_type"              "FIELD_INTEGER"
-                "damage_tooltip"        "150"
-            }    
+                "lumber_cost"           "125"
+            } 
         }
 
         "OnSpellStart"
@@ -50,12 +50,6 @@
             {
                 "EffectName"    "techies_tech_remotemines_28"
                 "Target"        "CASTER"
-            }
-
-            "RunScript"
-            {
-                "ScriptFile"    "core/research.lua"
-                "Function"      "ReEnableResearch"
             }
         }
     }

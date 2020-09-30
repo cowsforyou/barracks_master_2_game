@@ -142,11 +142,11 @@
 //--------------------------------------------------------------------------------------------------
 #base "abilities\ability_building.txt"
 #base "abilities\ability_tower.txt"
-#base "abilities\add_mines.txt"
 #base "abilities\dummy_tree.txt"
 #base "abilities\gather_lumber.txt"
 #base "abilities\giant_tree_passive.txt"
 #base "abilities\techies_suicide_datadriven.txt"
+#base "abilities\unlock_mines.txt"
 #base "abilities\unlock_scout_techies.txt"
 
 "DOTAAbilities"
