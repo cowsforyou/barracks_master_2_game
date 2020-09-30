@@ -150,6 +150,9 @@ function GameMode:InitGameMode()
   Convars:RegisterCommand( "command_example", Dynamic_Wrap(GameMode, 'ExampleConsoleCommand'), "A console command example", FCVAR_CHEAT )
 
   DebugPrint('[BAREBONES] Done loading Barebones gamemode!\n\n')
+
+  -- Set Post Game Time
+  GameRules:SetPostGameTime(60)
 end
 
 -- This is an example console command
