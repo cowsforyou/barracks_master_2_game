@@ -24,7 +24,7 @@
             "01"
             {
                 "var_type"              "FIELD_INTEGER"
-                "mana_amount"           "150"
+                "mana_amount"           "200"
             }
             "02"
             {
