@@ -115,7 +115,7 @@
                 {
                     "RunScript"
                     {
-                        "ScriptFile"    "heroes/hero_techies/suicide.lua"
+                        "ScriptFile"    "spells/suicide.lua"
                         "Function"      "Suicide"
                     }
                 }
