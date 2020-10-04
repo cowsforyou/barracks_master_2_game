@@ -23,8 +23,8 @@
 		"ModelRotation"					"45.0"
 		"AbilityCooldown"				"0"
 
-		"BuildTime"						"7.0"
-		"AbilityGoldCost"				"200"
+		"BuildTime"						"40.0"
+		"AbilityGoldCost"				"450"
 		"MaxBuildingCount"				"1"
 
 
@@ -35,12 +35,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"build_time"			"7"
+				"build_time"			"40"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"200"
+				"gold_cost"				"450"
 			}
 			"03"
 			{
