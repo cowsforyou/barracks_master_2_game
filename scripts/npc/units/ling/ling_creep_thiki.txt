@@ -24,7 +24,7 @@
 
         // Abilities
         //----------------------------------------------------------------    
-        "Ability1"                  ""     
+        "Ability1"                  "beastmaster_inner_beast"     
         "Ability2"                  ""    
         "Ability3"                  ""     
         "Ability4"                  ""      
@@ -45,11 +45,11 @@
         // Attack
         //----------------------------------------------------------------
         "AttackCapabilities"        "DOTA_UNIT_CAP_MELEE_ATTACK"
-        "AttackDamageMin"           "38"
-        "AttackDamageMax"           "52"
+        "AttackDamageMin"           "28"
+        "AttackDamageMax"           "32"
         "AttackDamageType"          "DAMAGE_TYPE_ArmorPhysical"
         "AttackRate"                "1.65"   
-        "AttackAnimationPoint"      "0.5"   
+        "AttackAnimationPoint"      "0.5"
         "AttackAcquisitionRange"    "500"
         "AttackRange"               "128"
 
@@ -81,14 +81,14 @@
         // Movement
         //----------------------------------------------------------------
         "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_GROUND"     // Type of locomotion - ground, air
-        "MovementSpeed"             "290"   // Speed
+        "MovementSpeed"             "325"   // Speed
         "MovementTurnRate"          "0.5"   // Turning rate.
         "FollowRange"               "0"   // Distance to keep when following
 
 
         // Status
         //----------------------------------------------------------------
-        "StatusHealth"              "700"     // Base health.
+        "StatusHealth"              "850"     // Base health.
         "StatusHealthRegen"         "0"     // Health regeneration rate.
         "StatusMana"                "0"     // Base mana.
         "StatusManaRegen"           "0"     // Mana regeneration rate.
