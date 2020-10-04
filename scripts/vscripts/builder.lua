@@ -173,6 +173,9 @@ function Build( event )
 
         -- Remove invulnerability on npc_dota_building baseclass
         unit:RemoveModifierByName("modifier_invulnerable")
+
+        -- Add the building handle to the list of structures
+        table.insert( hero.structures, unit )
     end)
 
     -- A building finished construction

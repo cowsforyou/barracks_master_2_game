@@ -40,17 +40,19 @@ function ScoreboardUpdater:GetNetWorth(player)
 	local hero = player:GetAssignedHero()
 	if hero == nil or hero.structures == nil then return 0 end
 
-	local netWorth = PlayerResource:GetGold(player:GetPlayerID())
+	local netWorth = PlayerResource:GetGold(player:GetPlayerID()) + hero.lumber
 	--PrintTable(player)
 
 	for _,structure in pairs(hero.structures) do
-		netWorth = netWorth + GetGoldCost(structure)
+		netWorth = netWorth + GetGoldCostForStructures(structure) + GetLumberCostForStructures(structure)
 	end
 
-	for _,unit in pairs(hero.units) do
-		netWorth = netWorth + GetGoldCost(unit)
-	end
+	-- No longer tracking unit values for score
+	-- for _,unit in pairs(hero.units) do
+	-- 	netWorth = netWorth + GetGoldCost(unit)
+	-- end
 
+	-- to fix
 	for upgradeName,upgradeLevel in pairs(hero.upgrades) do
 		local costString = GameRules.AbilityKV[upgradeName]["AbilityGoldCost"]
 		local costTable = self:SplitResearchGoldCostString(costString)
