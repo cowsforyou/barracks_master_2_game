@@ -52,11 +52,12 @@ function LandMinesPlant( keys )
         ability:ApplyDataDrivenModifier(caster, land_mine, modifier_land_mine_invisibility, {})
     end)
 
-    local itemName = "item_mines"
-    local minesItem = GetItemByName(caster, itemName)
-    if minesItem then
-        minesItem:SetCurrentCharges(minesItem:GetCurrentCharges() - 1)
-    end
+    -- Only require this section if mines is based on charges
+    -- local itemName = "item_mines"
+    -- local minesItem = GetItemByName(caster, itemName)
+    -- if minesItem then
+    --     minesItem:SetCurrentCharges(minesItem:GetCurrentCharges() - 1)
+    -- end
 end
 
 --[[Author: Pizzalol
@@ -101,7 +102,7 @@ function LandMinesTracker( keys )
     local ability_level = ability:GetLevel() - 1
 
     -- Ability variables
-    local trigger_radius = ability:GetLevelSpecialValueFor("small_radius", ability_level) 
+    local trigger_radius = ability:GetLevelSpecialValueFor("radius", ability_level) 
     local explode_delay = ability:GetLevelSpecialValueFor("explode_delay", ability_level) 
 
     -- Target variables
