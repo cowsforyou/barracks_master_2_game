@@ -193,6 +193,19 @@ function Build( event )
             UTIL_Remove(unit.item_building_cancel)
         end
 
+        -- Popup notification and sound for specific buildings
+        local dur = 4.0
+        if unit:GetUnitName() == "ling_building_temple" then
+            Notifications:BottomToAll({text="#warning_temple", duration=dur, style={color="red", ["font-size"]="40px"}})
+            EmitGlobalSound("General.PingWarning")
+        end
+
+        local dur = 4.0
+        if unit:GetUnitName() == "xoya_building_monolith" then
+            Notifications:BottomToAll({text="#warning_monolith", duration=dur, style={color="red", ["font-size"]="40px"}})
+            EmitGlobalSound("General.PingWarning")
+        end
+
         -- Give the unit their original attack capability
         if unit.original_attack then
             unit:SetAttackCapability(unit.original_attack)
