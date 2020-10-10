@@ -21,19 +21,19 @@
             "02"
           {
             "var_type"              "FIELD_INTEGER"
-            "research_time"         "0 30 40"
+            "research_time"         "0 30 60"
           }
 
             "03"
           {
             "var_type"              "FIELD_INTEGER"
-            "gold_cost"             "0 500 700"
+            "gold_cost"             "0 500 750"
           }
      
             "04"
           {
-            "var_type"              "FIELD_INTEGzER"
-            "lumber_cost"           "0 250 350"
+            "var_type"              "FIELD_INTEGER"
+            "lumber_cost"           "0 250 500"
           }
         }
 
