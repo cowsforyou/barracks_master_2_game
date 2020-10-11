@@ -183,6 +183,42 @@
         "PortraitAnimationRate"     "1.000000"
         "PortraitHideHero"          "0"
     }
+    "models/lamp.vmdl"
+    {
+        "cameras"
+        {
+            "Default"
+            {
+                "PortraitPosition"  "200 -200 220"
+                "PortraitAngles"    "352 136 0"
+                "PortraitFOV"       "60"
+                "PortraitFar"       "1000"
+            }
+        }
+        "PortraitLightPosition"     "-935.812988 763.572388 563.713867"
+        "PortraitLightAngles"       "21.119438 -37.507915 -88.684349"
+        "PortraitLightFOV"      "22.181999"
+        "PortraitLightDistance"     "1508.469971"
+        "PortraitLightColor"        "153 255 238"
+        "PortraitLightScale"        "10.000000"
+        "PortraitShadowColor"       "49 108 113"
+        "PortraitShadowScale"       "1.000000"
+        "PortraitGroundShadowScale"     "1.000000"
+        "PortraitAmbientDirection"      "0.480 -0.529 -0.700"
+        "PortraitAmbientColor"      "255 51 0"
+        "PortraitAmbientScale"      "10.000000"
+        "PortraitSpecularColor"     "251 74 84"
+        "PortraitSpecularDirection"     "0.000000 0.000000 -1.000000"
+        "PortraitSpecularPower"     "16.000000"
+        "PortraitBackgroundColor1"      "1.000000 0.000000 0.000000"
+        "PortraitBackgroundColor2"      "0.000000 0.000000 0.000000"
+        "PortraitBackgroundColor3"      "1.000000 0.305882 0.098039"
+        "PortraitBackgroundColor4"      "1.000000 0.000000 0.000000"
+        "PortraitBackgroundTexture"     "materials/vgui/hud/heroportraits/portraitbackground_darkclouds.vmat"
+        "PortraitAnimationCycle"        "0.000000"
+        "PortraitAnimationRate"     "1.000000"
+        "PortraitHideHero"      "0"
+    }
     "models/library.vmdl"
     {
         "cameras"
@@ -291,7 +327,42 @@
         "PortraitAnimationRate"     "1.000000"
         "PortraitHideHero"          "0"
     }
-
+    "models/portal.vmdl"
+    {
+        "cameras"
+        {
+            "Default"
+            {
+                "PortraitPosition"      "210 -200 200"
+                "PortraitAngles"        "352 136 0"
+                "PortraitFOV"           "60"
+                "PortraitFar"           "1000"
+            }
+        }
+        "PortraitLightPosition"     "165.934387 506.319611 807.458984"
+        "PortraitLightAngles"       "56.795567 -111.496040 170.940033"
+        "PortraitLightFOV"          "26.466000"
+        "PortraitLightDistance"     "1072.660034"
+        "PortraitLightColor"        "255 255 255"
+        "PortraitLightScale"        "4.348000"
+        "PortraitShadowColor"       "77 134 195"
+        "PortraitShadowScale"       "1.000000"
+        "PortraitGroundShadowScale" "1.000000"
+        "PortraitAmbientDirection"  "-0.957 0.044 0.287"
+        "PortraitAmbientColor"      "127 190 244"
+        "PortraitAmbientScale"      "5.000000"
+        "PortraitSpecularColor"     "48 182 222"
+        "PortraitSpecularDirection" "0.000000 0.000000 -1.000000"
+        "PortraitSpecularPower"     "16.000000"
+        "PortraitBackgroundColor1"  "0.313726 0.909804 1.000000"
+        "PortraitBackgroundColor2"  "1.000000 1.000000 1.000000"
+        "PortraitBackgroundColor3"  "1.000000 1.000000 1.000000"
+        "PortraitBackgroundColor4"  "0.313726 0.909804 1.000000"
+        "PortraitBackgroundTexture" "materials/vgui/hud/heroportraits/portraitbackground_bluebloom.vmat"
+        "PortraitAnimationCycle"    "0.000000"
+        "PortraitAnimationRate"     "1.000000"
+        "PortraitHideHero"          "0"
+    }
     "models/props_structures/radiant_statue002.vmdl"
     {
         "cameras"
