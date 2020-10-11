@@ -1,8 +1,8 @@
 "DOTAAbilities"
 {
-    "unlock_mines"
+    "research_mines"
     {
-        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
         "BaseClass"                     "ability_datadriven"
         "AbilityTextureName"            "techies_land_mines"
         "MaxLevel"                      "1"
@@ -28,11 +28,10 @@
         {
             "RunScript"
             {
-                "ScriptFile"    "core/research.lua"
-                "Function"      "ItemResearchComplete"
-                "item_name"     "item_mines"
+                "ScriptFile"    "core/queue.lua"
+                "Function"      "EnqueueUnit"
             }
-
+            
             "FireSound"
             {
                 "EffectName"    "ui.comp_coins_tick"
@@ -50,6 +49,22 @@
             {
                 "EffectName"    "techies_tech_remotemines_28"
                 "Target"        "CASTER"
+            }
+        }
+
+        "OnChannelSucceeded"
+        {
+            "RunScript"
+            {
+                "ScriptFile"    "core/queue.lua"
+                "Function"      "NextQueue"
+            }
+
+            "RunScript"
+            {
+                "ScriptFile"    "core/research.lua"
+                "Function"      "ItemResearchComplete"
+                "item_name"     "item_mines"
             }
         }
     }
