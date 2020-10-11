@@ -150,7 +150,7 @@
 #base "abilities\giant_tree_passive.txt"
 #base "abilities\techies_suicide_datadriven.txt"
 #base "abilities\unlock_mines.txt"
-#base "abilities\unlock_scout_techies.txt"
+#base "abilities\research_scout_techies.txt"
 
 "DOTAAbilities"
 {

@@ -1,16 +1,15 @@
 "DOTAAbilities"
 {
-    "unlock_scout_techies"
+    "research_scout_techies"
     {
-        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
         "BaseClass"                     "ability_datadriven"
         "AbilityTextureName"            "scout_techies"
         "MaxLevel"                      "1"
 
         "AbilityChannelTime"            "0"
         "AbilityGoldCost"               "200"
-
-        
+      
         "AbilitySpecial"
         {       
             "01"
@@ -36,15 +35,30 @@
         {
             "RunScript"
             {
-                "ScriptFile"    "core/research.lua"
-                "Function"      "ItemResearchComplete"
-                "item_name"     "item_scout_techies"
+                "ScriptFile"    "core/queue.lua"
+                "Function"      "EnqueueUnit"
             }
-
+            
             "FireSound"
             {
                 "EffectName"    "techies_tech_kill_17"
                 "Target"        "CASTER"
+            }
+        }
+
+        "OnChannelSucceeded"
+        {
+            "RunScript"
+            {
+                "ScriptFile"    "core/queue.lua"
+                "Function"      "NextQueue"
+            }
+
+            "RunScript"
+            {
+                "ScriptFile"    "core/research.lua"
+                "Function"      "ItemResearchComplete"
+                "item_name"     "item_scout_techies"
             }
         }
     }

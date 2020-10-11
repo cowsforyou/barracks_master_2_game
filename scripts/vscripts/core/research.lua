@@ -37,7 +37,7 @@ function ResearchComplete( event )
     EmitSoundOnClient("BarracksMaster.ResearchComplete", PlayerResource:GetPlayer(playerID))
 end
 
--- For add_mines
+-- For researches that gives items
 function ItemResearchComplete ( event )
 	local caster = event.caster
 	local ability = event.ability

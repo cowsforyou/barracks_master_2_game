@@ -37,7 +37,7 @@
         // Abilities
         //----------------------------------------------------------------
         "AbilityLayout"             "6"  
-        "Ability1"                  "unlock_scout_techies"     
+        "Ability1"                  "research_scout_techies"     
         "Ability2"                  ""    
         "Ability3"                  ""     
         "Ability4"                  ""      
