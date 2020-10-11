@@ -52,21 +52,33 @@ function ScoreboardUpdater:GetNetWorth(player)
 	-- 	netWorth = netWorth + GetGoldCost(unit)
 	-- end
 
-	-- to fix
 	for upgradeName,upgradeLevel in pairs(hero.upgrades) do
-		local costString = GameRules.AbilityKV[upgradeName]["AbilityGoldCost"]
-		local costTable = self:SplitResearchGoldCostString(costString)
-		
+		local goldCostString = GameRules.AbilityKV[upgradeName]["AbilityGoldCost"]
+		local goldCostTable = self:SplitResearchCostString(goldCostString)
 		for i=1, upgradeLevel do
-			netWorth = netWorth + costTable[i]
+			netWorth = netWorth + goldCostTable[i]
 			--print(upgradeName .. ": Adding " .. costTable[i])
+		end
+
+		local abilitySpecialTable = GameRules.AbilityKV[upgradeName]["AbilitySpecial"]
+		local lumberCostString = nil
+		for _,abilityVariable in pairs(abilitySpecialTable) do
+			if abilityVariable['lumber_cost'] then
+				lumberCostString = abilityVariable['lumber_cost']
+			end
+		end
+		if lumberCostString then
+			local lumberCostTable = self:SplitResearchCostString(lumberCostString)
+			for i=1, upgradeLevel do
+				netWorth = netWorth + lumberCostTable[i]
+			end
 		end
 	end
 
 	return netWorth
 end
 
-function ScoreboardUpdater:SplitResearchGoldCostString(costString)
+function ScoreboardUpdater:SplitResearchCostString(costString)
 	return string_split(costString, " ")
 end
 

@@ -11,6 +11,7 @@ function ResearchComplete( event )
 
 	-- It shouldn't be possible to research the same upgrade more than once.
 	Upgrades:SetLevel(playerID, research_name, ability_level)
+	hero.upgrades[research_name] = ability_level
 	ability:SetLevel(ability_level + 1)
 	if ability:GetMaxLevel()+1 == ability:GetLevel() then
 		ability:SetHidden(true)
