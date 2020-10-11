@@ -1,0 +1,9 @@
+"DOTAAbilities" 
+{
+	"build_ling_building_portal_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"ling"
+		"MaxLevel" 						"0"
+	}
+}

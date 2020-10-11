@@ -15,9 +15,8 @@ function OnSpellStart(keys)
         "build_ling_building_thiki",-- start page 2
         "build_ling_building_gnorgil",
         "build_ling_building_temple",
-        --"build_xoya_building_arrow",
-        --"build_xoya_building_skeleton",
-        "build_ling_building_purifier",
+        "build_ling_building_portal",
+        "build_ling_building_purifier", -- start page 3
         "build_ling_building_runic",
         -- remaining slots will be filled with blanks, if any
     }
