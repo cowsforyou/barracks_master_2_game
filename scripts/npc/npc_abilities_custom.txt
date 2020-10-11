@@ -39,6 +39,9 @@
 #base "abilities\ling\Orthi\research_spawn_ling_creep_orthi.txt"
 #base "abilities\ling\Orthi\spawn_ling_creep_orthi.txt"
 
+#base "abilities\ling\Portal\build_ling_building_portal.txt"
+#base "abilities\ling\Portal\build_ling_building_portal_disabled.txt"
+
 #base "abilities\ling\Purifier\build_ling_building_purifier.txt"
 #base "abilities\ling\Purifier\build_ling_building_purifier_disabled.txt"
 #base "abilities\ling\Purifier\ling_purifier_bonus_gold.txt"
@@ -102,6 +105,9 @@
 #base "abilities\xoya\Phe\xoya_phe_armor_disabled.txt"
 #base "abilities\xoya\Phe\xoya_phe_damage.txt"
 #base "abilities\xoya\Phe\xoya_phe_damage_disabled.txt"
+
+#base "abilities\xoya\Portal\build_xoo_building_portal.txt"
+#base "abilities\xoya\Portal\build_xoo_building_portal_disabled.txt"
 
 #base "abilities\xoya\Purifier\build_xoya_building_purifier.txt"
 #base "abilities\xoya\Purifier\build_xoya_building_purifier_disabled.txt"
