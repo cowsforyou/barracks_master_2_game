@@ -7,17 +7,22 @@
         "AbilityTextureName"            "techies_land_mines"
         "MaxLevel"                      "1"
 
-        "AbilityChannelTime"            "0"
+        "AbilityChannelTime"            "90"
         "AbilityGoldCost"               "300"
         
         "AbilitySpecial"
-        {    
+        {
             "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "research_time"         "90"
+            }
+            "02"
             {
                 "var_type"              "FIELD_INTEGER"
                 "gold_cost"             "300"
             }
-            "02"
+            "03"
             {
                 "var_type"              "FIELD_INTEGER"
                 "lumber_cost"           "125"

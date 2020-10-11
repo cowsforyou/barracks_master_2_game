@@ -7,7 +7,7 @@
         "AbilityTextureName"            "scout_techies"
         "MaxLevel"                      "1"
 
-        "AbilityChannelTime"            "0"
+        "AbilityChannelTime"            "180"
         "AbilityGoldCost"               "200"
       
         "AbilitySpecial"
@@ -17,13 +17,11 @@
                 "var_type"              "FIELD_INTEGER"
                 "research_time"         "180"
             }
-
             "02"
             {
                 "var_type"              "FIELD_INTEGER"
                 "gold_cost"             "200"
             }
-     
             "03"
             {
                 "var_type"              "FIELD_INTEGER"
