@@ -2,7 +2,7 @@ function SpawnScout( event )
     local caster = event.caster -- Hero
     local distance = event.Distance -- Passed by parameter
     local duration = event.Duration -- Passed by parameter
-    local goldCost = event.GoldCost -- Passed by parameter
+
 
     -- Determine the unitName based on steamID
     local playerID = caster:GetPlayerID()
@@ -20,12 +20,12 @@ function SpawnScout( event )
         unitName = "scout_land_white"
     end
 
-    -- if steamID == 49458799 or steamID == 12498553 or steamID == 191904610 then
-    --     unitName = "scout_land_white"
+    -- List of steamID3
 
-    -- elseif steamID == 46639111 then
-    --     unitName = "scout_land_red"
-    -- end
+    -- 46639111 (cows)
+    -- 72355671 (xiao)
+    -- 103245869 (iRest)
+    -- 87566860 (groovy)
 
     -- Create the unit in front of the caster
     local origin = caster:GetAbsOrigin()
@@ -37,22 +37,10 @@ function SpawnScout( event )
     unit:SetControllableByPlayer( playerID, true )
     unit:SetForwardVector(fv)
 
-    -- Add to scoreboard
-    unit.GoldCost = goldCost
-    table.insert(caster.units, unit)
-
     -- Apply modifiers
     local ability = event.ability
     ability:ApplyDataDrivenModifier( caster, unit, "modifier_creation_and_death_effects", {} )
 
     -- Set duration for summoned units
     unit:AddNewModifier( unit, nil, "modifier_kill", {duration = duration} )
-end
-
-function ScoutDeath( event )
-    local hero = event.caster -- Hero
-    local unit = event.unit -- Unit
-    local unit_index = getIndexTable(hero.units, unit)
-
-    table.remove(hero.units, unit_index)
 end

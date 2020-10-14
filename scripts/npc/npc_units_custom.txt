@@ -109,8 +109,11 @@
 //Scouts
 //--------------------------------------------------------------------------------------------------
 #base "units\scouts\scout_land.txt"
+#base "units\scouts\scout_land_blue.txt"
+#base "units\scouts\scout_land_purple.txt"
 #base "units\scouts\scout_land_red.txt"
 #base "units\scouts\scout_land_white.txt"
+#base "units\scouts\scout_land_yellow.txt"
 #base "units\scouts\scout_techies.txt"
 
 //Miscellaneous
