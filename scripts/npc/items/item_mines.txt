@@ -161,6 +161,13 @@
                             }
                         }
                     }
+
+                    "RunScript"
+                    {
+                        "ScriptFile"        "spells/mines.lua"
+                        "Function"          "LandMinesDeath"
+                        "modifier_caster"   "modifier_land_mine_caster_datadriven"
+                    }
                 }
 
                 "States"

@@ -59,6 +59,7 @@
                 "Function"      "SpawnScout"
                 "Distance"      "%distance"
                 "Duration"      "%duration"
+                "GoldCost"      "%gold_cost"
             }
         }
 
@@ -98,6 +99,12 @@
                             "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
                         }
                         "EffectName"    "techies_tech_death_12"
+                    }
+
+                    "RunScript"
+                    {
+                        "ScriptFile"    "spells/scout_land.lua"
+                        "Function"      "ScoutDeath"
                     }
                 }
             }

@@ -47,10 +47,9 @@ function ScoreboardUpdater:GetNetWorth(player)
 		netWorth = netWorth + GetGoldCostForStructures(structure) + GetLumberCostForStructures(structure)
 	end
 
-	-- No longer tracking unit values for score
-	-- for _,unit in pairs(hero.units) do
-	-- 	netWorth = netWorth + GetGoldCost(unit)
-	-- end
+	for _,unit in pairs(hero.units) do
+		netWorth = netWorth + GetGoldCost(unit)
+	end
 
 	for upgradeName,upgradeLevel in pairs(hero.upgrades) do
 		local goldCostString = GameRules.AbilityKV[upgradeName]["AbilityGoldCost"]

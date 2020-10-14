@@ -48,5 +48,22 @@
                 "workerName"            "xoya_worker_dendro"
             }
         }
+              
+        "Modifiers"
+        {
+            "modifier_creation_and_death_effects"
+            {
+                "IsHidden"      "1"
+
+                "OnDeath"
+                {
+                    "RunScript"
+                    {
+                        "ScriptFile"    "core/gathering.lua"
+                        "Function"      "WorkerDeath"
+                    }
+                }
+            }
+        }
     }
 }

@@ -51,6 +51,10 @@ function LandMinesPlant( keys )
     Timers:CreateTimer(fade_time, function()
         ability:ApplyDataDrivenModifier(caster, land_mine, modifier_land_mine_invisibility, {})
     end)
+    
+    -- For scoreboard
+    land_mine.GoldCost = ability:GetGoldCost(1)
+    table.insert(caster.units, land_mine)
 
     -- Only require this section if mines is based on charges
     -- local itemName = "item_mines"
@@ -91,6 +95,10 @@ function LandMinesDeath( keys )
     if caster.land_mine_count < 1 then
         caster:RemoveModifierByNameAndCaster(modifier_caster, caster) 
     end
+
+    -- Remove from unit tracker
+    local unit_index = getIndexTable(caster.units, unit)
+    table.remove(caster.units, unit_index)
 end
 
 --[[Author: Pizzalol

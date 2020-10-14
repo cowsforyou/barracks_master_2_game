@@ -64,6 +64,7 @@
                 "Function"      "SpawnScout"
                 "Distance"      "%distance"
                 "Duration"      "%duration"
+                "GoldCost"      "%gold_cost"
             }
         }
 
@@ -110,6 +111,12 @@
                             "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
                         }
                         "EffectName"    "Hero_Beastmaster_Boar.Death"
+                    }
+
+                    "RunScript"
+                    {
+                        "ScriptFile"    "spells/scout_land.lua"
+                        "Function"      "ScoutDeath"
                     }
                 }
             }

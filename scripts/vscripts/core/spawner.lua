@@ -36,7 +36,8 @@ function AutoSpawnCreeps(playerID, buildingAbility, creepName, spawn_count, over
     for i=1, spawn_count do
         local unit = CreateUnitByName(creepName, spawn_point:GetAbsOrigin() , true, hero, hero, team)
         unit:SetOwner(hero)
-        table.insert(hero.units, unit)
+        -- Only necessary for adding creeps to score
+        -- table.insert(hero.units, unit)
         unit.coreSpawn = true
         Upgrades:CheckAbilityRequirements(unit, playerID)
         

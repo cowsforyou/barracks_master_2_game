@@ -116,6 +116,13 @@ function SpawnWorker(event)
     local color = PlayerColors:GetPlayerColor(playerID) or {191,0,255}
     worker:SetRenderColor(color[1],color[2],color[3])
 
+    -- Apply modifiers
+    ability:ApplyDataDrivenModifier( spawner, worker, "modifier_creation_and_death_effects", {} )
+
+    -- Scoreboard updater
+    worker.GoldCost = ability:GetGoldCost(1)
+    table.insert(hero.units, worker)
+
     -- Add the worker to the table
     table.insert(Gathering.Workers[playerID], worker)   
 
@@ -277,6 +284,18 @@ function SpawnWorker(event)
     if GameRules.WarpTen then
         ability:EndCooldown()
     end
+end
+
+function WorkerDeath(event)
+    local spawner = event.caster -- Building
+    local unit = event.unit -- Unit
+
+    local playerID = spawner:GetPlayerOwnerID()
+    local hero = PlayerResource:GetSelectedHeroEntity(playerID)
+
+    local unit_index = getIndexTable(hero.units, unit)
+
+    table.remove(hero.units, unit_index)
 end
 
 function GatherLumber(event)
