@@ -30,7 +30,7 @@
             "gold_cost"             "0 100 150 250 350 500"
           }
      
-            "04"
+            "08"
           {
             "var_type"              "FIELD_INTEGzER"
             "lumber_cost"           "0 0 0 100 150 250"
