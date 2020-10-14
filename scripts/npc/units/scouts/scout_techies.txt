@@ -48,7 +48,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"50"		// Base health.
+		"StatusHealth"				"30"		// Base health.
 		"StatusHealthRegen"			"0.25"		// Health regeneration rate.
 		"StatusMana"				"0"
 		"StatusManaRegen"			"0"
