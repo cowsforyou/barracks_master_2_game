@@ -12,7 +12,8 @@
         "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
         "FightRecapLevel"               "1"
         "AbilityTextureName"            "suicide_squad_attack"
-
+        "MaxLevel"                      "1"
+        
         // Precache
         //-------------------------------------------------------------------------------------------------------------
         "precache"
