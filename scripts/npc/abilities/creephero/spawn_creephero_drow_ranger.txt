@@ -37,7 +37,7 @@
             "RunScript"
             {
                 "ScriptFile"    "core/spawner.lua"
-                "Function"      "SooNameThisPlease"
+                "Function"      "ManualSpawnCreeps"
                 "creepName"		"creephero_drow_ranger"
                 "soundName"     "Hero_DrowRanger.Pick"
                 "iconName"      "npc_dota_hero_drow_ranger"

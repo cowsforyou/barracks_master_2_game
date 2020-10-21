@@ -40,3 +40,38 @@ function SpawnerAbility( keys )
     local playerID = caster:GetPlayerOwnerID()
     AutoSpawnCreeps(playerID, ability, creepName, spawn_count, overrideSpawnSync)
 end
+
+function ManualSpawnerAbility( keys )
+    local ability = keys.ability
+    local caster = keys.caster
+    local player = caster:GetPlayerOwner()
+    if player == nil then return end -- don't try to spawn creeps from a ghost dummy
+    local playerID = player:GetPlayerID()
+    local hero = player:GetAssignedHero
+
+    local creepName = keys.creepName
+    local iconName = keys.iconName
+    local soundName = keys.soundName
+    local creepCount = ability:GetSpecialValueFor("creep_count")
+    local gold_cost = ability:GetSpecialValueFor("gold_cost") or 0
+    local lumber_cost = ability:GetSpecialValueFor("lumber_cost") or 0
+
+    -- check if player has enough lumber
+    if hero.lumber > lumber_cost then
+        ModifyLumber(player, -lumber_cost)
+    else
+        PlayerResource:ModifyGold(playerID, gold_cost, false, 0) -- refund gold
+        ability:EndCooldown()
+        --SendErrorMessage(pID, "#error_not_enough_lumber")
+        return
+    end
+
+    -- send notification
+    local dur = 4.0
+    Notifications:BottomToAll({hero=iconName, duration=dur})
+	Notifications:BottomToAll({text="&nbsp;", duration=dur, continue=true})    
+	Notifications:BottomToAll({text="#warning_" .. creepName, duration=dur, continue=true})
+    EmitGlobalSound(soundName)
+    
+    ManualSpawnCreeps(playerID, ability, creepName)
+end

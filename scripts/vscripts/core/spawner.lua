@@ -61,3 +61,46 @@ function AutoSpawnCreeps(playerID, buildingAbility, creepName, spawn_count, over
         end)
     end
 end
+
+function ManualSpawnCreeps(playerID, buildingAbility, creepName)
+    local hero = PlayerResource:GetSelectedHeroEntity(playerID)
+
+    -- Linking with entities on hammer
+    local team = PlayerResource:GetTeam(playerID)
+    local spawn_number = 0
+    if GetPlayerAllyNumber(playerID) == 1 or GetPlayerAllyNumber(playerID) == 2 then
+        spawn_number = 1
+    else
+        spawn_number = 2
+    end
+    local spawn_name = team.."_"..spawn_number.."_spawner"
+    local spawn_point = Entities:FindByName(nil, spawn_name)
+
+    local unit = CreateUnitByName(creepName, spawn_point:GetAbsOrigin() , true, hero, hero, team)
+    unit:SetOwner(hero)
+
+    -- Only necessary for adding creeps to score
+    -- table.insert(hero.units, unit)
+
+    unit.coreSpawn = true
+    Upgrades:CheckAbilityRequirements(unit, playerID)
+    
+    -- Colorize creeps according to player color
+    local color = PlayerColors:GetPlayerColor(playerID) or {191,0,255}
+    unit:SetRenderColor(color[1],color[2],color[3])
+    
+    Timers(0.1, function()
+        local wp = Entities:FindByName(nil, team.."_"..spawn_number.."_spawner_waypoint_1") -- First wp, this must exist
+        ExecuteOrderFromTable({UnitIndex=unit:GetEntityIndex(), OrderType=DOTA_UNIT_ORDER_ATTACK_MOVE, Position=wp:GetAbsOrigin()})
+
+        -- Queued wps
+        for i=2,10 do --whatever max waypoint number
+            local wp = Entities:FindByName(nil, team.."_"..spawn_number.."_spawner_waypoint_"..i) --wp number i
+            if wp then -- if it exists, queue the movement
+                ExecuteOrderFromTable({UnitIndex=unit:GetEntityIndex(), OrderType=DOTA_UNIT_ORDER_ATTACK_MOVE, Position=wp:GetAbsOrigin(), Queue=true})
+            else --no more wps to process, they come in order
+                break
+            end
+        end
+    end)
+end
