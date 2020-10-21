@@ -147,6 +147,11 @@
 #base "abilities\cosmetics\ability_particle_ambient_yellow.txt"
 #base "abilities\cosmetics\ability_small_fire.txt"
 
+//Creephero
+#base "abilities\creephero\spawn_creephero_drow_ranger.txt"
+#base "abilities\creephero\spawn_creephero_elder_titan.txt"
+#base "abilities\creephero\spawn_creephero_medusa.txt"
+
 //Miscellaneous
 //--------------------------------------------------------------------------------------------------
 #base "abilities\ability_building.txt"

@@ -1,0 +1,47 @@
+"DOTAAbilities"
+{
+    "spawn_creephero_drow_ranger"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityTextureName"            "creephero_drow_ranger"
+        "MaxLevel"                      "1"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCastPoint"              "0"
+
+        "AbilityGoldCost"               "25"
+        "AbilityCooldown"               "40.0"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"				"FIELD_INTEGER"
+                "creep_count"			"1"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "gold_cost"             "25"
+            }
+            "08"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "lumber_cost"           "250"
+            }
+        }
+
+        // run this script every time the spell is used
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"    "core/spawner.lua"
+                "Function"      "SooNameThisPlease"
+                "creepName"		"creephero_drow_ranger"
+                "soundName"     "Hero_DrowRanger.Pick"
+                "iconName"      "npc_dota_hero_drow_ranger"
+            }
+        }
+    }
+}

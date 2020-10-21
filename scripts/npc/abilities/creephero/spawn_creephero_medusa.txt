@@ -1,0 +1,42 @@
+"DOTAAbilities"
+{
+    "spawn_creephero_medusa"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityTextureName"            "creephero_medusa"
+        "MaxLevel"                      "1"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCastPoint"              "0"
+
+        "AbilityGoldCost"               "700"
+        "AbilityCooldown"               "15.0"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"				"FIELD_INTEGER"
+                "creep_count"			"1"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "gold_cost"             "700"
+            }
+        }
+
+        // run this script every time the spell is used
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"    "core/spawner.lua"
+                "Function"      "SooNameThisPlease"
+                "creepName"     "creephero_medusa"
+                "soundName"     "Hero_Medusa.Pick"
+                "iconName"      "npc_dota_hero_medusa"
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+"DOTAAbilities"
+{
+    "spawn_creephero_elder_titan"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityTextureName"            "creephero_elder_titan"
+        "MaxLevel"                      "1"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCastPoint"              "0"
+
+        "AbilityGoldCost"               "200"
+        "AbilityCooldown"               "15.0"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"				"FIELD_INTEGER"
+                "creep_count"			"1"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "gold_cost"             "200"
+            }
+            "08"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "lumber_cost"           "150"
+            }
+        }
+
+        // run this script every time the spell is used
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"    "core/spawner.lua"
+                "Function"      "SooNameThisPlease"
+                "creepName"     "creephero_elder_titan"
+                "soundName"     "Hero_ElderTitan.Pick"
+                "iconName"      "npc_dota_hero_elder_titan"
+            }
+        }
+    }
+}
