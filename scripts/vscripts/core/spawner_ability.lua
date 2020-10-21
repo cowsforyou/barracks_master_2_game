@@ -46,8 +46,8 @@ function ManualSpawnerAbility( keys )
     local caster = keys.caster
     local player = caster:GetPlayerOwner()
     if player == nil then return end -- don't try to spawn creeps from a ghost dummy
-    local playerID = player:GetPlayerID()
-    local hero = player:GetAssignedHero
+    local playerID = caster:GetPlayerOwnerID()
+    local hero = player:GetAssignedHero()
 
     local creepName = keys.creepName
     local iconName = keys.iconName
@@ -58,11 +58,11 @@ function ManualSpawnerAbility( keys )
 
     -- check if player has enough lumber
     if hero.lumber > lumber_cost then
-        ModifyLumber(player, -lumber_cost)
+        ModifyLumber(hero, -lumber_cost)
     else
         PlayerResource:ModifyGold(playerID, gold_cost, false, 0) -- refund gold
         ability:EndCooldown()
-        --SendErrorMessage(pID, "#error_not_enough_lumber")
+        SendErrorMessage(playerID, "#error_not_enough_lumber")
         return
     end
 
