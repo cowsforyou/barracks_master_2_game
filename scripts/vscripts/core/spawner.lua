@@ -40,6 +40,13 @@ function AutoSpawnCreeps(playerID, buildingAbility, creepName, spawn_count, over
         -- table.insert(hero.units, unit)
         unit.coreSpawn = true
         Upgrades:CheckAbilityRequirements(unit, playerID)
+
+        -- Turn on toggle for specific abilities -- cows
+        local split_shot = unit:FindAbilityByName("medusa_split_shot")
+        if split_shot then split_shot:ToggleAbility() end
+
+        local mana_shield = unit:FindAbilityByName("medusa_mana_shield")
+        if mana_shield then mana_shield:ToggleAbility() end
         
         -- Colorize creeps according to player color
         local color = PlayerColors:GetPlayerColor(playerID) or {191,0,255}

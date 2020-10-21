@@ -13,8 +13,8 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
-		"Ability2"					""			// Ability 2
+		"Ability1"					"medusa_split_shot"			// Ability 1
+		"Ability2"					"medusa_mana_shield"			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
@@ -56,7 +56,7 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"800"		// Base health.
 		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
-		"StatusMana"				"0"
+		"StatusMana"				"300"
 		"StatusManaRegen"			"0"
 		
 		// Vision
