@@ -3,7 +3,7 @@
   "xoya_purifier_bonus_lumber"
   {
     "BaseClass"                     "ability_datadriven"
-    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_AUTOCAST"
     "AbilityTextureName"            "wood_chips"
 
     "MaxLevel"                      "3"

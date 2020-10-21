@@ -3,7 +3,7 @@
   "xoya_purifier_bonus_gold"
   {
     "BaseClass"                     "ability_datadriven"
-    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_AUTOCAST"
     "AbilityTextureName"            "dragon_knight_breathe_fire"
 
     "MaxLevel"                      "1"
