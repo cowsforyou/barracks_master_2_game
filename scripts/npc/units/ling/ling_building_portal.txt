@@ -37,9 +37,9 @@
     // Abilities
     //----------------------------------------------------------------    
     "AbilityLayout"             "6"
-    "Ability1"                  ""
-    "Ability2"                  ""
-    "Ability3"                  ""
+    "Ability1"                  "spawn_creephero_drow_ranger"
+    "Ability2"                  "spawn_creephero_elder_titan"
+    "Ability3"                  "spawn_creephero_medusa"
     "Ability4"                  ""
     "Ability5"                  ""
     "Ability6"                  ""

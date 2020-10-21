@@ -107,6 +107,11 @@ PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_beastm
 PrecacheUnitByNameSync("scout_techies", context)
 PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_techies.vsndevts", context) -- for scout_techies
 
+-- Creephero
+PrecacheUnitByNameSync("creephero_drow_ranger", context)
+PrecacheUnitByNameSync("creephero_elder_titan", context)
+PrecacheUnitByNameSync("creephero_medusa", context)
+
 -- Abilities
 PrecacheResource("particle_folder", "particles/units/heroes/hero_treant", context) -- Living Armor
 PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_treant.vsndevts", context) -- Living Armor

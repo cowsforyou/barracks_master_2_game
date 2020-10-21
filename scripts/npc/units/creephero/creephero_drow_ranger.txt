@@ -1,0 +1,88 @@
+"DOTAUnits" 
+{
+	"creephero_drow_ranger"
+	{										
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/drow/drow_base.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_DrowRanger"			// Name of sound set.
+		"Level"						"1"
+		"IgnoreAddSummonedToSelection"  "1"
+		"ModelScale"				"0.97"
+		
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					""			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"			// Physical protection.
+		"MagicalResistance"			"25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"80"
+		"AttackDamageMax"			"90"
+		"AttackRate"				"0.9"		// Speed of attack.
+	    "AttackAnimationPoint"      "0.500000"
+	    "AttackAcquisitionRange"    "800"
+	    "AttackRange"               "500"
+	    "ProjectileModel"           "particles/units/heroes/hero_drow/drow_base_attack.vpcf"
+	    "ProjectileSpeed"           "1250"
+
+		// Bounds
+		//----------------------------------------------------------------
+	    "BoundsHullName"            "DOTA_HULL_SIZE_HERO"
+	    "HealthBarOffset"           "180"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"90"		// Gold earned min.
+		"BountyGoldMax"				"110"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"325"		// Speed.
+		"MovementTurnRate"			"0.5"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"800"		// Base health.
+		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
+		"StatusMana"				"0"
+		"StatusManaRegen"			"0"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1100"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		"Creature"
+		{
+			"AttachWearables"
+			{
+	            "Wearable1"     {   "ItemDef" "78" } // Drow's Leg Armor
+	            "Wearable2"     {   "ItemDef" "77" } // Drow's Bow
+	            "Wearable3"     {   "ItemDef" "76" } // Drow's Cape
+	            "Wearable4"     {   "ItemDef" "75" } // Drow's Bracers
+	            "Wearable5"     {   "ItemDef" "80" } // Drow's Shoulder Armor
+	            "Wearable6"     {   "ItemDef" "267" } // Drow's Headwear
+	            "Wearable7"     {   "ItemDef" "79" } // Drow's Quiver
+			}
+		}
+	}
+}

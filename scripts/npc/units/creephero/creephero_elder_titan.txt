@@ -1,0 +1,86 @@
+"DOTAUnits" 
+{
+	"creephero_elder_titan"
+	{										
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/elder_titan/elder_titan.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_ElderTitan"			// Name of sound set.
+		"Level"						"1"
+		"IgnoreAddSummonedToSelection"  "1"
+		"ModelScale"				"0.75"
+		
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					""			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"			// Physical protection.
+		"MagicalResistance"			"25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"100"
+		"AttackDamageMax"			"120"
+		"AttackRate"				"0.90"		// Speed of attack.
+	    "AttackAnimationPoint"      "0.300000"
+	    "AttackAcquisitionRange"    "600"
+	    "AttackRange"               "128"
+	    //"ProjectileModel"           "particles/units/heroes/hero_nevermore/nevermore_base_attack.vpcf"
+	    //"ProjectileSpeed"           "1200"
+
+		// Bounds
+		//----------------------------------------------------------------
+	    "BoundsHullName"            "DOTA_HULL_SIZE_HERO"
+	    "HealthBarOffset"           "180"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"100"		// Gold earned min.
+		"BountyGoldMax"				"120"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"325"		// Speed.
+		"MovementTurnRate"			"0.5"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"900"		// Base health.
+		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
+		"StatusMana"				"0"
+		"StatusManaRegen"			"0"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1100"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"	{ "ItemDef" "430" } // Elder Titan's Back Totem
+				"Wearable2"	{ "ItemDef" "426" } // Elder Titan's Weapon
+				"Wearable3"	{ "ItemDef" "428" } // Elder Titan's Head
+				"Wearable4"	{ "ItemDef" "427" } // Elder Titan's Bracers
+				"Wearable5"	{ "ItemDef" "429" } // Elder Titan's Shoulders
+			}
+		}
+	}
+}
