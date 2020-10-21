@@ -116,6 +116,12 @@
 #base "units\scouts\scout_land_yellow.txt"
 #base "units\scouts\scout_techies.txt"
 
+//Creephero
+//--------------------------------------------------------------------------------------------------
+#base "units\creephero\creephero_drow_ranger.txt"
+#base "units\creephero\creephero_elder_titan.txt"
+#base "units\creephero\creephero_medusa.txt"
+
 //Miscellaneous
 //--------------------------------------------------------------------------------------------------
 #base "units\npc_dummy_unit.txt"
