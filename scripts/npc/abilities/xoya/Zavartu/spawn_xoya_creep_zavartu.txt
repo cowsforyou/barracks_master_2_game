@@ -7,7 +7,7 @@
         "AbilityTextureName"            "xoo_zavartu_creep"
         "MaxLevel"                      "2"
 
-        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
         "AbilityCastPoint"              "0"
 
         "AbilitySpecial"
