@@ -32,7 +32,7 @@
             "RunScript"
             {
                 "ScriptFile"    "core/spawner.lua"
-                "Function"      "SooNameThisPlease"
+                "Function"      "ManualSpawnCreeps"
                 "creepName"     "creephero_medusa"
                 "soundName"     "Hero_Medusa.Pick"
                 "iconName"      "npc_dota_hero_medusa"

@@ -37,7 +37,7 @@
             "RunScript"
             {
                 "ScriptFile"    "core/spawner.lua"
-                "Function"      "SooNameThisPlease"
+                "Function"      "ManualSpawnCreeps"
                 "creepName"     "creephero_elder_titan"
                 "soundName"     "Hero_ElderTitan.Pick"
                 "iconName"      "npc_dota_hero_elder_titan"
