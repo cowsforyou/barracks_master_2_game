@@ -6,7 +6,7 @@ UNIVERSAL_SHOP_MODE = false             -- Should the main shop contain Secret S
 ALLOW_SAME_HERO_SELECTION = true        -- Should we let people select the same hero as each other
 
 HERO_SELECTION_TIME = 30.0              -- How long should we let people select their hero?
-PRE_GAME_TIME = 35.0                    -- How long after people select their heroes should the horn blow and the game start?
+PRE_GAME_TIME = 40.0                    -- How long after people select their heroes should the horn blow and the game start?
 POST_GAME_TIME = 120.0                  -- How long should we let people look at the scoreboard before closing the server automatically?
 TREE_REGROW_TIME = 3600.0               -- How long should it take individual trees to respawn after being cut down/destroyed?
 
@@ -26,7 +26,7 @@ MINIMAP_RUNE_ICON_SIZE = 1              -- What icon size should we use for rune
 RUNE_SPAWN_TIME = 120                   -- How long in seconds should we wait between rune spawns?
 CUSTOM_BUYBACK_COST_ENABLED = true      -- Should we use a custom buyback cost setting?
 CUSTOM_BUYBACK_COOLDOWN_ENABLED = true  -- Should we use a custom buyback time?
-BUYBACK_ENABLED = true                 -- Should we allow people to buyback when they die?
+BUYBACK_ENABLED = false                 -- Should we allow people to buyback when they die?
 
 DISABLE_FOG_OF_WAR_ENTIRELY = false     -- Should we disable fog of war entirely for both teams?
 USE_UNSEEN_FOG_OF_WAR = true           -- Should we make unseen and fogged areas of the map completely black until uncovered by each team? 
@@ -86,9 +86,9 @@ LOCK_TEAM_SETUP = false                 -- Should we lock the teams initially?  
 ENABLED_RUNES = {}                      -- Which runes should be enabled to spawn in our game mode?
 ENABLED_RUNES[DOTA_RUNE_DOUBLEDAMAGE] = true
 ENABLED_RUNES[DOTA_RUNE_HASTE] = true
-ENABLED_RUNES[DOTA_RUNE_ILLUSION] = true
-ENABLED_RUNES[DOTA_RUNE_INVISIBILITY] = false
-ENABLED_RUNES[DOTA_RUNE_REGENERATION] = false -- Regen runes are currently not spawning as of the writing of this comment
+ENABLED_RUNES[DOTA_RUNE_ILLUSION] = false
+ENABLED_RUNES[DOTA_RUNE_INVISIBILITY] = true
+ENABLED_RUNES[DOTA_RUNE_REGENERATION] = true -- Regen runes are currently not spawning as of the writing of this comment
 ENABLED_RUNES[DOTA_RUNE_BOUNTY] = true
 ENABLED_RUNES[DOTA_RUNE_ARCANE] = false
 
