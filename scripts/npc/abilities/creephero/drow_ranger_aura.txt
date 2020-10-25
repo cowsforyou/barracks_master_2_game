@@ -1,0 +1,54 @@
+"DOTAAbilities"
+{
+    "drow_ranger_aura"
+    {
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+        "AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        "BaseClass"             "ability_datadriven"
+        "AbilityTextureName"    "drow_ranger_aura"
+
+        "MaxLevel"    "1"
+
+        // AbilitySpecial  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "damage_bonus"      "8"
+            }
+            "02"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "radius"            "900"
+            }
+        }
+
+        // Modifiers
+        //-------------------------------------------------------------------------------------------------------------
+        "Modifiers"
+        {
+            "modifier_drow_ranger_aura"
+            {
+                "Passive"           "1"
+                "IsHidden"          "1"
+        
+                "Aura"              "modifier_drow_ranger_aura_buff"
+                "Aura_Radius"       "%radius"
+                "Aura_Teams"        "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                "Aura_Types"        "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+            }
+
+            "modifier_drow_ranger_aura_buff"
+            {
+                "IsHidden"          "0"
+
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"      "%damage_bonus"
+                } 
+            }
+        }
+    }
+}
