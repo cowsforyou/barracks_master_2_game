@@ -55,7 +55,7 @@ for i=1,MAX_LEVEL do
   XP_PER_LEVEL_TABLE[i] = (i-1) * 100
 end
 
-ENABLE_FIRST_BLOOD = false               -- Should we enable first blood for the first kill in this game?
+ENABLE_FIRST_BLOOD = true               -- Should we enable first blood for the first kill in this game?
 HIDE_KILL_BANNERS = false               -- Should we hide the kill banners that show when a player is killed?
 LOSE_GOLD_ON_DEATH = false               -- Should we have players lose the normal amount of dota gold on death?
 SHOW_ONLY_PLAYER_INVENTORY = false      -- Should we only allow players to see their own inventory even when selecting other units?
@@ -88,7 +88,7 @@ ENABLED_RUNES[DOTA_RUNE_DOUBLEDAMAGE] = true
 ENABLED_RUNES[DOTA_RUNE_HASTE] = true
 ENABLED_RUNES[DOTA_RUNE_ILLUSION] = false
 ENABLED_RUNES[DOTA_RUNE_INVISIBILITY] = true
-ENABLED_RUNES[DOTA_RUNE_REGENERATION] = true -- Regen runes are currently not spawning as of the writing of this comment
+ENABLED_RUNES[DOTA_RUNE_REGENERATION] = true
 ENABLED_RUNES[DOTA_RUNE_BOUNTY] = true
 ENABLED_RUNES[DOTA_RUNE_ARCANE] = false
 

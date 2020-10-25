@@ -8,7 +8,7 @@
 	    "MaxLevel"                      "3"
 
 	    "AbilityChannelTime"            "60 120 240"
-	    "AbilityGoldCost"               "350 550 800"
+	    "AbilityGoldCost"               "350 700 1400"
 	    
 	    "AbilitySpecial"
 	    {
@@ -27,7 +27,7 @@
 	        "03"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "gold_cost"             "350 500 800"
+	        "gold_cost"             "350 700 1400"
 	      }
 	    }
 
