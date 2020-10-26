@@ -1,0 +1,61 @@
+"DOTAAbilities"
+{
+    "elder_titan_aura"
+    {
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+        "AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "BaseClass"             "ability_datadriven"
+        "AbilityTextureName"    "elder_titan_aura"
+
+        "MaxLevel"    "1"
+
+        // AbilitySpecial  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "armor_reduction"       "-2"
+            }
+            "02"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "magic_resistance"       "-25"
+            }            
+            "03"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "radius"            "900"
+            }
+        }
+
+        // Modifiers
+        //-------------------------------------------------------------------------------------------------------------
+        "Modifiers"
+        {
+            "modifier_elder_titan_aura"
+            {
+                "Passive"           "1"
+                "IsHidden"          "1"
+        
+                "Aura"              "modifier_elder_titan_aura_debuff"
+                "Aura_Radius"       "%radius"
+                "Aura_Teams"        "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                "Aura_Types"        "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+            }
+
+            "modifier_elder_titan_aura_debuff"
+            {
+                "IsHidden"          "0"
+
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"        "%armor_reduction"
+                    "MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"    "%magic_resistance"
+                } 
+            }
+        }
+    }
+}

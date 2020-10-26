@@ -151,6 +151,7 @@
 #base "abilities\creephero\spawn_creephero_drow_ranger.txt"
 #base "abilities\creephero\drow_ranger_aura.txt"
 #base "abilities\creephero\spawn_creephero_elder_titan.txt"
+#base "abilities\creephero\elder_titan_aura.txt"
 #base "abilities\creephero\spawn_creephero_medusa.txt"
 
 //Miscellaneous
