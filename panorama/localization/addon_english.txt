@@ -4,7 +4,14 @@
 	//Loading Screen
 	//-------------------
 	"bm_updates_title"								"Updates"
-	"bm_updates_text"								"We're no strangers to love, you know the rules and so do I, a full commitment's what I'm thinking of, you wouldn't get this from any other guy."	
+	"bm_updates_text"								
+
+"Thank you for playing Barracks Master 2!
+
+We are still building the foundation so the game is only about 80% complete. We aim to have the game launch into beta on 15th Nov 2020! 
+
+Have something to say? Drop us a feedback on reddit.com/r/barracksmaster."
+
 	"bm_ladder_title"								"Ladder"
 	"bm_ladder_text"								"Coming Soon"
 
