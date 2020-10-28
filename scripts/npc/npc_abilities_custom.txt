@@ -18,6 +18,7 @@
 #base "abilities\ling\Clorn\spawn_ling_creep_clorn.txt"
 
 #base "abilities\ling\Elixir\build_ling_building_elixir.txt"
+#base "abilities\ling\Elixir\ling_purification.txt"
 
 #base "abilities\ling\Gnorgil\build_ling_building_gnorgil.txt"
 #base "abilities\ling\Gnorgil\build_ling_building_gnorgil_disabled.txt"

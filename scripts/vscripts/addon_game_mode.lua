@@ -117,6 +117,8 @@ PrecacheResource("particle_folder", "particles/units/heroes/hero_treant", contex
 PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_treant.vsndevts", context) -- Living Armor
 PrecacheResource("particle", "particles/items3_fx/mango_active.vpcf", context) -- Mango
 PrecacheResource("particle", "particles/units/heroes/hero_omniknight/omniknight_purification.vpcf", context) -- Purification
+PrecacheResource("particle", "particles/units/heroes/hero_omniknight/omniknight_purification_cast.vpcf", context) -- Purification
+PrecacheResource("particle", "particles/units/heroes/hero_omniknight/omniknight_purification_hit.vpcf", context) -- Purification
 PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_omniknight.vsndevts", context) -- Purification
 
 

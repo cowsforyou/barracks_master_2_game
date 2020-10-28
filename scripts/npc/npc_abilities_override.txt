@@ -125,55 +125,6 @@
     }
   }
 
-  "omniknight_purification"
-  {
-    // General
-    //-------------------------------------------------------------------------------------------------------------
-    "ID"              "5263"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
-    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-    "AbilityUnitDamageType"     "DAMAGE_TYPE_PURE"
-    "SpellImmunityType"       "SPELL_IMMUNITY_ALLIES_YES"
-    "FightRecapLevel"       "1"
-    "AbilitySound"          "Hero_Omniknight.Purification"
-
-    // Casting
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityCastRange"        "5000"
-    "AbilityCastPoint"        "0.2"
-    
-    // Time   
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityCooldown"       "60"
-    
-    // Cost
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityManaCost"       "0"
-    
-    // Special
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
-    {
-      "01"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "heal"            "200"
-      }
-      "02"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "radius"          "120"
-      }
-      "03"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "cast_range"      "5000" //Purely for tooltip
-      }
-    }
-    "AbilityCastAnimation"    "ACT_DOTA_CAST_ABILITY_1"
-  }
-
   "sven_great_cleave"
   {
     "AbilitySpecial"
