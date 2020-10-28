@@ -221,4 +221,5 @@ function Activate()
   GameRules.GameMode:_InitGameMode()
   PlayerColors:Init()
   GameRules:GetGameModeEntity():SetCustomGameForceHero("npc_dota_hero_wisp")
+  GameRules.WarpTen = true -- Turn this off after finishing testing!
 end

@@ -54,6 +54,7 @@ function DequeueUnit( event )
     local caster = event.caster
     local item = event.ability
     local playerID = caster:GetPlayerOwnerID()
+    local hero = PlayerResource:GetSelectedHeroEntity(playerID)
 
     local item_ability = EntIndexToHScript(item:GetEntityIndex())
     local item_ability_name = item_ability:GetAbilityName()

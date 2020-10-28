@@ -7,8 +7,6 @@ function Gathering:Init()
     LinkLuaModifier("modifier_carrying_lumber","libraries/modifiers/modifier_carrying_lumber",LUA_MODIFIER_MOTION_NONE)
     self.Particle = {}
     self.Workers = {}
-
-    GameRules.WarpTen = true -- Turn this off after finishing testing!
 end
 
 function Gathering:SpawnMapEntities()
