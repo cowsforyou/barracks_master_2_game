@@ -70,6 +70,7 @@
 
 #base "abilities\xoya\Belek\build_xoya_building_belek.txt"
 #base "abilities\xoya\Belek\spawn_xoya_creep_belek.txt"
+#base "abilities\xoya\Belek\xoo_rage_sacrifice.txt"
 
 #base "abilities\xoya\Catlix\build_xoya_building_catlix.txt"
 #base "abilities\xoya\Catlix\build_xoya_building_catlix_disabled.txt"

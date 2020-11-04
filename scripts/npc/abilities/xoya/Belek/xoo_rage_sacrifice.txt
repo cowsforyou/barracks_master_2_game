@@ -1,0 +1,76 @@
+"DOTAAbilities"
+{
+    "xoo_rage_sacrifice"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_datadriven"
+        "ID"                            "1172"  //Valve's version of this item uses the ID "172".
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
+        "AbilityTextureName"            "xoya"
+        "MaxLevel"                      "1"
+        
+        // Stats        
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "5000"
+        "AbilityCastPoint"              "0.0"
+        "AbilityCooldown"               "3.0"
+        "AbilityManaCost"               "0"
+        
+        "AbilitySpecial"
+        {
+            "02"
+            {
+                "var_type"                                      "FIELD_INTEGER"
+                "active_bonus_attack_speed"                     "50"
+            }
+            "03"
+            {
+                "var_type"                                      "FIELD_INTEGER"
+                "active_bonus_movement_speed_percentage"        "40"
+            }
+            "05"
+            {
+                "var_type"                                      "FIELD_FLOAT"
+                "active_duration"                               "10.0"
+            }
+        }
+        
+        "OnSpellStart"
+        {
+            "ApplyModifier"
+            {
+                "Target"            "TARGET"
+                "ModifierName"      "modifier_xoo_rage_sacrifice_active"
+            }
+            
+            "FireSound"
+            {
+                "EffectName"        "DOTA_Item.MaskOfMadness.Activate"
+                "Target"            "TARGET"
+            }
+        }
+        
+        "Modifiers"
+        {
+            "modifier_xoo_rage_sacrifice_active"
+            {
+                "Duration"          "%active_duration"
+                "Passive"           "0"
+                "IsHidden"          "0"
+                
+                "EffectName"            "particles/items2_fx/mask_of_madness.vpcf"
+                "EffectAttachType"      "follow_origin"
+                    
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"      "%active_bonus_movement_speed_percentage"
+                    "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"      "%active_bonus_attack_speed"
+                }
+            }
+        }
+    }
+}
