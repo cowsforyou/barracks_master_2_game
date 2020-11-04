@@ -70,6 +70,16 @@
                     "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"      "%active_bonus_movement_speed_percentage"
                     "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"      "%active_bonus_attack_speed"
                 }
+
+    			"ThinkInterval" 	"1.00"
+    		    "OnIntervalThink"
+    			{
+    				"RunScript"
+    		        {
+    		            "ScriptFile"    "spells/xoo_rage_sacrifice.lua"
+    		            "Function"      "Sacrifice"
+    		        }
+    			}
             }
         }
     }
