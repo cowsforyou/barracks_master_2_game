@@ -10,38 +10,43 @@
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
         "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
-        "AbilityTextureName"            "xoya"
+        "AbilityTextureName"            "xoo_rage_sacrifice"
         "MaxLevel"                      "1"
         
         // Stats        
         //-------------------------------------------------------------------------------------------------------------
         "AbilityCastRange"              "5000"
         "AbilityCastPoint"              "0.0"
-        "AbilityCooldown"               "3.0"
+        "AbilityCooldown"               "60.0"
         "AbilityManaCost"               "0"
         
         "AbilitySpecial"
         {
-            "02"
+            "01"
             {
                 "var_type"                                      "FIELD_INTEGER"
                 "active_bonus_attack_speed"                     "50"
             }
-            "03"
+            "02"
             {
                 "var_type"                                      "FIELD_INTEGER"
                 "active_bonus_movement_speed_percentage"        "40"
             }
+            "03"
+            {
+                "var_type"                                      "FIELD_FLOAT"
+                "health_loss_pct"                               "0.2"
+            }
+            "04"
+            {
+                "var_type"                                      "FIELD_FLOAT"
+                "active_duration"                               "6.0"
+            }
             "05"
             {
                 "var_type"                                      "FIELD_FLOAT"
-                "active_duration"                               "10.0"
-            }
-            "06"
-            {
-                "var_type"                                      "FIELD_FLOAT"
-                "sacrifice_hp_damage_pct"                       "0.8"
-            }
+                "cast_range"                                    "5000" //Purely for tooltip
+            }            
         }
         
         "OnSpellStart"
