@@ -12,7 +12,7 @@ function WebApi:Send(path, data, onSuccess, onError)
 		DeepPrintTable(data)
 	end
 
-	request:SetHTTPRequestHeaderValue("X-Parse-Application-Id", 'JLK7H11N6')
+	request:SetHTTPRequestHeaderValue("X-Parse-Application-Id", dedicatedServerKey)
 	if data ~= nil then
 		request:SetHTTPRequestRawPostBody("application/json", json.encode(data))
 	end
