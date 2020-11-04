@@ -37,6 +37,11 @@
                 "var_type"                                      "FIELD_FLOAT"
                 "active_duration"                               "10.0"
             }
+            "06"
+            {
+                "var_type"                                      "FIELD_FLOAT"
+                "sacrifice_hp_damage_pct"                       "0.8"
+            }
         }
         
         "OnSpellStart"
