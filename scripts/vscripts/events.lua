@@ -296,6 +296,7 @@ function GameMode:OnEntityKilled( keys )
   if killedUnit.winOnKill then
     local team = killedUnit:GetOpposingTeamNumber() --This would need to change in a multi team scenario
     BuildingHelper:RemoveBuilding(killedUnit)
+    WebApi.winner = team
     GameRules:SetGameWinner(team)
   end
 end

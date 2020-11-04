@@ -23,6 +23,8 @@ function GameMode:_OnGameRulesStateChange(keys)
     end
   elseif newState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
     GameMode:OnGameInProgress()
+  elseif newState == DOTA_GAMERULES_STATE_POST_GAME then
+    WebApi:AfterMatch(WebApi.winner)
   end
 
   GameMode._reentrantCheck = true

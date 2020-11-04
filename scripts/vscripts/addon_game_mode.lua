@@ -69,6 +69,10 @@ require('widgets/get_resources_info')
 -- Allows Purifier code to work when built
 require('widgets/purifier')
 
+-- LeaderBoard
+require('statcollection/web_api')
+require('statcollection/points')
+
 ------------------------------------------------------
 --                PRECACHE BLOCK
 ------------------------------------------------------
