@@ -13,28 +13,25 @@
         "AbilitySpecial"
         {
             "01"
-          {
-            "var_type"              "FIELD_INTEGER"
-            "creep_count"           "1 2 3"
-          }
-          
+            {
+                "var_type"              "FIELD_INTEGER"
+                "creep_count"           "1 2 3"
+            }
             "02"
-          {
-            "var_type"              "FIELD_INTEGER"
-            "research_time"         "0 30 60"
-          }
-
+            {
+                "var_type"              "FIELD_INTEGER"
+                "research_time"         "0 30 60"
+            }
             "03"
-          {
-            "var_type"              "FIELD_INTEGER"
-            "gold_cost"             "0 500 750"
-          }
-     
-            "04"
-          {
-            "var_type"              "FIELD_INTEGER"
-            "lumber_cost"           "0 250 500"
-          }
+            {
+                "var_type"              "FIELD_INTEGER"
+                "gold_cost"             "0 500 750"
+            }
+            "08"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "lumber_cost"           "0 250 500"
+            }
         }
 
         "OnSpellStart"

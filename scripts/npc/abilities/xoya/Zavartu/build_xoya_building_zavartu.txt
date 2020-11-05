@@ -42,7 +42,7 @@
 				"var_type"				"FIELD_INTEGER"
 				"gold_cost"				"475"
 			}
-			"03"
+			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
 				"lumber_cost"			"150"

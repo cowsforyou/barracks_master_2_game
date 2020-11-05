@@ -7,7 +7,7 @@
         "AbilityTextureName"            "ling_clorn_creep"
         "MaxLevel"                      "6"
 
-        "AbilityChannelTime"            "0 10 10 20 30 40"
+        "AbilityChannelTime"            "0 10 10 20 40 70"
         "AbilityGoldCost"               "0 100 150 250 350 500"
         
         "AbilitySpecial"
@@ -21,7 +21,7 @@
             "02"
           {
             "var_type"              "FIELD_INTEGER"
-            "research_time"         "0 10 10 20 30 40"
+            "research_time"         "0 10 10 20 40 70"
           }
 
             "03"
@@ -32,7 +32,7 @@
      
             "08"
           {
-            "var_type"              "FIELD_INTEGzER"
+            "var_type"              "FIELD_INTEGER"
             "lumber_cost"           "0 0 0 100 150 250"
           }
         }
