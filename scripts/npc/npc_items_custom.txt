@@ -29,6 +29,7 @@
 
 #base "items\xoya\item_research_xoya_citol_armor.txt"
 #base "items\xoya\item_research_xoya_citol_damage.txt"
+#base "items\xoya\item_research_xoo_citol_health.txt"
 #base "items\xoya\item_research_xoya_phe_armor.txt"
 #base "items\xoya\item_research_xoya_phe_damage.txt"
 #base "items\xoya\item_research_xoya_purifier_bonus_lumber.txt"

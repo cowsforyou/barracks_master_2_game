@@ -1,0 +1,42 @@
+"DOTAAbilities"
+{
+    "xoo_citol_health"
+    {
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "BaseClass"             "ability_datadriven"
+        "AbilityTextureName"    "health_vial"
+
+        "MaxLevel"    "1"
+
+        // AbilitySpecial  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"      "FIELD_INTEGER"
+                "health_bonus"  "250"
+            }     
+        }
+
+        // Modifiers
+        //-------------------------------------------------------------------------------------------------------------
+        "Modifiers"
+        {
+            "modifier_xoo_citol_health"
+            {
+                "Passive"    "1"
+                "IsHidden"   "1"
+            
+                "OnCreated"
+                {
+                    "RunScript"
+                    {
+                        "ScriptFile"    "spells/health_vial.lua"
+                        "Function"      "HealthVial"
+                    }
+                } 
+            }
+        }
+    }
+}
