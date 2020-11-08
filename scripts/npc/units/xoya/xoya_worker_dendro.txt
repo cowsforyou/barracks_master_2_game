@@ -48,8 +48,8 @@
         "AttackDamageType"          "DAMAGE_TYPE_ArmorPhysical"
         "AttackRate"                "1"   
         "AttackAnimationPoint"      "0.5"   
-        "AttackAcquisitionRange"    "500"   
-        "AttackRange"               "150"   
+        "AttackAcquisitionRange"    "500"
+        "AttackRange"               "175"
 
 
         // Attributes
