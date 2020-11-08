@@ -40,7 +40,7 @@
         "Ability2"                  "research_spawn_xoya_creep_phe"    
         "Ability3"                  "research_xoya_phe_armor"     
         "Ability4"                  "research_xoya_phe_damage"      
-        "Ability5"                  ""     
+        "Ability5"                  "research_xoo_phe_health_disabled"     
         "Ability6"                  ""     
         "Ability7"                  ""      
         "Ability8"                  ""      
