@@ -41,7 +41,7 @@
         "Ability2"                  "research_spawn_ling_creep_orthi"    
         "Ability3"                  "research_ling_orthi_armor"     
         "Ability4"                  "research_ling_orthi_damage"      
-        "Ability5"                  ""     
+        "Ability5"                  "research_ling_orthi_health_disabled"
         "Ability6"                  ""     
         "Ability7"                  ""      
         "Ability8"                  ""      

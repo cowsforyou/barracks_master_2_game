@@ -39,8 +39,12 @@
 #base "abilities\ling\Orthi\ling_orthi_armor_disabled.txt"
 #base "abilities\ling\Orthi\ling_orthi_damage.txt"
 #base "abilities\ling\Orthi\ling_orthi_damage_disabled.txt"
+#base "abilities\ling\Orthi\ling_orthi_health.txt"
+#base "abilities\ling\Orthi\ling_orthi_health_disabled.txt"
 #base "abilities\ling\Orthi\research_ling_orthi_armor.txt"
 #base "abilities\ling\Orthi\research_ling_orthi_damage.txt"
+#base "abilities\ling\Orthi\research_ling_orthi_health.txt"
+#base "abilities\ling\Orthi\research_ling_orthi_health_disabled.txt"
 #base "abilities\ling\Orthi\research_spawn_ling_creep_orthi.txt"
 #base "abilities\ling\Orthi\spawn_ling_creep_orthi.txt"
 

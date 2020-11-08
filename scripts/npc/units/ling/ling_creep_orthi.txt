@@ -27,7 +27,7 @@
         "AbilityLayout"             "6"
         "Ability1"                  "ling_orthi_armor_disabled"     
         "Ability2"                  "ling_orthi_damage_disabled" 
-        "Ability3"                  ""     
+        "Ability3"                  "ling_orthi_health_disabled"     
         "Ability4"                  ""      
         "Ability5"                  ""     
         "Ability6"                  ""     
