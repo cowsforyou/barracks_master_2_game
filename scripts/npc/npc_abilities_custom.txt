@@ -12,8 +12,12 @@
 #base "abilities\ling\Clorn\ling_clorn_armor_disabled.txt"
 #base "abilities\ling\Clorn\ling_clorn_damage.txt"
 #base "abilities\ling\Clorn\ling_clorn_damage_disabled.txt"
+#base "abilities\ling\Clorn\ling_clorn_health.txt"
+#base "abilities\ling\Clorn\ling_clorn_health_disabled.txt"
 #base "abilities\ling\Clorn\research_ling_clorn_armor.txt"
 #base "abilities\ling\Clorn\research_ling_clorn_damage.txt"
+#base "abilities\ling\Clorn\research_ling_clorn_health.txt"
+#base "abilities\ling\Clorn\research_ling_clorn_health_disabled.txt"
 #base "abilities\ling\Clorn\research_spawn_ling_creep_clorn.txt"
 #base "abilities\ling\Clorn\spawn_ling_creep_clorn.txt"
 

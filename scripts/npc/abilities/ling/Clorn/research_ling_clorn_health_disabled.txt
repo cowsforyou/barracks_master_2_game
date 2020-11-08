@@ -1,0 +1,9 @@
+"DOTAAbilities"
+{
+	"research_ling_clorn_health_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "health_vial"
+	    "MaxLevel"                      "0"
+	}
+}

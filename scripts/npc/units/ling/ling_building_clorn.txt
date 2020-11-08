@@ -41,7 +41,7 @@
         "Ability2"                  "research_spawn_ling_creep_clorn"    
         "Ability3"                  "research_ling_clorn_armor"     
         "Ability4"                  "research_ling_clorn_damage"      
-        "Ability5"                  ""
+        "Ability5"                  "research_ling_clorn_health_disabled"
         "Ability6"                  ""
         "Ability7"                  ""
         "Ability8"                  ""
