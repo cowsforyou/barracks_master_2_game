@@ -1,0 +1,97 @@
+"DOTAAbilities"
+{
+    "ling_static_touch"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"   
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "AbilityTextureName"            "ling_static_touch"
+
+        "MaxLevel"                      "1"
+
+        // Special  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "lightning_damage"      "120"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "lightning_bounces"     "5"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "bounce_range"          "500"
+            }
+            "04"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "lightning_decay"       "25"
+            }
+            "05"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "time_between_bounces"  "0.2"
+            }
+            "06"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "lightning_chance"      "20"
+            }
+            "07"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "bonus_range"           "200"
+            }    
+            "08"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "bonus_movespeed"       "-30"
+            }                
+        }
+        
+        // Modifiers
+        //-------------------------------------------------------------------------------------------------------------
+        "Modifiers"
+        {
+            "modifier_static_touch"
+            {
+                "Passive"       "1"
+                "IsHidden"      "1"
+
+                "EffectName"            "particles/items2_fx/mask_of_madness.vpcf"
+                "EffectAttachType"      "follow_origin"
+
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_ATTACK_RANGE_BONUS"          "%bonus_range"
+                    "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"    "%bonus_movespeed"
+                }
+
+                "OnAttackLanded"
+                {
+                    "Random"
+                    {
+                        "Chance"        "%lightning_chance"
+
+                        "OnSuccess"
+                        {
+                            "RunScript"
+                            {
+                                "ScriptFile"    "spells/ling_static_touch.lua"
+                                "Function"      "ChainLightning"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

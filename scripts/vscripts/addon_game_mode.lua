@@ -120,10 +120,11 @@ PrecacheUnitByNameSync("creephero_medusa", context)
 PrecacheResource("particle_folder", "particles/units/heroes/hero_treant", context) -- Living Armor
 PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_treant.vsndevts", context) -- Living Armor
 PrecacheResource("particle", "particles/items3_fx/mango_active.vpcf", context) -- Mango
+PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_zuus.vsndevts", context) -- Ling Static Touch
 PrecacheResource("particle", "particles/units/heroes/hero_omniknight/omniknight_purification.vpcf", context) -- Purification
-PrecacheResource("particle", "particles/units/heroes/hero_omniknight/omniknight_purification_cast.vpcf", context) -- Purification
-PrecacheResource("particle", "particles/units/heroes/hero_omniknight/omniknight_purification_hit.vpcf", context) -- Purification
-PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_omniknight.vsndevts", context) -- Purification
+PrecacheResource("particle", "particles/units/heroes/hero_omniknight/omniknight_purification_cast.vpcf", context) -- Ling Purification
+PrecacheResource("particle", "particles/units/heroes/hero_omniknight/omniknight_purification_hit.vpcf", context) -- Ling Purification
+PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_omniknight.vsndevts", context) -- Ling Purification
 
 
 -- LING

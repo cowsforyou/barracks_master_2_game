@@ -26,6 +26,10 @@
 
 #base "abilities\ling\Gnorgil\build_ling_building_gnorgil.txt"
 #base "abilities\ling\Gnorgil\build_ling_building_gnorgil_disabled.txt"
+#base "abilities\ling\Gnorgil\ling_static_touch.txt"
+#base "abilities\ling\Gnorgil\ling_static_touch_disabled.txt"
+#base "abilities\ling\Gnorgil\research_ling_static_touch.txt"
+#base "abilities\ling\Gnorgil\research_ling_static_touch_disabled.txt"
 #base "abilities\ling\Gnorgil\research_spawn_ling_creep_gnorgil.txt"
 #base "abilities\ling\Gnorgil\spawn_ling_creep_gnorgil.txt"
 

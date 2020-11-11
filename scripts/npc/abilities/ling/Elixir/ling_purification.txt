@@ -8,7 +8,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_lua"
 		"ScriptFile"					"spells/ling_purification"
-		"AbilityTextureName"			"purification"
+		"AbilityTextureName"			"ling_purification"
 		"FightRecapLevel"				"1"
 		"MaxLevel"						"1"
 		"precache"

@@ -25,7 +25,7 @@
         // Abilities
         //----------------------------------------------------------------    
         "Ability1"                  "ghost_frost_attack"
-        "Ability2"                  ""
+        "Ability2"                  "ling_static_touch_disabled"
         "Ability3"                  ""
         "Ability4"                  ""      
         "Ability5"                  ""     
