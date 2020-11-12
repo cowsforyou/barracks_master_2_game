@@ -16,16 +16,13 @@ function BMCore:InitializeHero(hero)
     hero.lumber = 0 -- Secondary resource of the player
     
     -- Give starting items and resources
-    --hero:SetGold(350, false)
-    --ModifyLumber(hero, 0)
+    hero:SetGold(350, false)
+    ModifyLumber(hero, 50)
 
     hero:AddItemByName("item_travel_boots")
     hero:AddItemByName("item_scout_land")
     hero:AddItemByName("item_last_stand")
     hero:AddItemByName("item_quelling_blade")
-
-    hero:SetGold(8000, false)
-    ModifyLumber(hero, 5000)
 
     -- Remove AbilityPoints and upgrade initial abilities
     hero:SetAbilityPoints(0)

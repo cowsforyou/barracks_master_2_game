@@ -73,6 +73,9 @@ require('widgets/purifier')
 require('statcollection/web_api')
 require('statcollection/points')
 
+-- Developer Tools
+require('widgets/developer_tools')
+
 ------------------------------------------------------
 --                PRECACHE BLOCK
 ------------------------------------------------------
@@ -228,5 +231,4 @@ function Activate()
   GameRules.GameMode:_InitGameMode()
   PlayerColors:Init()
   GameRules:GetGameModeEntity():SetCustomGameForceHero("npc_dota_hero_wisp")
-  GameRules.WarpTen = true -- Turn this off after finishing testing!
 end
