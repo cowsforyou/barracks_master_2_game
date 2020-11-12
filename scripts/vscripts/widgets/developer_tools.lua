@@ -37,3 +37,9 @@ Convars:RegisterCommand("modify_lumber", function(name, lumberAmount)
     ModifyLumber(hero, tonumber(lumberAmount))
     print('Lumber set to ', lumberAmount)    
 end, "Set Lumber Amount", FCVAR_CHEAT)
+
+Convars:RegisterCommand("test_send_match_data", function(name, winnerTeam)
+    if not IsAdmin() then return end
+
+    WebApi:AfterMatch(tonumber(winnerTeam))
+end, "Send Sample Match Data", FCVAR_CHEAT)
