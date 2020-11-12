@@ -1,9 +1,9 @@
 "DOTAAbilities"
 {
-	"build_xoya_building_library_disabled"
+	"build_xoo_building_holocron_disabled"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"xoo_library_building"
+		"AbilityTextureName"			"xoo_holocron_building"
 		"MaxLevel" 						"0"
 	}
 }

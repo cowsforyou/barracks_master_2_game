@@ -17,7 +17,7 @@ function OnSpellStart(keys)
         "build_xoya_building_monolith",
         "build_xoo_building_portal",
         "build_xoya_building_purifier", -- start page 3
-        "build_xoya_building_library",
+        "build_xoo_building_holocron",
         -- remaining slots will be filled with blanks, if any
     }
 

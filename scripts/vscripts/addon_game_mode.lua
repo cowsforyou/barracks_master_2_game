@@ -172,7 +172,7 @@ PrecacheUnitByNameSync("xoya_building_tech", context)
 PrecacheUnitByNameSync("xoya_building_arrow", context)
 PrecacheUnitByNameSync("xoya_building_skeleton", context)
 PrecacheUnitByNameSync("xoya_building_purifier", context)
-PrecacheUnitByNameSync("xoya_building_library", context)
+PrecacheUnitByNameSync("xoo_building_holocron", context)
 
 -- Xoya Creeps
 PrecacheUnitByNameSync("xoya_creep_belek", context)

@@ -1,19 +1,19 @@
 "DOTAAbilities"
 {
-	"build_xoya_building_library"
+	"build_xoo_building_holocron"
 	{
 		// Ability Settings
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	    "AbilityCastPoint"              "0"
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"xoo_library_building"
+		"AbilityTextureName"			"xoo_holocron_building"
 		"MaxLevel" 						"1"
 
 
 		// Building Helper Info
 		//-------------------------------------------------------------------------------------------------------------
-		"UnitName"						"xoya_building_library"
+		"UnitName"						"xoo_building_holocron"
 		"Building"						"1" //bool 
 		"AbilityCastRange"				"250"
 		"UpdateHealth"					"1" //bool

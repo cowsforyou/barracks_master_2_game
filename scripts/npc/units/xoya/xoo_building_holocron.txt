@@ -1,6 +1,6 @@
 "DOTAUnits" 
 {
-    "xoya_building_library"
+    "xoo_building_holocron"
     {
         // General
         //----------------------------------------------------------------
