@@ -35,7 +35,7 @@
             "03"
             {
                 "var_type"                                      "FIELD_FLOAT"
-                "health_loss_pct"                               "0.2"
+                "health_loss_pct"                               "0.12"
             }
             "04"
             {
