@@ -39,7 +39,7 @@
 #base "units\xoya\xoya_building_belek.txt"
 #base "units\xoya\xoya_building_catlix.txt"
 #base "units\xoya\xoya_building_citol.txt"
-#base "units\xoya\xoya_building_library.txt"
+#base "units\xoya\xoo_building_holocron.txt"
 #base "units\xoya\xoya_building_lumber.txt"
 #base "units\xoya\xoya_building_monolith.txt"
 #base "units\xoya\xoya_building_phe.txt"
