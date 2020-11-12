@@ -1,0 +1,9 @@
+"DOTAAbilities"
+{
+	"research_xoo_bashlord_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "xoo_bashlord"
+	    "MaxLevel"                      "0"
+	}
+}

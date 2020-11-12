@@ -42,7 +42,7 @@
         "Ability3"                  "research_xoya_citol_armor"     
         "Ability4"                  "research_xoya_citol_damage"      
         "Ability5"                  "research_xoo_citol_health_disabled"     
-        "Ability6"                  ""     
+        "Ability6"                  "research_xoo_bashlord_disabled"     
         "Ability7"                  ""      
         "Ability8"                  ""      
         "Ability9"                  ""        

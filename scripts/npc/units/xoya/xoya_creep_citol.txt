@@ -28,11 +28,11 @@
         "Ability1"                  "xoya_citol_armor_disabled"
         "Ability2"                  "xoya_citol_damage_disabled"
         "Ability3"                  "xoo_citol_health_disabled"
-        "Ability4"                  ""
+        "Ability4"                  "xoo_bashlord_disabled"
         "Ability5"                  ""     
         "Ability6"                  ""
         "Ability7"                  ""      
-        "Ability8"                  ""      
+        "Ability8"                  ""
         "Ability9"                  ""        
         "Ability10"                 ""
 
