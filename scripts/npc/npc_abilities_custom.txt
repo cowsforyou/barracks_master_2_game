@@ -103,8 +103,8 @@
 #base "abilities\xoya\Citol\xoo_citol_health.txt"
 #base "abilities\xoya\Citol\xoo_citol_health_disabled.txt"
 
-#base "abilities\xoya\Library\build_xoya_building_library.txt"
-#base "abilities\xoya\Library\build_xoya_building_library_disabled.txt"
+#base "abilities\xoya\Holocron\build_xoo_building_holocron.txt"
+#base "abilities\xoya\Holocron\build_xoo_building_holocron_disabled.txt"
 
 #base "abilities\xoya\Lumber\build_xoya_building_lumber.txt"
 #base "abilities\xoya\Lumber\spawn_xoya_worker_dendro.txt"
