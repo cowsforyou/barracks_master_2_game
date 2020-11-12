@@ -49,6 +49,7 @@
             "modifier_elder_titan_aura_debuff"
             {
                 "IsHidden"          "0"
+                "IsDebuff"          "1"
 
                 "Properties"
                 {
