@@ -1,0 +1,48 @@
+"DOTAAbilities"
+{
+    "xoo_armor_alchemy"
+    {
+        // Ability Technical Aspect
+        // base script folder   : scripts/vscripts
+        // base texture folder  : resource/flash3/images/spellicons
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "spells/xoo_armor_alchemy"
+        "AbilityTextureName"            "xoo_armor_alchemy"
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "1"
+        
+        // Ability General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC | DOTA_UNIT_TARGET_HERO"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+
+        // Ability Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "500"
+
+        // Ability Resource
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Damage
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "aura_radius"           "600"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "armor_reduction"       "-2"
+            }
+        }
+    }
+}

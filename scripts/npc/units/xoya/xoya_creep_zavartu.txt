@@ -24,12 +24,12 @@
 
         // Abilities
         //----------------------------------------------------------------    
-        "Ability1"                  ""     
+        "Ability1"                  "xoo_armor_alchemy"     
         "Ability2"                  "xoo_corrupted_blade_disabled"
-        "Ability3"                  ""     
-        "Ability4"                  ""      
-        "Ability5"                  ""     
-        "Ability6"                  ""     
+        "Ability3"                  ""
+        "Ability4"                  ""
+        "Ability5"                  ""
+        "Ability6"                  ""
         "Ability7"                  ""      
         "Ability8"                  ""      
         "Ability9"                  ""        
