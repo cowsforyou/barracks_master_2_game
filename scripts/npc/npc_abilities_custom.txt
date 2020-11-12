@@ -145,8 +145,13 @@
 
 #base "abilities\xoya\Zavartu\build_xoya_building_zavartu.txt"
 #base "abilities\xoya\Zavartu\build_xoya_building_zavartu_disabled.txt"
+#base "abilities\xoya\Zavartu\research_xoo_corrupted_blade.txt"
+#base "abilities\xoya\Zavartu\research_xoo_corrupted_blade_disabled.txt"
 #base "abilities\xoya\Zavartu\research_spawn_xoya_creep_zavartu.txt"
 #base "abilities\xoya\Zavartu\spawn_xoya_creep_zavartu.txt"
+#base "abilities\xoya\Zavartu\xoo_corrupted_blade.txt"
+#base "abilities\xoya\Zavartu\xoo_corrupted_blade_disabled.txt"
+
 
 //==================================================================================================
 //                                     **  G L O B A L  **
