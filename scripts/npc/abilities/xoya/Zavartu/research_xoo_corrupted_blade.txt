@@ -1,0 +1,66 @@
+"DOTAAbilities"
+{
+    "research_xoo_corrupted_blade"
+    {
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+        "BaseClass"                     "ability_datadriven"
+        "AbilityTextureName"            "xoo_corrupted_blade"
+        "MaxLevel"                      "1"
+
+        "AbilityChannelTime"            "110"
+        "AbilityGoldCost"               "900"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "bonus_damage"          "30"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "armor_reduction"       "-4"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "research_time"         "110"
+            }
+            "04"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "gold_cost"             "900"
+            }
+            "08"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "lumber_cost"           "800"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"    "core/queue.lua"
+                "Function"      "EnqueueUnit"
+            }
+        }
+
+        "OnChannelSucceeded"
+        {
+            "RunScript"
+            {
+                "ScriptFile"    "core/queue.lua"
+                "Function"      "NextQueue"
+            }
+
+            "RunScript"
+            {
+                "ScriptFile"    "core/research.lua"
+                "Function"      "ResearchComplete"
+            }
+        }
+    }
+}

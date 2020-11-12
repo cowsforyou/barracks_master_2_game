@@ -128,6 +128,7 @@ PrecacheResource("particle", "particles/units/heroes/hero_omniknight/omniknight_
 PrecacheResource("particle", "particles/units/heroes/hero_omniknight/omniknight_purification_cast.vpcf", context) -- Ling Purification
 PrecacheResource("particle", "particles/units/heroes/hero_omniknight/omniknight_purification_hit.vpcf", context) -- Ling Purification
 PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_omniknight.vsndevts", context) -- Ling Purification
+PrecacheResource("particle", "particles/items_fx/desolator_projectile.vpcf", context) -- Xoo Corrupted Blade
 
 
 -- LING

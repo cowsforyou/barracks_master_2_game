@@ -1,0 +1,89 @@
+"DOTAAbilities"
+{
+    "xoo_corrupted_blade"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"   
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "AbilityTextureName"            "xoo_corrupted_blade"
+
+        "MaxLevel"                      "1"
+
+        // Special  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "bonus_damage"          "30"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "armor_reduction"       "-4"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "debuff_duration"       "10"
+            }             
+        }
+        
+        // Modifiers
+        //-------------------------------------------------------------------------------------------------------------
+        "Modifiers"
+        {
+            "modifier_xoo_corrupted_blade"
+            {
+                "Passive"           "1"
+                "IsHidden"          "1"
+                "Attributes"        "MODIFIER_ATTRIBUTE_MULTIPLE"
+
+                "EffectName"            "particles/items2_fx/mask_of_madness.vpcf"
+                "EffectAttachType"      "follow_origin"
+                
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"                      "%bonus_damage"
+                }
+                
+                "Orb"
+                {
+                    "Priority"              "DOTA_ORB_PRIORITY_ITEM"
+                    "ProjectileName"        "particles/items_fx/desolator_projectile.vpcf"
+                    "CastAttack"            "0"
+                }
+
+                "OnOrbImpact"
+                {
+                    "ApplyModifier"
+                    {
+                        "Target"            "TARGET"
+                        "ModifierName"      "modifier_xoo_corrupted_blade_debuff"
+                    }
+                    
+                    "FireSound"
+                    {
+                        "EffectName"        "Item_Desolator.Target"
+                        "Target"            "TARGET"
+                    }
+                }
+            }
+            "modifier_xoo_corrupted_blade_debuff"
+            {
+                "Duration"              "%debuff_duration"
+                "Passive"               "0"
+                "IsHidden"              "0"
+                "IsDebuff"              "1"
+                
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"        "%armor_reduction"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+"DOTAAbilities"
+{
+	"xoo_corrupted_blade_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "xoo_corrupted_blade"
+	    "MaxLevel"                      "0"
+	}
+}

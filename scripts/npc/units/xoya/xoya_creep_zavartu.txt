@@ -25,7 +25,7 @@
         // Abilities
         //----------------------------------------------------------------    
         "Ability1"                  ""     
-        "Ability2"                  ""    
+        "Ability2"                  "xoo_corrupted_blade_disabled"
         "Ability3"                  ""     
         "Ability4"                  ""      
         "Ability5"                  ""     
