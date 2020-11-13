@@ -3,7 +3,7 @@
 	"build_ling_building_portal_disabled"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"ling"
+		"AbilityTextureName"			"ling_portal_building"
 		"MaxLevel" 						"0"
 	}
 }
