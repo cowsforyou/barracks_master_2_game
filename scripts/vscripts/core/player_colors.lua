@@ -4,14 +4,17 @@ end
 
 function PlayerColors:Init()
     for i, color in ipairs({
-        "mandarinorange",
-        "red",
-        "tiffany",
-        "limegreen",
-        "armygreen",
-        "yellow",
-        "pink",
-        "cyan",
+        "Gold",
+        "Red",
+        "Blue",
+        "LightGreen",
+        "Green",
+        "Yellow",
+        "Pink",
+        "LightBlue",
+        "Purple",
+        "Silver",
+        "Black",
     }) do
         CustomNetTables:SetTableValue( "player_colors", color, { isAvailable = true } )
         if color == "purple" then
@@ -23,6 +26,30 @@ function PlayerColors:Init()
     CustomGameEventManager:RegisterListener ('set_player_color', Dynamic_Wrap(PlayerColors, "SetPlayerColor") )
     CustomGameEventManager:RegisterListener ('set_player_color_unselected', Dynamic_Wrap(PlayerColors, "SetPlayerColorUnselected") )
     CustomGameEventManager:RegisterListener ('set_player_color_preview', Dynamic_Wrap(PlayerColors, "SetPlayerColorPreview") )
+    CustomGameEventManager:RegisterListener ('check_player_premium_colors', Dynamic_Wrap(PlayerColors, "CheckPlayerPremiumColors") )
+end
+
+function PlayerColors:CheckPlayerPremiumColors( event )
+    local playerId = event.PlayerID
+    local player = PlayerResource:GetPlayer(playerId)
+    local steamId = PlayerResource:GetSteamAccountID(playerId)
+    local premiumColor = {Purple = false, Silver = false, Black = false}
+
+    if steamId == 46639111 then -- (cows)
+        premiumColor.Silver = true
+        premiumColor.Black = true
+        premiumColor.Purple = true
+    end
+
+    if steamId == 72355671 then -- (xiao)
+        premiumColor.Silver = true
+        premiumColor.Black = true
+        premiumColor.Purple = true
+    end
+
+    if player then
+      CustomGameEventManager:Send_ServerToPlayer(player, "get_player_premium_colors", premiumColor)
+    end
 end
 
 function PlayerColors:SetPlayerColorPreview( event )
@@ -31,22 +58,28 @@ function PlayerColors:SetPlayerColorPreview( event )
 end
 
 function PlayerColors:GetRGBValues (color)
-    if color == "mandarinorange" then
+    if color == "Gold" then
         return {215,138,5}
-    elseif color == "red" then
+    elseif color == "Red" then
         return {128,0,3}
-    elseif color == "tiffany" then
+    elseif color == "Blue" then
         return {0,156,201}
-    elseif color == "limegreen" then
+    elseif color == "LightGreen" then
         return {170,255,170}
-    elseif color == "armygreen" then
+    elseif color == "Green" then
         return {0,200,50}
-    elseif color == "yellow" then
+    elseif color == "Yellow" then
         return {255,255,0}
-    elseif color == "pink" then
+    elseif color == "Pink" then
         return {255,125,200}
-    elseif color == "cyan" then
+    elseif color == "LightBlue" then
         return {0,255,255}
+    elseif color == "Purple" then
+        return {191,0,255}
+    elseif color == "Silver" then
+        return {225,225,225}
+    elseif color == "Black" then
+        return {0,0,0}
     else end
 end
 
@@ -82,14 +115,17 @@ function PlayerColors:SetPlayerColorUnselected( event )
     local colorData = CustomNetTables:GetTableValue("selected_player_colors", tostring(event.PlayerID))
     if colorData == nil then
         for i, color in ipairs({
-            "mandarinorange",
-            "red",
-            "tiffany",
-            "limegreen",
-            "armygreen",
-            "yellow",
-            "pink",
-            "cyan",
+            "Gold",
+            "Red",
+            "Blue",
+            "LightGreen",
+            "Green",
+            "Yellow",
+            "Pink",
+            "LightBlue",
+            "Purple",
+            "Silver",
+            "Black",
         }) do
             local colorAvailabilityData = CustomNetTables:GetTableValue("player_colors", color)
             if colorAvailabilityData['isAvailable'] == 1 then
