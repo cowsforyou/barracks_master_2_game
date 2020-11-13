@@ -1,0 +1,71 @@
+"DOTAAbilities" 
+{
+    "ling_retaliate"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+        "AbilityTextureName"            "ling_retaliate"
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "return_damage"             "30"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "damage_reduction_pct"      "-15"
+            }
+        }
+
+        "precache"
+        {
+            "particle"  "particles/units/heroes/hero_centaur/centaur_return.vpcf"
+        }
+
+        "Modifiers"
+        {
+            "modifier_ling_retaliate"
+            {
+                "Passive"   "1"
+                "IsHidden"  "1"
+
+                "EffectName"            "particles/items2_fx/mask_of_madness.vpcf"
+                "EffectAttachType"      "follow_origin"
+
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_INCOMING_PHYSICAL_DAMAGE_PERCENTAGE"          "%damage_reduction_pct"
+                }
+
+                "OnAttacked"
+                {
+                    "RunScript"
+                    {
+                        "ScriptFile"    "spells/ling_retaliate.lua"
+                        "Function"      "Return"
+                    }
+                    "FireEffect"
+                    {
+                        "EffectName"        "particles/units/heroes/hero_centaur/centaur_return.vpcf"
+                        "EffectAttachType"  "attach_hitloc"
+                        "Target"            "CASTER"
+                        "ControlPointEntities"
+                        {
+                            "CASTER"        "attach_hitloc"
+                            "ATTACKER"      "attach_hitloc"
+                        }
+                    }
+                }   
+            }
+        }
+    }
+}

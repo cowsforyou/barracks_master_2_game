@@ -10,6 +10,7 @@
 #base "items\ling\item_research_ling_orthi_damage.txt"
 #base "items\ling\item_research_ling_orthi_health.txt"
 #base "items\ling\item_research_ling_purifier_bonus_lumber.txt"
+#base "items\ling\item_research_ling_retaliate.txt"
 
 #base "items\ling\item_research_spawn_ling_creep_catlan.txt"
 #base "items\ling\item_research_spawn_ling_creep_clorn.txt"
