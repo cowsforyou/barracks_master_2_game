@@ -57,11 +57,10 @@ function WebApi:AfterMatch(winnerTeam)
 
 	local requestBody = {
 		customGame = WebApi.customGame,
-		matchId = isTesting and RandomInt(1, 10000000) or tonumber(tostring(GameRules:GetMatchID())),
+		matchId = tonumber(tostring(GameRules:GetMatchID())),
 		duration = math.floor(GameRules:GetDOTATime(false, true)),
 		mapName = GetMapName(),
 		winner = winnerTeam,
-
 		players = {}
 	}
 
@@ -70,9 +69,9 @@ function WebApi:AfterMatch(winnerTeam)
 			local playerScore = CustomNetTables:GetTableValue("scores", tostring(playerId))
 			local playerData = {
 				playerId = playerId,
+				matchId = tonumber(tostring(GameRules:GetMatchID())),
 				steamId = tostring(PlayerResource:GetSteamID(playerId)),
 				team = PlayerResource:GetTeam(playerId),
-                serverKey = dedicatedServerKey,
 				hero = PlayerResource:GetSelectedHeroName(playerId),
 				bmPoints = GetBMPointsForPlayer(playerId),
 				netWorth = playerScore["netWorth"],
@@ -82,6 +81,8 @@ function WebApi:AfterMatch(winnerTeam)
 			}
 
 			table.insert(requestBody.players, playerData)
+
+			WebApi:Send("classes/UserScore", playerData)
 		end
 	end
 
