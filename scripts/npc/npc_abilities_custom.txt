@@ -70,8 +70,13 @@
 
 #base "abilities\ling\Thiki\build_ling_building_thiki.txt"
 #base "abilities\ling\Thiki\build_ling_building_thiki_disabled.txt"
+#base "abilities\ling\Thiki\ling_retaliate.txt"
+#base "abilities\ling\Thiki\ling_retaliate_disabled.txt"
+#base "abilities\ling\Thiki\research_ling_retaliate.txt"
+#base "abilities\ling\Thiki\research_ling_retaliate_disabled.txt"
 #base "abilities\ling\Thiki\research_spawn_ling_creep_thiki.txt"
 #base "abilities\ling\Thiki\spawn_ling_creep_thiki.txt"
+
 
 //==================================================================================================
 //                                     **  X O O  **
