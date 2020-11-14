@@ -123,15 +123,19 @@ PrecacheUnitByNameSync("creephero_medusa", context)
 PrecacheResource("particle_folder", "particles/units/heroes/hero_treant", context) -- Living Armor
 PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_treant.vsndevts", context) -- Living Armor
 PrecacheResource("particle", "particles/items3_fx/mango_active.vpcf", context) -- Mango
-PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_zuus.vsndevts", context) -- Ling Static Touch
-PrecacheResource("particle", "particles/units/heroes/hero_omniknight/omniknight_purification.vpcf", context) -- Purification
+
+PrecacheResource("particle", "particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_blinding_light_aoe.vpcf", context) -- Ling Blinding Attack          
+PrecacheResource("particle", "particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_blinding_light_debuff.vpcf", context) -- Ling Blinding Attack
+PrecacheResource("particle", "particles/units/heroes/hero_omniknight/omniknight_purification.vpcf", context) -- Ling Purification            
 PrecacheResource("particle", "particles/units/heroes/hero_omniknight/omniknight_purification_cast.vpcf", context) -- Ling Purification
 PrecacheResource("particle", "particles/units/heroes/hero_omniknight/omniknight_purification_hit.vpcf", context) -- Ling Purification
 PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_omniknight.vsndevts", context) -- Ling Purification
 PrecacheResource("particle", "particles/units/heroes/hero_centaur/centaur_return.vpcf", context) -- Ling Retaliate
+PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_zuus.vsndevts", context) -- Ling Static Touch
 PrecacheResource("particle", "particles/status_fx/status_effect_frost_lich.vpcf", context) -- Ling Snowball
 PrecacheResource("particle", "particles/units/heroes/hero_lich/lich_frost_nova.vpcf", context) -- Ling Snowball
 PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_lich.vsndevts", context) -- Ling Snowball
+
 PrecacheResource("particle", "particles/items_fx/desolator_projectile.vpcf", context) -- Xoo Corrupted Blade
 PrecacheResource("particle", "particles/units/heroes/hero_phoenix/phoenix_fire_spirit_ground.vpcf", context) -- Xoo Fireball
 PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_phoenix.vsndevts", context) -- Xoo Fireball

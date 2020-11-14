@@ -43,6 +43,7 @@
 #base "abilities\ling\Lumber\spawn_ling_worker_nelum.txt"
 
 #base "abilities\ling\Orthi\build_ling_building_orthi.txt"
+#base "abilities\ling\Orthi\ling_blinding_attack.txt"
 #base "abilities\ling\Orthi\ling_orthi_armor.txt"
 #base "abilities\ling\Orthi\ling_orthi_armor_disabled.txt"
 #base "abilities\ling\Orthi\ling_orthi_damage.txt"

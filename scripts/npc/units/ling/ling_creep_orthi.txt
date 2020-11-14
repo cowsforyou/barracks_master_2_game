@@ -28,12 +28,12 @@
         "Ability1"                  "ling_orthi_armor_disabled"     
         "Ability2"                  "ling_orthi_damage_disabled" 
         "Ability3"                  "ling_orthi_health_disabled"     
-        "Ability4"                  ""      
-        "Ability5"                  ""     
-        "Ability6"                  ""     
-        "Ability7"                  ""      
+        "Ability4"                  "ling_blinding_attack"      
+        "Ability5"                  ""
+        "Ability6"                  ""
+        "Ability7"                  ""
         "Ability8"                  ""      
-        "Ability9"                  ""        
+        "Ability9"                  ""
         "Ability10"                 ""
 
         // Armor and Resistance
