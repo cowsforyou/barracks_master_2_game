@@ -16,7 +16,7 @@ function EnqueueUnit( event )
 
     -- Lumber check
     if hero.lumber < lumber_cost then
-        PlayerResource:ModifyGold(player, gold_cost, false, 0) -- refund gold       
+        PlayerResource:ModifyGold(playerID, gold_cost, false, 0) -- refund gold       
         SendErrorMessage(playerID, "#error_not_enough_lumber")
         return
     end
