@@ -129,7 +129,12 @@ PrecacheResource("particle", "particles/units/heroes/hero_omniknight/omniknight_
 PrecacheResource("particle", "particles/units/heroes/hero_omniknight/omniknight_purification_hit.vpcf", context) -- Ling Purification
 PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_omniknight.vsndevts", context) -- Ling Purification
 PrecacheResource("particle", "particles/units/heroes/hero_centaur/centaur_return.vpcf", context) -- Ling Retaliate
+PrecacheResource("particle", "particles/status_fx/status_effect_frost_lich.vpcf", context) -- Ling Snowball
+PrecacheResource("particle", "particles/units/heroes/hero_lich/lich_frost_nova.vpcf", context) -- Ling Snowball
+PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_lich.vsndevts", context) -- Ling Snowball
 PrecacheResource("particle", "particles/items_fx/desolator_projectile.vpcf", context) -- Xoo Corrupted Blade
+PrecacheResource("particle", "particles/units/heroes/hero_phoenix/phoenix_fire_spirit_ground.vpcf", context) -- Xoo Fireball
+PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_phoenix.vsndevts", context) -- Xoo Fireball
 
 
 -- LING

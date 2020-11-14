@@ -1,0 +1,106 @@
+"DOTAAbilities" 
+{
+    "xoo_fireball"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"            "xoo_fireball"
+
+        "MaxLevel"                      "1"
+
+        // Special  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "aoe_damage"                    "75"
+            }
+            "02"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "radius"                        "160"
+            }
+            "03"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "movement_slow"                 "-60"
+            }
+            "04"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "slow_duration"                 "3.0"
+            }            
+        }
+        
+        // Modifiers  
+        //-------------------------------------------------------------------------------------------------------------
+        "Modifiers"
+        {
+            "modifier_xoo_fireball"
+            {
+                "Passive"    "1"
+                "IsHidden"   "1"
+
+                "EffectName"            "particles/items2_fx/mask_of_madness.vpcf"
+                "EffectAttachType"      "follow_origin"
+
+                "OnAttackLanded"
+                {
+                    "FireSound"
+                    {
+                        "EffectName"    "Hero_Phoenix.FireSpirits.Cast"
+                        "Target"        "TARGET"
+                    }
+
+                    "FireEffect"
+                    {
+                        "EffectName"        "particles/units/heroes/hero_phoenix/phoenix_fire_spirit_ground.vpcf"
+                        "EffectAttachType"  "follow_origin"
+                        "Target"            "TARGET"
+                    }
+
+                    "ActOnTargets"
+                    {
+                        "Target"
+                        {
+                            "Center"                "TARGET"
+                            "Radius"                "%radius"
+                            "Teams"                 "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                            "Types"                 "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+                        }
+
+                        "Action"
+                        {
+                            "ApplyModifier"
+                            {
+                                "ModifierName"      "modifier_xoo_fireball_slow"
+                                "Target"            "TARGET"
+                                "Duration"          "%slow_duration"
+                            }
+
+                            "Damage"
+                            {
+                                "Type"              "DAMAGE_TYPE_MAGICAL"
+                                "Target"            "TARGET"
+                                "Damage"            "%aoe_damage"
+                            }
+                        }
+                    }
+                }
+            }
+
+            "modifier_xoo_fireball_slow"
+            {
+                "IsHidden"      "0"
+                "IsDebuff"      "1"
+
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"  "%movement_slow"
+                }
+            }
+        }
+    }
+}

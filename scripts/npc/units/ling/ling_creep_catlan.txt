@@ -24,7 +24,7 @@
 
         // Abilities
         //----------------------------------------------------------------    
-        "Ability1"                  ""     
+        "Ability1"                  "ling_snowball_disabled"
         "Ability2"                  ""    
         "Ability3"                  ""     
         "Ability4"                  ""      

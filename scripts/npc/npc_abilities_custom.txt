@@ -4,6 +4,10 @@
 
 #base "abilities\ling\Catlan\build_ling_building_catlan.txt"
 #base "abilities\ling\Catlan\build_ling_building_catlan_disabled.txt"
+#base "abilities\ling\Catlan\ling_snowball.txt"
+#base "abilities\ling\Catlan\ling_snowball_disabled.txt"
+#base "abilities\ling\Catlan\research_ling_snowball.txt"
+#base "abilities\ling\Catlan\research_ling_snowball_disabled.txt"
 #base "abilities\ling\Catlan\research_spawn_ling_creep_catlan.txt"
 #base "abilities\ling\Catlan\spawn_ling_creep_catlan.txt"
 
@@ -92,7 +96,11 @@
 #base "abilities\xoya\Catlix\build_xoya_building_catlix.txt"
 #base "abilities\xoya\Catlix\build_xoya_building_catlix_disabled.txt"
 #base "abilities\xoya\Catlix\research_spawn_xoya_creep_catlix.txt"
+#base "abilities\xoya\Catlix\research_xoo_fireball.txt"
+#base "abilities\xoya\Catlix\research_xoo_fireball_disabled.txt"
 #base "abilities\xoya\Catlix\spawn_xoya_creep_catlix.txt"
+#base "abilities\xoya\Catlix\xoo_fireball.txt"
+#base "abilities\xoya\Catlix\xoo_fireball_disabled.txt"
 
 #base "abilities\xoya\Citol\build_xoya_building_citol.txt"
 #base "abilities\xoya\Citol\research_spawn_xoya_creep_citol.txt"

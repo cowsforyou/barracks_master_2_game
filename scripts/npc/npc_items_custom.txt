@@ -11,6 +11,7 @@
 #base "items\ling\item_research_ling_orthi_health.txt"
 #base "items\ling\item_research_ling_purifier_bonus_lumber.txt"
 #base "items\ling\item_research_ling_retaliate.txt"
+#base "items\ling\item_research_ling_snowball.txt"
 
 #base "items\ling\item_research_spawn_ling_creep_catlan.txt"
 #base "items\ling\item_research_spawn_ling_creep_clorn.txt"
@@ -32,6 +33,7 @@
 #base "items\xoya\item_research_xoo_bashlord.txt"
 #base "items\xoya\item_research_xoo_citol_health.txt"
 #base "items\xoya\item_research_xoo_corrupted_blade.txt"
+#base "items\xoya\item_research_xoo_fireball.txt"
 #base "items\xoya\item_research_xoo_phe_health.txt"
 #base "items\xoya\item_research_xoya_citol_armor.txt"
 #base "items\xoya\item_research_xoya_citol_damage.txt"

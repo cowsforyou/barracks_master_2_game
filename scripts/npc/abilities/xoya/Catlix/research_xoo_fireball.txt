@@ -1,0 +1,71 @@
+"DOTAAbilities" 
+{
+    "research_xoo_fireball"
+    {
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+        "BaseClass"                     "ability_datadriven"
+        "AbilityTextureName"            "xoo_fireball"
+        "MaxLevel"                      "1"
+
+        "AbilityChannelTime"            "110"
+        "AbilityGoldCost"               "950"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "aoe_damage"                "75"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "radius"                    "160"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "movement_slow"             "-60"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "research_time"             "110"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "gold_cost"                 "950"
+            }
+            "08"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "lumber_cost"               "1200"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"    "core/queue.lua"
+                "Function"      "EnqueueUnit"
+            }
+        }
+
+        "OnChannelSucceeded"
+        {
+            "RunScript"
+            {
+                "ScriptFile"    "core/queue.lua"
+                "Function"      "NextQueue"
+            }
+
+            "RunScript"
+            {
+                "ScriptFile"    "core/research.lua"
+                "Function"      "ResearchComplete"
+            }
+        }
+    }
+}

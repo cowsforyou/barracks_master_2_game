@@ -24,9 +24,9 @@
 
         // Abilities
         //----------------------------------------------------------------    
-        "Ability1"                  ""     
+        "Ability1"                  "xoo_fireball_disabled"     
         "Ability2"                  ""    
-        "Ability3"                  ""     
+        "Ability3"                  ""
         "Ability4"                  ""      
         "Ability5"                  ""     
         "Ability6"                  ""     
