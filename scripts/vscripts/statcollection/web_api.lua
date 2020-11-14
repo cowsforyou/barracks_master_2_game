@@ -90,3 +90,41 @@ function WebApi:AfterMatch(winnerTeam)
 		WebApi:Send("classes/GameScore", requestBody)
 	-- end
 end
+
+function WebApi:GetLeaderBoard()
+	local request = CreateHTTPRequestScriptVM("GET", serverHost .. '/parse/aggregate/UserScore?group={"objectId":"$steamId","bmPoints":{"$sum":"$bmPoints"}}&limit=10')
+	request:SetHTTPRequestHeaderValue("X-Parse-Master-Key", dedicatedServerKey)
+	request:SetHTTPRequestHeaderValue("X-Parse-Application-Id", dedicatedServerKey)
+
+	request:Send(function(response)
+		if response.StatusCode == 200 then
+			local data = json.decode(response.Body)
+			if isTesting then
+				print("Response from Leaderboard")
+				DeepPrintTable(data)
+			end
+
+			CustomGameEventManager:Send_ServerToAllClients( "leaderboard_data_update", data )
+
+			if onSuccess then
+				onSuccess(data, response.StatusCode)
+			end
+		else
+			if isTesting then
+				print("Error from leaderboard " .. response.StatusCode)
+				if response.Body then
+					local status, result = pcall(json.decode, response.Body)
+					if status then
+						DeepPrintTable(result)
+					else
+						print(response.Body)
+					end
+				end
+			end
+			if onError then
+				-- TODO: Is response.Body nullable?
+				onError(response.Body or "Unknown error (" .. response.StatusCode .. ")", response.StatusCode)
+			end
+		end
+	end)
+end
