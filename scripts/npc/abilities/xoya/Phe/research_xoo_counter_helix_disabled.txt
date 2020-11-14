@@ -1,0 +1,9 @@
+"DOTAAbilities"
+{
+	"research_xoo_counter_helix_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "xoo_counter_helix"
+	    "MaxLevel"                      "0"
+	}
+}
