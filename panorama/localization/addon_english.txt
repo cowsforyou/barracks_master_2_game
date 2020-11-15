@@ -6,9 +6,7 @@
 	"bm_updates_title"								"Updates"
 	"bm_updates_text"								
 
-"Thank you for playing Barracks Master 2!
-
-We are still building the foundation so the game is only about 80% complete. We aim to have the game launch into beta on 15th Nov 2020! 
+"Welcome to Barracks Master 2! We are officially in open beta as of Nov 15, 2020!
 
 Have something to say? Drop us a feedback on reddit.com/r/barracksmaster."
 
