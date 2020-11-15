@@ -31,6 +31,7 @@ Have something to say? Drop us a feedback on reddit.com/r/barracksmaster."
 	//-------------------
 	//Scoreboard Labels
 	//-------------------
+	"custom_end_screen_legend_color"				"COLOR"
 	"custom_end_screen_legend_cs"					"CS"
 	"custom_end_screen_legend_networth"				"NET WORTH"
 	"custom_end_screen_legend_gold"					"GOLD"
