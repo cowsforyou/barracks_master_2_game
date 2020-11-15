@@ -20,17 +20,16 @@ function modifier_xoo_counter_helix:OnCreated( kv )
 	ParticleManager:ReleaseParticleIndex( effect_cast )
 
 	-- references
-	self.radius = self:GetAbility():GetSpecialValueFor( "radius" )
-	self.chance = self:GetAbility():GetSpecialValueFor( "trigger_chance" )
+		self.radius = 200 -- radius
+		self.chance = 20 -- trigger_chance
+		self.damage = 60 -- helix_damage
 
 	if IsServer() then
-		local damage = self:GetAbility():GetSpecialValueFor( "helix_damage" )
-
 		-- precache damage
 		self.damageTable = {
 			-- victim = target,
 			attacker = self:GetCaster(),
-			damage = damage,
+			damage = self.damage,
 			damage_type = DAMAGE_TYPE_PURE,
 			ability = self:GetAbility(), --Optional.
 			damage_flags = DOTA_DAMAGE_FLAG_NONE, --Optional.
@@ -41,9 +40,7 @@ end
 
 function modifier_xoo_counter_helix:OnRefresh( kv )
 	if IsServer() then
-		local damage = self:GetAbility():GetSpecialValueFor( "helix_damage" )
-
-		self.damageTable.damage = damage
+		self.damageTable.damage = self.damage
 	end
 end
 
