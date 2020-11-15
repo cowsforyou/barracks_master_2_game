@@ -62,6 +62,7 @@ end
 local admin_ids = {
     [46639111] = 1, -- (cows)
     [72355671]  = 1, -- (xiao)
+    [103245869] = 1, -- (iRest)
 }
 
 function IsAdmin(playerId)
