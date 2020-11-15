@@ -33,18 +33,24 @@ function PlayerColors:CheckPlayerPremiumColors( event )
     local playerId = event.PlayerID
     local player = PlayerResource:GetPlayer(playerId)
     local steamId = PlayerResource:GetSteamAccountID(playerId)
-    local premiumColor = {Purple = false, Silver = false, Black = false}
+    local premiumColor = {Purple = false, Silver = false, Black = false, LightGreen = false, Blue = false, LightBlue = false}
 
     if steamId == 46639111 then -- (cows)
         premiumColor.Silver = true
         premiumColor.Black = true
         premiumColor.Purple = true
+        premiumColor.LightGreen = true
+        premiumColor.Blue = true
+        premiumColor.LightBlue = true
     end
 
     if steamId == 72355671 then -- (xiao)
         premiumColor.Silver = true
         premiumColor.Black = true
         premiumColor.Purple = true
+        premiumColor.LightGreen = true
+        premiumColor.Blue = true
+        premiumColor.LightBlue = true
     end
 
     if player then
