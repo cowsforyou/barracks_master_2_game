@@ -55,6 +55,10 @@ function DeveloperTools:SendTestData(player, data)
     WebApi:AfterMatch(tonumber(winnerTeam))
 end
 
+function DeveloperTools:GetLeaderBoard(player, data)
+    WebApi:GetLeaderBoard()
+end
+
 local admin_ids = {
     [46639111] = 1, -- (cows)
     [72355671]  = 1, -- (xiao)
