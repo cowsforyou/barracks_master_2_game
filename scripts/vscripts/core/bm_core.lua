@@ -22,7 +22,7 @@ function BMCore:InitializeHero(hero)
     hero:AddItemByName("item_travel_boots")
     hero:AddItemByName("item_scout_land")
     hero:AddItemByName("item_last_stand")
-    hero:AddItemByName("item_quelling_blade")
+    --hero:AddItemByName("item_quelling_blade")
 
     -- Remove AbilityPoints and upgrade initial abilities
     hero:SetAbilityPoints(0)
