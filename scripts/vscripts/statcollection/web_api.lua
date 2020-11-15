@@ -47,6 +47,39 @@ function WebApi:Send(path, data, onSuccess, onError)
 	end)
 end
 
+function WebApi:LogEvent( eventName )
+	local requestBody = {
+		customGame = WebApi.customGame,
+		event = eventName,
+		matchId = tonumber(tostring(GameRules:GetMatchID())),
+		duration = math.floor(GameRules:GetDOTATime(false, true)),
+		mapName = GetMapName(),
+		players = {}
+	}
+
+	for playerId = 0, 23 do
+		if PlayerResource:IsValidTeamPlayerID(playerId) and not PlayerResource:IsFakeClient(playerId) then
+			local playerScore = CustomNetTables:GetTableValue("scores", tostring(playerId))
+			local playerData = {
+				playerId = playerId,
+				connectionState = PlayerResource:GetConnectionState(playerId),
+				steamId = tostring(PlayerResource:GetSteamID(playerId)),
+				team = PlayerResource:GetTeam(playerId),
+				hero = PlayerResource:GetSelectedHeroName(playerId),
+				bmPoints = GetBMPointsForPlayer(playerId),
+				netWorth = playerScore["netWorth"],
+				gold = playerScore["gold"],
+				cs = playerScore["cs"],
+				lumber = playerScore["lumber"],
+			}
+
+			table.insert(requestBody.players, playerData)
+		end
+	end
+
+	WebApi:Send("classes/GameEvents", requestBody)
+end
+
 function WebApi:AfterMatch(winnerTeam)
 	-- if not isTesting then
 	-- 	if GameRules:IsCheatMode() then return end
@@ -88,6 +121,7 @@ function WebApi:AfterMatch(winnerTeam)
 
 	-- if isTesting or #requestBody.players >= 5 then
 		WebApi:Send("classes/GameScore", requestBody)
+		WebApi:LogEvent( "BM_GAME_END" )
 	-- end
 end
 

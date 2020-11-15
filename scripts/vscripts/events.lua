@@ -21,6 +21,9 @@ function GameMode:OnGameRulesStateChange(keys)
     print("Game State: Custom Game Setup")
     ScoreboardUpdater:Setup()
     WebApi:GetLeaderBoard()
+
+    -- Log Team Selection
+    WebApi:LogEvent( "BM_TEAM_SELECTION" )  
   elseif newState == DOTA_GAMERULES_STATE_HERO_SELECTION then
     
     print("Game State: Hero Selection")
@@ -33,11 +36,16 @@ function GameMode:OnGameRulesStateChange(keys)
 
     -- Spawn Giant Trees
     Gathering:SpawnMapEntities()
-
+    
+    -- Log Hero Selection Start
+    WebApi:LogEvent( "BM_HERO_SELECTION" )
   elseif newState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
     print("Game State: Game In Progress")
     SpawnSynchronizer:Setup()
     AlchemistGifter:Setup()
+
+    -- Log Hero Selection Start
+    WebApi:LogEvent( "BM_GAME_IN_PROGRESS" )
   end
 end
 
