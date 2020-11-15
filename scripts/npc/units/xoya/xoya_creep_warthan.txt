@@ -26,10 +26,10 @@
         // Abilities
         //----------------------------------------------------------------    
         "Ability1"                  "sven_great_cleave"     
-        "Ability2"                  ""
+        "Ability2"                  "xoo_flame_guard_disabled"
         "Ability3"                  ""
         "Ability4"                  ""
-        "Ability5"                  ""     
+        "Ability5"                  ""
         "Ability6"                  ""     
         "Ability7"                  ""      
         "Ability8"                  ""      

@@ -141,6 +141,7 @@ PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_lich.v
 PrecacheResource("particle", "particles/items_fx/desolator_projectile.vpcf", context) -- Xoo Corrupted Blade
 PrecacheResource("particle", "particles/units/heroes/hero_phoenix/phoenix_fire_spirit_ground.vpcf", context) -- Xoo Fireball
 PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_phoenix.vsndevts", context) -- Xoo Fireball
+PrecacheResource("particle", "particles/units/heroes/hero_ember_spirit/ember_spirit_flameguard.vpcf", context) -- Xoo Flame Guard
 
 
 -- LING

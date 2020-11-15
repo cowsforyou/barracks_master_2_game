@@ -37,6 +37,7 @@
 #base "items\xoya\item_research_xoo_corrupted_blade.txt"
 #base "items\xoya\item_research_xoo_counter_helix.txt"
 #base "items\xoya\item_research_xoo_fireball.txt"
+#base "items\xoya\item_research_xoo_flame_guard.txt"
 #base "items\xoya\item_research_xoo_phe_health.txt"
 #base "items\xoya\item_research_xoya_citol_armor.txt"
 #base "items\xoya\item_research_xoya_citol_damage.txt"

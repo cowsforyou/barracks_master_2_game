@@ -1,0 +1,9 @@
+"DOTAAbilities"
+{
+	"research_xoo_flame_guard_disabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"xoo_flame_guard"
+		"MaxLevel" 						"0"
+	}
+}

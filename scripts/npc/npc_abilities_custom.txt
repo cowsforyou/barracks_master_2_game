@@ -170,7 +170,11 @@
 #base "abilities\xoya\Warthan\build_xoya_building_warthan.txt"
 #base "abilities\xoya\Warthan\build_xoya_building_warthan_disabled.txt"
 #base "abilities\xoya\Warthan\research_spawn_xoya_creep_warthan.txt"
+#base "abilities\xoya\Warthan\research_xoo_flame_guard.txt"
+#base "abilities\xoya\Warthan\research_xoo_flame_guard_disabled.txt"
 #base "abilities\xoya\Warthan\spawn_xoya_creep_warthan.txt"
+#base "abilities\xoya\Warthan\xoo_flame_guard.txt"
+#base "abilities\xoya\Warthan\xoo_flame_guard_disabled.txt"
 
 #base "abilities\xoya\Zavartu\build_xoya_building_zavartu.txt"
 #base "abilities\xoya\Zavartu\build_xoya_building_zavartu_disabled.txt"

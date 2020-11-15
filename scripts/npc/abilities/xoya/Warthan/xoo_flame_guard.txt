@@ -1,0 +1,82 @@
+"DOTAAbilities"
+{
+    "xoo_flame_guard"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "AbilityTextureName"            "xoo_flame_guard"
+
+        "MaxLevel"                      "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "radius"                        "160"
+            }              
+            "02"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "tick_interval"                 "0.2"
+            }
+            "03"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "damage_per_tick"               "4"
+            }
+        }
+               
+        "Modifiers"
+        {
+            "modifier_xoo_flame_guard_aesthetic"
+            {
+                "Passive"               "1"
+                "IsHidden"              "1"
+
+                "EffectName"            "particles/items2_fx/mask_of_madness.vpcf"
+                "EffectAttachType"      "follow_origin"
+            }
+            "modifier_xoo_flame_guard"
+            {
+                "Passive"               "1"
+                "IsHidden"              "1"
+
+                "EffectName"            "particles/units/heroes/hero_ember_spirit/ember_spirit_flameguard.vpcf"
+                "EffectAttachType"      "start_at_customorigin"
+                "ControlPointEntities"
+                {
+                    "TARGET"            "attach_origin"
+                    "TARGET"            "attach_origin"
+                }
+
+                "ThinkInterval"         "%tick_interval"
+                "OnIntervalThink"
+                {
+                    "ActOnTargets"
+                    {
+                        "Target"
+                        {
+                            "Center"            "TARGET"
+                            "Radius"            "%radius"
+                            "Teams"             "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                            "Types"             "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+                            "Flags"             "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+                        }
+                        "Action"
+                        {
+                            "Damage"
+                            {
+                                "Target"        "TARGET"
+                                "Damage"        "%damage_per_tick"
+                                "Type"          "DAMAGE_TYPE_MAGICAL"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
