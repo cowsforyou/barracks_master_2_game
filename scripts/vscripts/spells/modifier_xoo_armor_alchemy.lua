@@ -9,9 +9,6 @@ function modifier_xoo_armor_alchemy:IsHidden()
 	return self:GetParent()==self:GetAbility():GetCaster()
 end
 
-function modifier_xoo_armor_alchemy:GetAttributes()
-	return MODIFIER_ATTRIBUTE_MULTIPLE
-end
 --------------------------------------------------------------------------------
 
 function modifier_xoo_armor_alchemy:IsAura()
@@ -32,7 +29,6 @@ end
 function modifier_xoo_armor_alchemy:GetAuraSearchTeam()
 	return DOTA_UNIT_TARGET_TEAM_ENEMY
 end
-
 
 function modifier_xoo_armor_alchemy:GetAuraSearchType()
 	return DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC
