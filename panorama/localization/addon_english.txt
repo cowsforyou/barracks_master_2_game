@@ -18,13 +18,9 @@ Have something to say? Drop us a feedback on reddit.com/r/barracksmaster."
 	//-------------------
 	//Pregame Selection Screen
 	//-------------------
-	"bm_ling_select"								"Ling"
 	"bm_ling_lore"									"The Lings are valiant people, valuing honour and camaraderie. Their forces are hardy with ample healing and regenerative abilities."
-	"bm_xoo_select"									"Xoo"
 	"bm_xoo_lore"									"The Xoos thrive on chaos. Their modus operandi is overwhelming their opponent with sheer numbers."
-	"bm_myro_select"								"Myro"
 	"bm_myro_lore"									"To be added."
-	"bm_random_select"								"Random"
 	"bm_random_lore"								"Randomize your faction selection. Life's exciting that way."
 
 	"bm_map_legacy_name"							"Legacy"
