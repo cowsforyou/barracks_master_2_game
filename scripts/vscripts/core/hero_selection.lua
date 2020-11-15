@@ -62,6 +62,12 @@ function HeroSelection:Tick()
 	elseif HeroSelection.TimeLeft == 58 then
 		PauseGame(true)
 		GameRules:GetGameModeEntity():SetPauseEnabled(false)
+		local mapInfo = {
+			mapName = GetMapName(),
+			maxPlayer = MapSettings:GetData('maxPlayers')
+		  }
+	
+		CustomGameEventManager:Send_ServerToAllClients( "send_map_info", mapInfo )
 		return 1
 	elseif HeroSelection.TimeLeft >= 0 then
 		return 1
