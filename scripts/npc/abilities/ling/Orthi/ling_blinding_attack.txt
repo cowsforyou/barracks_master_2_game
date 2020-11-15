@@ -7,7 +7,7 @@
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"   
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
-        "AbilityTextureName"            "ling"
+        "AbilityTextureName"            "ling_blinding_attack"
 
         "MaxLevel"                      "1"
 
@@ -26,52 +26,51 @@
         {
             "01"
             {
-                "var_type"              "FIELD_INTEGER"
-                "radius"                "675"
+                "var_type"              "FIELD_FLOAT"
+                "st_miss_rate"          "100"
             }
             "02"
             {
                 "var_type"              "FIELD_FLOAT"
-                "miss_duration"         "4.0"
-            }
+                "aoe_chance"            "10"
+            }  
             "03"
             {
                 "var_type"              "FIELD_INTEGER"
-                "miss_rate"             "80"
+                "radius"                "400"
             }
             "04"
             {
                 "var_type"              "FIELD_INTEGER"
-                "knockback_distance"    "400"
+                "aoe_miss_rate"         "15"
             }
             "05"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "miss_duration"         "2.0"
+            }
+            "06"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "knockback_distance"    "400"
+            }
+            "07"
             {
                 "var_type"              "FIELD_INTEGER"
                 "knockback_height"      "50"
             }
-            "06"
+            "08"
             {
                 "var_type"              "FIELD_FLOAT"
                 "knockback_duration"    "0.4"
             }
-            // Extra
-            "07"
-            {
-                "var_type"              "FIELD_FLOAT"
-                "tree_radius"           "150"
-            }
-            "08"
-            {
-                "var_type"              "FIELD_FLOAT"
-                "aoe_chance"            "70"
-            }              
         }
         
         // Modifiers
         //-------------------------------------------------------------------------------------------------------------
         "Modifiers"
         {
-            "modifier_blinding_attack"
+            "modifier_ling_blinding_attack"
             {
                 "Passive"       "1"
                 "IsHidden"      "1"
@@ -81,6 +80,12 @@
 
                 "OnAttackLanded"
                 {
+                    "ApplyModifier"
+                    {
+                        "Target"            "TARGET"
+                        "ModifierName"      "modifier_ling_blinding_attack_single_target"
+                    }
+
                     "Random"
                     {
                         "Chance"        "%aoe_chance"
@@ -96,14 +101,8 @@
                             "FireEffect"
                             {
                                 "EffectName"        "particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_blinding_light_aoe.vpcf"
-                                "EffectAttachType"  "start_at_customorigin"
+                                "EffectAttachType"  "follow_origin"
                                 "Target"            "TARGET"
-
-                                "ControlPoints"
-                                {
-                                    "01"    "TARGET"
-                                    "02"    "%radius 0 0"
-                                }
                             }
 
                             "ActOnTargets"
@@ -116,37 +115,23 @@
                                     "Types"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
                                 }
                             
-                                "Action"    
+                                "Action"
                                 {
                                     "Knockback"
                                     {
                                         "Target"            "TARGET"
-                                        "Center"            "TARGET"
+                                        "Center"            "CASTER"
                                         "Distance"          "%knockback_distance"
                                         "Duration"          "%knockback_duration"
                                         "Height"            "%knockback_height"
                                         "IsFixedDistance"   "1"
                                         "ShouldStun"        "0" 
-                                    }
-
-                                    "DelayedAction"
-                                    {
-                                        "Delay"     "%knockback_duration"
-                                        "Action"    
-                                        {
-                                            "DestroyTrees"
-                                            {
-                                                "Target"        "TARGET"
-                                                "Radius"        "%tree_radius"
-                                            }
-                                        }
-                                    }               
+                                    }             
                                     
                                     "ApplyModifier"
                                     {
-                                        "ModifierName"  "modifier_blinding_light_debuff"
+                                        "ModifierName"  "modifier_ling_blinding_attack_aoe"
                                         "Target"        "TARGET"
-                                        "Duration"      "%miss_duration"
                                     }
                                 }
                             }
@@ -154,9 +139,10 @@
                     }
                 }
             }
-            
-            "modifier_blinding_light_debuff"
+
+            "modifier_ling_blinding_attack_single_target"
             {
+                "Duration"          "%miss_duration"
                 "Passive"           "0"
                 "IsHidden"          "0"
                 "IsDebuff"          "1"
@@ -166,7 +152,23 @@
         
                 "Properties"
                 {
-                    "MODIFIER_PROPERTY_MISS_PERCENTAGE" "%miss_rate" 
+                    "MODIFIER_PROPERTY_MISS_PERCENTAGE" "%st_miss_rate"
+                }           
+            }
+
+            "modifier_ling_blinding_attack_aoe"
+            {
+                "Duration"          "%miss_duration"       
+                "Passive"           "0"
+                "IsHidden"          "0"
+                "IsDebuff"          "1"
+        
+                "EffectName"        "particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_blinding_light_debuff.vpcf"
+                "EffectAttachType"  "follow_origin"
+        
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_MISS_PERCENTAGE" "%aoe_miss_rate"
                 }           
             }
         }

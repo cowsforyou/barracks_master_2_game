@@ -1,0 +1,76 @@
+"DOTAAbilities"
+{
+    "research_ling_blinding_attack"
+    {
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+        "BaseClass"                     "ability_datadriven"
+        "AbilityTextureName"            "ling_blinding_attack"
+        "MaxLevel"                      "1"
+
+        "AbilityChannelTime"            "110"
+        "AbilityGoldCost"               "1100"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "st_miss_rate"          "100"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "aoe_chance"            "10"
+            }  
+            "03"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "radius"                "400"
+            }
+            "04"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "aoe_miss_rate"         "15"
+            }
+            "05"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "research_time"         "110"
+            }
+            "06"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "gold_cost"             "1100"
+            }
+            "08"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "lumber_cost"           "950"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"    "core/queue.lua"
+                "Function"      "EnqueueUnit"
+            }
+        }
+
+        "OnChannelSucceeded"
+        {
+            "RunScript"
+            {
+                "ScriptFile"    "core/queue.lua"
+                "Function"      "NextQueue"
+            }
+
+            "RunScript"
+            {
+                "ScriptFile"    "core/research.lua"
+                "Function"      "ResearchComplete"
+            }
+        }
+    }
+}

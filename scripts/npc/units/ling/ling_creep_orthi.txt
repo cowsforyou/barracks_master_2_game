@@ -28,7 +28,7 @@
         "Ability1"                  "ling_orthi_armor_disabled"     
         "Ability2"                  "ling_orthi_damage_disabled" 
         "Ability3"                  "ling_orthi_health_disabled"     
-        "Ability4"                  "ling_blinding_attack"      
+        "Ability4"                  "ling_blinding_attack_disabled"      
         "Ability5"                  ""
         "Ability6"                  ""
         "Ability7"                  ""

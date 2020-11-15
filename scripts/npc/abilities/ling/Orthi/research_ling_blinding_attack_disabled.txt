@@ -1,0 +1,9 @@
+"DOTAAbilities"
+{
+	"research_ling_blinding_attack_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "ling_blinding_attack"
+	    "MaxLevel"                      "0"
+	}
+}

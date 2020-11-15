@@ -2,6 +2,7 @@
 //                                     **  L I N G  **
 //==================================================================================================
 
+#base "items\ling\item_research_ling_blinding_attack.txt"
 #base "items\ling\item_research_ling_clorn_armor.txt"
 #base "items\ling\item_research_ling_clorn_damage.txt"
 #base "items\ling\item_research_ling_clorn_health.txt"

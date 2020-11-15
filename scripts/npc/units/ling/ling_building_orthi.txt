@@ -42,10 +42,10 @@
         "Ability3"                  "research_ling_orthi_armor"     
         "Ability4"                  "research_ling_orthi_damage"      
         "Ability5"                  "research_ling_orthi_health_disabled"
-        "Ability6"                  ""     
-        "Ability7"                  ""      
-        "Ability8"                  ""      
-        "Ability9"                  ""        
+        "Ability6"                  "research_ling_blinding_attack_disabled"
+        "Ability7"                  ""
+        "Ability8"                  ""
+        "Ability9"                  ""
         "Ability10"                 "ability_building"
 
         // Armor and Resistance
