@@ -6,6 +6,7 @@
 #base "items\ling\item_research_ling_clorn_armor.txt"
 #base "items\ling\item_research_ling_clorn_damage.txt"
 #base "items\ling\item_research_ling_clorn_health.txt"
+#base "items\ling\item_research_ling_mekansm_reflex.txt"
 #base "items\ling\item_research_ling_static_touch.txt"
 #base "items\ling\item_research_ling_orthi_armor.txt"
 #base "items\ling\item_research_ling_orthi_damage.txt"

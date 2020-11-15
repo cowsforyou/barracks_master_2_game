@@ -126,6 +126,8 @@ PrecacheResource("particle", "particles/items3_fx/mango_active.vpcf", context) -
 
 PrecacheResource("particle", "particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_blinding_light_aoe.vpcf", context) -- Ling Blinding Attack          
 PrecacheResource("particle", "particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_blinding_light_debuff.vpcf", context) -- Ling Blinding Attack
+PrecacheResource("particle", "particles/items2_fx/mekanism.vpcf", context) -- Ling Mekansm
+PrecacheResource("particle", "particles/items2_fx/mekanism_recipient.vpcf", context) -- Ling Mekansm
 PrecacheResource("particle", "particles/units/heroes/hero_omniknight/omniknight_purification.vpcf", context) -- Ling Purification            
 PrecacheResource("particle", "particles/units/heroes/hero_omniknight/omniknight_purification_cast.vpcf", context) -- Ling Purification
 PrecacheResource("particle", "particles/units/heroes/hero_omniknight/omniknight_purification_hit.vpcf", context) -- Ling Purification

@@ -42,7 +42,7 @@
         "Ability3"                  "research_ling_clorn_armor"     
         "Ability4"                  "research_ling_clorn_damage"      
         "Ability5"                  "research_ling_clorn_health_disabled"
-        "Ability6"                  ""
+        "Ability6"                  "research_ling_mekansm_reflex_disabled"
         "Ability7"                  ""
         "Ability8"                  ""
         "Ability9"                  ""
