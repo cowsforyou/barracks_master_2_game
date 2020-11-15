@@ -7,13 +7,33 @@
         "MaxLevel"                  "1"
 
         "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-        
+
         "OnSpellStart"
         {
+            "ApplyModifier"
+            {
+                "Target"            "CASTER"
+                "ModifierName"      "modifier_gather_lumber_phased"
+            }
+
             "RunScript"
             {
                 "ScriptFile"    "core/gathering.lua"
                 "Function"      "GatherLumber"
+            }
+        }
+
+        "Modifiers"
+        {
+            "modifier_gather_lumber_phased"
+            {
+                "IsHidden"          "0"
+                "Duration"          "10000"
+                
+                "States"
+                {
+                    "MODIFIER_STATE_NO_UNIT_COLLISION"      "MODIFIER_STATE_VALUE_ENABLED"
+                } 
             }
         }
     }
