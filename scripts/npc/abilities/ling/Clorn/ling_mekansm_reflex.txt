@@ -1,0 +1,65 @@
+"DOTAAbilities"
+{
+    "ling_mekansm_reflex"
+    {
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "BaseClass"             "ability_datadriven"
+        "AbilityTextureName"    "ling_mekansm_reflex"
+
+        "MaxLevel"    "1"
+
+        // AbilitySpecial  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "heal_chance"           "15"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "heal_amount"           "150"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "heal_radius"           "200"
+            }
+        }
+
+        // Modifiers
+        //-------------------------------------------------------------------------------------------------------------
+        "Modifiers"
+        {
+            "modifier_ling_mekansm_reflex"
+            {
+                "Passive"    "1"
+                "IsHidden"   "1"
+
+                "EffectName"            "particles/items2_fx/mask_of_madness.vpcf"
+                "EffectAttachType"      "follow_origin"
+
+                "OnAttacked"
+                {
+                    "Random"
+                    {
+                        "Chance"        "%heal_chance"
+
+                        "OnSuccess"
+                        {
+                            "RunScript"
+                            {
+                                "ScriptFile"            "spells/ling_mekansm_reflex.lua"
+                                "Function"              "mekansm_on_spell_start"
+                                "HealAmount"            "%heal_amount"
+                                "HealRadius"            "%heal_radius"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

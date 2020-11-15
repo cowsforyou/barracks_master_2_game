@@ -28,7 +28,7 @@
         "Ability1"                  "ling_clorn_armor_disabled"     
         "Ability2"                  "ling_clorn_damage_disabled"   
         "Ability3"                  "ling_clorn_health_disabled"     
-        "Ability4"                  ""
+        "Ability4"                  "ling_mekansm_reflex_disabled"
         "Ability5"                  ""
         "Ability6"                  ""     
         "Ability7"                  ""      

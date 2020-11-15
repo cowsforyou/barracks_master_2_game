@@ -1,0 +1,9 @@
+"DOTAAbilities"
+{
+	"research_ling_mekansm_reflex_disabled"
+	{
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "ling_mekansm_reflex"
+	    "MaxLevel"                      "0"
+	}
+}
