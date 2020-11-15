@@ -42,7 +42,7 @@ function GameMode:_InitGameMode()
 
   -- This is multiteam configuration stuff
   if USE_AUTOMATIC_PLAYERS_PER_TEAM then
-    local num = math.floor(10 / MAX_NUMBER_OF_TEAMS)
+    local num = math.floor(MapSettings:GetData('maxPlayers') / MAX_NUMBER_OF_TEAMS)
     local count = 0
     for team,number in pairs(TEAM_COLORS) do
       if count >= MAX_NUMBER_OF_TEAMS then

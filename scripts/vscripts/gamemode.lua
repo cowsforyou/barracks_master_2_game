@@ -38,6 +38,7 @@ require('internal/gamemode')
 require('internal/events')
 
 -- settings.lua is where you can specify many different properties for your game mode and is one of the core barebones files.
+require('widgets/map_settings')
 require('settings')
 -- events.lua is where you can specify the actions to be taken when any event occurs and is one of the core barebones files.
 require('events')
