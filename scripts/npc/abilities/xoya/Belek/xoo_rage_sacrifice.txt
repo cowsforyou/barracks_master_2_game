@@ -25,7 +25,7 @@
             "01"
             {
                 "var_type"                                      "FIELD_INTEGER"
-                "active_bonus_attack_speed"                     "120"
+                "active_bonus_attack_speed"                     "350"
             }
             "02"
             {
@@ -35,7 +35,7 @@
             "03"
             {
                 "var_type"                                      "FIELD_FLOAT"
-                "health_loss_pct"                               "0.12"
+                "health_loss_pct"                               "0.08"
             }
             "04"
             {
