@@ -15,7 +15,7 @@
             "01"
             {
                 "var_type"              "FIELD_INTEGER"
-                "heal_chance"           "15"
+                "heal_chance"           "55"
             }
             "02"
             {
@@ -26,6 +26,11 @@
             {
                 "var_type"              "FIELD_INTEGER"
                 "heal_radius"           "200"
+            }
+            "04"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "delay"                 "0.1"    
             }
         }
 
@@ -49,12 +54,19 @@
 
                         "OnSuccess"
                         {
-                            "RunScript"
+                            "DelayedAction"
                             {
-                                "ScriptFile"            "spells/ling_mekansm_reflex.lua"
-                                "Function"              "mekansm_on_spell_start"
-                                "HealAmount"            "%heal_amount"
-                                "HealRadius"            "%heal_radius"
+                                "Delay"     "%delay"
+                                "Action"
+                                {
+                                    "RunScript"
+                                    {
+                                        "ScriptFile"            "spells/ling_mekansm_reflex.lua"
+                                        "Function"              "mekansm_on_spell_start"
+                                        "HealAmount"            "%heal_amount"
+                                        "HealRadius"            "%heal_radius"
+                                    }
+                                }
                             }
                         }
                     }
