@@ -68,6 +68,18 @@ function HeroSelection:Tick()
 		  }
 	
 		CustomGameEventManager:Send_ServerToAllClients( "send_map_info", mapInfo )
+			
+		if GameRules.botEnabled == true then
+			PlayerColors:SetPlayerColorUnselected({ PlayerID = bot:GetPlayerID() })
+			
+			local botHero = "npc_dota_hero_nevermore"
+			if RandomInt(0,1) == 1 then
+				botHero = "npc_dota_hero_keeper_of_the_light"
+			end
+
+			HeroSelection:HeroSelect( { PlayerID = bot:GetPlayerID(), HeroName = botHero} )
+		end
+
 		return 1
 	elseif HeroSelection.TimeLeft >= 0 then
 		return 1
