@@ -126,7 +126,7 @@ function WebApi:AfterMatch(winnerTeam)
 end
 
 function WebApi:GetLeaderBoard()
-	local request = CreateHTTPRequestScriptVM("GET", serverHost .. '/parse/aggregate/UserScore?group={"objectId":"$steamId","bmPoints":{"$sum":"$bmPoints"}}&limit=10')
+	local request = CreateHTTPRequestScriptVM("GET", serverHost .. '/parse/aggregate/UserScore?group={"objectId":"$steamId","bmPoints":{"$sum":"$bmPoints"}}&sort={"bmPoints":-1}&limit=10')
 	request:SetHTTPRequestHeaderValue("X-Parse-Master-Key", dedicatedServerKey)
 	request:SetHTTPRequestHeaderValue("X-Parse-Application-Id", dedicatedServerKey)
 
