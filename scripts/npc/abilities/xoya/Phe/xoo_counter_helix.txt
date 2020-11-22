@@ -2,30 +2,157 @@
 {
     "xoo_counter_helix"
     {
-        // Ability Technical Aspect
-        // base script folder   : scripts/vscripts
-        // base texture folder  : resource/flash3/images/spellicons
+        // General
         //-------------------------------------------------------------------------------------------------------------
-        "BaseClass"                     "ability_lua"
-        "ScriptFile"                    "spells/xoo_counter_helix"
-        "AbilityTextureName"            "xoo_counter_helix"
-        "FightRecapLevel"               "1"
-        "MaxLevel"                      "1"
-        "precache"
-        {
-            "soundfile" "soundevents/game_sounds_heroes/game_sounds_axe.vsndevts"
-            "particle"  "particles/units/heroes/hero_axe/axe_counterhelix.vpcf"
-        }
-        
-        // Ability General
-        //-------------------------------------------------------------------------------------------------------------
-        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+        "BaseClass"                     "ability_datadriven"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE"  
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "AbilityTextureName"            "xoo_counter_helix"
+        "AOERadius"                     "%radius"
 
-        // Ability Casting
+        // Precache
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCastRange"              "275"
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_axe.vsndevts"
+            "particle"          "particles/units/heroes/hero_axe/axe_attack_blur_counterhelix.vpcf"
+        }
+        
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "0.3"
+        
+        // Damage.
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityDamage"                 "60"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "radius"                    "200"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "trigger_chance"            "20"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "cooldown"                  "0.3"
+            }
+            // Extra
+            "04"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "trigger_radius"            "1000"
+            }
+        }
+
+        "Modifiers"
+        {
+            "modifier_counter_helix_aura_datadriven"
+            {
+                "Passive"           "1"
+                "IsHidden"          "1"
+
+                "EffectName"            "particles/items2_fx/mask_of_madness.vpcf"
+                "EffectAttachType"      "follow_origin"
+
+                "Aura"          "modifier_counter_helix_enemy_datadriven"
+                "Aura_Radius"   "%trigger_radius"
+                "Aura_Teams"    "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                "Aura_Types"    "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+            }
+
+            "modifier_counter_helix_enemy_datadriven"
+            {
+                "IsHidden"          "1"
+
+                "OnAttackStart"
+                {
+                    "Random"
+                    {
+                        "Chance"            "%trigger_chance"
+                        "PseudoRandom"      "DOTA_PSEUDO_RANDOM_JUGG_CRIT"
+                        "OnSuccess"
+                        {
+                            "RunScript"
+                            {
+                                "ScriptFile"    "spells/xoo_counter_helix.lua"
+                                "Function"      "CounterHelix"
+                                "helix_modifier"    "modifier_counter_helix_datadriven"
+                            }
+                        }
+                    }
+                }
+            }
+
+            "modifier_counter_helix_datadriven"
+            {
+                "Duration"      "%cooldown"
+                "IsHidden"      "1"
+
+                "EffectName"    "particles/units/heroes/hero_axe/axe_attack_blur_counterhelix.vpcf"
+                "EffectAttachType"  "follow_origin"         
+
+                "OnCreated"
+                {
+                    "FireSound"
+                    {
+                        "EffectName"    "Hero_Axe.CounterHelix"
+                        "Target"        "CASTER"
+                    }
+
+                    "ActOnTargets"
+                    {
+                        "Target"
+                        {
+                            "Center"    "CASTER"
+                            "Radius"    "%radius"
+                            "Teams"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                            "Types"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                        }
+                    
+                        "Action"    
+                        {
+                            "Damage"
+                            {
+                                "Target"        "TARGET"
+                                "Type"          "DAMAGE_TYPE_PURE"
+                                "Damage"        "%AbilityDamage"
+                            }
+                        }
+                    }
+
+                    "ApplyModifier"
+                    {
+                        "ModifierName"  "modifier_counter_helix_rotate_datadriven"
+                        "Target"        "CASTER"
+                        "Duration"      "0.15"
+                    }
+                }
+            }
+
+            "modifier_counter_helix_rotate_datadriven"
+            {
+                "IsHidden"  "1"
+
+                "ThinkInterval"  "0.03"
+                "OnIntervalThink"
+                {
+                    "Rotate"
+                    {
+                        "Target"    "CASTER"
+                        "PitchYawRoll"  "0 72 0"
+                    }
+                }
+            }
+        }
     }
 }

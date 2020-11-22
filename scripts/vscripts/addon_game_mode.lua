@@ -139,6 +139,8 @@ PrecacheResource("particle", "particles/units/heroes/hero_lich/lich_frost_nova.v
 PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_lich.vsndevts", context) -- Ling Snowball
 
 PrecacheResource("particle", "particles/items_fx/desolator_projectile.vpcf", context) -- Xoo Corrupted Blade
+PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_axe.vsndevts", context) -- Xoo Counter Helix
+PrecacheResource("particle", "particles/units/heroes/hero_axe/axe_attack_blur_counterhelix.vpcf", context) -- Xoo Counter Helix
 PrecacheResource("particle", "particles/units/heroes/hero_phoenix/phoenix_fire_spirit_ground.vpcf", context) -- Xoo Fireball
 PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_phoenix.vsndevts", context) -- Xoo Fireball
 PrecacheResource("particle", "particles/units/heroes/hero_ember_spirit/ember_spirit_flameguard.vpcf", context) -- Xoo Flame Guard
