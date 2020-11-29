@@ -45,6 +45,13 @@
 
                 "EffectName"            "particles/items2_fx/mask_of_madness.vpcf"
                 "EffectAttachType"      "follow_origin"
+                
+                "Orb"
+                {
+                    "Priority"              "DOTA_ORB_PRIORITY_ITEM"
+                    "ProjectileName"        "particles/units/heroes/hero_phoenix/phoenix_base_attack.vpcf"
+                    "CastAttack"            "0"
+                }
 
                 "OnAttackLanded"
                 {

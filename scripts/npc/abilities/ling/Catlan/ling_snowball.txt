@@ -46,6 +46,13 @@
                 "EffectName"            "particles/items2_fx/mask_of_madness.vpcf"
                 "EffectAttachType"      "follow_origin"
 
+                "Orb"
+                {
+                    "Priority"              "DOTA_ORB_PRIORITY_ITEM"
+                    "ProjectileName"        "particles/neutral_fx/ghost_frost_attack.vpcf"
+                    "CastAttack"            "0"
+                }
+
                 "OnAttackLanded"
                 {
                     "FireSound"
