@@ -78,6 +78,7 @@ function HeroSelection:Tick()
 			end
 
 			HeroSelection:HeroSelect( { PlayerID = bot:GetPlayerID(), HeroName = botHero} )
+			bot:RespawnHero(false, false)
 		end
 
 		return 1
