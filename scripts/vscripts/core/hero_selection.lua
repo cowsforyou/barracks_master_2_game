@@ -1,5 +1,5 @@
 --Constant parameters
-SELECTION_DURATION_LIMIT = 60
+SELECTION_DURATION_LIMIT = 90
 
 --Class definition
 if HeroSelection == nil then
@@ -59,7 +59,7 @@ function HeroSelection:Tick()
 		--End picking phase
 		HeroSelection:EndPicking()
 		return nil
-	elseif HeroSelection.TimeLeft == 58 then
+	elseif HeroSelection.TimeLeft == 88 then
 		PauseGame(true)
 		GameRules:GetGameModeEntity():SetPauseEnabled(false)
 		local mapInfo = {
