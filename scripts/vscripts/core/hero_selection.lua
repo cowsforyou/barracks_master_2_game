@@ -78,7 +78,10 @@ function HeroSelection:Tick()
 			end
 
 			HeroSelection:HeroSelect( { PlayerID = bot:GetPlayerID(), HeroName = botHero} )
-			bot:RespawnHero(false, false)
+			local ent = Entities:FindByName(nil, "badguys_spawn_1")
+			local position = ent:GetAbsOrigin()
+			bot:SetRespawnPosition(position)
+			bot:RespawnHero(false, false)		
 		end
 
 		return 1
