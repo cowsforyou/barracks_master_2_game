@@ -1,6 +1,6 @@
 "DOTAUnits" 
 {
-    "xoya_building_belek"
+    "xoo_building_belek"
     {
         // General
         //----------------------------------------------------------------

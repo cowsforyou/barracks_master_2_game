@@ -49,7 +49,7 @@
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityLayout"				"6"
-		"Ability1" 					"build_xoya_building_belek"
+		"Ability1" 					"build_xoo_building_belek"
 		"Ability2" 					"build_xoya_building_citol"
 		"Ability3" 					"build_xoya_building_phe"
 		"Ability4"					"build_xoya_building_lumber"

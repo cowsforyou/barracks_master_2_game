@@ -36,7 +36,7 @@
 //Buildings
 //--------------------------------------------------------------------------------------------------
 #base "units\xoya\xoya_building_arrow.txt"
-#base "units\xoya\xoya_building_belek.txt"
+#base "units\xoya\xoo_building_belek.txt"
 #base "units\xoya\xoya_building_catlix.txt"
 #base "units\xoya\xoya_building_citol.txt"
 #base "units\xoya\xoo_building_holocron.txt"
