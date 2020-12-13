@@ -16,6 +16,9 @@ function HeroSelection:Start()
 	--Figure out which players have to pick
 	 HeroSelection.playerPicks = {}
 	 HeroSelection.numPickers = 0
+	 HeroSelection.botPicked = false
+	 HeroSelection.botSpawned = false
+
 	for pID = 0, DOTA_MAX_PLAYERS -1 do
 		if PlayerResource:IsValidPlayer( pID ) then
 			HeroSelection.numPickers = self.numPickers + 1
@@ -59,11 +62,12 @@ function HeroSelection:Tick()
 		--End picking phase
 		HeroSelection:EndPicking()
 
-		if GameRules.botEnabled == true then
+		if GameRules.botEnabled == true and HeroSelection.botSpawned == false then
 			local ent = Entities:FindByName(nil, "badguys_spawn_2")
 			local position = ent:GetAbsOrigin()
 			bot:SetRespawnPosition(position)
-			bot:RespawnHero(false, false)		
+			bot:RespawnHero(false, false)
+			HeroSelection.botSpawned = true	
 		end
 		
 		return nil
@@ -77,15 +81,17 @@ function HeroSelection:Tick()
 	
 		CustomGameEventManager:Send_ServerToAllClients( "send_map_info", mapInfo )
 			
-		if GameRules.botEnabled == true then
+		if GameRules.botEnabled == true and HeroSelection.botPicked == false then
+			bot:MakeVisibleToTeam(DOTA_TEAM_GOODGUYS, 0.5)
+			bot:MakeVisibleToTeam(DOTA_TEAM_BADGUYS, 0.5)
 			PlayerColors:SetPlayerColorUnselected({ PlayerID = bot:GetPlayerID() })
-			
-			local botHero = "npc_dota_hero_nevermore"
 			if RandomInt(0,1) == 1 then
-				botHero = "npc_dota_hero_keeper_of_the_light"
+				HeroSelection:HeroSelect( { PlayerID = bot:GetPlayerID(), HeroName = 'npc_dota_hero_nevermore'} )
+			else
+				HeroSelection:HeroSelect( { PlayerID = bot:GetPlayerID(), HeroName = 'npc_dota_hero_keeper_of_the_light'} )
 			end
 
-			HeroSelection:HeroSelect( { PlayerID = bot:GetPlayerID(), HeroName = botHero} )
+			HeroSelection.botPicked = true
 		end
 
 		return 1

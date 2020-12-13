@@ -11,6 +11,8 @@ function ScoreboardUpdater:Setup()
 	if playerCount == 1 then
 		bot = GameRules:AddBotPlayerWithEntityScript('npc_dota_hero_wisp','Barracks Master Bot', DOTA_TEAM_BADGUYS, nil, false)
 		bot:ForceKill(false)
+		bot:MakeVisibleToTeam(DOTA_TEAM_GOODGUYS, 0.5)
+		bot:MakeVisibleToTeam(DOTA_TEAM_BADGUYS, 0.5)
 		GameRules.botEnabled = true
 	end
 

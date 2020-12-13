@@ -17,11 +17,18 @@ function BMCore:InitializeHero(hero)
     hero.lumber = 0 -- Secondary resource of the player
     
     -- Create a building in front of the hero
-    local position = hero:GetAbsOrigin() + hero:GetForwardVector() * 300
+    if PlayerResource:GetTeam(playerID) == DOTA_TEAM_GOODGUYS then
+        local ent = Entities:FindByName(nil, "goodguys_spawn_1")
+        initialSpawnPosition = ent:GetAbsOrigin()
+    else 
+        local ent = Entities:FindByName(nil, "badguys_spawn_1")
+        initialSpawnPosition = ent:GetAbsOrigin()
+    end
+    -- local position = hero:GetAbsOrigin() + hero:GetForwardVector() * 400
     if hero:GetUnitName() == "npc_dota_hero_keeper_of_the_light" then
-        InstantBuild( hero, player, "ling_building_clorn", position )
+        InstantBuild( hero, player, "ling_building_clorn", initialSpawnPosition )
     elseif hero:GetUnitName() == "npc_dota_hero_nevermore" then
-        InstantBuild( hero, player, "xoya_building_citol", position )
+        InstantBuild( hero, player, "xoya_building_citol", initialSpawnPosition )
     end
 
     -- Give starting items and resources
