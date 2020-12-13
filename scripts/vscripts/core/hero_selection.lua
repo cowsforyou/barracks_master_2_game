@@ -58,6 +58,14 @@ function HeroSelection:Tick()
 	if HeroSelection.TimeLeft == -1 then
 		--End picking phase
 		HeroSelection:EndPicking()
+
+		if GameRules.botEnabled == true then
+			local ent = Entities:FindByName(nil, "badguys_spawn_2")
+			local position = ent:GetAbsOrigin()
+			bot:SetRespawnPosition(position)
+			bot:RespawnHero(false, false)		
+		end
+		
 		return nil
 	elseif HeroSelection.TimeLeft == 88 then
 		PauseGame(true)
@@ -78,10 +86,6 @@ function HeroSelection:Tick()
 			end
 
 			HeroSelection:HeroSelect( { PlayerID = bot:GetPlayerID(), HeroName = botHero} )
-			local ent = Entities:FindByName(nil, "badguys_spawn_1")
-			local position = ent:GetAbsOrigin()
-			bot:SetRespawnPosition(position)
-			bot:RespawnHero(false, false)		
 		end
 
 		return 1
