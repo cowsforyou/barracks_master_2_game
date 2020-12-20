@@ -15,7 +15,7 @@
             "01"
             {
                 "var_type"              "FIELD_INTEGER"
-                "heal_chance"           "55"
+                "heal_chance"           "15"
             }
             "02"
             {
