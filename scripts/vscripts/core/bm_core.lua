@@ -54,7 +54,8 @@ end
 -- Instantly build the starting buildings
 function InstantBuild( hero, player, building_name, position )
     local playerID = hero:GetPlayerOwnerID()     
-    local unit = BuildingHelper:PlaceBuilding(player, building_name, position, 5)
+    local angle = GetUnitKV("build_"..building_name, "ModelRotation")
+    local unit = BuildingHelper:PlaceBuilding(player, building_name, position, 5, nil, angle)
 
     -- Colorize building according to player color
     local color = PlayerColors:GetPlayerColor(playerID) or {191,0,255}
