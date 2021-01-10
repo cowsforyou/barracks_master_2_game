@@ -15,7 +15,7 @@
         
         // Stats        
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCastRange"              "5000"
+        "AbilityCastRange"              "3000"
         "AbilityCastPoint"              "0.0"
         "AbilityCooldown"               "60.0"
         "AbilityManaCost"               "0"
@@ -45,8 +45,8 @@
             "05"
             {
                 "var_type"                                      "FIELD_FLOAT"
-                "cast_range"                                    "5000" //Purely for tooltip
-            }            
+                "cast_range"                                    "3000" //Purely for tooltip
+            }
         }
         
         "OnSpellStart"
