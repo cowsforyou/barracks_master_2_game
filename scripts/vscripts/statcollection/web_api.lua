@@ -51,7 +51,7 @@ function WebApi:LogEvent( eventName )
 	local requestBody = {
 		customGame = WebApi.customGame,
 		event = eventName,
-		matchId = tonumber(tostring(GameRules:GetMatchID())),
+		matchId = tonumber(tostring(GameRules:Script_GetMatchID())),
 		duration = math.floor(GameRules:GetDOTATime(false, true)),
 		mapName = GetMapName(),
 		players = {}
@@ -90,7 +90,7 @@ function WebApi:AfterMatch(winnerTeam)
 
 	local requestBody = {
 		customGame = WebApi.customGame,
-		matchId = tonumber(tostring(GameRules:GetMatchID())),
+		matchId = tonumber(tostring(GameRules:Script_GetMatchID())),
 		duration = math.floor(GameRules:GetDOTATime(false, true)),
 		mapName = GetMapName(),
 		winner = winnerTeam,
@@ -102,7 +102,7 @@ function WebApi:AfterMatch(winnerTeam)
 			local playerScore = CustomNetTables:GetTableValue("scores", tostring(playerId))
 			local playerData = {
 				playerId = playerId,
-				matchId = tonumber(tostring(GameRules:GetMatchID())),
+				matchId = tonumber(tostring(GameRules:Script_GetMatchID())),
 				steamId = tostring(PlayerResource:GetSteamID(playerId)),
 				team = PlayerResource:GetTeam(playerId),
 				hero = PlayerResource:GetSelectedHeroName(playerId),
