@@ -15,7 +15,7 @@
             "01"
             {
                 "var_type"              "FIELD_FLOAT"
-                "st_miss_rate"          "100"
+                "st_miss_rate"          "60"
             }
             "02"
             {

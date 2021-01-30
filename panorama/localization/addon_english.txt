@@ -6,9 +6,13 @@
 	"bm_updates_title"								"Updates"
 	"bm_updates_text"								
 
-"Welcome to Barracks Master 2! We are officially in open beta as of Nov 15, 2020!
+"Welcome to Barracks Master 2.
 
-Have something to say? Drop us a feedback on reddit.com/r/barracksmaster."
+We will be hosting our very first Barracks Master 2 tournament soon! Get practicing and keep a lookout on this space.
+
+We are also looking for language translators. Let us know if you would like to help.
+
+Have a bug to report or feedback for us? Drop a note at reddit.com/r/barracksmaster."
 
 	"bm_ladder_title"								"Ladder"
 	"bm_ladder_text"								"Coming Soon"
