@@ -1,0 +1,82 @@
+"addon"
+{
+	//-------------------
+	//Loading Screen
+	//-------------------
+	"bm_updates_title"								"Обновления"
+	"bm_updates_text"								
+
+"Welcome to Barracks Master 2.
+
+We will be hosting our very first Barracks Master 2 tournament soon! Get practicing and keep a lookout on this space.
+
+We are also looking for language translators. Let us know if you would like to help.
+
+Have a bug to report or feedback for us? Drop a note at reddit.com/r/barracksmaster."
+
+	"bm_ladder_title"								"Лестница"
+	"bm_ladder_text"								"Coming Soon"
+
+	//-------------------
+	//Pregame Selection Screen
+	//-------------------
+	"bm_ling_lore"									"Ling отважные люди, ценящие честь и дух товарищества. Их силы выносливы и обладают обширными целительными и регенерирующими способностями."
+	"bm_xoo_lore"									"Xoo процветает в хаосе. Их образ действия заключается в том, что их оппонент просто подавлен численностью."
+	"bm_myro_lore"									"To be added."
+	"bm_random_lore"								"Произведите случайный выбор фракции. Так жизнь увлекательна."
+
+	"bm_map_legacy_name"							"Наследие"
+	"bm_map_legacy_count"							"2 против 2"
+	"bm_map_mexican_name"							"Мексиканское противостояние"
+	"bm_map_mexican_count"							"1 против 1"
+
+	//-------------------
+	//Scoreboard Labels
+	//-------------------
+	"custom_end_screen_legend_color"				"ЦВЕТ"
+	"custom_end_screen_legend_cs"					"CS"
+	"custom_end_screen_legend_networth"				"ЧИСТАЯ СТОИМОСТЬ"
+	"custom_end_screen_legend_gold"					"ЗОЛОТО"
+	"custom_end_screen_legend_lumber"				"Пиломатериалы"
+
+	//-------------------
+	//End Game Labels
+	//-------------------
+	"end_screen_bm_score"							"BM ТОЧКИ"
+	"custom_end_screen_extra_note"					"Спасибо за игру Barracks Master 2!"
+	"custom_end_screen_extra_website"				"Посещение barracksmaster.com за дополнительной информацией."	
+
+	//-------------------
+	//Notifications
+	//-------------------
+	"alch_gold"										"Alchemist чувствовал себя богатым и подарил вам золото. Полученная сумма: "
+	"give_item_last_stand"							"Вы получили дополнительную плату за Последний бой"
+
+	//Error Messages
+	"error_invalid_build_position"					"Невозможно построить на переулке или в воде"
+	"error_invalid_build_position_2"				"Неверная позиция сборки"	
+	"error_max_build_count"							"Достигнуто максимальное количество построек"
+	"error_max_worker_count_reached"				"Достигнуто максимальное количество рабочих"
+	"error_not_enough_gold"							"Недостаточно золота"
+	"error_not_enough_lumber"						"Недостаточно пиломатериалов"
+	"error_queue_full"								"Очередь заполнена"
+	"error_must_use_worker"							"Используйте Worker для сбора урожая"
+
+	"Unassigned"      								"Unassigned Team"
+	"Spectator"       								"Spectator Team"
+	"Neutrals"        								"Neutral Team"
+	"NoTeam"          								"No Team"
+
+	"DOTA_GoodGuys"   								"Radiant"
+	"DOTA_BadGuys"    								"Dire"
+	"DOTA_Custom1"    								"Pink Dragon"
+	"DOTA_Custom2"    								"Orange Dog"
+	"DOTA_Custom3"    								"Blue Rooster"
+	"DOTA_Custom4"    								"Green Ram"
+	"DOTA_Custom5"    								"Brown Rat"
+	"DOTA_Custom6"    								"Cyan Boar"
+	"DOTA_Custom7"    								"Olive Snake"
+	"DOTA_Custom8"    								"Purple Horse"
+	
+	"addonname"										"Barracks Master 2"
+}
