@@ -60,7 +60,7 @@ Have a bug to report or feedback for us? Drop a note at reddit.com/r/barracksmas
 	"error_not_enough_gold"							"Недостаточно золота"
 	"error_not_enough_lumber"						"Недостаточно пиломатериалов"
 	"error_queue_full"								"Очередь заполнена"
-	"error_must_use_worker"							"Используйте Worker для сбора урожая"
+	"error_must_use_worker"							"Используйте Рабочий для сбора урожая"
 
 	"Unassigned"      								"Unassigned Team"
 	"Spectator"       								"Spectator Team"
