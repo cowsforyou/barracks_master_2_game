@@ -1,0 +1,82 @@
+"addon"
+{
+	//-------------------
+	//Loading Screen
+	//-------------------
+	"bm_updates_title"								"Updates"
+	"bm_updates_text"								
+
+"Welcome to Barracks Master 2.
+
+We will be hosting our very first Barracks Master 2 tournament soon! Get practicing and keep a lookout on this space.
+
+We are also looking for language translators. Let us know if you would like to help.
+
+Have a bug to report or feedback for us? Drop a note at reddit.com/r/barracksmaster."
+
+	"bm_ladder_title"								"Ladder"
+	"bm_ladder_text"								"Coming Soon"
+
+	//-------------------
+	//Pregame Selection Screen
+	//-------------------
+	"bm_ling_lore"									"The Lings are valiant people, valuing honour and camaraderie. Their forces are hardy with ample healing and regenerative abilities."
+	"bm_xoo_lore"									"The Xoos thrive on chaos. Their modus operandi is overwhelming their opponent with sheer numbers."
+	"bm_myro_lore"									"To be added."
+	"bm_random_lore"								"Randomize your faction selection. Life's exciting that way."
+
+	"bm_map_legacy_name"							"Legacy"
+	"bm_map_legacy_count"							"2 vs 2"
+	"bm_map_mexican_name"							"Mexican Standoff"
+	"bm_map_mexican_count"							"1 vs 1"
+
+	//-------------------
+	//Scoreboard Labels
+	//-------------------
+	"custom_end_screen_legend_color"				"COLOR"
+	"custom_end_screen_legend_cs"					"CS"
+	"custom_end_screen_legend_networth"				"NET WORTH"
+	"custom_end_screen_legend_gold"					"GOLD"
+	"custom_end_screen_legend_lumber"				"LUMBER"
+
+	//-------------------
+	//End Game Labels
+	//-------------------
+	"end_screen_bm_score"							"BM POINTS"
+	"custom_end_screen_extra_note"					"Thank you for playing Barracks Master 2!"
+	"custom_end_screen_extra_website"				"Visit barracksmaster.com for more information."	
+
+	//-------------------
+	//Notifications
+	//-------------------
+	"alch_gold"										"Alchemist was feeling rich and donated gold to you. Amount received: "
+	"give_item_last_stand"							"You have been awarded an extra charge of Last Stand"
+
+	//Error Messages
+	"error_invalid_build_position"					"Cannot Build In Lane or Water"
+	"error_invalid_build_position_2"				"Invalid Build Position"	
+	"error_max_build_count"							"Max Building Count Reached"
+	"error_max_worker_count_reached"				"Max Worker Count Reached"
+	"error_not_enough_gold"							"Insufficient Gold"
+	"error_not_enough_lumber"						"Insufficient Lumber"
+	"error_queue_full"								"The Queue is Full"
+	"error_must_use_worker"							"Use Worker to Harvest"
+
+	"Unassigned"      								"Unassigned Team"
+	"Spectator"       								"Spectator Team"
+	"Neutrals"        								"Neutral Team"
+	"NoTeam"          								"No Team"
+
+	"DOTA_GoodGuys"   								"Radiant"
+	"DOTA_BadGuys"    								"Dire"
+	"DOTA_Custom1"    								"Pink Dragon"
+	"DOTA_Custom2"    								"Orange Dog"
+	"DOTA_Custom3"    								"Blue Rooster"
+	"DOTA_Custom4"    								"Green Ram"
+	"DOTA_Custom5"    								"Brown Rat"
+	"DOTA_Custom6"    								"Cyan Boar"
+	"DOTA_Custom7"    								"Olive Snake"
+	"DOTA_Custom8"    								"Purple Horse"
+	
+	"addonname"										"Barracks Master 2"
+}
