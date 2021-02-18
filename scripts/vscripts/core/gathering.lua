@@ -248,7 +248,14 @@ function SpawnWorker(event)
                     local distance = (worker.target_building:GetAbsOrigin() - worker:GetAbsOrigin()):Length2D()
 
                     -- When close, deposit and grant the resources, remove the carrying modifier
-                    if distance > 250 then
+                    if distance > 275 then
+                        -- Worker was blocked by another brother and stopped moving
+                        if not worker:IsMoving() then
+                            -- Move towards the building
+                            worker.target_building = closestBuilding
+                            local position = closestBuilding:GetAbsOrigin() + (worker:GetAbsOrigin() - closestBuilding:GetAbsOrigin()):Normalized() * closestBuilding:GetHullRadius()
+                            ExecuteOrderFromTable({UnitIndex = worker:GetEntityIndex(), OrderType = DOTA_UNIT_ORDER_MOVE_TO_POSITION, Position = position, Queue = false}) 
+                        end
                         return 0.1
                     else
                         ModifyLumber(hero, worker.lumber_gathered)
