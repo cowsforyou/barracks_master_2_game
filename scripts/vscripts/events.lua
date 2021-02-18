@@ -64,6 +64,7 @@ function GameMode:OnNPCSpawned(keys)
     -- Heroes gain 5 seconds of invisibility when spawning
     local dur = 5.0
     npc:AddNewModifier(npc, nil, "modifier_invisible", {duration=dur})
+    npc:AddNewModifier(npc, nil, "modifier_invulnerable", {duration=dur})
   end
 end
 
