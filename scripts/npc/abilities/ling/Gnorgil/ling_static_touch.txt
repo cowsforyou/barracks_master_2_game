@@ -33,7 +33,7 @@
             "04"
             {
                 "var_type"              "FIELD_INTEGER"
-                "lightning_decay"       "25"
+                "lightning_decay"       "35"
             }
             "05"
             {
@@ -48,7 +48,7 @@
             "07"
             {
                 "var_type"              "FIELD_FLOAT"
-                "bonus_range"           "200"
+                "bonus_range"           "150"
             }    
             "08"
             {
