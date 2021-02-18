@@ -1,6 +1,6 @@
 "DOTAAbilities"
 {
-	"build_xoya_building_arrow_disabled"
+	"build_xoo_building_arrow_disabled"
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"xoya"

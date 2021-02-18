@@ -94,8 +94,8 @@
 //                                     **  X O O  **
 //==================================================================================================
 
-#base "abilities\xoya\Arrow\build_xoya_building_arrow.txt" //-- not deployed yet
-#base "abilities\xoya\Arrow\build_xoya_building_arrow_disabled.txt" //-- not deployed yet
+#base "abilities\xoya\Arrow\build_xoo_building_arrow.txt" //-- not deployed yet
+#base "abilities\xoya\Arrow\build_xoo_building_arrow_disabled.txt" //-- not deployed yet
 
 #base "abilities\xoya\Belek\build_xoo_building_belek.txt"
 #base "abilities\xoya\Belek\xoo_rage_sacrifice.txt"

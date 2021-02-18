@@ -1,6 +1,6 @@
 "DOTAAbilities"
 {
-	"build_xoya_building_arrow"
+	"build_xoo_building_arrow"
 	{
 		// Ability Settings
 		//-------------------------------------------------------------------------------------------------------------
