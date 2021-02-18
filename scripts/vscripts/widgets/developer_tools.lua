@@ -50,6 +50,14 @@ function DeveloperTools:ModifyLumber(player, data)
     print('Lumber set to ', lumberAmount)
 end
 
+function DeveloperTools:PowerOverwhelming(player, data)
+    local amount = {}
+    amount[1] = "50000"
+    DeveloperTools:ToggleFastBuild(player, data)
+    DeveloperTools:ModifyGold(player, amount)
+    DeveloperTools:ModifyLumber(player, amount)
+end
+
 function DeveloperTools:SendTestData(player, data)
     local winnerTeam = tonumber(data[1])
     WebApi:AfterMatch(tonumber(winnerTeam))
