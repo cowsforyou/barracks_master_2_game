@@ -14,11 +14,11 @@ function WebApi:Send(path, data, onSuccess, onError)
 
 	request:SetHTTPRequestHeaderValue("X-Parse-Application-Id", dedicatedServerKey)
 	if data ~= nil then
-		request:SetHTTPRequestRawPostBody("application/json", json.encode(data))
+		request:SetHTTPRequestRawPostBody("application/json", GameRules.JSON:encode(data))
 	end
 
 	request:Send(function(response)
-		if response.StatusCode == 201 then
+		if response.StatusCode == 201 or response.StatusCode == 200 then
 			local data = json.decode(response.Body)
 			if isTesting then
 				print("Response from " .. path .. ":")
@@ -45,6 +45,9 @@ function WebApi:Send(path, data, onSuccess, onError)
 			end
 		end
 	end)
+end
+
+function WebApi:TestSend()
 end
 
 function WebApi:LogEvent( eventName )
@@ -97,6 +100,14 @@ function WebApi:AfterMatch(winnerTeam)
 		players = {}
 	}
 
+	local playerCreateDataBody = {
+		requests = {}
+	}
+
+	local playerUpdateDataBody = {
+		requests = {}
+	}
+
 	for playerId = 0, 23 do
 		if PlayerResource:IsValidTeamPlayerID(playerId) and not PlayerResource:IsFakeClient(playerId) then
 			local playerScore = CustomNetTables:GetTableValue("scores", tostring(playerId))
@@ -115,9 +126,73 @@ function WebApi:AfterMatch(winnerTeam)
 
 			table.insert(requestBody.players, playerData)
 
+			local playerUpdateData = {
+				method = "PUT",
+				path = "/parse/classes/UserInfo/" .. tostring(PlayerResource:GetSteamID(playerId)),
+				body = {
+					totalBMPoints = {__op = "Increment", amount = GetBMPointsForPlayer(playerId)},
+					gamesPlayed = {__op = "Increment", amount = 1},
+				}
+			}
+
+			local playerCreateData = {
+				method = "POST",
+				path = "/parse/classes/UserInfo/",
+				body = {
+					objectId = tostring(PlayerResource:GetSteamID(playerId)),
+					totalBMPoints =  GetBMPointsForPlayer(playerId),
+					gamesPlayed = 1,
+				}
+			}
+
+			local increaseBy1 = {__op = "Increment", amount = 1}
+
+			if PlayerResource:GetTeam(playerId) == winnerTeam then
+				playerUpdateData.body.gamesWon = increaseBy1
+				playerUpdateData.body.winStreak = increaseBy1
+				playerCreateData.body.gamesWon = 1
+				playerCreateData.body.winStreak = 1
+			else
+				playerUpdateData.body.gamesLost = increaseBy1
+				playerCreateData.body.gamesLost = 1
+				playerUpdateData.body.winStreak = 0
+				playerCreateData.body.winStreak = 0
+			end
+
+			if PlayerResource:GetSelectedHeroName(playerId) == "npc_dota_hero_keeper_of_the_light" then
+				playerUpdateData.body.playedAsLing = increaseBy1
+				playerCreateData.body.playedAsLing = 1
+			elseif PlayerResource:GetSelectedHeroName(playerId) == "npc_dota_hero_nevermore" then
+				playerUpdateData.body.playedAsXoo = increaseBy1
+				playerCreateData.body.playedAsXoo = 1
+			else
+				playerUpdateData.body.playedAsRandom = increaseBy1
+				playerCreateData.body.playedAsRandom = 1
+			end
+
+			if GetMapName() == "bm2_legacy" then
+				playerUpdateData.body.legacyMapPlayed = increaseBy1
+				playerCreateData.body.legacyMapPlayed = 1
+			elseif GetMapName() == "bm2_mexican_standoff" then
+				playerUpdateData.body.mexicanMapPlayed = increaseBy1
+				playerCreateData.body.mexicanMapPlayed = 1
+			end
+
+			playerUpdateData.body["playedAsColor" .. PlayerColors:GetPlayerColorName ( playerId )] = increaseBy1
+			playerCreateData.body["playedAsColor" .. PlayerColors:GetPlayerColorName ( playerId )] = 1
+
+			table.insert(playerUpdateDataBody.requests, playerUpdateData)
+			table.insert(playerCreateDataBody.requests, playerCreateData)
+
 			WebApi:Send("classes/UserScore", playerData)
 		end
 	end
+
+	-- Update the existing players
+	WebApi:Send("batch", playerUpdateDataBody, function() 
+		-- If player does not exist, create the player
+		WebApi:Send("batch", playerCreateDataBody)
+	end)
 
 	-- if isTesting or #requestBody.players >= 5 then
 		WebApi:Send("classes/GameScore", requestBody)

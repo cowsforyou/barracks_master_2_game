@@ -10,6 +10,7 @@ require("libraries/buildinghelper")
 require("libraries/upgrades")
 require("libraries/keyvalues")
 require("libraries/popups")
+GameRules.JSON = require("libraries/json")
 
 -- Require core files!
 require('core/bm_core')

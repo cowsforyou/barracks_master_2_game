@@ -148,3 +148,9 @@ function PlayerColors:GetPlayerColor ( playerId )
     local colorData = CustomNetTables:GetTableValue("selected_player_colors", tostring(playerId))
     return PlayerColors:GetRGBValues (colorData.color)
 end
+
+function PlayerColors:GetPlayerColorName ( playerId )
+    local colorData = CustomNetTables:GetTableValue("selected_player_colors", tostring(playerId))
+    return colorData.color
+end
+
