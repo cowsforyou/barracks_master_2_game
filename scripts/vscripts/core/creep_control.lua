@@ -8,7 +8,7 @@ function CreepControl:IsTower(entity)
 end
 
 function CreepControl:IsValidBountyKiller(killerEntity)
-    return not self:IsTower(killerEntity) and killerEntity:IsHero()
+    return not self:IsTower(killerEntity)
 end
 
 function CreepControl:IsValidBountyTargetForPlayer(killedUnit)

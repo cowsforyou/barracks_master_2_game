@@ -41,7 +41,7 @@ function Purifier:EarnedGold(player, gold)
     end
 
     local playerID = player:GetPlayerID()
-    local goldMultiplier = goldAbility:GetSpecialValueFor("gold_bonus") / 10
+    local goldMultiplier = goldAbility:GetSpecialValueFor("gold_bonus") / 100
     local extraGold = math.floor(gold * goldMultiplier)
     PlayerResource:ModifyGold(playerID, extraGold, false, DOTA_ModifyGold_CreepKill)
 
