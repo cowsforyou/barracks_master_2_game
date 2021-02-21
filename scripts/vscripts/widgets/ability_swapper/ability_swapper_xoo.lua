@@ -17,14 +17,14 @@ SWAPPER_ABILITY_INDEX_PREVIOUS = 4 -- Valve 0-indexing; 6 abilities numbered 0-5
 SWAPPER_ABILITY_INDEX_NEXT = 5
 
 -- requires class_utils.lua
-if AbilitySwapperXoya == nil then
-    AbilitySwapperXoya = DeclareClass({}, function(self, caster, ability_list)
+if AbilitySwapperXoo == nil then
+    AbilitySwapperXoo = DeclareClass({}, function(self, caster, ability_list)
         self.initialize(self, caster, ability_list)
     end)
 
 end
 
-function AbilitySwapperXoya:initialize(caster, ability_list)
+function AbilitySwapperXoo:initialize(caster, ability_list)
     self.caster = caster
     self.pages = self:_BuildPages(ability_list)
     self.finalPage = #self.pages
@@ -32,7 +32,7 @@ function AbilitySwapperXoya:initialize(caster, ability_list)
     self.currentPage = 1
 end
 
-function AbilitySwapperXoya:_BuildPages(ability_list)
+function AbilitySwapperXoo:_BuildPages(ability_list)
     -- create table pages that holds tables
     local pages = {}
     pages[1] = {}
@@ -70,16 +70,16 @@ function AbilitySwapperXoya:_BuildPages(ability_list)
     return pages
 end
 
-function AbilitySwapperXoya:SetCurrentPage(newPageNumber)
+function AbilitySwapperXoo:SetCurrentPage(newPageNumber)
     self.currentPage = newPageNumber
     return self.currentPage
 end
 
-function AbilitySwapperXoya:GetCurrentPage()
+function AbilitySwapperXoo:GetCurrentPage()
     return self.currentPage
 end
 
-function AbilitySwapperXoya:DoSwap()
+function AbilitySwapperXoo:DoSwap()
     local currentPage = self:GetCurrentPage()
     local page = self.pages[currentPage]
 
@@ -102,8 +102,8 @@ function AbilitySwapperXoya:DoSwap()
 
     -- add previous swapper, if not the first page
     if currentPage ~= 1 then
-        self.caster:AddAbility("ability_swapper_xoya_back")
-        local previousAbility = self.caster:FindAbilityByName("ability_swapper_xoya_back")
+        self.caster:AddAbility("ability_swapper_xoo_back")
+        local previousAbility = self.caster:FindAbilityByName("ability_swapper_xoo_back")
         previousAbility:SetLevel(previousAbility:GetMaxLevel())
     end
 
@@ -112,7 +112,7 @@ function AbilitySwapperXoya:DoSwap()
     if currentPage == self.finalPage then
         finalAbilityName = "ability_swapper_empty"
     else
-        finalAbilityName = "ability_swapper_xoya_next"
+        finalAbilityName = "ability_swapper_xoo_next"
     end
 
     -- add the final ability, whether it's next or empty
@@ -121,18 +121,18 @@ function AbilitySwapperXoya:DoSwap()
     finalAbility:SetLevel(finalAbility:GetMaxLevel())
 end
 
-function AbilitySwapperXoya:NextPage()
+function AbilitySwapperXoo:NextPage()
     local currentPage = self:SetCurrentPage(self:GetCurrentPage() + 1)
     self:DoSwap()
 end
 
-function AbilitySwapperXoya:PreviousPage()
+function AbilitySwapperXoo:PreviousPage()
     local currentPage = self:SetCurrentPage(self:GetCurrentPage() - 1)
     self:DoSwap()
 end
 
 -- should be called on spell start
-function AbilitySwapperXoya:SwapAbilities(ability)
+function AbilitySwapperXoo:SwapAbilities(ability)
     local abilityIndex = ability:GetAbilityIndex()
     local caster = ability:GetCaster()
 

@@ -22,12 +22,12 @@ function OnSpellStart(keys)
     }
 
     -- if caster doesn't have an AbilitySwapper, make one
-    if caster.AbilitySwapperXoya == nil then
-        caster.AbilitySwapperXoya = AbilitySwapperXoya(caster, ability_list)
+    if caster.AbilitySwapperXoo == nil then
+        caster.AbilitySwapperXoo = AbilitySwapperXoo(caster, ability_list)
     end
 
     -- swap abilities (takes the ability to know which index it's in)
-    caster.AbilitySwapperXoya:SwapAbilities(ability)
+    caster.AbilitySwapperXoo:SwapAbilities(ability)
 
     -- building helper fixes requirements
     --CheckAbilityRequirements(caster, player) 

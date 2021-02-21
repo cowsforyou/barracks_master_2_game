@@ -35,7 +35,7 @@ require('widgets/error_message')
 -- Ability Swapper Stuff
 require('widgets/ability_swapper/class_utils')
 require('widgets/ability_swapper/ability_swapper_ling')
-require('widgets/ability_swapper/ability_swapper_xoya')
+require('widgets/ability_swapper/ability_swapper_xoo')
 
 -- Alchemist Gifter
 require('widgets/alchemist_gifter')

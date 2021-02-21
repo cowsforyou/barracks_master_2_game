@@ -1,13 +1,13 @@
 "DOTAAbilities"
 {
-	"ability_swapper_xoya_next"
+	"ability_swapper_xoo_back"
 	{
 		// Ability Settings
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	    "AbilityCastPoint"              "0"	
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"ability_swapper_xoya_next"
+		"AbilityTextureName"			"ability_swapper_xoo_back"
 		"MaxLevel" 						"1"
 
 		// Ability Special
@@ -23,7 +23,7 @@
 		{
 			"RunScript"
 			{
-				"ScriptFile"	"widgets/ability_swapper/ability_list_xoya.lua"
+				"ScriptFile"	"widgets/ability_swapper/ability_list_xoo.lua"
 				"Function"		"OnSpellStart"
 			}
 		}
