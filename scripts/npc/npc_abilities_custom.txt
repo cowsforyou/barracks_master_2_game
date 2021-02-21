@@ -195,8 +195,8 @@
 #base "abilities\ability_swapper\ability_swapper_empty.txt"
 #base "abilities\ability_swapper\ability_swapper_ling_back.txt"
 #base "abilities\ability_swapper\ability_swapper_ling_next.txt"
-#base "abilities\ability_swapper\ability_swapper_xoya_back.txt"
-#base "abilities\ability_swapper\ability_swapper_xoya_next.txt"
+#base "abilities\ability_swapper\ability_swapper_xoo_back.txt"
+#base "abilities\ability_swapper\ability_swapper_xoo_next.txt"
 
 //Cosmetics
 //--------------------------------------------------------------------------------------------------

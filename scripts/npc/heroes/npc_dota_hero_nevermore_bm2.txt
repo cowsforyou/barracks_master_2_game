@@ -54,7 +54,7 @@
 		"Ability3" 					"build_xoya_building_phe"
 		"Ability4"					"build_xoya_building_lumber"
 		"Ability5"					"build_xoya_building_catlix"
-		"Ability6" 					"ability_swapper_xoya_next"
+		"Ability6" 					"ability_swapper_xoo_next"
 		"Ability7"					""
 		"Ability8"					""
 		"Ability9"					""
