@@ -23,7 +23,7 @@ function GameMode:OnGameRulesStateChange(keys)
     WebApi:GetLeaderBoard()
 
     -- Log Team Selection
-    WebApi:LogEvent( "BM_TEAM_SELECTION" )  
+    WebApi:LogEvent( "BM_TEAM_SELECTION" )
   elseif newState == DOTA_GAMERULES_STATE_HERO_SELECTION then
     
     print("Game State: Hero Selection")
@@ -33,6 +33,13 @@ function GameMode:OnGameRulesStateChange(keys)
     
     -- Spawn the initial towers for the map and setup their invulnerabily links
     TowerControl:SpawnMapEntities()
+
+    -- Check tower invulnerability status
+    Timers:CreateTimer(30, function()
+      TowerControl:VerifyInvulnerabilityCount()
+      return 1.0
+    end
+    )
 
     -- Spawn Giant Trees
     Gathering:SpawnMapEntities()

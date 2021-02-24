@@ -113,4 +113,9 @@ Convars:RegisterCommand("test_send_match_data", function(name, winnerTeam)
     WebApi:AfterMatch(tonumber(winnerTeam))
 end, "Send Sample Match Data", FCVAR_CHEAT)
 
+Convars:RegisterCommand("test_tower_control", function(name)
+    if not IsAdmin() then return end
+    
+    TowerControl:VerifyInvulnerabilityCount()
+end, "Test Tower Control", FCVAR_CHEAT)
 DeveloperTools:Init()
