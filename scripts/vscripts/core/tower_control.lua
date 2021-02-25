@@ -9,6 +9,7 @@ function TowerControl:Init()
         TowerControl.Links[teamNumber] = {}
     end
     TowerControl.Debug = false -- Turn this off to stop spewing messages from this module
+    TowerControl.maximumTowers = 0
 end
 
 -- Naming convention is tower_lane[1-X]_tier[1-Y]_team[2-Z]
@@ -27,6 +28,7 @@ function TowerControl:SpawnMapEntities()
 
         for tierNumber=1,maxTier do
             local tower_entities = Entities:FindAllByName("tower_lane"..laneNumber.."_tier"..tierNumber.."*")
+            TowerControl.maximumTowers = TowerControl.maximumTowers + #tower_entities
             if #tower_entities > 0 then
                 self:print("Found "..#tower_entities.." tower entities for lane "..laneNumber.." tier "..tierNumber)
 
@@ -47,6 +49,7 @@ function TowerControl:SpawnMapEntities()
                     tower:SetNeverMoveToClearSpace(true)
                     tower:SetAngles(angles.x, angles.y, angles.z)
                     tower:AddNewModifier(nil, nil, "modifier_disable_turning", {})
+                    tower:SetEntityName(name)
                     tower.tier = tierNumber
                     tower.lane = laneNumber
                     tower.blockers = blockers
@@ -170,6 +173,66 @@ end
 function TowerControl:print(...)
     if self.Debug then
         print('[TowerControl] '.. ...)
+    end
+end
+
+function TowerControl:VerifyInvulnerabilityCount()
+    local maxLanes = MapSettings:GetData("maxLanes")
+    local maxTier = MapSettings:GetData("maxTier")
+
+    for _,teamNumber in pairs(self.validTeams) do
+        -- Get remaining towers remaining
+        local towersRemaining = 0
+        for laneNumber=1,maxLanes do
+            for tierNumber=1,maxTier do
+                local towerEntities = Entities:FindAllByName("tower_lane"..laneNumber.."_tier"..tierNumber.."_team"..teamNumber)
+                towersRemaining = towersRemaining + #towerEntities
+            end
+        end
+
+        -- Remove ancient invulnerability if all towers destroyed
+        if towersRemaining == 0 then
+            local ancient = TowerControl.Links[teamNumber]['ancient']
+            if IsValidEntity(ancient) and ancient:HasModifier("modifier_invulnerable") then
+                self:print("Removed "..ancient:GetUnitName().." invulnerability ")
+                ancient:RemoveModifierByName("modifier_invulnerable")
+            end
+        end
+
+        -- Check if invulnerability count matches expected count
+        for laneNumber=1,maxLanes do
+            for tierNumber=1,maxTier do
+                local tower = Entities:FindByName(nil, "tower_lane"..laneNumber.."_tier"..tierNumber.."_team"..teamNumber)
+                if not tower then
+                    self:print("Tower does not exist for team "..teamNumber)
+                else
+                    local invulnModifier = tower:FindModifierByName("modifier_invulnerable")
+                    if invulnModifier then 
+                        local currentInvulnCount = invulnModifier:GetStackCount()
+                        self:print("Current invulnerability count for tower_lane"..laneNumber.."_tier"..tierNumber.."_team"..teamNumber..": "..currentInvulnCount)
+
+                        if currentInvulnCount > 0 then
+                            -- Check expected invulnerability count
+                            local expectedInvulnCount = tierNumber - 1 - (TowerControl.maximumTowers / 2 - towersRemaining)
+                            self:print("Expected invulnerability count for tower_lane"..laneNumber.."_tier"..tierNumber.."_team"..teamNumber..": "..expectedInvulnCount)
+                        
+                            if currentInvulnCount ~= expectedInvulnCount then
+                                self:print("Invulnerability count does not match for tower_lane"..laneNumber.."_tier"..tierNumber.."_team"..teamNumber..". Fixing.")
+                                if expectedInvulnCount == 0 then
+                                    tower:RemoveModifierByName("modifier_invulnerable")
+                                else
+                                    invulnModifier:SetStackCount(expectedInvulnCount)
+                                end
+
+                                tower.invulnCount = expectedInvulnCount
+                            end
+                        end
+                    else
+                        self:print("Tower has no invulnerability modifier.")
+                    end
+                end
+            end
+        end
     end
 end
 
