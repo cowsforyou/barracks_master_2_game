@@ -10,9 +10,9 @@
 
 We will be hosting our very first Barracks Master 2 tournament soon! Get practicing and keep a lookout on this space.
 
-We are also looking for language translators. Let us know if you would like to help.
+Our game is still in beta and development is still in progress. If you have a bug to report or feedback for us, drop us a note on Discord at:
 
-Have a bug to report or feedback for us? Drop a note at reddit.com/r/barracksmaster."
+https://discord.gg/Jy97QGfAUF"
 
 	"bm_ladder_title"								"Ladder"
 	"bm_ladder_text"								"Coming Soon"
