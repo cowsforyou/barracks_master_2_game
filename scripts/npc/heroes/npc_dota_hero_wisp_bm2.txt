@@ -1,0 +1,63 @@
+"DOTAHeroes"
+{
+	"npc_dota_hero_wisp_bm2"
+	{
+		"override_hero"				"npc_dota_hero_wisp"
+
+		// Health & Mana
+		//-------------------------------------------------------------------------------------------------------------
+		"StatusHealth"					"1"			// Base health.
+		"StatusHealthRegen"				"0"
+		"StatusMana"					"1"
+		"StatusManaRegen"				"0"	
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackDamageMin"				"0"
+		"AttackDamageMax"				"0"	
+		"AttackDamageType"				"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRange"					"0"
+		"AttackRate"                	"0"
+
+		// Armor
+		//-------------------------------------------------------------------------------------------------------------
+		"ArmorPhysical"					"0"
+		"MagicalResistance"				"0"
+
+		// Attributes
+		//-------------------------------------------------------------------------------------------------------------
+		"AttributePrimary"				"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"			"0"
+		"AttributeStrengthGain"			"0"
+		"AttributeBaseIntelligence"		"0"
+		"AttributeIntelligenceGain"		"0"
+		"AttributeBaseAgility"			"0"
+		"AttributeAgilityGain"			"0"
+
+	    // Bounty
+	    //----------------------------------------------------------------
+	    "BountyXP"                  "0"        // Experience earn.
+	    "BountyGoldMin"             "0"        // Gold earned min.
+	    "BountyGoldMax"             "0"        // Gold earned max.
+	   
+		// Movement
+		//-------------------------------------------------------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"0"
+
+		// Abilities
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityLayout"				"6"
+		"Ability1" 					""
+		"Ability2" 					""
+		"Ability3" 					""
+		"Ability4"					""
+		"Ability5"					""
+		"Ability6" 					""
+		"Ability7"					""
+		"Ability8"					""
+		"Ability9"					""
+		"Ability10"					""
+	}
+}
