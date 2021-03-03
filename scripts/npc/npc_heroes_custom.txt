@@ -1,6 +1,7 @@
 #base "heroes\npc_dota_hero_arc_warden_bm2.txt"
 #base "heroes\npc_dota_hero_keeper_of_the_light_bm2.txt"
 #base "heroes\npc_dota_hero_nevermore_bm2.txt"
+#base "heroes\npc_dota_hero_wisp_bm2.txt"
 
 "DOTAHeroes"
 {
