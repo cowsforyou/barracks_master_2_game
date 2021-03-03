@@ -10,6 +10,7 @@ function TowerControl:Init()
     end
     TowerControl.Debug = false -- Turn this off to stop spewing messages from this module
     TowerControl.maximumTowers = 0
+    TowerControl.teamToIssueLastStand = nil
 end
 
 -- Naming convention is tower_lane[1-X]_tier[1-Y]_team[2-Z]
@@ -232,6 +233,7 @@ function TowerControl:VerifyInvulnerabilityCount()
                                 end
 
                                 tower.invulnCount = expectedInvulnCount
+                                TowerControl.teamToIssueLastStand = tower:GetTeamNumber()
                             end
                         end
                     else
@@ -239,6 +241,30 @@ function TowerControl:VerifyInvulnerabilityCount()
                     end
                 end
             end
+        end
+        
+        -- Award last stand as it was not awarded
+        if TowerControl.teamToIssueLastStand ~= nil then
+            local teamNumber = TowerControl.teamToIssueLastStand
+
+            local dur = 5.0
+            Notifications:BottomToTeam(teamNumber, {item="item_last_stand", duration=dur}) 
+            Notifications:BottomToTeam(teamNumber, {text="&nbsp;", continue=true})
+            Notifications:BottomToTeam(teamNumber, {text="#give_item_last_stand", continue=true})
+            local heroList = HeroList:GetAllHeroes()
+            for _,hero in pairs(heroList) do
+                if hero:GetTeamNumber() == teamNumber then
+                    local itemName = "item_last_stand"
+                    local lastStandItem = GetItemByName(hero, itemName)
+                    if lastStandItem then
+                        lastStandItem:SetCurrentCharges(lastStandItem:GetCurrentCharges() + 1)
+                    else
+                        hero:AddItemByName(itemName)
+                    end
+                end
+            end
+
+            TowerControl.teamToIssueLastStand = nil
         end
     end
 end
