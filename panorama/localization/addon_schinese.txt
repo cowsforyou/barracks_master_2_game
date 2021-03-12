@@ -20,15 +20,55 @@ Have a bug to report or feedback for us? Drop a note at reddit.com/r/barracksmas
 	//-------------------
 	//Pregame Selection Screen
 	//-------------------
-	"bm_ling_lore"									"The Lings are valiant people, valuing honour and camaraderie. Their forces are hardy with ample healing and regenerative abilities."
-	"bm_xoo_lore"									"The Xoos thrive on chaos. Their modus operandi is overwhelming their opponent with sheer numbers."
-	"bm_myro_lore"									"To be added."
-	"bm_random_lore"								"Randomize your faction selection. Life's exciting that way."
+	"top_card_streak"								"Streak:"
+	"top_card_waiting"								"Waiting"
+	"top_card_ready"								"Ready"
+
+	"player_rating"									"Rating"
+	"player_rank"									"Season Rank"
+	"player_played"									"Games Played"
+	"player_won"									"Games Won"
+	"player_win"									"Win %"
+
+	"player_color"									"Favorite Color"
+	"color_gold"									"Gold"
+	"color_red"										"Red"
+	"color_blue"									"Blue"
+	"color_lightgreen"								"Light Green"
+	"color_green"									"Green"
+	"color_yellow"									"Yellow"
+	"color_pink"									"Pink"
+	"color_lightblue"								"Light Blue"
+	"color_Purple"									"Purple"
+	"color_silver"									"Silver"
+	"color_black"									"Black"
+
+	"player_faction"								"Most Played Faction"
+	"faction_random"								"Random"
+	"faction_ling"									"Ling"
+	"faction_xoo"									"Xoo"
 
 	"bm_map_legacy_name"							"Legacy"
 	"bm_map_legacy_count"							"2 vs 2"
 	"bm_map_mexican_name"							"Mexican Standoff"
 	"bm_map_mexican_count"							"1 vs 1"
+
+	"title_color"									"Color Select"
+
+	"title_faction"									"Faction Select"
+
+	"title_perk"									"Perk Select"
+	"perk_damage_mouseover"							"Grants bonus damage to your Builder."
+	"perk_health_mouseover"							"Grants bonus health to your Builder."
+	"perk_range_mouseover"							"Grants bonus attack range to your Builder."	
+
+	"title_customization"							"Customization"
+	"customization_description"						"Coming soon!"
+
+	"bm_ling_lore"									"The Lings are valiant people, valuing honour and camaraderie. Their forces are hardy with ample healing and regenerative abilities."
+	"bm_xoo_lore"									"The Xoos thrive on chaos. Their modus operandi is overwhelming their opponent with sheer numbers."
+	"bm_myro_lore"									"To be added."
+	"bm_random_lore"								"Randomize your faction selection. Life's exciting that way."
 
 	//-------------------
 	//Scoreboard Labels

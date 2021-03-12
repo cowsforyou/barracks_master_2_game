@@ -20,15 +20,55 @@ https://discord.gg/Jy97QGfAUF"
 	//-------------------
 	//Pregame Selection Screen
 	//-------------------
-	"bm_ling_lore"									"Ling отважные люди, ценящие честь и дух товарищества. Их силы выносливы и обладают обширными целительными и регенерирующими способностями."
-	"bm_xoo_lore"									"Xoo процветает в хаосе. Их образ действия заключается в том, что их оппонент просто подавлен численностью."
-	"bm_myro_lore"									"To be added."
-	"bm_random_lore"								"Произведите случайный выбор фракции. Так жизнь увлекательна."
+	"top_card_streak"								"Полоса:"
+	"top_card_waiting"								"Ожидающий"
+	"top_card_ready"								"Готовый"
+
+	"player_rating"									"Рейтинг"
+	"player_rank"									"Рейтинг сезона"
+	"player_played"									"Игр сыграно"
+	"player_won"									"Игры выиграны"
+	"player_win"									"Победить %"
+
+	"player_color"									"Любимый цвет"
+	"color_gold"									"Золото"
+	"color_red"										"красный"
+	"color_blue"									"Синий"
+	"color_lightgreen"								"Светло-зеленый"
+	"color_green"									"Зеленый"
+	"color_yellow"									"Желтый"
+	"color_pink"									"Розовый"
+	"color_lightblue"								"Светло-синий"
+	"color_Purple"									"Фиолетовый"
+	"color_silver"									"Серебро"
+	"color_black"									"Чернить"
+
+	"player_faction"								"Самая популярная фракция"
+	"faction_random"								"Случайный"
+	"faction_ling"									"Ling"
+	"faction_xoo"									"Xoo"
 
 	"bm_map_legacy_name"							"Наследие"
 	"bm_map_legacy_count"							"2 на 2"
 	"bm_map_mexican_name"							"Мексиканское противостояние"
 	"bm_map_mexican_count"							"1 на 1"
+
+	"title_color"									"Выбор цвета"
+
+	"title_faction"									"Выбор фракции"
+
+	"title_perk"									"Perk Select"
+	"perk_damage_mouseover"							"Дает дополнительный урон вашему Строителю."
+	"perk_health_mouseover"							"Увеличивает здоровье вашего Строителя.."
+	"perk_range_mouseover"							"Предоставляет вашему Строителю бонусный диапазон."	
+
+	"title_customization"							"Настройка"
+	"customization_description"						"Скоро будет!"
+
+	"bm_ling_lore"									"Ling отважные люди, ценящие честь и дух товарищества. Их силы выносливы и обладают обширными целительными и регенерирующими способностями."
+	"bm_xoo_lore"									"Xoo процветает в хаосе. Их образ действия заключается в том, что их оппонент просто подавлен численностью."
+	"bm_myro_lore"									"To be added."
+	"bm_random_lore"								"Произведите случайный выбор фракции. Так жизнь увлекательна."
 
 	//-------------------
 	//Scoreboard Labels

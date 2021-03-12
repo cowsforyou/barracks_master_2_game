@@ -225,6 +225,13 @@
 #base "abilities\research_mines.txt"
 #base "abilities\research_scout_techies.txt"
 
+//Perks
+//--------------------------------------------------------------------------------------------------
+#base "abilities\perks\perk_damage.txt"
+#base "abilities\perks\perk_health.txt"
+#base "abilities\perks\perk_range.txt"
+
+
 "DOTAAbilities"
 {
 

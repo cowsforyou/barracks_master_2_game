@@ -1,0 +1,38 @@
+"DOTAAbilities"
+{
+    "perk_health"
+    {
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "BaseClass"             "ability_datadriven"
+        "AbilityTextureName"    "perk_health"
+
+        "MaxLevel"    "1"
+
+        // AbilitySpecial  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "bonus_health"          "20"
+            }
+        }
+
+        // Modifiers
+        //-------------------------------------------------------------------------------------------------------------
+        "Modifiers"
+        {
+            "modifier_perk_health"
+            {
+                "Passive"    "1"
+                "IsHidden"   "0"
+
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_HEALTH_BONUS"          "%bonus_health"
+                }
+            }
+        }
+    }
+}
