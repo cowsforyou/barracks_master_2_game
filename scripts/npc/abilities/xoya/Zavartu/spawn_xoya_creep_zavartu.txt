@@ -5,7 +5,7 @@
     {
         "BaseClass"                     "ability_datadriven"
         "AbilityTextureName"            "xoo_zavartu_creep"
-        "MaxLevel"                      "2"
+        "MaxLevel"                      "3"
 
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
         "AbilityCastPoint"              "0"
@@ -15,7 +15,7 @@
             "01"
             {
                 "var_type"				"FIELD_INTEGER"
-                "creep_count"			"1 2"
+                "creep_count"			"1 2 3"
             }
         }
 
