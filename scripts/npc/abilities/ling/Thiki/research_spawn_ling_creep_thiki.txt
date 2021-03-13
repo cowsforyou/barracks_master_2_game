@@ -5,36 +5,33 @@
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
         "BaseClass"                     "ability_datadriven"
         "AbilityTextureName"            "ling_thiki_creep"
-        "MaxLevel"                      "2"
+        "MaxLevel"                      "3"
 
-        "AbilityChannelTime"            "0 40"
-        "AbilityGoldCost"               "0 700"
+        "AbilityChannelTime"            "0 40 50"
+        "AbilityGoldCost"               "0 550 850"
         
         "AbilitySpecial"
         {
             "01"
-          {
-            "var_type"              "FIELD_INTEGER"
-            "creep_count"           "1 2"
-          }
-          
+            {
+                "var_type"              "FIELD_INTEGER"
+                "creep_count"           "1 2 3"
+            }
             "02"
-          {
-            "var_type"              "FIELD_INTEGER"
-            "research_time"         "0 40"
-          }
-
+            {
+                "var_type"              "FIELD_INTEGER"
+                "research_time"         "0 40 50"
+            }
             "03"
-          {
-            "var_type"              "FIELD_INTEGER"
-            "gold_cost"             "0 700"
-          }
-     
+            {
+                "var_type"              "FIELD_INTEGER"
+                "gold_cost"             "0 550 850"
+            }
             "08"
-          {
-            "var_type"              "FIELD_INTEGER"
-            "lumber_cost"           "0 350"
-          }
+            {
+                "var_type"              "FIELD_INTEGER"
+                "lumber_cost"           "0 100 200"
+            }
         }
 
         "OnSpellStart"
