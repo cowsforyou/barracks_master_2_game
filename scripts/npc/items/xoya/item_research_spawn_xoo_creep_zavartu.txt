@@ -1,6 +1,6 @@
 "DOTAAbilities"
 {
-	"item_research_spawn_xoya_creep_zavartu"
+	"item_research_spawn_xoo_creep_zavartu"
 	{
 	    "ID"    "1010"
 		"BaseClass"             		"item_datadriven"

@@ -12,7 +12,7 @@ function OnSpellStart(keys)
         "build_xoya_building_phe",
         "build_xoya_building_lumber",
         "build_xoya_building_catlix",
-        "build_xoya_building_zavartu", -- start page 2
+        "build_xoo_building_zavartu", -- start page 2
         "build_xoya_building_warthan",
         "build_xoya_building_monolith",
         "build_xoo_building_portal",

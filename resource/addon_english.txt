@@ -1298,36 +1298,36 @@
 
 		//Building Name
 		//---------------------------------
-		"xoya_building_zavartu"													"Shrine of Zavartu"
+		"xoo_building_zavartu"													"Shrine of Zavartu"
 
 
 		//Build Ability
 		//---------------------------------			
-		"DOTA_Tooltip_ability_build_xoya_building_zavartu"						"Shrine of Zavartu"
-		"DOTA_Tooltip_ability_build_xoya_building_zavartu_Description"			"Spawns Zavartu. The ancient race of Zavartus studied dark alchemy, eventually discovering a myraid of ways to waste away enemy armor. Even their mere presence is potent enough."
-		"DOTA_Tooltip_ability_build_xoya_building_zavartu_build_time"			"<font color='#057aff'>BUILD TIME</font>:"
-		"DOTA_Tooltip_ability_build_xoya_building_zavartu_gold_cost"			"<font color='#fff22e'>GOLD COST</font>:"		
-		"DOTA_Tooltip_ability_build_xoya_building_zavartu_lumber_cost"			"<font color='#28fe77'>LUMBER COST</font>:"
+		"DOTA_Tooltip_ability_build_xoo_building_zavartu"						"Shrine of Zavartu"
+		"DOTA_Tooltip_ability_build_xoo_building_zavartu_Description"			"Spawns Zavartu. The ancient race of Zavartus studied dark alchemy, eventually discovering a myraid of ways to waste away enemy armor. Even their mere presence is potent enough."
+		"DOTA_Tooltip_ability_build_xoo_building_zavartu_build_time"			"<font color='#057aff'>BUILD TIME</font>:"
+		"DOTA_Tooltip_ability_build_xoo_building_zavartu_gold_cost"				"<font color='#fff22e'>GOLD COST</font>:"		
+		"DOTA_Tooltip_ability_build_xoo_building_zavartu_lumber_cost"			"<font color='#28fe77'>LUMBER COST</font>:"
 
-		"DOTA_Tooltip_ability_build_xoya_building_zavartu_disabled"				"Shrine of Zavartu"	
-		"DOTA_Tooltip_ability_build_xoya_building_zavartu_disabled_Description"	"<b><font color='#eedd44'>Requires:</font></b><br/> - Cavern of Citol<br/> - Cavern of Phe"
+		"DOTA_Tooltip_ability_build_xoo_building_zavartu_disabled"				"Shrine of Zavartu"	
+		"DOTA_Tooltip_ability_build_xoo_building_zavartu_disabled_Description"	"<b><font color='#eedd44'>Requires:</font></b><br/> - Cavern of Citol<br/> - Cavern of Phe"
 
 
 		//Ability 1: Spawner
 		//---------------------------------		
-		"DOTA_Tooltip_ability_spawn_xoya_creep_zavartu"							"Zavartu Spawner"	
-		"DOTA_Tooltip_ability_spawn_xoya_creep_zavartu_Description"				""
-		"DOTA_Tooltip_ability_spawn_xoya_creep_zavartu_creep_count"				"CREEP COUNT:"
+		"DOTA_Tooltip_ability_spawn_xoo_creep_zavartu"							"Zavartu Spawner"	
+		"DOTA_Tooltip_ability_spawn_xoo_creep_zavartu_Description"				""
+		"DOTA_Tooltip_ability_spawn_xoo_creep_zavartu_creep_count"				"CREEP COUNT:"
 
 
 		//Ability 2: Increase Spawn Count
 		//---------------------------------		
-		"DOTA_Tooltip_ability_research_spawn_xoya_creep_zavartu"				"Increase Spawn Count"		
-		"DOTA_Tooltip_ability_research_spawn_xoya_creep_zavartu_Description"	""
-		"DOTA_Tooltip_ability_research_spawn_xoya_creep_zavartu_creep_count"	"CREEP COUNT:"
-		"DOTA_Tooltip_ability_research_spawn_xoya_creep_zavartu_research_time"	"<font color='#057aff'>RESEARCH TIME</font>:"
-		"DOTA_Tooltip_ability_research_spawn_xoya_creep_zavartu_gold_cost"		"<font color='#fff22e'>GOLD COST</font>:"
-		"DOTA_Tooltip_ability_research_spawn_xoya_creep_zavartu_lumber_cost"	"<font color='#28fe77'>LUMBER COST</font>:"
+		"DOTA_Tooltip_ability_research_spawn_xoo_creep_zavartu"					"Increase Spawn Count"		
+		"DOTA_Tooltip_ability_research_spawn_xoo_creep_zavartu_Description"		""
+		"DOTA_Tooltip_ability_research_spawn_xoo_creep_zavartu_creep_count"		"CREEP COUNT:"
+		"DOTA_Tooltip_ability_research_spawn_xoo_creep_zavartu_research_time"	"<font color='#057aff'>RESEARCH TIME</font>:"
+		"DOTA_Tooltip_ability_research_spawn_xoo_creep_zavartu_gold_cost"		"<font color='#fff22e'>GOLD COST</font>:"
+		"DOTA_Tooltip_ability_research_spawn_xoo_creep_zavartu_lumber_cost"		"<font color='#28fe77'>LUMBER COST</font>:"
 
 
 		//Ability 3: Corrupted Blade
@@ -1349,7 +1349,7 @@
 
 		//Creep
 		//---------------------------------	
-		"xoya_creep_zavartu"													"Zavartu"
+		"xoo_creep_zavartu"														"Zavartu"
 
 		"DOTA_Tooltip_ability_xoo_armor_alchemy"								"Armor Alchemy"
 		"DOTA_Tooltip_ability_xoo_armor_alchemy_Description"					"Enemy armor wastes away at the mere presence of Zavartu."

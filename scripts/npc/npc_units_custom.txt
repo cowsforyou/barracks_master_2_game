@@ -37,27 +37,27 @@
 //--------------------------------------------------------------------------------------------------
 #base "units\xoya\xoo_building_arrow.txt"
 #base "units\xoya\xoo_building_belek.txt"
+#base "units\xoya\xoo_building_holocron.txt"
+#base "units\xoya\xoo_building_portal.txt"
+#base "units\xoya\xoo_building_zavartu.txt"
 #base "units\xoya\xoya_building_catlix.txt"
 #base "units\xoya\xoya_building_citol.txt"
-#base "units\xoya\xoo_building_holocron.txt"
 #base "units\xoya\xoya_building_lumber.txt"
 #base "units\xoya\xoya_building_monolith.txt"
 #base "units\xoya\xoya_building_phe.txt"
-#base "units\xoya\xoo_building_portal.txt"
 #base "units\xoya\xoya_building_purifier.txt"
 #base "units\xoya\xoya_building_skeleton.txt"
 #base "units\xoya\xoya_building_warthan.txt"
-#base "units\xoya\xoya_building_zavartu.txt"
+
 
 //Creeps
 //--------------------------------------------------------------------------------------------------
-#base "units\xoya\xoya_creep_belek.txt"
 #base "units\xoya\xoya_creep_catlix.txt"
 #base "units\xoya\xoya_creep_citol.txt"
 #base "units\xoya\xoya_creep_phe.txt"
 #base "units\xoya\xoya_creep_skeleton.txt"
 #base "units\xoya\xoya_creep_warthan.txt"
-#base "units\xoya\xoya_creep_zavartu.txt"
+#base "units\xoya\xoo_creep_zavartu.txt"
 
 //Workers
 //--------------------------------------------------------------------------------------------------
