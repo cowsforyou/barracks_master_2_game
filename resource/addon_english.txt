@@ -1226,36 +1226,36 @@
 
 		//Building Name
 		//---------------------------------
-		"xoya_building_catlix"													"Tower of Catl'ix"
+		"xoo_building_catlix"													"Tower of Catl'ix"
 
 
 		//Build Ability
 		//---------------------------------	
-		"DOTA_Tooltip_ability_build_xoya_building_catlix"						"Tower of Catl'ix"
-		"DOTA_Tooltip_ability_build_xoya_building_catlix_Description"			"Spawns Catl'ix. A relentless artillery unit, Catl'ix stands at a distance to provide constant bombardment. Its weapon can be upgraded to do splash damage."
-		"DOTA_Tooltip_ability_build_xoya_building_catlix_build_time"			"<font color='#057aff'>BUILD TIME</font>:"
-		"DOTA_Tooltip_ability_build_xoya_building_catlix_gold_cost"				"<font color='#fff22e'>GOLD COST</font>:"		
-		"DOTA_Tooltip_ability_build_xoya_building_catlix_lumber_cost"			"<font color='#28fe77'>LUMBER COST</font>:"
+		"DOTA_Tooltip_ability_build_xoo_building_catlix"						"Tower of Catl'ix"
+		"DOTA_Tooltip_ability_build_xoo_building_catlix_Description"			"Spawns Catl'ix. A relentless artillery unit, Catl'ix stands at a distance to provide constant bombardment. Its weapon can be upgraded to do splash damage."
+		"DOTA_Tooltip_ability_build_xoo_building_catlix_build_time"				"<font color='#057aff'>BUILD TIME</font>:"
+		"DOTA_Tooltip_ability_build_xoo_building_catlix_gold_cost"				"<font color='#fff22e'>GOLD COST</font>:"		
+		"DOTA_Tooltip_ability_build_xoo_building_catlix_lumber_cost"			"<font color='#28fe77'>LUMBER COST</font>:"
 
-		"DOTA_Tooltip_ability_build_xoya_building_catlix_disabled"				"Tower of Catl'ix"
-		"DOTA_Tooltip_ability_build_xoya_building_catlix_disabled_Description"	"<b><font color='#eedd44'>Requires:</font></b><br/> - Cavern of Citol<br/> - Cavern of Phe"
+		"DOTA_Tooltip_ability_build_xoo_building_catlix_disabled"				"Tower of Catl'ix"
+		"DOTA_Tooltip_ability_build_xoo_building_catlix_disabled_Description"	"<b><font color='#eedd44'>Requires:</font></b><br/> - Cavern of Citol<br/> - Cavern of Phe"
 
 
 		//Ability 1: Spawner
 		//---------------------------------		
-		"DOTA_Tooltip_ability_spawn_xoya_creep_catlix"							"Catl'ix Spawner"
-		"DOTA_Tooltip_ability_spawn_xoya_creep_catlix_Description"				"Automatically spawns Catl'ix."
-		"DOTA_Tooltip_ability_spawn_xoya_creep_catlix_creep_count"				"CREEP COUNT:"
+		"DOTA_Tooltip_ability_spawn_xoo_creep_catlix"							"Catl'ix Spawner"
+		"DOTA_Tooltip_ability_spawn_xoo_creep_catlix_Description"				"Automatically spawns Catl'ix."
+		"DOTA_Tooltip_ability_spawn_xoo_creep_catlix_creep_count"				"CREEP COUNT:"
 
 
 		//Ability 2: Increase Spawn Count
 		//---------------------------------		
-		"DOTA_Tooltip_ability_research_spawn_xoya_creep_catlix"					"Increase Spawn Count"		
-		"DOTA_Tooltip_ability_research_spawn_xoya_creep_catlix_Description"		"Increases the number of Catl'ixs that spawn."
-		"DOTA_Tooltip_ability_research_spawn_xoya_creep_catlix_creep_count"		"CREEP COUNT:"
-		"DOTA_Tooltip_ability_research_spawn_xoya_creep_catlix_research_time"	"<font color='#057aff'>RESEARCH TIME</font>:"
-		"DOTA_Tooltip_ability_research_spawn_xoya_creep_catlix_gold_cost"		"<font color='#fff22e'>GOLD COST</font>:"
-		"DOTA_Tooltip_ability_research_spawn_xoya_creep_catlix_lumber_cost"		"<font color='#28fe77'>LUMBER COST</font>:"
+		"DOTA_Tooltip_ability_research_spawn_xoo_creep_catlix"					"Increase Spawn Count"		
+		"DOTA_Tooltip_ability_research_spawn_xoo_creep_catlix_Description"		"Increases the number of Catl'ixs that spawn."
+		"DOTA_Tooltip_ability_research_spawn_xoo_creep_catlix_creep_count"		"CREEP COUNT:"
+		"DOTA_Tooltip_ability_research_spawn_xoo_creep_catlix_research_time"	"<font color='#057aff'>RESEARCH TIME</font>:"
+		"DOTA_Tooltip_ability_research_spawn_xoo_creep_catlix_gold_cost"		"<font color='#fff22e'>GOLD COST</font>:"
+		"DOTA_Tooltip_ability_research_spawn_xoo_creep_catlix_lumber_cost"		"<font color='#28fe77'>LUMBER COST</font>:"
 
 
 		//Ability 3: Research Fireball
@@ -1278,7 +1278,7 @@
 
 		//Creep
 		//---------------------------------	
-		"xoya_creep_catlix"														"Catl'ix"
+		"xoo_creep_catlix"														"Catl'ix"
 
 		"DOTA_Tooltip_ability_xoo_fireball"										"Fireball"		
 		"DOTA_Tooltip_ability_xoo_fireball_Description"							"Change out your standard boulders for flaming fireballs that deal extra AoE damage and movement slow."

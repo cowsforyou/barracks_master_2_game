@@ -100,12 +100,12 @@
 #base "abilities\xoya\Belek\build_xoo_building_belek.txt"
 #base "abilities\xoya\Belek\xoo_rage_sacrifice.txt"
 
-#base "abilities\xoya\Catlix\build_xoya_building_catlix.txt"
-#base "abilities\xoya\Catlix\build_xoya_building_catlix_disabled.txt"
-#base "abilities\xoya\Catlix\research_spawn_xoya_creep_catlix.txt"
+#base "abilities\xoya\Catlix\build_xoo_building_catlix.txt"
+#base "abilities\xoya\Catlix\build_xoo_building_catlix_disabled.txt"
+#base "abilities\xoya\Catlix\research_spawn_xoo_creep_catlix.txt"
 #base "abilities\xoya\Catlix\research_xoo_fireball.txt"
 #base "abilities\xoya\Catlix\research_xoo_fireball_disabled.txt"
-#base "abilities\xoya\Catlix\spawn_xoya_creep_catlix.txt"
+#base "abilities\xoya\Catlix\spawn_xoo_creep_catlix.txt"
 #base "abilities\xoya\Catlix\xoo_fireball.txt"
 #base "abilities\xoya\Catlix\xoo_fireball_disabled.txt"
 

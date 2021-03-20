@@ -26,7 +26,7 @@
 //                                     **  X O O  **
 //==================================================================================================
 
-#base "items\xoya\item_research_spawn_xoya_creep_catlix.txt"
+#base "items\xoya\item_research_spawn_xoo_creep_catlix.txt"
 #base "items\xoya\item_research_spawn_xoya_creep_citol.txt"
 #base "items\xoya\item_research_spawn_xoya_creep_phe.txt"
 #base "items\xoya\item_research_spawn_xoya_creep_warthan.txt"

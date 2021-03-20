@@ -1,6 +1,6 @@
 "DOTAUnits" 
 {
-    "xoya_building_catlix"
+    "xoo_building_catlix"
     {
         // General
         //----------------------------------------------------------------
@@ -37,8 +37,8 @@
         // Abilities
         //----------------------------------------------------------------    
         "AbilityLayout"             "6"
-        "Ability1"                  "spawn_xoya_creep_catlix"     
-        "Ability2"                  "research_spawn_xoya_creep_catlix"    
+        "Ability1"                  "spawn_xoo_creep_catlix"     
+        "Ability2"                  "research_spawn_xoo_creep_catlix"    
         "Ability3"                  "research_xoo_fireball_disabled"     
         "Ability4"                  ""      
         "Ability5"                  ""     

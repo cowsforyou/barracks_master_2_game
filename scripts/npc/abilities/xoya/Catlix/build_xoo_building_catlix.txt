@@ -1,6 +1,6 @@
 "DOTAAbilities"
 {
-	"build_xoya_building_catlix"
+	"build_xoo_building_catlix"
 	{
 		// Ability Settings
 		//-------------------------------------------------------------------------------------------------------------
@@ -13,7 +13,7 @@
 
 		// Building Helper Info
 		//-------------------------------------------------------------------------------------------------------------
-		"UnitName"						"xoya_building_catlix"
+		"UnitName"						"xoo_building_catlix"
 		"Building"						"1" //bool 
 		"AbilityCastRange"				"250"
 		"UpdateHealth"					"1" //bool

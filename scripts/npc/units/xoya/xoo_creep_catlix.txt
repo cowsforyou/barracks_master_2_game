@@ -1,6 +1,6 @@
 "DOTAUnits"
 {
-    "xoya_creep_catlix"
+    "xoo_creep_catlix"
     {
         // General
         //----------------------------------------------------------------

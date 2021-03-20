@@ -3,7 +3,7 @@
 	//-------------------
 	//Loading Screen
 	//-------------------
-	"bm_updates_title"								"Updates"
+	"bm_updates_title"								"更新"
 	"bm_updates_text"								
 
 "Welcome to Barracks Master 2.
@@ -14,98 +14,98 @@ We are also looking for language translators. Let us know if you would like to h
 
 Have a bug to report or feedback for us? Drop a note at reddit.com/r/barracksmaster."
 
-	"bm_ladder_title"								"Ladder"
-	"bm_ladder_text"								"Coming Soon"
+	"bm_ladder_title"								"等级制度"
+	"bm_ladder_text"								"快来了"
 
 	//-------------------
 	//Pregame Selection Screen
 	//-------------------
-	"top_card_streak"								"Streak:"
-	"top_card_waiting"								"Waiting"
-	"top_card_ready"								"Ready"
+	"top_card_streak"								"条纹:"
+	"top_card_waiting"								"等待"
+	"top_card_ready"								"准备好"
 
-	"player_rating"									"Rating"
-	"player_rank"									"Season Rank"
-	"player_played"									"Games Played"
-	"player_won"									"Games Won"
-	"player_win"									"Win %"
+	"player_rating"									"评分"
+	"player_rank"									"赛季排名"
+	"player_played"									"玩过的游戏"
+	"player_won"									"游戏胜出"
+	"player_win"									"赢 %"
 
-	"player_color"									"Favorite Color"
-	"color_gold"									"Gold"
-	"color_red"										"Red"
-	"color_blue"									"Blue"
-	"color_lightgreen"								"Light Green"
-	"color_green"									"Green"
-	"color_yellow"									"Yellow"
-	"color_pink"									"Pink"
-	"color_lightblue"								"Light Blue"
-	"color_Purple"									"Purple"
-	"color_silver"									"Silver"
-	"color_black"									"Black"
+	"player_color"									"最喜欢的颜色"
+	"color_gold"									"金色"
+	"color_red"										"红色"
+	"color_blue"									"蓝色"
+	"color_lightgreen"								"浅绿色"
+	"color_green"									"绿色"
+	"color_yellow"									"黄色"
+	"color_pink"									"粉色"
+	"color_lightblue"								"浅蓝色"
+	"color_Purple"									"紫色"
+	"color_silver"									"银色"
+	"color_black"									"黑色"
 
-	"player_faction"								"Most Played Faction"
-	"faction_random"								"Random"
+	"player_faction"								"最常使用的派系"
+	"faction_random"								"随机"
 	"faction_ling"									"Ling"
 	"faction_xoo"									"Xoo"
 
-	"bm_map_legacy_name"							"Legacy"
+	"bm_map_legacy_name"							"遗产"
 	"bm_map_legacy_count"							"2 vs 2"
-	"bm_map_mexican_name"							"Mexican Standoff"
+	"bm_map_mexican_name"							"墨西哥僵持"
 	"bm_map_mexican_count"							"1 vs 1"
 
-	"title_color"									"Color Select"
+	"title_color"									"颜色选择"
 
-	"title_faction"									"Faction Select"
+	"title_faction"									"派系选择"
 
-	"title_perk"									"Perk Select"
-	"perk_damage_mouseover"							"Grants bonus damage to your Builder."
-	"perk_health_mouseover"							"Grants bonus health to your Builder."
-	"perk_range_mouseover"							"Grants bonus attack range to your Builder."	
+	"title_perk"									"振作选择"
+	"perk_damage_mouseover"							"给予建造者额外的伤害。"
+	"perk_health_mouseover"							"为您的建造者提供额外的生命值。"
+	"perk_range_mouseover"							"向建造者授予额外的攻击范围。"	
 
-	"title_customization"							"Customization"
-	"customization_description"						"Coming soon!"
+	"title_customization"							"客制化"
+	"customization_description"						"快来了！"
 
-	"bm_ling_lore"									"The Lings are valiant people, valuing honour and camaraderie. Their forces are hardy with ample healing and regenerative abilities."
-	"bm_xoo_lore"									"The Xoos thrive on chaos. Their modus operandi is overwhelming their opponent with sheer numbers."
-	"bm_myro_lore"									"To be added."
-	"bm_random_lore"								"Randomize your faction selection. Life's exciting that way."
+	"bm_ling_lore"									"Lings 是英勇的人，重视荣誉和友善。 他们的部队具有强大的康复能力和再生能力"
+	"bm_xoo_lore"									"Xoos 在混乱中壮成长。 他们的作案手法以惊人的数字压倒了对手。"
+	"bm_myro_lore"									"快来了！"
+	"bm_random_lore"								"随机选择您的派系。 这样的生活令人兴奋。"
 
 	//-------------------
 	//Scoreboard Labels
 	//-------------------
-	"custom_end_screen_legend_color"				"COLOR"
-	"custom_end_screen_legend_cs"					"CS"
-	"custom_end_screen_legend_networth"				"NET WORTH"
-	"custom_end_screen_legend_gold"					"GOLD"
-	"custom_end_screen_legend_lumber"				"LUMBER"
+	"custom_end_screen_legend_color"				"颜色"
+	"custom_end_screen_legend_cs"					"蠕变分数"
+	"custom_end_screen_legend_networth"				"净值"
+	"custom_end_screen_legend_gold"					"金子"
+	"custom_end_screen_legend_lumber"				"木材"
 
 	//-------------------
 	//End Game Labels
 	//-------------------
-	"end_screen_bm_score"							"BM POINTS"
-	"custom_end_screen_extra_note"					"Thank you for playing Barracks Master 2!"
-	"custom_end_screen_extra_website"				"Visit barracksmaster.com for more information."	
+	"end_screen_bm_score"							"BM 分数"
+	"custom_end_screen_extra_note"					"谢谢你来玩Barracks Master 2!"
+	"custom_end_screen_extra_website"				"访问 barracksmaster.com 欲获得更多信息."	
 
 	//-------------------
 	//Notifications
 	//-------------------
-	"alch_gold"										"Alchemist was feeling rich and donated gold to you. Amount received: "
-	"give_item_last_stand"							"You have been awarded an extra charge of Last Stand"
+	"alch_gold"										"Alchemist 感到很富有，并向您捐赠了黄金。 收到的金额: "
+	"give_item_last_stand"							"您已获得 LAST STAND 的额外费用"
 
 	//Error Messages
-	"error_invalid_build_position"					"Cannot Build In Lane or Water"
-	"error_invalid_build_position_2"				"Invalid Build Position"	
-	"error_max_build_count"							"Max Building Count Reached"
-	"error_max_worker_count_reached"				"Max Worker Count Reached"
-	"error_not_enough_gold"							"Insufficient Gold"
-	"error_not_enough_lumber"						"Insufficient Lumber"
-	"error_queue_full"								"The Queue is Full"
-	"error_must_use_worker"							"Use Worker to Harvest"
+	"error_invalid_build_position"					"无法在车道或水上建造"
+	"error_invalid_build_position_2"				"无效的构建位置"	
+	"error_max_build_count"							"达到最大建筑数"
+	"error_max_worker_count_reached"				"达到最大工人数"
+	"error_not_enough_gold"							"黄金不足"
+	"error_not_enough_lumber"						"木材不足"
+	"error_queue_full"								"队列已满"
+	"error_must_use_worker"							"使用工人来收获"
 
-	"Unassigned"      								"Unassigned Team"
-	"Spectator"       								"Spectator Team"
-	"Neutrals"        								"Neutral Team"
-	"NoTeam"          								"No Team"
+	"Unassigned"      								"未分配的团队"
+	"Spectator"       								"观众团队"
+	"Neutrals"        								"中立团队"
+	"NoTeam"          								"没有团队"
 
 	"DOTA_GoodGuys"   								"Radiant"
 	"DOTA_BadGuys"    								"Dire"

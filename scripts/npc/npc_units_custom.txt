@@ -40,7 +40,7 @@
 #base "units\xoya\xoo_building_holocron.txt"
 #base "units\xoya\xoo_building_portal.txt"
 #base "units\xoya\xoo_building_zavartu.txt"
-#base "units\xoya\xoya_building_catlix.txt"
+#base "units\xoya\xoo_building_catlix.txt"
 #base "units\xoya\xoya_building_citol.txt"
 #base "units\xoya\xoya_building_lumber.txt"
 #base "units\xoya\xoya_building_monolith.txt"
@@ -52,7 +52,7 @@
 
 //Creeps
 //--------------------------------------------------------------------------------------------------
-#base "units\xoya\xoya_creep_catlix.txt"
+#base "units\xoya\xoo_creep_catlix.txt"
 #base "units\xoya\xoya_creep_citol.txt"
 #base "units\xoya\xoya_creep_phe.txt"
 #base "units\xoya\xoya_creep_skeleton.txt"

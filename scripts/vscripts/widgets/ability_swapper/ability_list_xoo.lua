@@ -11,7 +11,7 @@ function OnSpellStart(keys)
         "build_xoya_building_citol",
         "build_xoya_building_phe",
         "build_xoya_building_lumber",
-        "build_xoya_building_catlix",
+        "build_xoo_building_catlix",
         "build_xoo_building_zavartu", -- start page 2
         "build_xoya_building_warthan",
         "build_xoya_building_monolith",
