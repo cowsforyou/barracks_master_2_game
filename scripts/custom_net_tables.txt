@@ -10,5 +10,6 @@
         "scores",
         "player_colors",
         "selected_player_colors",
+        "selected_player_perks",
     ]
 } 

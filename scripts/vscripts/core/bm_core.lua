@@ -44,6 +44,15 @@ function BMCore:InitializeHero(hero)
     hero:SetAbilityPoints(0)
     Upgrades:CheckAbilityRequirements(hero)
 
+    -- Give Perk Ability
+    local perkData = CustomNetTables:GetTableValue("selected_player_perks", tostring(playerID))
+    print("hahah im here")
+    PrintTable(perkData)
+    if perkData ~= nil then
+        print(perkData.perk)
+        hero:AddAbility(perkData.perk)
+    end
+
     -- Setup Lumber tick
     Timers(function()
         ModifyLumber(hero, LUMBER_PER_TICK)

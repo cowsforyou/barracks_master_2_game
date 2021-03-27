@@ -42,6 +42,9 @@ function HeroSelection:Start()
 
 	--Listen for the hero preview event
 	HeroSelection.previewSelectionListener = CustomGameEventManager:RegisterListener( "hero_preview", HeroSelection.HeroPreview )
+	
+	--Listen for the hero preview event
+	HeroSelection.perkSelectionListener = CustomGameEventManager:RegisterListener( "perk_selected", HeroSelection.PerkSelect )
 end
 
 --[[
@@ -200,4 +203,15 @@ function HeroSelection:AssignHero( player, hero )
 		BMCore:InitializeHero(heroEnt)
 		Upgrades:CheckAbilityRequirements(heroEnt)
 	end, player)
+end
+
+--[[
+	PerkSelect
+	A player has selected a perk. This function is called by the CustomGameEventManager
+	once a 'perk_select' event was seen.
+	Params:
+			- event {table} - A table containing PlayerID and Perk.
+]]
+function HeroSelection:PerkSelect( event )
+    CustomNetTables:SetTableValue( "selected_player_perks", tostring(event.PlayerID), {perk = event.perk})
 end
