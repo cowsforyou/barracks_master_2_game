@@ -114,6 +114,7 @@
 #base "units\scouts\scout_land_red.txt"
 #base "units\scouts\scout_land_white.txt"
 #base "units\scouts\scout_land_yellow.txt"
+#base "units\scouts\scout_land_dino_white.txt"
 #base "units\scouts\scout_techies.txt"
 
 //Creephero

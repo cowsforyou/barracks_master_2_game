@@ -124,6 +124,7 @@
 		"scout_land_red"														"Land Scout"
 		"scout_land_white"														"Land Scout"
 		"scout_land_yellow"														"Land Scout"
+		"scout_land_dino_white"													"Land Scout"
 
 		"DOTA_Tooltip_ability_item_scout_land"									"Land Scout"
 		"DOTA_Tooltip_ability_item_scout_land_Description"						"<h1>Active: Spawn Scout</h1>Land Scouts can help in exploring terrain and dealing light damage."

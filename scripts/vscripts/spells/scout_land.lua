@@ -17,7 +17,7 @@ function SpawnScout( event )
         unitName = "scout_land_red"
     elseif 
         steamID == 46639111 then
-        unitName = "scout_land_white"
+        unitName = "scout_land_dino_white"
     end
 
     -- List of steamID3
