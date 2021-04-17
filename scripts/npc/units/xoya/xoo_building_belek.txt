@@ -101,7 +101,7 @@
         // Status
         //----------------------------------------------------------------
         "HealthBarOffset"           "180"
-        "StatusHealth"              "200"     // Base health.
+        "StatusHealth"              "140"     // Base health.
         "StatusHealthRegen"         "0"     // Health regeneration rate.
         "StatusMana"                "0"     // Base mana.
         "StatusManaRegen"           "0"     // Mana regeneration rate.
