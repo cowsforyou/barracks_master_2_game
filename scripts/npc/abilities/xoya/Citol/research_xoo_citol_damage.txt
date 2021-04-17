@@ -1,40 +1,40 @@
 "DOTAAbilities" 
 {
-    "research_xoya_citol_armor"
+    "research_xoo_citol_damage"
     {
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
         "BaseClass"                     "ability_datadriven"
-        "AbilityTextureName"            "armor"
+        "AbilityTextureName"            "damage"
         "MaxLevel"                      "3"
 
-        "AbilityChannelTime"            "30 45 80"
-        "AbilityGoldCost"               "100 200 450"
-        
+        "AbilityChannelTime"            "35 55 80"
+        "AbilityGoldCost"               "130 320 550"
+
         "AbilitySpecial"
         {
             "01"
-          {
-            "var_type"              "FIELD_INTEGER"
-            "armor_bonus"           "1 2 6"
-          }
+            {
+                "var_type"              "FIELD_INTEGER"
+                "damage_bonus"          "3 7 12"
+            }
           
             "02"
-          {
-            "var_type"              "FIELD_INTEGER"
-            "research_time"         "30 45 80"
-          }
+            {
+                "var_type"              "FIELD_INTEGER"
+                "research_time"         "35 55 80"
+            }
 
             "03"
-          {
-            "var_type"              "FIELD_INTEGER"
-            "gold_cost"             "100 200 450"
-          }
+            {
+                "var_type"              "FIELD_INTEGER"
+                "gold_cost"             "130 320 550"
+            }
      
             "08"
-          {
-            "var_type"              "FIELD_INTEGER"
-            "lumber_cost"           "0 0 125"
-          }
+            {
+                "var_type"              "FIELD_INTEGER"
+                "lumber_cost"           "0 0 350"
+            }
         }
 
         "OnSpellStart"

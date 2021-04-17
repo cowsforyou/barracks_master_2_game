@@ -173,12 +173,12 @@ PrecacheUnitByNameSync("ling_creep_gnorgil", context)
 PrecacheUnitByNameSync("xoya_worker_nelum", context)
 
 
--- XOYA
+-- XOO
 --------------------------
 
--- Xoya Buildings
+-- Xoo Buildings
 PrecacheUnitByNameSync("xoo_building_belek", context)
-PrecacheUnitByNameSync("xoya_building_citol", context)
+PrecacheUnitByNameSync("xoo_building_citol", context)
 PrecacheUnitByNameSync("xoya_building_phe", context)
 PrecacheUnitByNameSync("xoya_building_lumber", context)
 PrecacheUnitByNameSync("xoo_building_catlix", context)
@@ -190,14 +190,14 @@ PrecacheUnitByNameSync("xoya_building_skeleton", context)
 PrecacheUnitByNameSync("xoya_building_purifier", context)
 PrecacheUnitByNameSync("xoo_building_holocron", context)
 
--- Xoya Creeps
-PrecacheUnitByNameSync("xoya_creep_citol", context)
+-- Xoo Creeps
+PrecacheUnitByNameSync("xoo_creep_citol", context)
 PrecacheUnitByNameSync("xoya_creep_phe", context)
 PrecacheUnitByNameSync("xoo_creep_catlix", context)
 PrecacheUnitByNameSync("xoo_creep_zavartu", context)
 PrecacheUnitByNameSync("xoya_creep_warthan", context)
 
--- Xoya Workers
+-- Xoo Workers
 PrecacheUnitByNameSync("xoya_worker_dendro", context)
 
 

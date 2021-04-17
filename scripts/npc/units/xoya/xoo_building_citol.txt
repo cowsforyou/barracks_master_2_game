@@ -1,6 +1,6 @@
 "DOTAUnits" 
 {
-    "xoya_building_citol"
+    "xoo_building_citol"
     {
         // General
         //----------------------------------------------------------------
@@ -37,10 +37,10 @@
         // Abilities
         //----------------------------------------------------------------    
         "AbilityLayout"             "6"
-        "Ability1"                  "spawn_xoya_creep_citol"     
-        "Ability2"                  "research_spawn_xoya_creep_citol"    
-        "Ability3"                  "research_xoya_citol_armor"     
-        "Ability4"                  "research_xoya_citol_damage"      
+        "Ability1"                  "spawn_xoo_creep_citol"     
+        "Ability2"                  "research_spawn_xoo_creep_citol"    
+        "Ability3"                  "research_xoo_citol_armor"
+        "Ability4"                  "research_xoo_citol_damage"
         "Ability5"                  "research_xoo_citol_health_disabled"     
         "Ability6"                  "research_xoo_bashlord_disabled"     
         "Ability7"                  ""      

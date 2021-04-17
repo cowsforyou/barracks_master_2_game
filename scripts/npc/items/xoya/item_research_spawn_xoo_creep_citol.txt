@@ -1,6 +1,6 @@
 "DOTAAbilities"
 {
-	"item_research_xoya_citol_armor"
+	"item_research_spawn_xoo_creep_citol"
 	{
 	    "ID"    "1010"
 		"BaseClass"             		"item_datadriven"

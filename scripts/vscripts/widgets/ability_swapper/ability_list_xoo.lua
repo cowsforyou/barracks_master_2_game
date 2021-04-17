@@ -8,7 +8,7 @@ function OnSpellStart(keys)
     local ability_list = 
     {
         "build_xoo_building_belek", -- start page 1 (contains 5 abilities)
-        "build_xoya_building_citol",
+        "build_xoo_building_citol",
         "build_xoya_building_phe",
         "build_xoya_building_lumber",
         "build_xoo_building_catlix",

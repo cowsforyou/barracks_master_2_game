@@ -1,6 +1,6 @@
 "DOTAUnits"
 {
-    "xoya_creep_citol"
+    "xoo_creep_citol"
     {
         // General
         //----------------------------------------------------------------
@@ -25,8 +25,8 @@
         // Abilities
         //----------------------------------------------------------------    
         "AbilityLayout"             "6"
-        "Ability1"                  "xoya_citol_armor_disabled"
-        "Ability2"                  "xoya_citol_damage_disabled"
+        "Ability1"                  "xoo_citol_armor_disabled"
+        "Ability2"                  "xoo_citol_damage_disabled"
         "Ability3"                  "xoo_citol_health_disabled"
         "Ability4"                  "xoo_bashlord_disabled"
         "Ability5"                  ""     

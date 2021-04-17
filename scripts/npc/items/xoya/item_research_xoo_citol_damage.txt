@@ -1,6 +1,6 @@
 "DOTAAbilities"
 {
-	"item_research_xoya_citol_damage"
+	"item_research_xoo_citol_damage"
 	{
 	    "ID"    "1010"
 		"BaseClass"             		"item_datadriven"

@@ -1,6 +1,6 @@
 "DOTAAbilities" 
 {
-	"xoya_citol_armor_disabled"
+	"xoo_citol_armor_disabled"
 	{
 	    "BaseClass"                     "ability_datadriven"
 	    "AbilityTextureName"            "armor"

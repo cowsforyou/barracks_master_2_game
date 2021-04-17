@@ -27,20 +27,20 @@
 //==================================================================================================
 
 #base "items\xoya\item_research_spawn_xoo_creep_catlix.txt"
-#base "items\xoya\item_research_spawn_xoya_creep_citol.txt"
+#base "items\xoya\item_research_spawn_xoo_creep_citol.txt"
 #base "items\xoya\item_research_spawn_xoya_creep_phe.txt"
 #base "items\xoya\item_research_spawn_xoya_creep_warthan.txt"
 #base "items\xoya\item_research_spawn_xoo_creep_zavartu.txt"
 
 #base "items\xoya\item_research_xoo_bashlord.txt"
+#base "items\xoya\item_research_xoo_citol_armor.txt"
+#base "items\xoya\item_research_xoo_citol_damage.txt"
 #base "items\xoya\item_research_xoo_citol_health.txt"
 #base "items\xoya\item_research_xoo_corrupted_blade.txt"
 #base "items\xoya\item_research_xoo_counter_helix.txt"
 #base "items\xoya\item_research_xoo_fireball.txt"
 #base "items\xoya\item_research_xoo_flame_guard.txt"
 #base "items\xoya\item_research_xoo_phe_health.txt"
-#base "items\xoya\item_research_xoya_citol_armor.txt"
-#base "items\xoya\item_research_xoya_citol_damage.txt"
 #base "items\xoya\item_research_xoya_phe_armor.txt"
 #base "items\xoya\item_research_xoya_phe_damage.txt"
 #base "items\xoya\item_research_xoya_purifier_bonus_lumber.txt"
