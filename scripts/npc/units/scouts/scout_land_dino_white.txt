@@ -19,7 +19,7 @@
 	    // Sounds, Projectiles and Destruction
 	    //----------------------------------------------------------------
 	    "SoundSet"                  "Beastmaster_Boar"
-		"ProjectileModel"			"particles/units/heroes/hero_beastmaster/beastmaster_boar_attack.vpcf"	// Particle system model for projectile.
+		"ProjectileModel"			"particles/units/heroes/hero_arc_warden/arc_warden_base_attack.vpcf"	// Particle system model for projectile.
 		"ProjectileSpeed"			"1500"		// Speed of projectile.
 
 
