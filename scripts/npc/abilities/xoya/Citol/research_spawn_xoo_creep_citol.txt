@@ -1,39 +1,39 @@
 "DOTAAbilities" 
 {
-    "research_xoya_citol_damage"
+    "research_spawn_xoo_creep_citol"
     {
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
         "BaseClass"                     "ability_datadriven"
-        "AbilityTextureName"            "damage"
-        "MaxLevel"                      "3"
+        "AbilityTextureName"            "xoo_citol_creep"
+        "MaxLevel"                      "6"
 
-        "AbilityChannelTime"            "35 55 80"
-        "AbilityGoldCost"               "130 320 550"
-
+        "AbilityChannelTime"            "0 10 10 20 40 70"
+        "AbilityGoldCost"               "0 100 150 250 350 500"
+        
         "AbilitySpecial"
         {
             "01"
           {
             "var_type"              "FIELD_INTEGER"
-            "damage_bonus"          "3 7 12"
+            "creep_count"           "2 4 6 8 10 12"
           }
           
             "02"
           {
             "var_type"              "FIELD_INTEGER"
-            "research_time"         "35 55 80"
+            "research_time"         "0 10 10 20 40 70"
           }
-c
+
             "03"
           {
             "var_type"              "FIELD_INTEGER"
-            "gold_cost"             "130 320 550"
+            "gold_cost"             "0 100 150 250 350 500"
           }
      
             "08"
           {
             "var_type"              "FIELD_INTEGER"
-            "lumber_cost"           "0 0 350"
+            "lumber_cost"           "0 0 0 100 150 250"
           }
         }
 

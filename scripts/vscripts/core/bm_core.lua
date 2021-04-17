@@ -28,7 +28,7 @@ function BMCore:InitializeHero(hero)
     if hero:GetUnitName() == "npc_dota_hero_keeper_of_the_light" then
         InstantBuild( hero, player, "ling_building_clorn", hero:GetAbsOrigin() )
     elseif hero:GetUnitName() == "npc_dota_hero_nevermore" then
-        InstantBuild( hero, player, "xoya_building_citol", hero:GetAbsOrigin() )
+        InstantBuild( hero, player, "xoo_building_citol", hero:GetAbsOrigin() )
     end
 
     -- Give starting items and resources

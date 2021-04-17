@@ -1,7 +1,7 @@
 "DOTAAbilities" 
 {
     // Autocast creep spawner spell; starts casting as soon as the building is fully constructed
-    "spawn_xoya_creep_citol"
+    "spawn_xoo_creep_citol"
     {
         "BaseClass"                     "ability_datadriven"
         "AbilityTextureName"            "xoo_citol_creep"
@@ -26,7 +26,7 @@
             {
                 "ScriptFile"    "core/spawner_ability.lua"
                 "Function"      "SpawnerAbility"
-                "creepName"		"xoya_creep_citol"
+                "creepName"		"xoo_creep_citol"
             }
         }
 

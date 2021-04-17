@@ -37,11 +37,11 @@
 //--------------------------------------------------------------------------------------------------
 #base "units\xoya\xoo_building_arrow.txt"
 #base "units\xoya\xoo_building_belek.txt"
+#base "units\xoya\xoo_building_citol.txt"
 #base "units\xoya\xoo_building_holocron.txt"
 #base "units\xoya\xoo_building_portal.txt"
 #base "units\xoya\xoo_building_zavartu.txt"
 #base "units\xoya\xoo_building_catlix.txt"
-#base "units\xoya\xoya_building_citol.txt"
 #base "units\xoya\xoya_building_lumber.txt"
 #base "units\xoya\xoya_building_monolith.txt"
 #base "units\xoya\xoya_building_phe.txt"
@@ -53,7 +53,7 @@
 //Creeps
 //--------------------------------------------------------------------------------------------------
 #base "units\xoya\xoo_creep_catlix.txt"
-#base "units\xoya\xoya_creep_citol.txt"
+#base "units\xoya\xoo_creep_citol.txt"
 #base "units\xoya\xoya_creep_phe.txt"
 #base "units\xoya\xoya_creep_skeleton.txt"
 #base "units\xoya\xoya_creep_warthan.txt"
@@ -114,6 +114,7 @@
 #base "units\scouts\scout_land_red.txt"
 #base "units\scouts\scout_land_white.txt"
 #base "units\scouts\scout_land_yellow.txt"
+#base "units\scouts\scout_land_dino_white.txt"
 #base "units\scouts\scout_techies.txt"
 
 //Creephero

@@ -38,7 +38,7 @@
         //----------------------------------------------------------------    
         "AbilityLayout"             "6"
         "Ability1"                  "xoo_rage_sacrifice"
-        "Ability2"                  ""    
+        "Ability2"                  ""
         "Ability3"                  ""     
         "Ability4"                  ""      
         "Ability5"                  ""     
@@ -101,7 +101,7 @@
         // Status
         //----------------------------------------------------------------
         "HealthBarOffset"           "180"
-        "StatusHealth"              "200"     // Base health.
+        "StatusHealth"              "140"     // Base health.
         "StatusHealthRegen"         "0"     // Health regeneration rate.
         "StatusMana"                "0"     // Base mana.
         "StatusManaRegen"           "0"     // Mana regeneration rate.

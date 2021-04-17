@@ -1,6 +1,6 @@
 "DOTAAbilities" 
 {
-    "xoya_citol_damage"
+    "xoo_citol_damage"
     {
         "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         "BaseClass"             "ability_datadriven"
@@ -23,7 +23,7 @@
         //-------------------------------------------------------------------------------------------------------------
         "Modifiers"
         {
-            "modifier_xoya_citol_damage"
+            "modifier_xoo_citol_damage"
             {
                 "Passive"    "1"
                 "IsHidden"   "0"
