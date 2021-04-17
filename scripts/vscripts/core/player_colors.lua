@@ -39,17 +39,17 @@ function PlayerColors:CheckPlayerPremiumColors( event )
         premiumColor.Silver = true
         premiumColor.Black = true
         premiumColor.Purple = true
-        premiumColor.LightGreen = true
+        premiumColor.LightGreen = false
         premiumColor.Blue = true
-        premiumColor.LightBlue = true
+        premiumColor.LightBlue = false
     end
 
     if steamId == 72355671 then -- (xiao)
         premiumColor.Silver = true
         premiumColor.Black = true
-        premiumColor.Purple = true
-        premiumColor.LightGreen = true
-        premiumColor.Blue = true
+        premiumColor.Purple = false
+        premiumColor.LightGreen = false
+        premiumColor.Blue = false
         premiumColor.LightBlue = true
     end
 
