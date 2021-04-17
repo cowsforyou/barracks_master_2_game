@@ -112,8 +112,11 @@
 		//Perks
 		//-------------------
 		"DOTA_Tooltip_modifier_perk_damage"										"Damage Perk"
-		"DOTA_Tooltip_modifier_perk_health"										"Health Perk"		
+		"DOTA_Tooltip_modifier_perk_damage_Description"							"+10 Damage"
+		"DOTA_Tooltip_modifier_perk_health"										"Health Perk"
+		"DOTA_Tooltip_modifier_perk_health_Description"							"+20 Health"		
 		"DOTA_Tooltip_modifier_perk_range"										"Range Perk"
+		"DOTA_Tooltip_modifier_perk_range_Description"							"+40 Attack Range"
 
 		//-------------------
 		//Scout Land
