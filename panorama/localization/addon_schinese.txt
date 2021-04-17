@@ -6,13 +6,15 @@
 	"bm_updates_title"								"更新"
 	"bm_updates_text"								
 
-"Welcome to Barracks Master 2.
+"欢迎使用Barracks Master 2。
 
-We will be hosting our very first Barracks Master 2 tournament soon! Get practicing and keep a lookout on this space.
+我们的第一个Barracks Master 2锦标赛将于5月29日开始！ 仅限于报名的前16支球队，并且有奖品可供赢取。
 
-We are also looking for language translators. Let us know if you would like to help.
+在barracksmaster.com上找到更多信息
 
-Have a bug to report or feedback for us? Drop a note at reddit.com/r/barracksmaster."
+我们的游戏仍处于测试阶段，开发仍在进行中。 如果您有错误需要报告或反馈给我们，请给我们发送有关Discord的注释，网址为：
+
+https://discord.gg/Jy97QGfAUF"
 
 	"bm_ladder_title"								"等级制度"
 	"bm_ladder_text"								"快来了"
