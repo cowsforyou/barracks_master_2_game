@@ -132,6 +132,7 @@ function WebApi:AfterMatch(winnerTeam)
 				body = {
 					totalBMPoints = {__op = "Increment", amount = GetBMPointsForPlayer(playerId)},
 					gamesPlayed = {__op = "Increment", amount = 1},
+					playerName = tostring(PlayerResource:GetPlayerName(playerId)),
 				}
 			}
 
@@ -142,6 +143,7 @@ function WebApi:AfterMatch(winnerTeam)
 					objectId = tostring(PlayerResource:GetSteamID(playerId)),
 					totalBMPoints =  GetBMPointsForPlayer(playerId),
 					gamesPlayed = 1,
+					playerName = tostring(PlayerResource:GetPlayerName(playerId)),
 				}
 			}
 
