@@ -130,10 +130,10 @@
 #base "abilities\xoya\Holocron\build_xoo_building_holocron.txt"
 #base "abilities\xoya\Holocron\build_xoo_building_holocron_disabled.txt"
 
-#base "abilities\xoya\Lumber\build_xoya_building_lumber.txt"
-#base "abilities\xoya\Lumber\spawn_xoya_worker_dendro.txt"
-#base "abilities\xoya\Lumber\xoya_lumber_mango.txt"
-#base "abilities\xoya\Lumber\xoya_lumber_mango_disabled.txt"
+#base "abilities\xoya\Lumber\build_xoo_building_lumber.txt"
+#base "abilities\xoya\Lumber\spawn_xoo_worker_dendro.txt"
+#base "abilities\xoya\Lumber\xoo_lumber_mango.txt"
+#base "abilities\xoya\Lumber\xoo_lumber_mango_disabled.txt"
 
 #base "abilities\xoya\Monolith\build_xoya_building_monolith.txt"
 #base "abilities\xoya\Monolith\build_xoya_building_monolith_disabled.txt"

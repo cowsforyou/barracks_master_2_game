@@ -1,6 +1,6 @@
 "DOTAUnits" 
 {
-    "xoya_building_lumber"
+    "xoo_building_lumber"
     {
         // General
         //----------------------------------------------------------------
@@ -37,9 +37,9 @@
         // Abilities
         //----------------------------------------------------------------    
         "AbilityLayout"             "6"
-        "Ability1"                  "spawn_xoya_worker_dendro"     
+        "Ability1"                  "spawn_xoo_worker_dendro"     
         "Ability2"                  "treant_living_armor"    
-        "Ability3"                  "xoya_lumber_mango_disabled"     
+        "Ability3"                  "xoo_lumber_mango_disabled"     
         "Ability4"                  ""      
         "Ability5"                  ""     
         "Ability6"                  ""     

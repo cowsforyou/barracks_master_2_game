@@ -1,6 +1,6 @@
 "DOTAAbilities" 
 {
-    "xoya_lumber_mango"
+    "xoo_lumber_mango"
     {
         "BaseClass"                     "ability_datadriven"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"

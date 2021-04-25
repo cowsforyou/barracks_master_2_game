@@ -10,7 +10,7 @@ function OnSpellStart(keys)
         "build_xoo_building_belek", -- start page 1 (contains 5 abilities)
         "build_xoo_building_citol",
         "build_xoya_building_phe",
-        "build_xoya_building_lumber",
+        "build_xoo_building_lumber",
         "build_xoo_building_catlix",
         "build_xoo_building_zavartu", -- start page 2
         "build_xoya_building_warthan",
