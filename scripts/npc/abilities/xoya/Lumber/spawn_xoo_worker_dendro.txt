@@ -1,6 +1,6 @@
 "DOTAAbilities"
 {
-    "spawn_xoya_worker_dendro"
+    "spawn_xoo_worker_dendro"
     {
         "BaseClass"                     "ability_datadriven"
         "AbilityTextureName"            "xoo_dendro_worker"
@@ -45,7 +45,7 @@
             {
                 "ScriptFile"            "core/gathering.lua"
                 "Function"              "SpawnWorker"
-                "workerName"            "xoya_worker_dendro"
+                "workerName"            "xoo_worker_dendro"
             }
         }
               

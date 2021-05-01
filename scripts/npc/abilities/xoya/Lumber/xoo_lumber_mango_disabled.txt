@@ -1,6 +1,6 @@
 "DOTAAbilities" 
 {
-	"xoya_lumber_mango_disabled"
+	"xoo_lumber_mango_disabled"
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"enchanted_mango"

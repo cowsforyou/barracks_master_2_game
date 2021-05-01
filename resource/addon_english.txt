@@ -1189,39 +1189,39 @@
 
 		//Building Name
 		//---------------------------------
-		"xoya_building_lumber"													"Lumber Depot"
+		"xoo_building_lumber"													"Lumber Depot"
 
 
 		//Build Ability
 		//---------------------------------	
-		"DOTA_Tooltip_ability_build_xoya_building_lumber"						"Lumber Depot"
-		"DOTA_Tooltip_ability_build_xoya_building_lumber_Description"			"Enables harvesting of lumber. Lumber is a secondary resource that allows you to access higher tier abilities. Use it wisely as there is a finite amount of lumber on each map. Build it close to the Giant Trees for efficiency."
-		"DOTA_Tooltip_ability_build_xoya_building_lumber_max_count"				"MAX COUNT:"
-		"DOTA_Tooltip_ability_build_xoya_building_lumber_build_time"			"<font color='#057aff'>BUILD TIME</font>:"
-		"DOTA_Tooltip_ability_build_xoya_building_lumber_gold_cost"				"<font color='#fff22e'>GOLD COST</font>:"		
-		"DOTA_Tooltip_ability_build_xoya_building_lumber_lumber_cost"			"<font color='#28fe77'>LUMBER COST</font>:"
+		"DOTA_Tooltip_ability_build_xoo_building_lumber"						"Lumber Depot"
+		"DOTA_Tooltip_ability_build_xoo_building_lumber_Description"			"Enables harvesting of lumber. Lumber is a secondary resource that allows you to access higher tier abilities. Use it wisely as there is a finite amount of lumber on each map. Build it close to the Giant Trees for efficiency."
+		"DOTA_Tooltip_ability_build_xoo_building_lumber_max_count"				"MAX COUNT:"
+		"DOTA_Tooltip_ability_build_xoo_building_lumber_build_time"				"<font color='#057aff'>BUILD TIME</font>:"
+		"DOTA_Tooltip_ability_build_xoo_building_lumber_gold_cost"				"<font color='#fff22e'>GOLD COST</font>:"		
+		"DOTA_Tooltip_ability_build_xoo_building_lumber_lumber_cost"			"<font color='#28fe77'>LUMBER COST</font>:"
 
 
 		//Ability 1: Spawner
 		//---------------------------------				
-		"DOTA_Tooltip_ability_spawn_xoya_worker_dendro"							"Spawn Dendro"
-		"DOTA_Tooltip_ability_spawn_xoya_worker_dendro_Description"				"Dendros will tirelessly harvest lumber for the greater good of Xoo. They are hardy stumps that will react if trifled with."
-		"DOTA_Tooltip_ability_spawn_xoya_worker_dendro_gold_cost"				"<font color='#fff22e'>GOLD COST</font>:"	
-		"DOTA_Tooltip_ability_spawn_xoya_worker_dendro_max_count"				"MAX COUNT:"					
+		"DOTA_Tooltip_ability_spawn_xoo_worker_dendro"							"Spawn Dendro"
+		"DOTA_Tooltip_ability_spawn_xoo_worker_dendro_Description"				"Dendros will tirelessly harvest lumber for the greater good of Xoo. They are hardy stumps that will react if trifled with."
+		"DOTA_Tooltip_ability_spawn_xoo_worker_dendro_gold_cost"				"<font color='#fff22e'>GOLD COST</font>:"	
+		"DOTA_Tooltip_ability_spawn_xoo_worker_dendro_max_count"				"MAX COUNT:"					
 
 
 		//Ability 3: Enchanted Mango
 		//---------------------------------		
-		"DOTA_Tooltip_ability_xoya_lumber_mango"								"Enchanted Mango"
-		"DOTA_Tooltip_ability_xoya_lumber_mango_Description"					"Consume the mango to instantly restore mana. Sometimes the Lumber Depot produces delicious fruits!"
+		"DOTA_Tooltip_ability_xoo_lumber_mango"									"Enchanted Mango"
+		"DOTA_Tooltip_ability_xoo_lumber_mango_Description"						"Consume the mango to instantly restore mana. Sometimes the Lumber Depot produces delicious fruits!"
 
-		"DOTA_Tooltip_ability_xoya_lumber_mango_disabled"						"Enchanted Mango"		
-		"DOTA_Tooltip_ability_xoya_lumber_mango_disabled_Description"			"<b><font color='#eedd44'>Requires:</font></b><br/> - Monolith of Secrets"
+		"DOTA_Tooltip_ability_xoo_lumber_mango_disabled"						"Enchanted Mango"		
+		"DOTA_Tooltip_ability_xoo_lumber_mango_disabled_Description"			"<b><font color='#eedd44'>Requires:</font></b><br/> - Monolith of Secrets"
 
 
 		//Worker
 		//---------------------------------
-		"xoya_worker_dendro"													"Dendro"
+		"xoo_worker_dendro"														"Dendro"
 
 
 		//---------------------------------------------------------------------------------------------------------------------------------
