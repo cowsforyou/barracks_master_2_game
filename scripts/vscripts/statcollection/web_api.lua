@@ -90,7 +90,8 @@ function WebApi:AfterMatch(winnerTeam)
 	-- end
 	if winnerTeam < DOTA_TEAM_FIRST or winnerTeam > DOTA_TEAM_CUSTOM_MAX then return end
 	if winnerTeam == DOTA_TEAM_NEUTRALS or winnerTeam == DOTA_TEAM_NOTEAM then return end
-
+	if GameRules.botEnabled == true then return end
+	
 	local requestBody = {
 		customGame = WebApi.customGame,
 		matchId = tonumber(tostring(GameRules:Script_GetMatchID())),
