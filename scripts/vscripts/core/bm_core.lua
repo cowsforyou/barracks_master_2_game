@@ -17,18 +17,45 @@ function BMCore:InitializeHero(hero)
     hero.lumber = 0 -- Secondary resource of the player
     
     -- Create a building in front of the hero
-    if PlayerResource:GetTeam(playerID) == DOTA_TEAM_GOODGUYS then
-        local ent = Entities:FindByName(nil, "goodguys_spawn_1")
-        initialSpawnPosition = ent:GetAbsOrigin()
-    else 
-        local ent = Entities:FindByName(nil, "badguys_spawn_1")
-        initialSpawnPosition = ent:GetAbsOrigin()
-    end
+    -- if PlayerResource:GetTeam(playerID) == DOTA_TEAM_GOODGUYS then
+    --     local ent = Entities:FindByName(nil, "goodguys_spawn_1")
+    --     initialSpawnPosition = ent:GetAbsOrigin()
+    -- else 
+    --     local ent = Entities:FindByName(nil, "badguys_spawn_1")
+    --     initialSpawnPosition = ent:GetAbsOrigin()
+    -- end
     -- local position = hero:GetAbsOrigin() + hero:GetForwardVector() * 400
     if hero:GetUnitName() == "npc_dota_hero_keeper_of_the_light" then
-        InstantBuild( hero, player, "ling_building_clorn", hero:GetAbsOrigin() )
+        local playerBuildings = BuildingHelper:GetBuildings(playerID)
+        local hasInitializedBuilding = false
+        if playerBuildings ~= nil then
+            for _,building in pairs(playerBuildings) do
+                if IsValidEntity(building) and building:IsAlive() then
+                    if building:GetUnitName():match("ling_building_clorn") then
+                        hasInitializedBuilding = true
+                    end
+                end
+            end
+        end
+
+        if not hasInitializedBuilding then
+            InstantBuild( hero, player, "ling_building_clorn", hero:GetAbsOrigin() )
+        end
     elseif hero:GetUnitName() == "npc_dota_hero_nevermore" then
-        InstantBuild( hero, player, "xoo_building_citol", hero:GetAbsOrigin() )
+        local hasInitializedBuilding = false
+        if playerBuildings ~= nil then
+            for _,building in pairs(playerBuildings) do
+                if IsValidEntity(building) and building:IsAlive() then
+                    if building:GetUnitName():match("xoo_building_citol") then
+                        hasInitializedBuilding = true
+                    end
+                end
+            end
+        end
+
+        if not hasInitializedBuilding then
+            InstantBuild( hero, player, "xoo_building_citol", hero:GetAbsOrigin() )
+        end
     end
 
     -- Give starting items and resources
