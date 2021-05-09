@@ -88,9 +88,17 @@ function WebApi:AfterMatch(winnerTeam)
 	-- 	if GameRules:IsCheatMode() then return end
 	-- 	if GameRules:GetDOTATime(false, true) < 60 then return end
 	-- end
+	local legitimatePlayerCount = 0
+	for playerId = 0, 23 do
+		if PlayerResource:IsValidTeamPlayerID(playerId) and not PlayerResource:IsFakeClient(playerId) then
+			legitimatePlayerCount = legitimatePlayerCount + 1
+		end
+	end
+	if legitimatePlayerCount == 1 then return end
+
 	if winnerTeam < DOTA_TEAM_FIRST or winnerTeam > DOTA_TEAM_CUSTOM_MAX then return end
 	if winnerTeam == DOTA_TEAM_NEUTRALS or winnerTeam == DOTA_TEAM_NOTEAM then return end
-	if GameRules.botEnabled == true then return end
+	-- if GameRules.botEnabled == true then return end
 	
 	local requestBody = {
 		customGame = WebApi.customGame,
