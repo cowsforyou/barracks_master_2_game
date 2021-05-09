@@ -55,14 +55,17 @@ https://discord.gg/Jy97QGfAUF"
 	"bm_map_mexican_name"							"Мексиканское противостояние"
 	"bm_map_mexican_count"							"1 на 1"
 
-	"title_color"									"Выбор цвета"
+	"title_color"									"Цвет"
 
-	"title_faction"									"Выбор фракции"
+	"title_faction"									"Фракция"
 
-	"title_perk"									"Perk Select"
-	"perk_damage_mouseover"							"Дает дополнительный урон вашему Строителю."
-	"perk_health_mouseover"							"Увеличивает здоровье вашего Строителя.."
-	"perk_range_mouseover"							"Предоставляет вашему Строителю бонусный диапазон."	
+	"title_perk"									"Привилегия"
+	"perk_range_title"								"Перк дальности"
+	"perk_range_des"								"Увеличивает дальность атаки вашего Строителя."	
+	"perk_damage_title"								"Перк урона"
+	"perk_damage_des"								"Дает дополнительный урон вашему Строителю."
+	"perk_health_title"								"Перк здоровья"
+	"perk_health_des"								"Увеличивает здоровье вашего Строителя."
 
 	"title_customization"							"Настройка"
 	"customization_description"						"Скоро будет!"
