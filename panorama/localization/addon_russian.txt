@@ -86,6 +86,10 @@ https://discord.gg/Jy97QGfAUF"
 	//End Game Labels
 	//-------------------
 	"end_screen_bm_score"							"BM ТОЧКИ"
+	"custom_end_screen_legend_cs"					"CS"
+	"custom_end_screen_legend_networth"				"ЧИСТАЯ СТОИМОСТЬ"
+	"custom_end_screen_legend_gold"					"ЗОЛОТО"
+	"custom_end_screen_legend_lumber"				"Пиломатериалы"
 	"custom_end_screen_extra_note"					"Спасибо за игру Barracks Master 2!"
 	"custom_end_screen_extra_website"				"Посещение barracksmaster.com за дополнительной информацией."	
 

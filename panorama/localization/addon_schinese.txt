@@ -85,7 +85,11 @@ https://discord.gg/Jy97QGfAUF"
 	//-------------------
 	//End Game Labels
 	//-------------------
-	"end_screen_bm_score"							"BM 分数"
+	"end_screen_bm_score"							"BM 评分"
+	"custom_end_screen_legend_cs"					"蠕变分数"
+	"custom_end_screen_legend_networth"				"净值"
+	"custom_end_screen_legend_gold"					"金子"
+	"custom_end_screen_legend_lumber"				"木材"
 	"custom_end_screen_extra_note"					"谢谢你来玩Barracks Master 2!"
 	"custom_end_screen_extra_website"				"访问 barracksmaster.com 欲获得更多信息."	
 
