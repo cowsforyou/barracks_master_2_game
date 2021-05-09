@@ -78,11 +78,9 @@ https://discord.gg/Jy97QGfAUF"
 	//-------------------
 	//Scoreboard Labels
 	//-------------------
-	"custom_end_screen_legend_color"				"ЦВЕТ"
-	"custom_end_screen_legend_cs"					"CS"
-	"custom_end_screen_legend_networth"				"ЧИСТАЯ СТОИМОСТЬ"
-	"custom_end_screen_legend_gold"					"ЗОЛОТО"
-	"custom_end_screen_legend_lumber"				"Пиломатериалы"
+	"scoreboard_color"								"ЦВЕТ"
+	"scoreboard_cs"									"CS"
+	"scoreboard_networth"							"ЧИСТАЯ СТОИМОСТЬ"
 
 	//-------------------
 	//End Game Labels

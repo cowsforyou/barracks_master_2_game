@@ -78,11 +78,9 @@ https://discord.gg/Jy97QGfAUF"
 	//-------------------
 	//Scoreboard Labels
 	//-------------------
-	"custom_end_screen_legend_color"				"颜色"
-	"custom_end_screen_legend_cs"					"蠕变分数"
-	"custom_end_screen_legend_networth"				"净值"
-	"custom_end_screen_legend_gold"					"金子"
-	"custom_end_screen_legend_lumber"				"木材"
+	"scoreboard_color"								"颜色"
+	"scoreboard_cs"									"蠕变分数"
+	"scoreboard_networth"							"净值"
 
 	//-------------------
 	//End Game Labels
