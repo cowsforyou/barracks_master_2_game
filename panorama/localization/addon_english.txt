@@ -79,16 +79,18 @@ https://discord.gg/Jy97QGfAUF"
 	//-------------------
 	//Scoreboard Labels
 	//-------------------
-	"custom_end_screen_legend_color"				"COLOR"
-	"custom_end_screen_legend_cs"					"CS"
-	"custom_end_screen_legend_networth"				"NET WORTH"
-	"custom_end_screen_legend_gold"					"GOLD"
-	"custom_end_screen_legend_lumber"				"LUMBER"
+	"scoreboard_color"								"COLOR"
+	"scoreboard_cs"									"CS"
+	"scoreboard_networth"							"NET WORTH"
 
 	//-------------------
 	//End Game Labels
 	//-------------------
-	"end_screen_bm_score"							"BM POINTS"
+	"end_screen_bm_score"							"BM RATING"
+	"custom_end_screen_legend_cs"					"CS"
+	"custom_end_screen_legend_networth"				"NET WORTH"
+	"custom_end_screen_legend_gold"					"GOLD"
+	"custom_end_screen_legend_lumber"				"LUMBER"
 	"custom_end_screen_extra_note"					"Thank you for playing Barracks Master 2!"
 	"custom_end_screen_extra_website"				"Visit barracksmaster.com for more information."	
 
