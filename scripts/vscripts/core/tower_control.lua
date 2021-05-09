@@ -130,37 +130,37 @@ function TowerControl:OnTowerKilled(unit)
     BuildingHelper:RemoveBuilding(unit)
 
     -- Award Last Stand charge
-    local dur = 5.0
-    Notifications:BottomToTeam(teamNumber, {item="item_last_stand", duration=dur}) 
-    Notifications:BottomToTeam(teamNumber, {text="&nbsp;", continue=true})
-    Notifications:BottomToTeam(teamNumber, {text="#give_item_last_stand", continue=true})
+    -- local dur = 5.0
+    -- Notifications:BottomToTeam(teamNumber, {item="item_last_stand", duration=dur}) 
+    -- Notifications:BottomToTeam(teamNumber, {text="&nbsp;", continue=true})
+    -- Notifications:BottomToTeam(teamNumber, {text="#give_item_last_stand", continue=true})
 
-    local heroList = HeroList:GetAllHeroes()
-    for _,hero in pairs(heroList) do
-        if hero:GetTeamNumber() == teamNumber then
-            local itemName = "item_last_stand"
-            local lastStandItem = GetItemByName(hero, itemName)
-            if lastStandItem then
-                lastStandItem:SetCurrentCharges(lastStandItem:GetCurrentCharges() + 1)
-            else
-                hero:AddItemByName(itemName)
-            end
-        end
-    end
+    -- local heroList = HeroList:GetAllHeroes()
+    -- for _,hero in pairs(heroList) do
+    --     if hero:GetTeamNumber() == teamNumber then
+    --         local itemName = "item_last_stand"
+    --         local lastStandItem = GetItemByName(hero, itemName)
+    --         if lastStandItem then
+    --             lastStandItem:SetCurrentCharges(lastStandItem:GetCurrentCharges() + 1)
+    --         else
+    --             hero:AddItemByName(itemName)
+    --         end
+    --     end
+    -- end
 
-    -- Go through the remaining towers in this lane and reduce their invulnerability count
-    for tier,tower in pairs(towerTable) do
-        tower.invulnCount = tower.invulnCount - 1
-        local invulnModifier = tower:FindModifierByName("modifier_invulnerable")
-        if invulnModifier and invulnModifier:GetStackCount() > 0 then
-            invulnModifier:SetStackCount(tower.invulnCount)
-            self:print("Set "..tower:GetUnitName().." invulnerability count to "..tower.invulnCount)
-        end
+    -- -- Go through the remaining towers in this lane and reduce their invulnerability count
+    -- for tier,tower in pairs(towerTable) do
+    --     tower.invulnCount = tower.invulnCount - 1
+    --     local invulnModifier = tower:FindModifierByName("modifier_invulnerable")
+    --     if invulnModifier and invulnModifier:GetStackCount() > 0 then
+    --         invulnModifier:SetStackCount(tower.invulnCount)
+    --         self:print("Set "..tower:GetUnitName().." invulnerability count to "..tower.invulnCount)
+    --     end
 
-        if tower.invulnCount == 0 then
-            tower:RemoveModifierByName("modifier_invulnerable")
-        end
-    end
+    --     if tower.invulnCount == 0 then
+    --         tower:RemoveModifierByName("modifier_invulnerable")
+    --     end
+    -- end
 
     -- Should we make the ancient vulnerable?
     local ancient = TowerControl.Links[teamNumber]['ancient']
@@ -188,6 +188,8 @@ function TowerControl:VerifyInvulnerabilityCount()
             for tierNumber=1,maxTier do
                 local towerEntities = Entities:FindAllByName("tower_lane"..laneNumber.."_tier"..tierNumber.."_team"..teamNumber)
                 towersRemaining = towersRemaining + #towerEntities
+                self:print("Tower remaining for team "..teamNumber.." : "..towersRemaining)
+
             end
         end
 
@@ -244,27 +246,28 @@ function TowerControl:VerifyInvulnerabilityCount()
         end
     end
 
-    -- -- Award last stand as it was not awarded
-    -- if TowerControl.teamToIssueLastStand ~= nil then
-    --     local teamNumber = TowerControl.teamToIssueLastStand
-    --     local dur = 5.0
-    --     Notifications:BottomToTeam(teamNumber, {item="item_last_stand", duration=dur}) 
-    --     Notifications:BottomToTeam(teamNumber, {text="&nbsp;", continue=true})
-    --     Notifications:BottomToTeam(teamNumber, {text="#give_item_last_stand", continue=true})
-    --     local heroList = HeroList:GetAllHeroes()
-    --     for _,hero in pairs(heroList) do
-    --         if hero:GetTeamNumber() == teamNumber then
-    --             local itemName = "item_last_stand"
-    --             local lastStandItem = GetItemByName(hero, itemName)
-    --             if lastStandItem then
-    --                 lastStandItem:SetCurrentCharges(lastStandItem:GetCurrentCharges() + 1)
-    --             else
-    --                 hero:AddItemByName(itemName)
-    --             end
-    --         end
-    --     end
-    --     TowerControl.teamToIssueLastStand = nil
-    -- end
+    -- Award last stand as it was not awarded
+    if TowerControl.teamToIssueLastStand ~= nil then
+        local teamNumber = TowerControl.teamToIssueLastStand
+        print('1')
+        local dur = 5.0
+        Notifications:BottomToTeam(teamNumber, {item="item_last_stand", duration=dur}) 
+        Notifications:BottomToTeam(teamNumber, {text="&nbsp;", continue=true})
+        Notifications:BottomToTeam(teamNumber, {text="#give_item_last_stand", continue=true})
+        local heroList = HeroList:GetAllHeroes()
+        for _,hero in pairs(heroList) do
+            if hero:GetTeamNumber() == teamNumber then
+                local itemName = "item_last_stand"
+                local lastStandItem = GetItemByName(hero, itemName)
+                if lastStandItem then
+                    lastStandItem:SetCurrentCharges(lastStandItem:GetCurrentCharges() + 1)
+                else
+                    hero:AddItemByName(itemName)
+                end
+            end
+        end
+        TowerControl.teamToIssueLastStand = nil
+    end
 end
 
 if not TowerControl.Links then TowerControl:Init() end
