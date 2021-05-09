@@ -55,14 +55,17 @@ https://discord.gg/Jy97QGfAUF"
 	"bm_map_mexican_name"							"墨西哥僵持"
 	"bm_map_mexican_count"							"1 vs 1"
 
-	"title_color"									"颜色选择"
+	"title_color"									"颜色"
 
-	"title_faction"									"派系选择"
+	"title_faction"									"派"
 
-	"title_perk"									"振作选择"
-	"perk_damage_mouseover"							"给予建造者额外的伤害。"
-	"perk_health_mouseover"							"为您的建造者提供额外的生命值。"
-	"perk_range_mouseover"							"向建造者授予额外的攻击范围。"	
+	"title_perk"									"振作"
+	"perk_range_title"								"范围振作"
+	"perk_range_des"								"向建造者授予额外的攻击范围。"	
+	"perk_damage_title"								"伤害加成"
+	"perk_damage_des"								"给予建造者额外的伤害。"
+	"perk_health_title"								"保健振作"
+	"perk_health_des"								"为您的建造者提供额外的生命值。"
 
 	"title_customization"							"客制化"
 	"customization_description"						"快来了！"
