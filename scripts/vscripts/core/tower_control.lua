@@ -249,7 +249,6 @@ function TowerControl:VerifyInvulnerabilityCount()
     -- Award last stand as it was not awarded
     if TowerControl.teamToIssueLastStand ~= nil then
         local teamNumber = TowerControl.teamToIssueLastStand
-        print('1')
         local dur = 5.0
         Notifications:BottomToTeam(teamNumber, {item="item_last_stand", duration=dur}) 
         Notifications:BottomToTeam(teamNumber, {text="&nbsp;", continue=true})
