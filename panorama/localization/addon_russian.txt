@@ -85,7 +85,7 @@ https://discord.gg/Jy97QGfAUF"
 	//-------------------
 	//End Game Labels
 	//-------------------
-	"end_screen_bm_score"							"BM ТОЧКИ"
+	"custom_end_screen_legend_change"				"МЕНЯТЬ"
 	"custom_end_screen_legend_cs"					"CS"
 	"custom_end_screen_legend_networth"				"ЧИСТАЯ СТОИМОСТЬ"
 	"custom_end_screen_legend_gold"					"ЗОЛОТО"
