@@ -200,13 +200,6 @@ function TowerControl:VerifyInvulnerabilityCount()
                 self:print("Removed "..ancient:GetUnitName().." invulnerability ")
                 ancient:RemoveModifierByName("modifier_invulnerable")
             end
-
-            -- End game if ancient is actually dead
-            if not ancient:IsAlive() then
-                local team = ancient:GetOpposingTeamNumber() --This would need to change in a multi team scenario
-                WebApi.winner = team
-                GameRules:SetGameWinner(team)
-            end
         end
 
         -- Check if invulnerability count matches expected count
@@ -266,6 +259,13 @@ function TowerControl:VerifyInvulnerabilityCount()
             end
         end
         TowerControl.teamToIssueLastStand = nil
+    end
+
+    -- End game if ancient is actually dead
+    if not ancient:IsAlive() then
+        local team = ancient:GetOpposingTeamNumber() --This would need to change in a multi team scenario
+        WebApi.winner = team
+        GameRules:SetGameWinner(team)
     end
 end
 
