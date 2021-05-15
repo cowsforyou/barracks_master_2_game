@@ -148,19 +148,19 @@ function TowerControl:OnTowerKilled(unit)
     --     end
     -- end
 
-    -- -- Go through the remaining towers in this lane and reduce their invulnerability count
-    -- for tier,tower in pairs(towerTable) do
-    --     tower.invulnCount = tower.invulnCount - 1
-    --     local invulnModifier = tower:FindModifierByName("modifier_invulnerable")
-    --     if invulnModifier and invulnModifier:GetStackCount() > 0 then
-    --         invulnModifier:SetStackCount(tower.invulnCount)
-    --         self:print("Set "..tower:GetUnitName().." invulnerability count to "..tower.invulnCount)
-    --     end
+    -- Go through the remaining towers in this lane and reduce their invulnerability count
+    for tier,tower in pairs(towerTable) do
+        tower.invulnCount = tower.invulnCount - 1
+        local invulnModifier = tower:FindModifierByName("modifier_invulnerable")
+        if invulnModifier and invulnModifier:GetStackCount() > 0 then
+            invulnModifier:SetStackCount(tower.invulnCount)
+            self:print("Set "..tower:GetUnitName().." invulnerability count to "..tower.invulnCount)
+        end
 
-    --     if tower.invulnCount == 0 then
-    --         tower:RemoveModifierByName("modifier_invulnerable")
-    --     end
-    -- end
+        if tower.invulnCount == 0 then
+            tower:RemoveModifierByName("modifier_invulnerable")
+        end
+    end
 
     -- Should we make the ancient vulnerable?
     local ancient = TowerControl.Links[teamNumber]['ancient']
