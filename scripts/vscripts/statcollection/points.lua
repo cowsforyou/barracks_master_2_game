@@ -10,8 +10,8 @@ function GetBMPointsForPlayer( playerID )
     end
 
     -- Neither do single player games
-    if PlayerResource:GetPlayerCount() == 1 then
-        return 0
+    if HeroSelection.totalLegitimatePlayers == 1 then
+        return 3
     end
 
     -- Each game has +3 points base

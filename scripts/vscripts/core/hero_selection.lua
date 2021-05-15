@@ -18,6 +18,7 @@ function HeroSelection:Start()
 	 HeroSelection.numPickers = 0
 	 HeroSelection.botPicked = false
 	 HeroSelection.botSpawned = false
+	 HeroSelection.totalLegitimatePlayers = 0
 
 	for pID = 0, DOTA_MAX_PLAYERS -1 do
 		if PlayerResource:IsValidPlayer( pID ) then
@@ -177,7 +178,13 @@ function HeroSelection:EndPicking()
 	PauseGame(false)
 	GameRules:GetGameModeEntity():SetPauseEnabled(true)
 	
-	-- Assigns color for users who did not select color
+	-- Check total number of legitimate players
+	for playerId = 0, 23 do
+		if PlayerResource:IsValidTeamPlayerID(playerId) and not PlayerResource:IsFakeClient(playerId) then
+			HeroSelection.totalLegitimatePlayers = HeroSelection.totalLegitimatePlayers + 1
+		end
+	end
+
 	local playerCount = PlayerResource:GetPlayerCount()
 	local test  = PlayerResource:IsValidPlayer( 0 )
 
