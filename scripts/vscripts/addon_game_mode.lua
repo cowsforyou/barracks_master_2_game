@@ -247,4 +247,5 @@ function Activate()
   GameRules.GameMode:_InitGameMode()
   PlayerColors:Init()
   GameRules:GetGameModeEntity():SetCustomGameForceHero("npc_dota_hero_wisp")
+  SendToServerConsole("tv_delay 0")
 end
