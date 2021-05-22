@@ -98,6 +98,9 @@ function HeroSelection:Tick()
 			HeroSelection.botPicked = true
 		end
 
+		--Get User Info
+		WebApi:GetUserInfo()
+
 		return 1
 	elseif HeroSelection.TimeLeft >= 0 then
 		return 1
