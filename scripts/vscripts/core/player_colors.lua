@@ -53,6 +53,22 @@ function PlayerColors:CheckPlayerPremiumColors( event )
         premiumColor.LightBlue = true
     end
 
+    if steamId == 102884028 then -- Valoron - 1st tourney winner
+        premiumColor.Black = true
+    end
+
+    if steamId = 311527784 then -- ментальное 1st tourney winner
+        premiumColor.Black = true
+    end
+
+    if steamId == 203843712 then -- Nyanners - 1st tourney runner up
+        premiumColor.Silver = true
+    end
+
+    if steamId == 487912271 then -- азазель228 - 1st tourney runner up
+        premiumColor.Silver = true
+    end
+
     if player then
       CustomGameEventManager:Send_ServerToPlayer(player, "get_player_premium_colors", premiumColor)
     end

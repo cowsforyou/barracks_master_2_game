@@ -10,10 +10,17 @@ function SpawnScout( event )
     local unitName = "scout_land"
     
     if 
-        steamID == 87566860 or steamID == 103245869 then
+        steamID == 87566860 
+        or steamID == 103245869 
+        or steamID == 203843712 
+        or steamID == 487912271 
+        then
         unitName = "scout_land_blue" 
     elseif 
-        steamID == 72355671 then
+        steamID == 72355671 
+        or steamID == 102884028 
+        or steamID == 311527784 
+        then
         unitName = "scout_land_red"
     elseif 
         steamID == 46639111 then
@@ -26,6 +33,11 @@ function SpawnScout( event )
     -- 72355671 (xiao)
     -- 103245869 (iRest)
     -- 87566860 (groovy)
+
+    -- 102884028 (Valoron - 1st tourney winner)
+    -- 311527784 (ментальное падение or https://steamcommunity.com/id/IDINAHUIPIDORBLIIN - 1st tourney winner)
+    -- 203843712 (Nyanners - 1st tourney runner up)
+    -- 487912271 (азазель228 - 1st tourney runner up)
 
     -- Create the unit in front of the caster
     local origin = caster:GetAbsOrigin()
