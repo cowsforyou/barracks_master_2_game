@@ -54,7 +54,7 @@ function TowerControl:SpawnMapEntities()
                     tower.tier = tierNumber
                     tower.lane = laneNumber
                     tower.blockers = blockers
-                    tower.invulnCount = tierNumber-1
+                    tower.invulnCount = tierNumber-2
 
                     -- radiant towers also have a pedestal that spawns below them
                     local pedestalName = GetUnitKV(name, "PedestalModel")
@@ -224,7 +224,7 @@ function TowerControl:VerifyInvulnerabilityCount()
 
                         if currentInvulnCount > 0 then
                             -- Check expected invulnerability count
-                            local expectedInvulnCount = tierNumber - 1 - (TowerControl.maximumTowers / 2 - towersRemaining)
+                            local expectedInvulnCount = tierNumber - 2 - (TowerControl.maximumTowers / 2 - towersRemaining)
                             self:print("Expected invulnerability count for tower_lane"..laneNumber.."_tier"..tierNumber.."_team"..teamNumber..": "..expectedInvulnCount)
                         
                             if currentInvulnCount ~= expectedInvulnCount then
