@@ -149,25 +149,25 @@ function TowerControl:OnTowerKilled(unit)
     -- end
 
     -- Go through the remaining towers in this lane and reduce their invulnerability count
-    for tier,tower in pairs(towerTable) do
-        tower.invulnCount = tower.invulnCount - 1
-        local invulnModifier = tower:FindModifierByName("modifier_invulnerable")
-        if invulnModifier and invulnModifier:GetStackCount() > 0 then
-            invulnModifier:SetStackCount(tower.invulnCount)
-            self:print("Set "..tower:GetUnitName().." invulnerability count to "..tower.invulnCount)
-        end
+    -- for tier,tower in pairs(towerTable) do
+    --     tower.invulnCount = tower.invulnCount - 1
+    --     local invulnModifier = tower:FindModifierByName("modifier_invulnerable")
+    --     if invulnModifier and invulnModifier:GetStackCount() > 0 then
+    --         invulnModifier:SetStackCount(tower.invulnCount)
+    --         self:print("Set "..tower:GetUnitName().." invulnerability count to "..tower.invulnCount)
+    --     end
 
-        if tower.invulnCount == 0 then
-            tower:RemoveModifierByName("modifier_invulnerable")
-        end
-    end
+    --     if tower.invulnCount == 0 then
+    --         tower:RemoveModifierByName("modifier_invulnerable")
+    --     end
+    -- end
 
-    -- Should we make the ancient vulnerable?
-    local ancient = TowerControl.Links[teamNumber]['ancient']
-    if IsValidEntity(ancient) and ancient:HasModifier("modifier_invulnerable") and unit.tier == ancient.tier then
-        self:print("Removed "..ancient:GetUnitName().." invulnerability ")
-        ancient:RemoveModifierByName("modifier_invulnerable")
-    end
+    -- -- Should we make the ancient vulnerable?
+    -- local ancient = TowerControl.Links[teamNumber]['ancient']
+    -- if IsValidEntity(ancient) and ancient:HasModifier("modifier_invulnerable") and unit.tier == ancient.tier then
+    --     self:print("Removed "..ancient:GetUnitName().." invulnerability ")
+    --     ancient:RemoveModifierByName("modifier_invulnerable")
+    -- end
 end
 
 -- self print while Debug flag is turned on
@@ -200,6 +200,14 @@ function TowerControl:VerifyInvulnerabilityCount()
                 self:print("Removed "..ancient:GetUnitName().." invulnerability ")
                 ancient:RemoveModifierByName("modifier_invulnerable")
             end
+        end
+
+        local ancient = TowerControl.Links[teamNumber]['ancient']
+        -- End game if ancient is actually dead
+        if IsValidEntity(ancient) and not ancient:IsAlive() then
+            local team = ancient:GetOpposingTeamNumber() --This would need to change in a multi team scenario
+            WebApi.winner = team
+            self:print('Setting winner'..team)
         end
 
         -- Check if invulnerability count matches expected count
@@ -261,11 +269,9 @@ function TowerControl:VerifyInvulnerabilityCount()
         TowerControl.teamToIssueLastStand = nil
     end
 
-    -- End game if ancient is actually dead
-    if not ancient:IsAlive() then
-        local team = ancient:GetOpposingTeamNumber() --This would need to change in a multi team scenario
-        WebApi.winner = team
-        GameRules:SetGameWinner(team)
+    if not (WebApi.winner == nil or WebApi.winner == -1) then
+        self:print("Game should end. Ancient is destroyed")
+        GameRules:SetGameWinner(WebApi.winner)
     end
 end
 
