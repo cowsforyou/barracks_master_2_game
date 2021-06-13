@@ -1,0 +1,60 @@
+"DOTAAbilities"
+{
+    "guardian_aura"
+    {
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+        "AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        "BaseClass"             "ability_datadriven"
+        "AbilityTextureName"    "guardian_aura"
+
+        "MaxLevel"    "1"
+
+        // AbilitySpecial  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "health_regen"      "3"
+            }
+            "02"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "armor_bonus"       "3"
+            }            
+            "03"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "radius"            "700"
+            }
+        }
+
+        // Modifiers
+        //-------------------------------------------------------------------------------------------------------------
+        "Modifiers"
+        {
+            "modifier_guardian_aura"
+            {
+                "Passive"           "1"
+                "IsHidden"          "1"
+        
+                "Aura"              "modifier_guardian_aura_buff"
+                "Aura_Radius"       "%radius"
+                "Aura_Teams"        "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                "Aura_Types"        "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+            }
+
+            "modifier_guardian_aura_buff"
+            {
+                "IsHidden"          "0"
+
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"       "%health_regen"
+                    "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"        "%armor_bonus"
+                } 
+            }
+        }
+    }
+}
