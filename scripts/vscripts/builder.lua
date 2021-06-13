@@ -9,17 +9,6 @@ function Build( event )
     local hero = caster:IsRealHero() and caster or caster:GetOwner()
     local playerID = hero:GetPlayerID()
 
-    -- Determine which construction effect to use
-    --local construction_effect = "modifier_construction_purple"
-    --[[if hero:GetUnitName() == "npc_dota_hero_nevermore" then 
-        construction_effect = "modifier_construction_purple"
-    elseif hero:GetUnitName() == "npc_dota_hero_arc_warden" then
-        construction_effect = "modifier_construction_blue"
-    elseif hero:GetUnitName() == "npc_dota_hero_keeper_of_the_light" then
-        construction_effect = "modifier_construction_gold"
-    end
-    ]]--
-
     -- If the ability has an AbilityGoldCost, it's impossible to not have enough gold the first time it's cast
     -- Always refund the gold here, as the building hasn't been placed yet
     hero:ModifyGold(gold_cost, false, 0)
@@ -136,7 +125,9 @@ function Build( event )
         EmitSoundOn("BarracksMaster.Building", caster)
 
         -- Add construction effect
-        ApplyModifier(unit, "modifier_construction_purple")
+        local playerColor = PlayerColors:GetPlayerColorName ( unit:GetPlayerOwnerID() ):lower()
+        -- print('Checking player color:'..PlayerColors:GetPlayerColorName ( unit:GetPlayerOwnerID() ):lower())
+        ApplyModifier(unit, "modifier_construction_"..playerColor)
 
         -- Store lumber cost of the building
         unit.lumber_cost = lumber_cost
@@ -186,7 +177,8 @@ function Build( event )
         EmitSoundOn("BarracksMaster.ConstructionComplete", caster)
         
         -- Remove construction effect
-        unit:RemoveModifierByName("modifier_construction_purple")
+        local playerColor = PlayerColors:GetPlayerColorName ( unit:GetPlayerOwnerID() ):lower()
+        unit:RemoveModifierByName("modifier_construction_"..playerColor)
 
         -- Remove the item
         if unit.item_building_cancel then
@@ -262,7 +254,8 @@ function CancelBuilding( keys )
     EmitSoundOn("BarracksMaster.Cancelled", building)
 
     -- Remove construction effect
-    building:RemoveModifierByName("modifier_construction_purple")
+    -- building:RemoveModifierByName("modifier_construction_purple")
+    -- This old code has been depreciated since the dota automatically removes the modifier when the building is gone.
 
     -- Refund here
     if building.gold_cost then

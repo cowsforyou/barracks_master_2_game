@@ -94,7 +94,8 @@ function DequeueUnit( event )
                     print("Cancel current channel")
 
                     -- Remove Research Particle Effect
-                    caster:RemoveModifierByName("modifier_research_purple")
+                    local playerColor = PlayerColors:GetPlayerColorName ( caster:GetPlayerOwnerID() ):lower()
+                    caster:RemoveModifierByName("modifier_research_"..playerColor)
 
                     -- Fake mana channel bar
                     caster:SetMana(0)
@@ -194,7 +195,8 @@ function AdvanceQueue(caster)
                 print("->"..ability_to_channel:GetAbilityName()," started channel")
 
                 -- Add Research Particle Effect -- cows
-                ApplyModifier(caster, "modifier_research_purple")
+                local playerColor = PlayerColors:GetPlayerColorName ( caster:GetPlayerOwnerID() ):lower()
+                ApplyModifier(caster, "modifier_research_"..playerColor)
 
                 -- Play A Sound -- cows
                 EmitSoundOn("BarracksMaster.Training", caster)
@@ -223,7 +225,8 @@ function AdvanceQueue(caster)
                         --print("Unit finished building")
                         
                         -- Remove Research Particle Effect
-                        caster:RemoveModifierByName("modifier_research_purple")
+                        local playerColor = PlayerColors:GetPlayerColorName ( caster:GetPlayerOwnerID() ):lower()
+                        caster:RemoveModifierByName("modifier_research_"..playerColor)
                     else
                         --print("This unit was interrupted")
                     end
@@ -242,7 +245,8 @@ function AdvanceQueue(caster)
                     print("->"..ability_to_channel:GetAbilityName()," started channel")
 
                     -- Add Research Particle Effect -- cows
-                    ApplyModifier(caster, "modifier_research_purple")
+                    local playerColor = PlayerColors:GetPlayerColorName ( caster:GetPlayerOwnerID() ):lower()
+                    ApplyModifier(caster, "modifier_research_"..playerColor)
 
                     -- Play A Sound -- cows
                     EmitSoundOn("BarracksMaster.Training", caster)
@@ -270,7 +274,8 @@ function AdvanceQueue(caster)
                             print("Research complete!")
 
                             -- Remove Research Particle Effect
-                            caster:RemoveModifierByName("modifier_research_purple")
+                            local playerColor = PlayerColors:GetPlayerColorName ( caster:GetPlayerOwnerID() ):lower()
+                            caster:RemoveModifierByName("modifier_research_"..playerColor)
 
                         else
                             --print("This Research was interrupted")
