@@ -37,8 +37,8 @@
         // Abilities
         //----------------------------------------------------------------
         "AbilityLayout"             "6"  
-        "Ability1"                  "ling_purification"
-        "Ability2"                  ""    
+        "Ability1"                  "guardian_aura"
+        "Ability2"                  "ling_purification"    
         "Ability3"                  ""     
         "Ability4"                  ""      
         "Ability5"                  ""     

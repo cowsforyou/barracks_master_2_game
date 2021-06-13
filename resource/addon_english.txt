@@ -75,6 +75,17 @@
 		"DOTA_Tooltip_ability_spawn_creephero_medusa_lumber_cost"				"<font color='#28fe77'>LUMBER COST</font>:"	
 
 		//-------------------
+		//Guardian Aura
+		//-------------------
+		"DOTA_Tooltip_ability_guardian_aura"									"Guardian Aura"
+		"DOTA_Tooltip_ability_guardian_aura_Description"						"Provides health regeneration and armor to allied units and structures."
+		"DOTA_Tooltip_ability_guardian_aura_health_regen"						"HEALTH REGENERATION:"
+		"DOTA_Tooltip_ability_guardian_aura_armor_bonus"						"ARMOR BONUS:"		
+		"DOTA_Tooltip_ability_guardian_aura_radius"								"RADIUS:"
+		"DOTA_Tooltip_modifier_guardian_aura_buff"								"Guardian Aura"
+		"DOTA_Tooltip_modifier_guardian_aura_buff_Description"					"Receiving bonus health regeneration and armor."
+
+		//-------------------
 		//Last Stand
 		//-------------------
 		"DOTA_Tooltip_ability_item_last_stand"									"Last Stand"

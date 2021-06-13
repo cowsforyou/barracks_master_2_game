@@ -57,7 +57,7 @@ function PlayerColors:CheckPlayerPremiumColors( event )
         premiumColor.Black = true
     end
 
-    if steamId = 311527784 then -- ментальное 1st tourney winner
+    if steamId == 311527784 then -- ментальное 1st tourney winner
         premiumColor.Black = true
     end
 

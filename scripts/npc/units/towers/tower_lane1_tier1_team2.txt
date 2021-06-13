@@ -13,7 +13,7 @@
         "HasInventory"              "0"
         "ConsideredHero"            "0"
         "SoundSet"                  "Tower.Water"
-        "DestructionEffect"         "particles/world_destruction_fx/base_statue_destruction_generic.vpcf"
+        "DestructionEffect"         "particles/radiant_fx/radiant_tower002_destruction.vpcf"
                  
         "UnitLabel"                 "tower"
        

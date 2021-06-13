@@ -127,7 +127,7 @@ function TowerControl:OnTowerKilled(unit)
     towerTable[unit.tier] = nil
 
     -- Play effects
-    unit:AddNoDraw()
+    -- unit:AddNoDraw()
     BuildingHelper:RemoveBuilding(unit)
 
     -- Award Last Stand charge
