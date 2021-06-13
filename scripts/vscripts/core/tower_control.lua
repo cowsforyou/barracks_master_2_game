@@ -12,6 +12,7 @@ function TowerControl:Init()
     end
     TowerControl.Debug = false -- Turn this off to stop spewing messages from this module
     TowerControl.maximumTowers = 0
+    TowerControl.verificationTimer = nil
 end
 
 -- Naming convention is tower_lane[1-X]_tier[1-Y]_team[2-Z]
@@ -270,6 +271,7 @@ function TowerControl:VerifyInvulnerabilityCount()
     if not (WebApi.winner == nil or WebApi.winner == -1) then
         self:print("Game should end. Ancient is destroyed")
         GameRules:SetGameWinner(WebApi.winner)
+        Timers:RemoveTimer(TowerControl.verificationTimer)
     end
 end
 

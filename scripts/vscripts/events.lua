@@ -35,7 +35,7 @@ function GameMode:OnGameRulesStateChange(keys)
     TowerControl:SpawnMapEntities()
 
     -- Check tower invulnerability status
-    Timers:CreateTimer(30, function()
+    TowerControl.verificationTimer = Timers:CreateTimer(30, function()
       TowerControl:VerifyInvulnerabilityCount()
       return 1.0
     end
