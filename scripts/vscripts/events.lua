@@ -19,8 +19,8 @@ function GameMode:OnGameRulesStateChange(keys)
   local newState = GameRules:State_Get()
   if newState == DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP then
     print("Game State: Custom Game Setup")
-    ScoreboardUpdater:Setup()
     WebApi:GetLeaderBoard()
+    ScoreboardUpdater:Setup()
 
     -- Log Team Selection
     WebApi:LogEvent( "BM_TEAM_SELECTION" )
