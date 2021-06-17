@@ -156,7 +156,7 @@
   "treant_living_armor"
   {
     "MaxLevel"            "1"
-    "AbilityCooldown"     "50.0"
+    "AbilityCooldown"     "70.0"
     "AbilityManaCost"     "0"
 
     "AbilitySpecial"

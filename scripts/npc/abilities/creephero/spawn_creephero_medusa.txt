@@ -9,7 +9,7 @@
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
         "AbilityCastPoint"              "0"
 
-        "AbilityGoldCost"               "700"
+        "AbilityGoldCost"               "850"
         "AbilityCooldown"               "15.0"
 
         "AbilitySpecial"
@@ -22,7 +22,7 @@
             "02"
             {
                 "var_type"              "FIELD_INTEGER"
-                "gold_cost"             "700"
+                "gold_cost"             "850"
             }
         }
 

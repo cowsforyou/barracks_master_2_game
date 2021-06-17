@@ -31,7 +31,7 @@
 
 		// Ability Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"3000"
+		"AbilityCastRange"				"2000"
 		"AbilityCastPoint"				"0.2"
 
 		// Ability Resource
@@ -60,7 +60,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cast_range"			"3000" //Purely for tooltip
+				"cast_range"			"2000" //Purely for tooltip, need to also update AbilityCastRange
 			}
 		}
 	}

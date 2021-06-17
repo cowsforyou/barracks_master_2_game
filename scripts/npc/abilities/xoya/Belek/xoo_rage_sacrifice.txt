@@ -15,7 +15,7 @@
         
         // Stats        
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCastRange"              "3000"
+        "AbilityCastRange"              "2000"
         "AbilityCastPoint"              "0.0"
         "AbilityCooldown"               "60.0"
         "AbilityManaCost"               "0"
@@ -45,7 +45,7 @@
             "05"
             {
                 "var_type"                                      "FIELD_FLOAT"
-                "cast_range"                                    "3000" //Purely for tooltip
+                "cast_range"                                    "2000" //Purely for tooltip, need to also update AbilityCastRange
             }
         }
         
