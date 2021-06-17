@@ -53,6 +53,15 @@ function PlayerColors:CheckPlayerPremiumColors( event )
         premiumColor.LightBlue = true
     end
 
+    if steamId == 103245869 then -- (irest)
+        premiumColor.Silver = false
+        premiumColor.Black = true
+        premiumColor.Purple = false
+        premiumColor.LightGreen = false
+        premiumColor.Blue = false
+        premiumColor.LightBlue = true
+    end
+
     if steamId == 102884028 then -- Valoron - 1st tourney winner
         premiumColor.Black = true
     end
