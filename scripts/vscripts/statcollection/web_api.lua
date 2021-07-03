@@ -247,7 +247,6 @@ function WebApi:GetUserInfo()
 	local ply = Convars:GetCommandClient()
 	local plyID = ply:GetPlayerID()
 	local steamId = tostring(PlayerResource:GetSteamID(plyID))
-	print(steamId)
 	local request = CreateHTTPRequestScriptVM("GET", serverHost .. '/parse/classes/UserInfo/' .. steamId)
 	request:SetHTTPRequestHeaderValue("X-Parse-Master-Key", dedicatedServerKey)
 	request:SetHTTPRequestHeaderValue("X-Parse-Application-Id", dedicatedServerKey)
@@ -283,4 +282,104 @@ function WebApi:GetUserInfo()
 			end
 		end
 	end)
+end
+
+function WebApi:GetUserRating( playerID , onSuccess)
+	local steamId = tostring(PlayerResource:GetSteamID(playerID))
+	local request = CreateHTTPRequestScriptVM("GET", serverHost .. '/parse/classes/UserInfo/' .. steamId)
+	request:SetHTTPRequestHeaderValue("X-Parse-Master-Key", dedicatedServerKey)
+	request:SetHTTPRequestHeaderValue("X-Parse-Application-Id", dedicatedServerKey)
+
+	request:Send(function(response)
+		if response.StatusCode == 200 then
+			local data = json.decode(response.Body)
+			if isTesting then
+				print("Response from UserRating")
+				print(data.BMRating or 800)
+			end
+
+			if onSuccess then
+				onSuccess(data.BMRating or 800)
+			end
+			
+			return 
+		else
+			if isTesting then
+				print("Error from leaderboard " .. response.StatusCode)
+				if response.Body then
+					local status, result = pcall(json.decode, response.Body)
+					if status then
+						DeepPrintTable(result)
+					else
+						print(response.Body)
+					end
+				end
+			end
+			if onError then
+				-- TODO: Is response.Body nullable?
+				onError(response.Body or "Unknown error (" .. response.StatusCode .. ")", response.StatusCode)
+			end
+		end
+	end)
+end
+
+function WebApi:GetTotalTeamRating ( playerId , teamACount , totalARating , teamBCount , totalBRating , onSuccess )
+	if playerId > 23 then
+		if onSuccess then
+			onSuccess(teamACount , totalARating , teamBCount , totalBRating)
+		end
+	elseif PlayerResource:IsValidTeamPlayerID(playerId) then
+		local steamId = tostring(PlayerResource:GetSteamID(0))
+		local request = CreateHTTPRequestScriptVM("GET", serverHost .. '/parse/classes/UserInfo/' .. steamId)
+		request:SetHTTPRequestHeaderValue("X-Parse-Master-Key", dedicatedServerKey)
+		request:SetHTTPRequestHeaderValue("X-Parse-Application-Id", dedicatedServerKey)
+
+		request:Send(function(response)
+			if response.StatusCode == 200 then
+				local data = json.decode(response.Body)
+				if isTesting then
+					-- print("Response from UserRating")
+					-- print(data.BMRating or 800)
+				end
+				local rating = data.BMRating or 800
+				if PlayerResource:GetTeam(playerId) == DOTA_TEAM_GOODGUYS then
+					return WebApi:GetTotalTeamRating ( playerId + 1 , teamACount + 1 , totalARating + rating , teamBCount , totalBRating , onSuccess )
+				else
+					return WebApi:GetTotalTeamRating ( playerId + 1 , teamACount , totalARating , teamBCount + 1 , totalBRating + rating , onSuccess )
+				end
+			else
+				if isTesting then
+					print("Error from leaderboard " .. response.StatusCode)
+					if response.Body then
+						local status, result = pcall(json.decode, response.Body)
+						if status then
+							DeepPrintTable(result)
+						else
+							print(response.Body)
+						end
+					end
+				end
+				if onError then
+					-- TODO: Is response.Body nullable?
+					onError(response.Body or "Unknown error (" .. response.StatusCode .. ")", response.StatusCode)
+				end
+			end
+		end)
+	else
+		return WebApi:GetTotalTeamRating ( playerId + 1 , teamACount , totalARating , teamBCount , totalBRating , onSuccess )
+	end
+end
+
+function WebApi:SetUserRating( playerID, rating )
+	local steamId = tostring(PlayerResource:GetSteamID(playerID))
+	local playerUpdateData = {
+		method = "PUT",
+		path = "/parse/classes/UserInfo/" .. steamId,
+		body = {
+			BMRating = rating,
+		}
+	}
+
+	-- Update the existing player rating
+	WebApi:Send("batch", playerUpdateData)
 end

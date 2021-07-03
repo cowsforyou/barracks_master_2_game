@@ -271,6 +271,11 @@ function TowerControl:VerifyInvulnerabilityCount()
     if not (WebApi.winner == nil or WebApi.winner == -1) then
         self:print("Game should end. Ancient is destroyed")
         GameRules:SetGameWinner(WebApi.winner)
+        
+        if HeroSelection.totalLegitimatePlayers > 1 then
+            RunBMRatingCalculationsAndSetScore()
+        end
+        
         Timers:RemoveTimer(TowerControl.verificationTimer)
     end
 end

@@ -73,6 +73,7 @@ require('widgets/purifier')
 -- LeaderBoard
 require('statcollection/web_api')
 require('statcollection/points')
+require('statcollection/rating')
 
 -- Developer Tools
 require('widgets/developer_tools')
