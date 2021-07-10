@@ -73,10 +73,11 @@ function BMCore:InitializeHero(hero)
 
     -- Give Perk Ability
     local perkData = CustomNetTables:GetTableValue("selected_player_perks", tostring(playerID))
-    print("hahah im here")
-    PrintTable(perkData)
     if perkData ~= nil then
-        print(perkData.perk)
+        if hero:GetUnitName() == "npc_dota_hero_keeper_of_the_light" then
+            hero:RemoveAbility('special_bonus_movement_speed_20')
+        end
+        
         hero:AddAbility(perkData.perk)
     end
 
