@@ -56,7 +56,7 @@
 		"Ability5"					"build_ling_building_catlan"
 		"Ability6" 					"ability_swapper_ling_next"
 		"Ability7"					""
-		"Ability8"					""
+		"Ability8"					"dummy_ability"
 		"Ability9"					""
 		"Ability10"					""
 	}

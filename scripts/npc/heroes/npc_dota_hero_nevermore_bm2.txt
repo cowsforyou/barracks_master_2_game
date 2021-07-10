@@ -56,7 +56,7 @@
 		"Ability5"					"build_xoo_building_catlix"
 		"Ability6" 					"ability_swapper_xoo_next"
 		"Ability7"					""
-		"Ability8"					""
+		"Ability8"					"dummy_ability"
 		"Ability9"					""
 		"Ability10"					""
 	}
