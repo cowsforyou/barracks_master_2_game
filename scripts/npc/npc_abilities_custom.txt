@@ -218,7 +218,6 @@
 //--------------------------------------------------------------------------------------------------
 #base "abilities\ability_building.txt"
 #base "abilities\ability_tower.txt"
-#base "abilities\dummy_ability.txt"
 #base "abilities\dummy_tree.txt"
 #base "abilities\gather_lumber.txt"
 #base "abilities\giant_tree_passive.txt"

@@ -56,7 +56,7 @@
 		"Ability5"					"build_myro_building_5"
 		"Ability6" 					"ability_swapper_myro_next"
 		"Ability7"					""
-		"Ability8"					"dummy_ability"
+		"Ability8"					""
 		"Ability9"					""
 		"Ability10"					""
 	}

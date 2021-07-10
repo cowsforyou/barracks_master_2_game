@@ -1,8 +1,0 @@
-"DOTAAbilities"
-{
-    "dummy_ability"
-    {
-        "BaseClass"         "ability_datadriven"
-        "AbilityBehavior"   "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    }
-}
