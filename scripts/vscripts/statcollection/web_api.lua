@@ -372,6 +372,10 @@ end
 
 function WebApi:SetUserRating( playerID, rating )
 	local steamId = tostring(PlayerResource:GetSteamID(playerID))
+	local playerUpdateDataBody = {
+		requests = {}
+	}
+
 	local playerUpdateData = {
 		method = "PUT",
 		path = "/parse/classes/UserInfo/" .. steamId,
@@ -380,6 +384,8 @@ function WebApi:SetUserRating( playerID, rating )
 		}
 	}
 
+	table.insert(playerUpdateDataBody.requests, playerUpdateData)
+
 	-- Update the existing player rating
-	WebApi:Send("batch", playerUpdateData)
+	WebApi:Send("batch", playerUpdateDataBody)
 end
