@@ -85,7 +85,10 @@ https://discord.gg/Jy97QGfAUF"
 	//-------------------
 	//End Game Labels
 	//-------------------
-	"custom_end_screen_legend_change"				"改变"
+	"custom_end_screen_legend_color"				"颜色"
+	"custom_end_screen_legend_bmrating"				"评分"
+	"custom_end_screen_legend_ratingchange"			"改变"
+	"custom_end_screen_legend_bmgold"				"BM 金子"
 	"custom_end_screen_legend_cs"					"蠕变分数"
 	"custom_end_screen_legend_networth"				"净值"
 	"custom_end_screen_legend_gold"					"金子"

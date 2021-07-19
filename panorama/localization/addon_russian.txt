@@ -85,7 +85,10 @@ https://discord.gg/Jy97QGfAUF"
 	//-------------------
 	//End Game Labels
 	//-------------------
-	"custom_end_screen_legend_change"				"МЕНЯТЬ"
+	"custom_end_screen_legend_color"				"ЦВЕТ"
+	"custom_end_screen_legend_bmrating"				"РЕЙТИНГ"
+	"custom_end_screen_legend_ratingchange"			"МЕНЯТЬ"
+	"custom_end_screen_legend_bmgold"				"BM ЗОЛОТО"
 	"custom_end_screen_legend_cs"					"CS"
 	"custom_end_screen_legend_networth"				"ЧИСТАЯ СТОИМОСТЬ"
 	"custom_end_screen_legend_gold"					"ЗОЛОТО"
